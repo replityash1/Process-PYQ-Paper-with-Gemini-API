@@ -5,37 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPSC Question Bank Viewer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script>
         window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
-            },
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true },
             startup: { typeset: false }
         };
     </script>
     <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <style>
-        .preserve-lines { white-space: pre-wrap; word-break: break-word; }
-    </style>
+    <style>.preserve-lines { white-space: pre-wrap; word-break: break-word; }</style>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen">
-
     <header class="bg-indigo-700 text-white shadow-md py-5 px-4 mb-8 sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <h1 class="text-2xl font-bold tracking-wide">RPSC Exam Question Bank</h1>
             <div class="flex items-center gap-4">
                 <div class="flex bg-indigo-900 p-1 rounded-lg text-sm font-medium shadow-inner">
-                    <button id="btn-hi" onclick="setLanguage('hi')" class="px-4 py-1.5 rounded-md transition-all duration-200 bg-white text-indigo-900 shadow">Hindi</button>
-                    <button id="btn-en" onclick="setLanguage('en')" class="px-4 py-1.5 rounded-md transition-all duration-200 text-indigo-100 hover:text-white">English</button>
-                    <button id="btn-both" onclick="setLanguage('both')" class="px-4 py-1.5 rounded-md transition-all duration-200 text-indigo-100 hover:text-white">Bilingual</button>
+                    <button id="btn-hi" onclick="setLanguage('hi')" class="px-4 py-1.5 rounded-md bg-white text-indigo-900 shadow">Hindi</button>
+                    <button id="btn-en" onclick="setLanguage('en')" class="px-4 py-1.5 rounded-md text-indigo-100 hover:text-white">English</button>
+                    <button id="btn-both" onclick="setLanguage('both')" class="px-4 py-1.5 rounded-md text-indigo-100 hover:text-white">Bilingual</button>
                 </div>
-                <span id="question-count" class="bg-indigo-100 text-indigo-800 text-sm px-3 py-1.5 rounded-full font-bold shadow-sm whitespace-nowrap">
-                    Loading...
-                </span>
+                <span id="question-count" class="bg-indigo-100 text-indigo-800 text-sm px-3 py-1.5 rounded-full font-bold shadow-sm">Loading...</span>
             </div>
         </div>
     </header>
@@ -49,8 +38,6 @@
             if (!text) return "";
             let formatted = text.trim().replace(/\n/g, '<br>');
             formatted = formatted.replace(/\s([A-E]\.)\s/g, '<br><span class="font-semibold text-indigo-700 ml-4">$1</span> ');
-            formatted = formatted.replace(/\s(\([iI]+v?\))\s/g, '<br><span class="font-semibold text-indigo-700 ml-4">$1</span> ');
-            formatted = formatted.replace(/(कथन\s[A-Z]\s*:|Statement\s[A-Z]\s*:)/gi, '<br><span class="font-semibold text-indigo-700 mt-2 block">$1</span>');
             return formatted;
         }
 
@@ -58,10 +45,9 @@
             ['hi', 'en', 'both'].forEach(b => {
                 const el = document.getElementById(`btn-${b}`);
                 el.className = b === lang 
-                    ? "px-4 py-1.5 rounded-md transition-all duration-200 bg-white text-indigo-900 shadow"
-                    : "px-4 py-1.5 rounded-md transition-all duration-200 text-indigo-100 hover:text-white";
+                    ? "px-4 py-1.5 rounded-md bg-white text-indigo-900 shadow"
+                    : "px-4 py-1.5 rounded-md text-indigo-100 hover:text-white";
             });
-
             document.querySelectorAll('.lang-hi').forEach(el => {
                 if (lang === 'hi' || lang === 'both') el.classList.remove('hidden'); else el.classList.add('hidden');
             });
@@ -73,18 +59,12 @@
         async function loadQuestions() {
             try {
                 const response = await fetch('question_bank.json');
-                if (!response.ok) throw new Error('File missing');
                 const data = await response.json();
                 const rawQuestions = data.questions || [];
                 
                 document.getElementById('question-count').innerText = `Total Questions: ${rawQuestions.length}`;
                 const container = document.getElementById('questions-container');
                 container.innerHTML = '';
-
-                if (rawQuestions.length === 0) {
-                    container.innerHTML = '<p class="text-center text-slate-500 py-12">No valid questions found.</p>';
-                    return;
-                }
 
                 rawQuestions.forEach((q) => {
                     const card = document.createElement('div');
@@ -93,24 +73,21 @@
                     let html = `<div class="border-b border-slate-100 pb-3 mb-4"><span class="bg-indigo-50 text-indigo-700 font-bold px-3 py-1 rounded-lg text-sm shadow-sm border border-indigo-100">Question ${q.number}</span></div>`;
 
                     html += `<div class="mb-6 flex flex-col gap-3">`;
-                    if (q.question_hi) html += `<div class="lang-hi text-lg font-medium text-slate-900 leading-relaxed overflow-x-auto preserve-lines">${formatText(q.question_hi)}</div>`;
-                    if (q.question_en) html += `<div class="lang-en text-base text-slate-600 leading-relaxed overflow-x-auto preserve-lines ${q.question_hi ? 'border-t border-slate-100 pt-3' : ''}">${formatText(q.question_en)}</div>`;
+                    if (q.question_hi) html += `<div class="lang-hi text-lg font-medium text-slate-900 leading-relaxed preserve-lines">${formatText(q.question_hi)}</div>`;
+                    if (q.question_en) html += `<div class="lang-en text-base text-slate-600 leading-relaxed preserve-lines ${q.question_hi ? 'border-t border-slate-100 pt-3' : ''}">${formatText(q.question_en)}</div>`;
                     html += `</div>`;
 
-                    const diagramPath = q.diagram_path || q.visual;
-                    if (diagramPath) {
-                        html += `<div class="mb-6 bg-slate-50 p-4 rounded-lg border border-slate-200 text-center"><img src="${diagramPath}" alt="Diagram" class="max-h-64 mx-auto rounded shadow-sm"><span class="text-xs text-slate-400 mt-2 block">Reference Diagram</span></div>`;
+                    // Enhanced Cropped Diagram Container
+                    if (q.diagram_path) {
+                        html += `<div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200 text-center"><img src="${q.diagram_path}" alt="Question Diagram" class="max-h-72 mx-auto rounded-lg shadow-sm border border-slate-200 bg-white"><span class="text-xs text-slate-400 mt-2 block font-medium">Chemical Structure / Diagram Reference</span></div>`;
                     }
 
                     html += `<div class="space-y-3">`;
                     if (q.options) {
                         q.options.forEach(opt => {
-                            const optLabel = opt.label ? opt.label.replace(/</g, "&lt;") : "?";
-                            html += `<div class="flex items-start bg-slate-50 border border-slate-200 rounded-lg p-3 overflow-x-auto"><span class="font-bold text-indigo-600 w-8 flex-shrink-0 mt-0.5">(${optLabel})</span><div class="flex-grow flex flex-col gap-2">`;
+                            html += `<div class="flex items-start bg-slate-50 border border-slate-200 rounded-lg p-3"><span class="font-bold text-indigo-600 w-8 flex-shrink-0 mt-0.5">(${opt.label})</span><div class="flex-grow flex flex-col gap-2">`;
                             if (opt.hi) html += `<div class="lang-hi text-sm text-slate-900 preserve-lines">${formatText(opt.hi)}</div>`;
                             if (opt.en) html += `<div class="lang-en text-sm text-slate-500 preserve-lines ${opt.hi ? 'border-t border-slate-200/60 pt-2' : ''}">${formatText(opt.en)}</div>`;
-                            const optImg = opt.image_path || opt.visual;
-                            if (optImg) html += `<div class="mt-2 pt-2"><img src="${optImg}" class="max-h-32 rounded border border-slate-200"></div>`;
                             html += `</div></div>`;
                         });
                     }
@@ -120,16 +97,9 @@
                 });
 
                 setLanguage('both');
-
-                setTimeout(() => {
-                    if (window.MathJax) {
-                        window.MathJax.typesetClear();
-                        window.MathJax.typeset();
-                    }
-                }, 300);
-
+                setTimeout(() => { if (window.MathJax) { MathJax.typesetClear(); MathJax.typeset(); } }, 300);
             } catch (error) {
-                document.getElementById('questions-container').innerHTML = `<div class="bg-red-50 text-red-700 p-6 rounded-xl text-center"><p class="font-bold">Error loading question_bank.json.</p></div>`;
+                document.getElementById('questions-container').innerHTML = `<div class="bg-red-50 text-red-700 p-6 rounded-xl text-center"><p class="font-bold">Error loading question_bank.json</p></div>`;
             }
         }
         loadQuestions();
