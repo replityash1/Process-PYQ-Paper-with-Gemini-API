@@ -77,17 +77,23 @@
                     if (q.question_en) html += `<div class="lang-en text-base text-slate-600 leading-relaxed preserve-lines ${q.question_hi ? 'border-t border-slate-100 pt-3' : ''}">${formatText(q.question_en)}</div>`;
                     html += `</div>`;
 
-                    // Enhanced Cropped Diagram Container
+                    // Main Question Diagram Container
                     if (q.diagram_path) {
-                        html += `<div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200 text-center"><img src="${q.diagram_path}" alt="Question Diagram" class="max-h-72 mx-auto rounded-lg shadow-sm border border-slate-200 bg-white"><span class="text-xs text-slate-400 mt-2 block font-medium">Chemical Structure / Diagram Reference</span></div>`;
+                        html += `<div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200 text-center"><img src="${q.diagram_path}" alt="Question Diagram" class="max-h-72 mx-auto rounded-lg shadow-sm border border-slate-200 bg-white"><span class="text-xs text-slate-400 mt-2 block font-medium">Diagram / Figure Reference</span></div>`;
                     }
 
+                    // Options List
                     html += `<div class="space-y-3">`;
                     if (q.options) {
                         q.options.forEach(opt => {
                             html += `<div class="flex items-start bg-slate-50 border border-slate-200 rounded-lg p-3"><span class="font-bold text-indigo-600 w-8 flex-shrink-0 mt-0.5">(${opt.label})</span><div class="flex-grow flex flex-col gap-2">`;
+                            
+                            if (opt.diagram_path) {
+                                html += `<div class="my-1"><img src="${opt.diagram_path}" alt="Option Diagram" class="max-h-36 rounded-md border border-slate-200 bg-white p-1"></div>`;
+                            }
                             if (opt.hi) html += `<div class="lang-hi text-sm text-slate-900 preserve-lines">${formatText(opt.hi)}</div>`;
                             if (opt.en) html += `<div class="lang-en text-sm text-slate-500 preserve-lines ${opt.hi ? 'border-t border-slate-200/60 pt-2' : ''}">${formatText(opt.en)}</div>`;
+                            
                             html += `</div></div>`;
                         });
                     }
