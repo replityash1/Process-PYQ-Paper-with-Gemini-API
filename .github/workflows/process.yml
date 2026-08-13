@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 1   # <--- Pacing & Concurrency Control: Serializes requests to stay under rate limits
+      max-parallel: 3   # <--- Run 3 pages concurrently to complete full paper in < 6 mins
       matrix:
         page: ${{ fromJson(needs.prep.outputs.matrix) }}
     steps:
@@ -72,7 +72,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add question_bank.json images/
           if ! git diff --cached --quiet; then
-            git commit -m "AI: Process PYQs via Gemini 2.5 Flash API with crop support"
+            git commit -m "AI: Extract RPSC PYQs with option diagrams and strict verification"
             git pull --rebase origin main
             git push
           fi
