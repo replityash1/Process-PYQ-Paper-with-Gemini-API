@@ -1,12 +1,12 @@
 import os
 import sys
 import json
+import time # <--- Added for rate-limit pacing
 from google import genai
 from google.genai import types
 from pydantic import BaseModel, Field
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-# 1. Enforce Structured JSON Output with Pydantic
 class Option(BaseModel):
     label: str = Field(description="Option label like 1, 2, 3, 4, or 5")
     hi: str = Field(description="Actual Hindi text of option or empty string if absent")
@@ -21,11 +21,10 @@ class Question(BaseModel):
 class QuestionBank(BaseModel):
     questions: list[Question]
 
-# 2. Add Automatic Retry Logic for 429 Rate Limits
-@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=2, min=5, max=30))
+@retry(stop=stop_after_attempt(7), wait=wait_exponential(multiplier=4, min=10, max=60))
 def call_gemini_with_retry(client, image_bytes, prompt):
     return client.models.generate_content(
-        model='gemini-3.6-flash',
+        model='gemini-3.6-flash',   # <--- Updated to match your project's active model
         contents=[
             types.Part.from_bytes(data=image_bytes, mime_type='image/jpeg'),
             prompt
@@ -47,7 +46,6 @@ def main():
 
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("ERROR: GEMINI_API_KEY secret is missing.")
         sys.exit(1)
 
     client = genai.Client(api_key=api_key)
@@ -57,14 +55,11 @@ def main():
 
     prompt = """
     Extract all multiple-choice questions from this RPSC exam paper page into a structured format.
-    
-    EXTRACTION RULES:
     1. Each question MUST have exactly 5 options. Option 5 is ALWAYS "Question not attempted" / "अनुत्तरित प्रश्न".
-    2. Do NOT use placeholder text like "Option 1" or "विकल्प 1". You MUST extract the actual text of each option from the image.
-    3. Put all premises, match-columns, and statements (I, II, III or A, B, C) inside the main question_hi and question_en text fields using line breaks (\n).
-    4. Wrap ALL math, equations, variables, physics values, and fractions in inline LaTeX dollar signs (e.g., $\\frac{w_1 + w_2}{2}$ or $x^2$).
+    2. Do NOT use placeholder text. Extract the actual text of each option.
+    3. Put all premises, match-columns, and statements inside question_hi and question_en using line breaks (\n).
+    4. Wrap ALL math and fractions in inline LaTeX dollar signs (e.g., $\\frac{w_1 + w_2}{2}$).
     5. Do NOT translate single-language questions; leave the absent language field as "".
-    6. If a page contains no numbered questions, return an empty list under "questions".
     """
 
     print(f"Sending Page {page_num} to Gemini API...")
@@ -73,7 +68,10 @@ def main():
     with open(output_json_path, "w", encoding="utf-8") as f:
         f.write(response.text)
         
-    print(f"SUCCESS: Page {page_num} extracted and saved!")
+    print(f"SUCCESS: Page {page_num} saved!")
+    
+    # Pace out requests to strictly respect the 5 requests/minute free-tier ceiling
+    time.sleep(12) 
 
 if __name__ == "__main__":
     main()
