@@ -35,8 +35,10 @@ PDF_PATH = (
     / "exam_paper.pdf"
 )
 
-DRIVE_INFO_PATH = Path(
-    ".drive_file_info"
+# FIXED: Save the tracking info inside the input folder
+DRIVE_INFO_PATH = (
+    INPUT_DIR
+    / ".drive_file_info"
 )
 
 
@@ -231,12 +233,17 @@ def save_drive_info(
 
 
 def load_drive_info():
-
-    if not DRIVE_INFO_PATH.exists():
+    
+    # Check input folder first, fallback to root if needed
+    info_path = DRIVE_INFO_PATH
+    if not info_path.exists():
+        info_path = Path(".drive_file_info")
+        
+    if not info_path.exists():
         return None
 
     with open(
-        DRIVE_INFO_PATH,
+        info_path,
         "r",
         encoding="utf-8",
     ) as file:
