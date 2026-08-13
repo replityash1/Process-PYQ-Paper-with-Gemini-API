@@ -29,7 +29,7 @@ class QuestionBank(BaseModel):
 @retry(stop=stop_after_attempt(7), wait=wait_exponential(multiplier=4, min=10, max=60))
 def call_gemini_with_retry(client, image_bytes, prompt):
     return client.models.generate_content(
-        model='gemini-2.5-flash',
+        model='gemini-3.5-flash-lite',
         contents=[
             types.Part.from_bytes(data=image_bytes, mime_type='image/jpeg'),
             prompt
