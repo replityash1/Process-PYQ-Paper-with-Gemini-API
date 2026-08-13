@@ -73,28 +73,34 @@
                     let html = `<div class="border-b border-slate-100 pb-3 mb-4"><span class="bg-indigo-50 text-indigo-700 font-bold px-3 py-1 rounded-lg text-sm shadow-sm border border-indigo-100">Question ${q.number}</span></div>`;
 
                     html += `<div class="mb-6 flex flex-col gap-3">`;
+                    
+                    // Display text if available
                     if (q.question_hi) html += `<div class="lang-hi text-lg font-medium text-slate-900 leading-relaxed preserve-lines">${formatText(q.question_hi)}</div>`;
+                    
+                    // Display Full Hindi Image Block
+                    if (q.image_hi) html += `<div class="lang-hi mt-2"><img src="${q.image_hi}" class="max-w-full rounded-lg border border-slate-200 shadow-sm" alt="Hindi Question Block"></div>`;
+                    
                     if (q.question_en) html += `<div class="lang-en text-base text-slate-600 leading-relaxed preserve-lines ${q.question_hi ? 'border-t border-slate-100 pt-3' : ''}">${formatText(q.question_en)}</div>`;
+                    
+                    // Display Full English Image Block
+                    if (q.image_en) html += `<div class="lang-en mt-2"><img src="${q.image_en}" class="max-w-full rounded-lg border border-slate-200 shadow-sm" alt="English Question Block"></div>`;
+                    
                     html += `</div>`;
 
-                    // Main Question Diagram Container
-                    if (q.diagram_path) {
-                        html += `<div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200 text-center"><img src="${q.diagram_path}" alt="Question Diagram" class="max-h-72 mx-auto rounded-lg shadow-sm border border-slate-200 bg-white"><span class="text-xs text-slate-400 mt-2 block font-medium">Diagram / Figure Reference</span></div>`;
-                    }
-
-                    // Options List
                     html += `<div class="space-y-3">`;
                     if (q.options) {
                         q.options.forEach(opt => {
-                            html += `<div class="flex items-start bg-slate-50 border border-slate-200 rounded-lg p-3"><span class="font-bold text-indigo-600 w-8 flex-shrink-0 mt-0.5">(${opt.label})</span><div class="flex-grow flex flex-col gap-2">`;
+                            // If option has no text (because it's a dummy visual option), just render the button label
+                            const hasText = opt.hi || opt.en;
                             
-                            if (opt.diagram_path) {
-                                html += `<div class="my-1"><img src="${opt.diagram_path}" alt="Option Diagram" class="max-h-36 rounded-md border border-slate-200 bg-white p-1"></div>`;
+                            if (!hasText) {
+                                html += `<div class="flex items-center bg-slate-50 hover:bg-indigo-50 cursor-pointer border border-slate-200 rounded-lg p-3 transition"><span class="font-bold text-indigo-600 w-8 flex-shrink-0">(${opt.label})</span></div>`;
+                            } else {
+                                html += `<div class="flex items-start bg-slate-50 hover:bg-indigo-50 cursor-pointer border border-slate-200 rounded-lg p-3 transition"><span class="font-bold text-indigo-600 w-8 flex-shrink-0 mt-0.5">(${opt.label})</span><div class="flex-grow flex flex-col gap-2">`;
+                                if (opt.hi) html += `<div class="lang-hi text-sm text-slate-900 preserve-lines">${formatText(opt.hi)}</div>`;
+                                if (opt.en) html += `<div class="lang-en text-sm text-slate-500 preserve-lines ${opt.hi ? 'border-t border-slate-200/60 pt-2' : ''}">${formatText(opt.en)}</div>`;
+                                html += `</div></div>`;
                             }
-                            if (opt.hi) html += `<div class="lang-hi text-sm text-slate-900 preserve-lines">${formatText(opt.hi)}</div>`;
-                            if (opt.en) html += `<div class="lang-en text-sm text-slate-500 preserve-lines ${opt.hi ? 'border-t border-slate-200/60 pt-2' : ''}">${formatText(opt.en)}</div>`;
-                            
-                            html += `</div></div>`;
                         });
                     }
                     html += `</div>`;
