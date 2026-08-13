@@ -140,8 +140,8 @@ jobs:
             exit 1
           fi
 
-          if [ ! -f "input/.drive_file_info" ]; then
-            echo "ERROR: input/.drive_file_info is missing."
+          if [ ! -f "input/drive_info.txt" ]; then
+            echo "ERROR: input/drive_info.txt is missing."
             exit 1
           fi
 
@@ -150,7 +150,7 @@ jobs:
 
           echo ""
           echo "Drive metadata:"
-          cat input/.drive_file_info
+          cat input/drive_info.txt
 
           echo ""
           echo "Source files verified."
@@ -158,9 +158,6 @@ jobs:
 
       # --------------------------------------------------------
       # Upload source files
-      #
-      # Uploading the input/ directory explicitly packages
-      # the PDF and tracking file together perfectly.
       # --------------------------------------------------------
 
       - name: Upload source files
@@ -260,7 +257,7 @@ jobs:
             \( \
               -name "exam_paper.pdf" \
               -o \
-              -name ".drive_file_info" \
+              -name "drive_info.txt" \
             \) \
             -print \
             | sort
@@ -293,10 +290,10 @@ jobs:
           fi
 
 
-          if [ ! -f "input/.drive_file_info" ]; then
+          if [ ! -f "input/drive_info.txt" ]; then
 
             echo "ERROR:"
-            echo "input/.drive_file_info was not found."
+            echo "input/drive_info.txt was not found."
 
             echo ""
             echo "Repository files:"
@@ -315,7 +312,7 @@ jobs:
 
           echo ""
           echo "Drive metadata:"
-          cat input/.drive_file_info
+          cat input/drive_info.txt
 
           echo ""
           echo "Source files verified successfully."
@@ -543,7 +540,7 @@ jobs:
           DRIVE_INFO=$(
             find downloaded_outputs \
               -type f \
-              -name ".drive_file_info" \
+              -name "drive_info.txt" \
               -print \
               -quit
           )
@@ -558,14 +555,14 @@ jobs:
             cp "$DRIVE_INFO" input/
 
             echo ""
-            echo "Restored input/.drive_file_info"
+            echo "Restored input/drive_info.txt"
 
-            cat input/.drive_file_info
+            cat input/drive_info.txt
 
           else
 
             echo "ERROR:"
-            echo ".drive_file_info was not found."
+            echo "drive_info.txt was not found."
 
             exit 1
 
