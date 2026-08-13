@@ -25,7 +25,7 @@ class QuestionBank(BaseModel):
 @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=2, min=5, max=30))
 def call_gemini_with_retry(client, image_bytes, prompt):
     return client.models.generate_content(
-        model='gemini-1.5-flash',
+        model='gemini-3.6-flash',
         contents=[
             types.Part.from_bytes(data=image_bytes, mime_type='image/jpeg'),
             prompt
