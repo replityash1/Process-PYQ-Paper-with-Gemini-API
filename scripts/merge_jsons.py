@@ -19,8 +19,9 @@ OUTPUT_ROOT = Path(
     "output"
 )
 
+# FIXED: Check inside input/ folder
 DRIVE_INFO_PATH = Path(
-    ".drive_file_info"
+    "input/.drive_file_info"
 )
 
 DEFAULT_RUN_NAME = (
@@ -132,7 +133,11 @@ def sanitize_slug(
 
 
 def load_drive_info():
-    if not DRIVE_INFO_PATH.exists():
+    info_path = DRIVE_INFO_PATH
+    if not info_path.exists():
+        info_path = Path(".drive_file_info")
+        
+    if not info_path.exists():
         return {
             "file_id": None,
             "file_name": None,
@@ -140,7 +145,7 @@ def load_drive_info():
         }
 
     lines = (
-        DRIVE_INFO_PATH.read_text(
+        info_path.read_text(
             encoding="utf-8"
         ).splitlines()
     )
