@@ -37,8 +37,7 @@ def call_gemini_with_retry(client, image_bytes, prompt):
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
             response_schema=QuestionBank,
-            temperature=0.0,
-            generation_config={"thinking_level": "low"}  # Enables reasoning for math/chemistry
+            temperature=0.0
         ),
     )
 
@@ -47,10 +46,7 @@ def validate_and_fix_questions(data):
     for q in data.get("questions", []):
         options = q.get("options", [])
         
-        # Ensure option 5 ("Question not attempted") is always present and correct
-        has_attempted_option = False
         cleaned_options = []
-        
         for i, opt in enumerate(options[:4], start=1):
             cleaned_options.append({
                 "label": str(i),
@@ -76,7 +72,6 @@ def crop_diagrams(page_num, data, output_json_path):
     img_w, img_h = img.size
     os.makedirs("images", exist_ok=True)
 
-    updated = False
     for q in data.get("questions", []):
         box = q.get("diagram_box")
         if box and len(box) == 4:
@@ -92,7 +87,6 @@ def crop_diagrams(page_num, data, output_json_path):
             cropped.save(diag_path)
             
             q["diagram_path"] = diag_path
-            updated = True
         else:
             q["diagram_path"] = None
 
