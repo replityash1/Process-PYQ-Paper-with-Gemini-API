@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 3   # <--- Run 3 pages concurrently to complete full paper in < 6 mins
+      max-parallel: 4   # <--- Run 4 pages concurrently to complete full paper in < 6 mins
       matrix:
         page: ${{ fromJson(needs.prep.outputs.matrix) }}
     steps:
