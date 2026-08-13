@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 3   # <--- TAMES RATE LIMITS (Keeps requests well under 15 RPM)
+      max-parallel: 1   # <--- TAMES RATE LIMITS (Keeps requests well under 15 RPM)
       matrix:
         page: ${{ fromJson(needs.prep.outputs.matrix) }}
     steps:
