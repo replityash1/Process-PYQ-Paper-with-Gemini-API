@@ -1,6 +1,7 @@
 name: Automated RPSC Drive Pipeline
 
 on:
+
   workflow_dispatch:
 
   schedule:
@@ -9,40 +10,45 @@ on:
 permissions:
   contents: write
 
-jobs:
 
-  # ==========================================================
-  # PREP
-  # ==========================================================
+# ============================================================
+# PREP
+# ============================================================
+
+jobs:
 
   prep:
 
     runs-on: ubuntu-latest
 
     outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
-      has_file: ${{ steps.check-drive.outputs.has_file }}
+      matrix: ${{ steps.matrix.outputs.matrix }}
+      has_file: ${{ steps.check.outputs.has_file }}
 
     steps:
 
       - name: Checkout repository
         uses: actions/checkout@v4
 
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y poppler-utils jq
 
+
       - name: Install Python dependencies
         run: |
           python3 -m pip install --upgrade pip
+
           python3 -m pip install \
             google-api-python-client \
             google-auth \
             pillow
 
-      - name: Check Drive and fetch PDF
-        id: check-drive
+
+      - name: Fetch latest PDF from Drive
+        id: check
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
 
@@ -54,44 +60,44 @@ jobs:
 
             echo "has_file=true" >> "$GITHUB_OUTPUT"
 
-            echo "PDF found."
-
           else
 
             echo "has_file=false" >> "$GITHUB_OUTPUT"
 
-            echo "No PDF found."
-
           fi
 
+
       - name: Generate page matrix
-        id: set-matrix
-        if: steps.check-drive.outputs.has_file == 'true'
+        id: matrix
+
+        if: steps.check.outputs.has_file == 'true'
 
         run: |
 
-          PAGES=$(
+          PAGE_COUNT=$(
             pdfinfo input/exam_paper.pdf |
             awk '/^Pages:/ {print $2}'
           )
 
-          echo "PDF pages: $PAGES"
+          echo "Total pages: $PAGE_COUNT"
 
           MATRIX=$(
-            seq 1 "$PAGES" |
+            seq 1 "$PAGE_COUNT" |
             jq -R . |
             jq -s -c 'map(tonumber)'
           )
 
           echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
 
+
       - name: Upload source PDF
-        if: steps.check-drive.outputs.has_file == 'true'
+        if: steps.check.outputs.has_file == 'true'
 
         uses: actions/upload-artifact@v4
 
         with:
           name: source-pdf
+
           path: |
             input/exam_paper.pdf
             .drive_file_info
@@ -99,9 +105,9 @@ jobs:
           retention-days: 1
 
 
-  # ==========================================================
-  # PROCESS PAGES
-  # ==========================================================
+# ============================================================
+# PROCESS EACH PAGE
+# ============================================================
 
   process:
 
@@ -112,6 +118,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+
       fail-fast: false
 
       max-parallel: 5
@@ -119,23 +126,29 @@ jobs:
       matrix:
         page: ${{ fromJson(needs.prep.outputs.matrix) }}
 
+
     steps:
 
       - name: Checkout repository
         uses: actions/checkout@v4
+
 
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y poppler-utils
 
+
       - name: Install Python dependencies
         run: |
+
           python3 -m pip install --upgrade pip
+
           python3 -m pip install \
             google-genai \
             pydantic \
             pillow
+
 
       - name: Download source PDF
         uses: actions/download-artifact@v4
@@ -144,10 +157,12 @@ jobs:
           name: source-pdf
           path: input/
 
+
       - name: Prepare directories
         run: |
           mkdir -p pages
           mkdir -p output_temp
+
 
       - name: Restore Drive metadata
         run: |
@@ -155,6 +170,7 @@ jobs:
           if [ -f "input/.drive_file_info" ]; then
             cp input/.drive_file_info .
           fi
+
 
       - name: Render page
         run: |
@@ -167,12 +183,12 @@ jobs:
             -singlefile \
             -jpeg \
             -r 200 \
-            -jpegopt quality=95,optimize=y \
             input/exam_paper.pdf \
             pages/page_${{ matrix.page }}
 
           ls -lh \
             pages/page_${{ matrix.page }}.jpg
+
 
       - name: Extract questions with Gemini
         env:
@@ -184,29 +200,21 @@ jobs:
             scripts/extract_api.py \
             ${{ matrix.page }}
 
-      - name: Show generated output
-        run: |
-
-          echo "Generated files:"
-          find output_temp \
-            -maxdepth 1 \
-            -type f \
-            -printf '%f\n' |
-            sort
 
       - name: Upload page output
         uses: actions/upload-artifact@v4
 
         with:
           name: output-page-${{ matrix.page }}
+
           path: output_temp/
 
           retention-days: 1
 
 
-  # ==========================================================
-  # MERGE
-  # ==========================================================
+# ============================================================
+# MERGE EVERYTHING
+# ============================================================
 
   merge:
 
@@ -219,27 +227,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Python dependencies
+
+      - name: Install Drive dependencies
         run: |
+
           python3 -m pip install --upgrade pip
+
           python3 -m pip install \
             google-api-python-client \
             google-auth
 
-      - name: Download all artifacts
+
+      - name: Download all page artifacts
         uses: actions/download-artifact@v4
 
         with:
           path: downloaded_outputs
 
+
       - name: Inspect downloaded artifacts
         run: |
 
-          echo "Downloaded artifacts:"
+          echo "Downloaded files:"
+
           find downloaded_outputs \
-            -maxdepth 4 \
             -type f |
             sort
+
 
       - name: Restore Drive metadata
         run: |
@@ -254,33 +268,25 @@ jobs:
 
           if [ -n "$DRIVE_INFO" ]; then
 
-            echo "Restoring Drive metadata from:"
-            echo "$DRIVE_INFO"
-
             cp "$DRIVE_INFO" .
+
+            echo "Drive metadata restored."
 
           else
 
-            echo "WARNING: .drive_file_info not found."
+            echo "WARNING: Drive metadata not found."
 
           fi
 
-      - name: Merge and organize question bank
+
+      - name: Merge question bank
         run: |
 
           python3 \
             scripts/merge_jsons.py
 
-      - name: Show final output
-        run: |
 
-          echo "Final output:"
-          find output \
-            -maxdepth 4 \
-            -type f |
-            sort
-
-      - name: Archive processed PDF in Drive
+      - name: Archive processed PDF
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
 
@@ -290,7 +296,8 @@ jobs:
             scripts/drive_sync.py \
             archive
 
-      - name: Commit generated question bank
+
+      - name: Commit generated database
         run: |
 
           git config user.name \
@@ -303,7 +310,7 @@ jobs:
 
           if git diff --cached --quiet; then
 
-            echo "No changes to commit."
+            echo "No output changes."
 
           else
 
