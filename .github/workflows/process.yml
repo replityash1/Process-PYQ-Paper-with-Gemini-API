@@ -2,117 +2,318 @@ name: Automated RPSC Drive Pipeline
 
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '0 0 * * *'   # Optional: Automatically checks Google Drive every day at midnight
+    - cron: "0 0 * * *"
 
 permissions:
   contents: write
 
 jobs:
+
+  # ==========================================================
+  # PREP
+  # ==========================================================
+
   prep:
+
     runs-on: ubuntu-latest
+
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
       has_file: ${{ steps.check-drive.outputs.has_file }}
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Install Dependencies
-        run: |
-          sudo apt-get update && sudo apt-get install -y poppler-utils
-          pip install google-api-python-client google-auth pillow
 
-      - name: Check Drive and Fetch PDF
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils jq
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install \
+            google-api-python-client \
+            google-auth \
+            pillow
+
+      - name: Check Drive and fetch PDF
         id: check-drive
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+
         run: |
+
           python3 scripts/drive_sync.py fetch
+
           if [ -f "input/exam_paper.pdf" ]; then
-            echo "has_file=true" >> $GITHUB_OUTPUT
+
+            echo "has_file=true" >> "$GITHUB_OUTPUT"
+
+            echo "PDF found."
+
           else
-            echo "has_file=false" >> $GITHUB_OUTPUT
+
+            echo "has_file=false" >> "$GITHUB_OUTPUT"
+
+            echo "No PDF found."
+
           fi
 
-      - name: Generate Matrix
+      - name: Generate page matrix
         id: set-matrix
         if: steps.check-drive.outputs.has_file == 'true'
-        run: |
-          PAGES=$(pdfinfo input/exam_paper.pdf | grep Pages | awk '{print $2}')
-          echo "matrix=$(seq 1 $PAGES | jq -R . | jq -s -c 'map(tonumber)')" >> $GITHUB_OUTPUT
 
-      - uses: actions/upload-artifact@v4
+        run: |
+
+          PAGES=$(
+            pdfinfo input/exam_paper.pdf |
+            awk '/^Pages:/ {print $2}'
+          )
+
+          echo "PDF pages: $PAGES"
+
+          MATRIX=$(
+            seq 1 "$PAGES" |
+            jq -R . |
+            jq -s -c 'map(tonumber)'
+          )
+
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+
+      - name: Upload source PDF
         if: steps.check-drive.outputs.has_file == 'true'
+
+        uses: actions/upload-artifact@v4
+
         with:
           name: source-pdf
-          path: input/exam_paper.pdf
+          path: |
+            input/exam_paper.pdf
+            .drive_file_info
+
+          retention-days: 1
+
+
+  # ==========================================================
+  # PROCESS PAGES
+  # ==========================================================
 
   process:
+
     needs: prep
+
     if: needs.prep.outputs.has_file == 'true'
+
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
+
       max-parallel: 5
+
       matrix:
         page: ${{ fromJson(needs.prep.outputs.matrix) }}
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Install Dependencies
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install system dependencies
         run: |
-          sudo apt-get update && sudo apt-get install -y poppler-utils
-          python3 -m pip install google-genai pydantic tenacity pillow
-      
-      - uses: actions/download-artifact@v4
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install \
+            google-genai \
+            pydantic \
+            pillow
+
+      - name: Download source PDF
+        uses: actions/download-artifact@v4
+
         with:
           name: source-pdf
           path: input/
-      
-      - name: Render Page
+
+      - name: Prepare directories
         run: |
-          mkdir -p pages output
-          pdftoppm -f ${{ matrix.page }} -l ${{ matrix.page }} -singlefile -jpeg -r 150 input/exam_paper.pdf pages/page_${{ matrix.page }}
-      
-      - name: Extract Questions with Gemini API
+          mkdir -p pages
+          mkdir -p output_temp
+
+      - name: Restore Drive metadata
+        run: |
+
+          if [ -f "input/.drive_file_info" ]; then
+            cp input/.drive_file_info .
+          fi
+
+      - name: Render page
+        run: |
+
+          echo "Rendering page ${{ matrix.page }}"
+
+          pdftoppm \
+            -f ${{ matrix.page }} \
+            -l ${{ matrix.page }} \
+            -singlefile \
+            -jpeg \
+            -r 200 \
+            -jpegopt quality=95,optimize=y \
+            input/exam_paper.pdf \
+            pages/page_${{ matrix.page }}
+
+          ls -lh \
+            pages/page_${{ matrix.page }}.jpg
+
+      - name: Extract questions with Gemini
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 scripts/extract_api.py ${{ matrix.page }}
-      
-      - uses: actions/upload-artifact@v4
+
+        run: |
+
+          python3 \
+            scripts/extract_api.py \
+            ${{ matrix.page }}
+
+      - name: Show generated output
+        run: |
+
+          echo "Generated files:"
+          find output_temp \
+            -maxdepth 1 \
+            -type f \
+            -printf '%f\n' |
+            sort
+
+      - name: Upload page output
+        uses: actions/upload-artifact@v4
+
         with:
           name: output-page-${{ matrix.page }}
-          path: output/
+          path: output_temp/
+
+          retention-days: 1
+
+
+  # ==========================================================
+  # MERGE
+  # ==========================================================
 
   merge:
+
     needs: process
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Install Drive Dependencies
-        run: pip install google-api-python-client google-auth
-      
-      - uses: actions/download-artifact@v4
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install \
+            google-api-python-client \
+            google-auth
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+
         with:
           path: downloaded_outputs
-          
-      - name: Merge, Deduplicate & Stitch
-        run: python3 scripts/merge_jsons.py
-        
-      - name: Organize Images, Commit, and Archive Drive File
+
+      - name: Inspect downloaded artifacts
+        run: |
+
+          echo "Downloaded artifacts:"
+          find downloaded_outputs \
+            -maxdepth 4 \
+            -type f |
+            sort
+
+      - name: Restore Drive metadata
+        run: |
+
+          DRIVE_INFO=$(
+            find downloaded_outputs \
+              -type f \
+              -name ".drive_file_info" \
+              -print \
+              -quit
+          )
+
+          if [ -n "$DRIVE_INFO" ]; then
+
+            echo "Restoring Drive metadata from:"
+            echo "$DRIVE_INFO"
+
+            cp "$DRIVE_INFO" .
+
+          else
+
+            echo "WARNING: .drive_file_info not found."
+
+          fi
+
+      - name: Merge and organize question bank
+        run: |
+
+          python3 \
+            scripts/merge_jsons.py
+
+      - name: Show final output
+        run: |
+
+          echo "Final output:"
+          find output \
+            -maxdepth 4 \
+            -type f |
+            sort
+
+      - name: Archive processed PDF in Drive
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-        run: |
-          mkdir -p images
-          find downloaded_outputs -type f -name "*.jpg" -exec cp {} images/ \;
-          
-          # Move the processed PDF in Google Drive to the completed folder
-          python3 scripts/drive_sync.py archive
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add question_bank.json images/
-          if ! git diff --cached --quiet; then
-            git commit -m "AI: Successfully processed paper from Google Drive inbox"
-            git pull --rebase origin main
+        run: |
+
+          python3 \
+            scripts/drive_sync.py \
+            archive
+
+      - name: Commit generated question bank
+        run: |
+
+          git config user.name \
+            "github-actions[bot]"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add output/
+
+          if git diff --cached --quiet; then
+
+            echo "No changes to commit."
+
+          else
+
+            git commit \
+              -m "AI: Process RPSC exam paper"
+
+            git pull \
+              --rebase \
+              origin main
+
             git push
+
           fi
