@@ -87,31 +87,45 @@ function toggleAnalysis(id) {
 }
 
 // ==========================================================
-// FRONTEND DATA CLEANER (REMOVES DUPLICATE OPTIONS)
+// FRONTEND DATA CLEANER (THE "GUILLOTINE" CUT)
 // ==========================================================
 function cleanQuestionText(text, options, lang) {
     if (!text || !Array.isArray(options)) return text || "";
 
-    let cleaned = text;
+    let chopIndex = text.length;
+    let hasFoundOptions = false;
 
-    // Loop backwards (from Option 5 down to 1) to peel them off the bottom
-    for (let i = options.length - 1; i >= 0; i--) {
-        const opt = options[i];
+    // Scan the text to find where the options block starts
+    options.forEach(opt => {
         const label = String(opt.label).trim();
         const optText = opt[lang] ? String(opt[lang]).trim() : "";
 
-        if (!optText || optText.length < 2) continue;
+        // Skip extremely short texts to prevent false positives
+        if (!optText || optText.length < 2) return;
 
-        // Escape regex characters so Math/Brackets don't break the search
+        // Escape special characters so formulas don't break the Regex
         const escapedText = optText.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        
+        // Looks for a newline, then a label format like "(1)", "[1]", or "1.", followed by the text
+        const pattern = new RegExp(`(?:\\n|\\r|<br>)*\\s*(?:\\(${label}\\)|\\[${label}\\]|${label}\\.|${label}\\-|${label}\\s+)\\s*${escapedText}`, 'i');
+        
+        const match = text.match(pattern);
+        
+        // If we found the option baked into the text, mark the exact index where it begins
+        if (match) {
+            if (match.index < chopIndex) {
+                chopIndex = match.index;
+                hasFoundOptions = true;
+            }
+        }
+    });
 
-        // Regex matches the option label (like "(1)" or "1.") and the text strictly at the END ($) of the block
-        const pattern = new RegExp(`(?:\\n|\\s)*(?:\\(${label}\\)|${label}\\.|${label}\\))?\\s*${escapedText}(?:\\n|\\s)*$`, 'i');
-
-        cleaned = cleaned.replace(pattern, '');
+    // Slice the string right before the first option begins, wiping them all out instantly
+    if (hasFoundOptions) {
+        return text.substring(0, chopIndex).trim();
     }
 
-    return cleaned.trim();
+    return text.trim();
 }
 
 // ==========================================================
@@ -157,7 +171,8 @@ function assetUrl(runId, relativePath) {
 // LOAD DATA
 // ==========================================================
 async function loadCatalog() {
-    const response = await fetch("output/catalog.json", { cache: "no-cache" });
+    // Adding a cache-buster timestamp to ensure you load fresh JSON
+    const response = await fetch(`output/catalog.json?v=${new Date().getTime()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
     return await response.json();
 }
@@ -171,7 +186,7 @@ async function openRun(encodedRunId) {
 async function loadRun(runId) {
     document.getElementById("loading").classList.remove("hidden");
     document.getElementById("content").classList.add("hidden");
-    const response = await fetch(`output/${encodeURIComponent(runId)}/question_bank.json`, { cache: "no-cache" });
+    const response = await fetch(`output/${encodeURIComponent(runId)}/question_bank.json?v=${new Date().getTime()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`Question bank HTTP ${response.status}`);
     const data = await response.json();
     currentRun = runId;
@@ -233,7 +248,7 @@ function renderQuestion(question) {
     const number = escapeHtml(question.number);
     const meta = question.metadata || {};
     
-    // Clean duplicate options from the question text
+    // 🔥 APPLIES THE SMART CLEANER HERE BEFORE RENDERING 🔥
     const cleanHi = cleanQuestionText(question.question_hi, question.options, 'hi');
     const cleanEn = cleanQuestionText(question.question_en, question.options, 'en');
 
