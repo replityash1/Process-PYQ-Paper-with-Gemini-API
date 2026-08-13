@@ -1,10 +1,9 @@
-name: Process PYQ Paper with Gemini API
+name: Automated RPSC Drive Pipeline
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "input/**"
+  schedule:
+    - cron: '0 0 * * *'   # Optional: Automatically checks Google Drive every day at midnight
 
 permissions:
   contents: write
@@ -14,24 +13,47 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
+      has_file: ${{ steps.check-drive.outputs.has_file }}
     steps:
       - uses: actions/checkout@v4
-      - name: Install poppler-utils
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y poppler-utils
+          pip install google-api-python-client google-auth pillow
+
+      - name: Check Drive and Fetch PDF
+        id: check-drive
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          python3 scripts/drive_sync.py fetch
+          if [ -f "input/exam_paper.pdf" ]; then
+            echo "has_file=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_file=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Generate Matrix
         id: set-matrix
+        if: steps.check-drive.outputs.has_file == 'true'
         run: |
-          PDF=$(find input -type f -iname "*.pdf" | head -n 1)
-          if [ -z "$PDF" ]; then echo "No PDF found in input/"; exit 1; fi
-          PAGES=$(pdfinfo "$PDF" | grep Pages | awk '{print $2}')
+          PAGES=$(pdfinfo input/exam_paper.pdf | grep Pages | awk '{print $2}')
           echo "matrix=$(seq 1 $PAGES | jq -R . | jq -s -c 'map(tonumber)')" >> $GITHUB_OUTPUT
+
+      - uses: actions/upload-artifact@v4
+        if: steps.check-drive.outputs.has_file == 'true'
+        with:
+          name: source-pdf
+          path: input/exam_paper.pdf
 
   process:
     needs: prep
+    if: needs.prep.outputs.has_file == 'true'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 4   # <--- Run 4 pages concurrently to complete full paper in < 6 mins
+      max-parallel: 5
       matrix:
         page: ${{ fromJson(needs.prep.outputs.matrix) }}
     steps:
@@ -40,15 +62,22 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y poppler-utils
           python3 -m pip install google-genai pydantic tenacity pillow
+      
+      - uses: actions/download-artifact@v4
+        with:
+          name: source-pdf
+          path: input/
+      
       - name: Render Page
         run: |
           mkdir -p pages output
-          PDF=$(find input -type f -iname "*.pdf" | head -n 1)
-          pdftoppm -f ${{ matrix.page }} -l ${{ matrix.page }} -singlefile -jpeg -r 150 "$PDF" pages/page_${{ matrix.page }}
+          pdftoppm -f ${{ matrix.page }} -l ${{ matrix.page }} -singlefile -jpeg -r 150 input/exam_paper.pdf pages/page_${{ matrix.page }}
+      
       - name: Extract Questions with Gemini API
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python3 scripts/extract_api.py ${{ matrix.page }}
+      
       - uses: actions/upload-artifact@v4
         with:
           name: output-page-${{ matrix.page }}
@@ -59,20 +88,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install Drive Dependencies
+        run: pip install google-api-python-client google-auth
+      
       - uses: actions/download-artifact@v4
         with:
           path: downloaded_outputs
+          
       - name: Merge, Deduplicate & Stitch
         run: python3 scripts/merge_jsons.py
-      - name: Organize Images and Commit
+        
+      - name: Organize Images, Commit, and Archive Drive File
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: |
           mkdir -p images
           find downloaded_outputs -type f -name "*.jpg" -exec cp {} images/ \;
+          
+          # Move the processed PDF in Google Drive to the completed folder
+          python3 scripts/drive_sync.py archive
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add question_bank.json images/
           if ! git diff --cached --quiet; then
-            git commit -m "AI: Extract RPSC PYQs with option diagrams and strict verification"
+            git commit -m "AI: Successfully processed paper from Google Drive inbox"
             git pull --rebase origin main
             git push
           fi
