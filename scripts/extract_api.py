@@ -14,7 +14,7 @@ from pydantic import BaseModel, Field, ValidationError
 # CONFIGURATION
 # ============================================================
 
-MODEL_NAME = "gemini-3.1-flash-lite"
+MODEL_NAME = "gemini-3.5-flash-lite"
 
 MAX_ATTEMPTS = 7
 RETRY_BASE_SECONDS = 8
