@@ -1,10 +1,10 @@
-import io
 import json
 import os
 import re
 import sys
 from pathlib import Path
 
+import io
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
@@ -18,92 +18,128 @@ SCOPES = [
     "https://www.googleapis.com/auth/drive"
 ]
 
-DRIVE_INBOX_FOLDER = "RPSC_To_Process"
-DRIVE_ARCHIVE_FOLDER = "RPSC_Completed"
+DEFAULT_INBOX_FOLDER = (
+    "RPSC_To_Process"
+)
 
-INPUT_DIR = Path("input")
-PDF_PATH = INPUT_DIR / "exam_paper.pdf"
+DEFAULT_ARCHIVE_FOLDER = (
+    "RPSC_Completed"
+)
 
-DRIVE_INFO_PATH = Path(".drive_file_info")
+INPUT_DIR = Path(
+    "input"
+)
+
+PDF_PATH = (
+    INPUT_DIR
+    / "exam_paper.pdf"
+)
+
+DRIVE_INFO_PATH = Path(
+    ".drive_file_info"
+)
 
 
 # ============================================================
 # HELPERS
 # ============================================================
 
-def get_env(name: str, default: str | None = None) -> str | None:
-    value = os.environ.get(name)
+def get_env(
+    name: str,
+    default: str | None = None,
+):
+    value = os.environ.get(
+        name
+    )
 
-    if value is None or not value.strip():
+    if value is None:
         return default
 
-    return value.strip()
+    value = value.strip()
+
+    return value or default
 
 
-def sanitize_slug(filename: str) -> str:
-    """
-    Convert a PDF filename into a safe folder name.
+def sanitize_slug(
+    filename: str,
+):
 
-    Example:
-        RPSC_Prelims_2025.pdf
-    ->
-        RPSC_Prelims_2025
-    """
+    name = Path(
+        filename
+    ).stem.strip()
 
-    name = Path(filename).stem.strip()
-
-    # Replace characters that are unsafe or inconvenient in paths.
     name = re.sub(
         r"[^A-Za-z0-9._-]+",
         "_",
         name,
     )
 
-    # Collapse repeated underscores.
     name = re.sub(
         r"_+",
         "_",
         name,
     )
 
-    name = name.strip("._-")
+    name = name.strip(
+        "._-"
+    )
 
-    if not name:
-        return "default_run"
+    return (
+        name[:150]
+        or "default_run"
+    )
 
-    return name[:150]
 
+def escape_drive_query(
+    value: str,
+):
 
-def escape_drive_query_value(value: str) -> str:
-    """
-    Escape a string used inside a Google Drive query.
-    """
-    return value.replace("\\", "\\\\").replace("'", "\\'")
+    return (
+        value
+        .replace(
+            "\\",
+            "\\\\",
+        )
+        .replace(
+            "'",
+            "\\'",
+        )
+    )
 
 
 # ============================================================
-# GOOGLE DRIVE
+# DRIVE SERVICE
 # ============================================================
 
 def get_drive_service():
-    sa_key_json = get_env("GCP_SA_KEY")
 
-    if not sa_key_json:
+    key_json = get_env(
+        "GCP_SA_KEY"
+    )
+
+    if not key_json:
         raise RuntimeError(
-            "GCP_SA_KEY environment variable is not configured."
+            "GCP_SA_KEY is not configured."
         )
 
     try:
-        sa_info = json.loads(sa_key_json)
+
+        service_account_info = (
+            json.loads(
+                key_json
+            )
+        )
+
     except json.JSONDecodeError as exc:
+
         raise RuntimeError(
-            "GCP_SA_KEY does not contain valid JSON."
+            "GCP_SA_KEY is not valid JSON."
         ) from exc
 
     credentials = (
         service_account.Credentials
         .from_service_account_info(
-            sa_info,
+            service_account_info,
             scopes=SCOPES,
         )
     )
@@ -119,19 +155,20 @@ def get_drive_service():
 def find_folder_id(
     service,
     folder_name: str,
-) -> str:
-    folder_name_escaped = (
-        escape_drive_query_value(folder_name)
+):
+
+    escaped = escape_drive_query(
+        folder_name
     )
 
     query = (
-        f"name = '{folder_name_escaped}' "
+        f"name = '{escaped}' "
         "and mimeType = "
         "'application/vnd.google-apps.folder' "
         "and trashed = false"
     )
 
-    results = (
+    response = (
         service.files()
         .list(
             q=query,
@@ -142,20 +179,18 @@ def find_folder_id(
         .execute()
     )
 
-    files = results.get(
+    files = response.get(
         "files",
         [],
     )
 
     if not files:
+
         raise FileNotFoundError(
-            f"Google Drive folder '{folder_name}' "
-            "was not found. Make sure the folder exists "
-            "and is shared with the service-account email."
+            f"Drive folder '{folder_name}' "
+            "was not found."
         )
 
-    # Exact name lookup should normally yield one folder.
-    # Use the first deterministic result if duplicates exist.
     files.sort(
         key=lambda item: item.get(
             "name",
@@ -167,7 +202,7 @@ def find_folder_id(
 
 
 # ============================================================
-# DRIVE METADATA
+# DRIVE INFO
 # ============================================================
 
 def save_drive_info(
@@ -175,34 +210,28 @@ def save_drive_info(
     file_name: str,
     folder_slug: str,
 ):
-    """
-    Format:
-
-    line 1 = Google Drive file ID
-    line 2 = original PDF filename
-    line 3 = generated output folder slug
-    """
 
     with open(
         DRIVE_INFO_PATH,
         "w",
         encoding="utf-8",
-    ) as f:
+    ) as file:
 
-        f.write(
+        file.write(
             f"{file_id}\n"
         )
 
-        f.write(
+        file.write(
             f"{file_name}\n"
         )
 
-        f.write(
+        file.write(
             f"{folder_slug}\n"
         )
 
 
 def load_drive_info():
+
     if not DRIVE_INFO_PATH.exists():
         return None
 
@@ -210,24 +239,23 @@ def load_drive_info():
         DRIVE_INFO_PATH,
         "r",
         encoding="utf-8",
-    ) as f:
+    ) as file:
 
-        lines = [
-            line.strip()
-            for line in f.read().splitlines()
-        ]
+        lines = (
+            file.read()
+            .splitlines()
+        )
 
     if len(lines) < 2:
         raise RuntimeError(
-            ".drive_file_info is malformed. "
-            "Expected at least file ID and filename."
+            ".drive_file_info is malformed."
         )
 
-    file_id = lines[0]
-    file_name = lines[1]
+    file_id = lines[0].strip()
+    file_name = lines[1].strip()
 
-    if len(lines) >= 3 and lines[2]:
-        folder_slug = lines[2]
+    if len(lines) >= 3:
+        folder_slug = lines[2].strip()
     else:
         folder_slug = sanitize_slug(
             file_name
@@ -245,11 +273,12 @@ def load_drive_info():
 # ============================================================
 
 def fetch_latest_pdf():
+
     service = get_drive_service()
 
     inbox_name = get_env(
         "DRIVE_INBOX_FOLDER",
-        DRIVE_INBOX_FOLDER,
+        DEFAULT_INBOX_FOLDER,
     )
 
     inbox_id = find_folder_id(
@@ -263,7 +292,7 @@ def fetch_latest_pdf():
         "and trashed = false"
     )
 
-    results = (
+    response = (
         service.files()
         .list(
             q=query,
@@ -273,7 +302,6 @@ def fetch_latest_pdf():
                 "id,"
                 "name,"
                 "modifiedTime,"
-                "createdTime,"
                 "size"
                 ")"
             ),
@@ -283,20 +311,18 @@ def fetch_latest_pdf():
         .execute()
     )
 
-    files = results.get(
+    files = response.get(
         "files",
         [],
     )
 
     if not files:
+
         print(
             "NO_FILE: No PDF found in "
-            f"Google Drive folder '{inbox_name}'."
+            f"'{inbox_name}'."
         )
 
-        # IMPORTANT:
-        # No PDF is not an infrastructure error.
-        # The scheduled workflow can finish normally.
         return None
 
     selected = files[0]
@@ -305,47 +331,35 @@ def fetch_latest_pdf():
     file_name = selected["name"]
 
     print(
-        "Found PDF:"
-    )
-
-    print(
-        f"  Name: {file_name}"
-    )
-
-    print(
-        f"  ID: {file_id}"
-    )
-
-    print(
-        f"  Modified: "
-        f"{selected.get('modifiedTime', 'unknown')}"
+        f"Found PDF: {file_name}"
     )
 
     folder_slug = sanitize_slug(
         file_name
     )
 
-    # --------------------------------------------------------
-    # Download
-    # --------------------------------------------------------
-
     INPUT_DIR.mkdir(
         parents=True,
         exist_ok=True,
     )
 
-    request = service.files().get_media(
-        fileId=file_id,
+    request = (
+        service.files()
+        .get_media(
+            fileId=file_id
+        )
     )
 
     with open(
         PDF_PATH,
         "wb",
-    ) as fh:
+    ) as file:
 
-        downloader = MediaIoBaseDownload(
-            fh,
-            request,
+        downloader = (
+            MediaIoBaseDownload(
+                file,
+                request,
+            )
         )
 
         done = False
@@ -357,47 +371,33 @@ def fetch_latest_pdf():
             )
 
             if status:
+
                 print(
-                    f"Download "
+                    "Download "
                     f"{int(status.progress() * 100)}%"
                 )
 
     if not PDF_PATH.exists():
         raise RuntimeError(
-            "Google Drive download completed "
-            "but input/exam_paper.pdf was not created."
+            "Downloaded PDF was not created."
         )
 
-    pdf_size = PDF_PATH.stat().st_size
-
-    if pdf_size <= 0:
+    if PDF_PATH.stat().st_size == 0:
         raise RuntimeError(
             "Downloaded PDF is empty."
         )
 
-    print(
-        f"Downloaded PDF size: {pdf_size:,} bytes"
-    )
-
-    # --------------------------------------------------------
-    # Save metadata
-    # --------------------------------------------------------
-
     save_drive_info(
-        file_id=file_id,
-        file_name=file_name,
-        folder_slug=folder_slug,
+        file_id,
+        file_name,
+        folder_slug,
     )
 
     print(
-        f"Output folder slug: {folder_slug}"
+        f"Run slug: {folder_slug}"
     )
 
-    return {
-        "file_id": file_id,
-        "file_name": file_name,
-        "folder_slug": folder_slug,
-    }
+    return True
 
 
 # ============================================================
@@ -410,8 +410,7 @@ def archive_pdf():
 
     if not info:
         print(
-            "WARNING: .drive_file_info not found. "
-            "Nothing to archive."
+            "WARNING: No Drive metadata found."
         )
         return
 
@@ -419,12 +418,12 @@ def archive_pdf():
 
     archive_name = get_env(
         "DRIVE_ARCHIVE_FOLDER",
-        DRIVE_ARCHIVE_FOLDER,
+        DEFAULT_ARCHIVE_FOLDER,
     )
 
     inbox_name = get_env(
         "DRIVE_INBOX_FOLDER",
-        DRIVE_INBOX_FOLDER,
+        DEFAULT_INBOX_FOLDER,
     )
 
     archive_id = find_folder_id(
@@ -437,17 +436,14 @@ def archive_pdf():
         inbox_name,
     )
 
-    file_id = info["file_id"]
-    file_name = info["file_name"]
-
     print(
-        f"Archiving '{file_name}'..."
+        f"Archiving '{info['file_name']}'..."
     )
 
     (
         service.files()
         .update(
-            fileId=file_id,
+            fileId=info["file_id"],
             addParents=archive_id,
             removeParents=inbox_id,
             fields="id,parents",
@@ -456,9 +452,7 @@ def archive_pdf():
     )
 
     print(
-        f"Successfully moved "
-        f"'{file_name}' to "
-        f"'{archive_name}'."
+        "Successfully archived PDF."
     )
 
 
@@ -480,8 +474,9 @@ def main():
 
             result = fetch_latest_pdf()
 
+            # No PDF is a normal condition for the
+            # scheduled workflow.
             if result is None:
-                # No PDF is a normal condition.
                 sys.exit(0)
 
         elif action == "archive":
@@ -491,8 +486,8 @@ def main():
         else:
 
             print(
-                f"ERROR: Unknown action '{action}'. "
-                "Use 'fetch' or 'archive'."
+                "ERROR: action must be "
+                "'fetch' or 'archive'."
             )
 
             sys.exit(2)
