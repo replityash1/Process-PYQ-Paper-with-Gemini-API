@@ -10,8 +10,8 @@ downloaded_outputs/
 input/exam_paper.pdf
 
 # Drive metadata created by GitHub Actions
-.drive_file_info
-
+drive_info.txt
+input/drive_info.txt
 
 # ============================================================
 # Python
