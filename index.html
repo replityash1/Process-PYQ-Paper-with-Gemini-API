@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="hi">
+
+<html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -8,21 +11,28 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>RPSC Question Bank Viewer</title>
+    <title>RPSC PYQ Question Bank</title>
+
 
     <script src="https://cdn.tailwindcss.com"></script>
 
+
     <script>
+
         window.MathJax = {
+
             tex: {
+
                 inlineMath: [
                     ['$', '$'],
                     ['\\(', '\\)']
                 ],
+
                 displayMath: [
                     ['$$', '$$'],
                     ['\\[', '\\]']
                 ],
+
                 processEscapes: true
             },
 
@@ -30,14 +40,18 @@
                 typeset: false
             }
         };
+
     </script>
+
 
     <script
         id="MathJax-script"
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
 
+
     <style>
+
         .preserve-lines {
             white-space: pre-wrap;
             word-break: break-word;
@@ -47,20 +61,30 @@
             max-height: 900px;
             object-fit: contain;
         }
+
     </style>
+
 </head>
 
 
-<body class="bg-slate-50 text-slate-800 min-h-screen">
+<body
+    class="
+        bg-slate-50
+        text-slate-800
+        min-h-screen
+    "
+>
+
+
+<!-- ========================================================
+     HEADER
+========================================================= -->
 
 <header
     class="
         bg-indigo-700
         text-white
         shadow-md
-        py-5
-        px-4
-        mb-8
         sticky
         top-0
         z-50
@@ -69,106 +93,143 @@
 
     <div
         class="
-            max-w-5xl
+            max-w-6xl
             mx-auto
-            flex
-            flex-col
-            md:flex-row
-            justify-between
-            items-center
-            gap-4
+            px-4
+            py-5
         "
     >
 
-        <div class="text-center md:text-left">
+        <div
+            class="
+                flex
+                flex-col
+                md:flex-row
+                justify-between
+                items-center
+                gap-4
+            "
+        >
 
-            <h1 class="text-2xl font-bold tracking-wide">
-                RPSC Exam Question Bank
-            </h1>
+            <div>
 
-            <div
-                id="run-name"
-                class="text-indigo-200 text-xs mt-1"
-            ></div>
+                <h1 class="text-2xl font-bold">
+                    RPSC PYQ Question Bank
+                </h1>
 
-        </div>
-
-
-        <div class="flex items-center gap-3 flex-wrap justify-center">
-
-            <div
-                class="
-                    flex
-                    bg-indigo-900
-                    p-1
-                    rounded-lg
-                    text-sm
-                    font-medium
-                    shadow-inner
-                "
-            >
-
-                <button
-                    id="btn-hi"
-                    onclick="setLanguage('hi')"
+                <p
+                    id="page-subtitle"
                     class="
-                        px-4
-                        py-1.5
-                        rounded-md
-                        bg-white
-                        text-indigo-900
-                        shadow
+                        text-indigo-200
+                        text-sm
+                        mt-1
                     "
                 >
-                    Hindi
-                </button>
-
-                <button
-                    id="btn-en"
-                    onclick="setLanguage('en')"
-                    class="
-                        px-4
-                        py-1.5
-                        rounded-md
-                        text-indigo-100
-                        hover:text-white
-                    "
-                >
-                    English
-                </button>
-
-                <button
-                    id="btn-both"
-                    onclick="setLanguage('both')"
-                    class="
-                        px-4
-                        py-1.5
-                        rounded-md
-                        text-indigo-100
-                        hover:text-white
-                    "
-                >
-                    Bilingual
-                </button>
+                    Previous Year Questions
+                </p>
 
             </div>
 
 
-            <span
-                id="question-count"
+            <div
                 class="
-                    bg-indigo-100
-                    text-indigo-800
-                    text-sm
-                    px-3
-                    py-1.5
-                    rounded-full
-                    font-bold
-                    shadow-sm
+                    flex
+                    items-center
+                    gap-3
+                    flex-wrap
+                    justify-center
                 "
             >
-                Loading...
-            </span>
+
+                <button
+                    id="home-button"
+                    onclick="showHome()"
+                    class="
+                        hidden
+                        bg-indigo-900
+                        hover:bg-indigo-950
+                        px-4
+                        py-2
+                        rounded-lg
+                        text-sm
+                    "
+                >
+                    All Papers
+                </button>
+
+
+                <div
+                    id="language-buttons"
+                    class="hidden"
+                >
+
+                    <div
+                        class="
+                            flex
+                            bg-indigo-900
+                            p-1
+                            rounded-lg
+                            text-sm
+                            font-medium
+                        "
+                    >
+
+                        <button
+                            id="btn-hi"
+                            onclick="setLanguage('hi')"
+                            class="
+                                px-4
+                                py-1.5
+                                rounded-md
+                            "
+                        >
+                            Hindi
+                        </button>
+
+
+                        <button
+                            id="btn-en"
+                            onclick="setLanguage('en')"
+                            class="
+                                px-4
+                                py-1.5
+                            "
+                        >
+                            English
+                        </button>
+
+
+                        <button
+                            id="btn-both"
+                            onclick="setLanguage('both')"
+                            class="
+                                px-4
+                                py-1.5
+                            "
+                        >
+                            Bilingual
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <span
+                    id="question-count"
+                    class="
+                        hidden
+                        bg-indigo-100
+                        text-indigo-800
+                        text-sm
+                        px-3
+                        py-1.5
+                        rounded-full
+                        font-bold
+                    "
+                ></span>
+
+            </div>
 
         </div>
 
@@ -177,16 +238,25 @@
 </header>
 
 
+<!-- ========================================================
+     MAIN
+========================================================= -->
+
 <main
-    class="max-w-5xl mx-auto px-4 pb-12"
+    class="
+        max-w-6xl
+        mx-auto
+        px-4
+        py-8
+    "
 >
+
 
     <div
         id="loading"
         class="
             bg-white
             rounded-xl
-            shadow-sm
             border
             border-slate-200
             p-8
@@ -194,80 +264,103 @@
             text-slate-500
         "
     >
-        Loading question bank...
+
+        Loading...
+
     </div>
 
 
     <div
-        id="questions-container"
-        class="space-y-8"
+        id="content"
+        class="hidden"
     ></div>
 
 
     <div
-        id="error-container"
+        id="error"
         class="hidden"
     ></div>
+
 
 </main>
 
 
 <script>
 
-    // ========================================================
-    // STATE
-    // ========================================================
 
-    let questionBank = [];
+// ==========================================================
+// STATE
+// ==========================================================
+
+let currentRun = null;
+
+let currentQuestions = [];
+
+let currentLanguage = "both";
 
 
-    // ========================================================
-    // HTML ESCAPING
-    // ========================================================
+// ==========================================================
+// HTML ESCAPE
+// ==========================================================
 
-    function escapeHtml(value) {
+function escapeHtml(value) {
 
-        if (value === null || value === undefined) {
-            return "";
-        }
-
-        const div = document.createElement("div");
-
-        div.textContent = String(value);
-
-        return div.innerHTML;
+    if (
+        value === null ||
+        value === undefined
+    ) {
+        return "";
     }
 
+    const element =
+        document.createElement(
+            "div"
+        );
 
-    // ========================================================
-    // TEXT FORMATTING
-    // ========================================================
+    element.textContent =
+        String(value);
 
-    function formatText(text) {
+    return element.innerHTML;
+}
 
-        if (!text) {
-            return "";
-        }
 
-        let formatted = escapeHtml(text);
+// ==========================================================
+// TEXT
+// ==========================================================
 
-        // Preserve newlines.
-        formatted = formatted.replace(
+function formatText(text) {
+
+    if (!text) {
+        return "";
+    }
+
+    let result =
+        escapeHtml(text);
+
+    result =
+        result.replace(
             /\n/g,
             "<br>"
         );
 
-        return formatted;
-    }
+    return result;
+}
 
 
-    // ========================================================
-    // LANGUAGE SWITCHING
-    // ========================================================
+// ==========================================================
+// LANGUAGE
+// ==========================================================
 
-    function setLanguage(lang) {
+function setLanguage(
+    language
+) {
 
-        ["hi", "en", "both"].forEach(
+    currentLanguage =
+        language;
+
+
+    ["hi", "en", "both"]
+        .forEach(
             buttonLanguage => {
 
                 const element =
@@ -279,8 +372,9 @@
                     return;
                 }
 
+
                 element.className =
-                    buttonLanguage === lang
+                    buttonLanguage === language
 
                         ? `
                             px-4
@@ -298,138 +392,709 @@
                             text-indigo-100
                             hover:text-white
                         `;
+
             }
         );
 
 
-        document
-            .querySelectorAll(".lang-hi")
-            .forEach(element => {
+    document
+        .querySelectorAll(
+            ".lang-hi"
+        )
+        .forEach(
+            element => {
 
                 if (
-                    lang === "hi" ||
-                    lang === "both"
+                    language === "hi" ||
+                    language === "both"
                 ) {
+
                     element.classList.remove(
                         "hidden"
                     );
+
                 } else {
+
                     element.classList.add(
                         "hidden"
                     );
                 }
-            });
-
-
-        document
-            .querySelectorAll(".lang-en")
-            .forEach(element => {
-
-                if (
-                    lang === "en" ||
-                    lang === "both"
-                ) {
-                    element.classList.remove(
-                        "hidden"
-                    );
-                } else {
-                    element.classList.add(
-                        "hidden"
-                    );
-                }
-            });
-
-
-        // Re-render MathJax after changing visibility.
-        setTimeout(
-            typesetMath,
-            50
-        );
-    }
-
-
-    // ========================================================
-    // MATHJAX
-    // ========================================================
-
-    async function typesetMath() {
-
-        if (
-            window.MathJax &&
-            typeof MathJax.typesetPromise === "function"
-        ) {
-
-            try {
-
-                MathJax.typesetClear();
-
-                await MathJax.typesetPromise();
-
-            } catch (error) {
-
-                console.warn(
-                    "MathJax typesetting failed:",
-                    error
-                );
 
             }
+        );
+
+
+    document
+        .querySelectorAll(
+            ".lang-en"
+        )
+        .forEach(
+            element => {
+
+                if (
+                    language === "en" ||
+                    language === "both"
+                ) {
+
+                    element.classList.remove(
+                        "hidden"
+                    );
+
+                } else {
+
+                    element.classList.add(
+                        "hidden"
+                    );
+                }
+
+            }
+        );
+
+
+    typesetMath();
+
+}
+
+
+// ==========================================================
+// MATHJAX
+// ==========================================================
+
+async function typesetMath() {
+
+    if (
+        window.MathJax &&
+        typeof MathJax.typesetPromise ===
+            "function"
+    ) {
+
+        try {
+
+            MathJax.typesetClear();
+
+            await MathJax.typesetPromise();
+
+        } catch (error) {
+
+            console.warn(
+                "MathJax error:",
+                error
+            );
+
         }
+
+    }
+}
+
+
+// ==========================================================
+// ASSET URL
+// ==========================================================
+
+function assetUrl(
+    runId,
+    relativePath
+) {
+
+    if (!relativePath) {
+        return "";
     }
 
-
-    // ========================================================
-    // IMAGE URL
-    // ========================================================
-
-    function imageUrl(path) {
-
-        if (!path) {
-            return "";
-        }
-
-        return escapeHtml(
-            path.replace(
-                /^\/+/,
-                ""
+    return (
+        "output/"
+        + encodeURIComponent(
+            runId
+        )
+        + "/"
+        + relativePath
+            .split("/")
+            .map(
+                part =>
+                    encodeURIComponent(
+                        part
+                    )
             )
+            .join("/")
+    );
+
+}
+
+
+// ==========================================================
+// LOAD CATALOG
+// ==========================================================
+
+async function loadCatalog() {
+
+    const response =
+        await fetch(
+            "output/catalog.json",
+            {
+                cache: "no-cache"
+            }
         );
+
+
+    if (!response.ok) {
+
+        throw new Error(
+            `Catalog HTTP ${response.status}`
+        );
+
     }
 
 
-    // ========================================================
-    // RENDER QUESTION
-    // ========================================================
+    return await response.json();
 
-    function renderQuestion(q) {
+}
 
-        const card =
-            document.createElement("article");
 
-        card.className = `
-            bg-white
-            rounded-xl
-            shadow-sm
-            border
-            border-slate-200
-            p-5
-            md:p-6
-            transition
-            hover:shadow-md
+// ==========================================================
+// HOME PAGE
+// ==========================================================
+
+function renderHome(
+    catalog
+) {
+
+    document
+        .getElementById(
+            "loading"
+        )
+        .classList.add(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "home-button"
+        )
+        .classList.add(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "language-buttons"
+        )
+        .classList.add(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "question-count"
+        )
+        .classList.add(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "page-subtitle"
+        )
+        .innerText =
+        "Select an examination paper";
+
+
+    const content =
+        document.getElementById(
+            "content"
+        );
+
+    content.classList.remove(
+        "hidden"
+    );
+
+
+    if (
+        !catalog.runs ||
+        !catalog.runs.length
+    ) {
+
+        content.innerHTML = `
+
+            <div
+                class="
+                    bg-white
+                    rounded-xl
+                    border
+                    border-slate-200
+                    p-10
+                    text-center
+                "
+            >
+
+                <h2
+                    class="
+                        text-xl
+                        font-bold
+                        text-slate-800
+                    "
+                >
+                    No question papers yet
+                </h2>
+
+                <p
+                    class="
+                        text-slate-500
+                        mt-2
+                    "
+                >
+                    Run the GitHub Actions workflow
+                    to process your first RPSC paper.
+                </p>
+
+            </div>
+
         `;
 
+        return;
 
-        const questionNumber =
-            escapeHtml(q.number);
-
-
-        const sourcePage =
-            q.source_page !== undefined &&
-            q.source_page !== null
-                ? `Page ${escapeHtml(q.source_page)}`
-                : "";
+    }
 
 
-        let html = `
+    let html = `
+
+        <div
+            class="
+                flex
+                flex-col
+                gap-2
+                mb-6
+            "
+        >
+
+            <h2
+                class="
+                    text-2xl
+                    font-bold
+                    text-slate-900
+                "
+            >
+                RPSC Question Papers
+            </h2>
+
+            <p
+                class="text-slate-500"
+            >
+                ${catalog.runs.length}
+                processed paper(s)
+            </p>
+
+        </div>
+
+
+        <div
+            class="
+                grid
+                grid-cols-1
+                md:grid-cols-2
+                gap-5
+            "
+        >
+    `;
+
+
+    catalog.runs.forEach(
+        run => {
+
+            const name =
+                escapeHtml(
+                    run.name
+                );
+
+
+            const questions =
+                escapeHtml(
+                    run.question_count
+                );
+
+
+            const visual =
+                escapeHtml(
+                    run.visual_question_count
+                );
+
+
+            const updated =
+                run.updated_at
+                    ? new Date(
+                        run.updated_at
+                    ).toLocaleString()
+                    : "";
+
+
+            html += `
+
+                <button
+                    onclick="openRun('${encodeURIComponent(run.id)}')"
+                    class="
+                        text-left
+                        bg-white
+                        border
+                        border-slate-200
+                        rounded-xl
+                        p-6
+                        shadow-sm
+                        hover:shadow-md
+                        hover:border-indigo-300
+                        transition
+                    "
+                >
+
+                    <div
+                        class="
+                            flex
+                            justify-between
+                            items-start
+                            gap-3
+                        "
+                    >
+
+                        <h3
+                            class="
+                                text-lg
+                                font-bold
+                                text-indigo-700
+                                break-words
+                            "
+                        >
+                            ${name}
+                        </h3>
+
+                        <span
+                            class="
+                                bg-indigo-50
+                                text-indigo-700
+                                px-2.5
+                                py-1
+                                rounded-full
+                                text-xs
+                                font-bold
+                            "
+                        >
+                            ${questions} Q
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="
+                            flex
+                            gap-4
+                            text-sm
+                            text-slate-500
+                            mt-4
+                            flex-wrap
+                        "
+                    >
+
+                        <span>
+                            ${visual}
+                            visual questions
+                        </span>
+
+                    </div>
+
+
+                    ${
+                        updated
+                            ? `
+                                <div
+                                    class="
+                                        text-xs
+                                        text-slate-400
+                                        mt-4
+                                    "
+                                >
+                                    Updated ${escapeHtml(updated)}
+                                </div>
+                            `
+                            : ""
+                    }
+
+                </button>
+
+            `;
+
+        }
+    );
+
+
+    html += `
+        </div>
+    `;
+
+
+    content.innerHTML =
+        html;
+
+}
+
+
+// ==========================================================
+// OPEN RUN
+// ==========================================================
+
+async function openRun(
+    encodedRunId
+) {
+
+    const runId =
+        decodeURIComponent(
+            encodedRunId
+        );
+
+    window.history.pushState(
+        {},
+        "",
+        `?run=${encodeURIComponent(runId)}`
+    );
+
+
+    await loadRun(
+        runId
+    );
+
+}
+
+
+// ==========================================================
+// LOAD RUN
+// ==========================================================
+
+async function loadRun(
+    runId
+) {
+
+    document
+        .getElementById(
+            "loading"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "content"
+        )
+        .classList.add(
+            "hidden"
+        );
+
+
+    const response =
+        await fetch(
+            `output/${encodeURIComponent(runId)}/question_bank.json`,
+            {
+                cache: "no-cache"
+            }
+        );
+
+
+    if (!response.ok) {
+
+        throw new Error(
+            `Question bank HTTP ${response.status}`
+        );
+
+    }
+
+
+    const data =
+        await response.json();
+
+
+    currentRun =
+        runId;
+
+
+    currentQuestions =
+        Array.isArray(
+            data.questions
+        )
+            ? data.questions
+            : [];
+
+
+    renderQuestions();
+
+}
+
+
+// ==========================================================
+// QUESTION PAGE
+// ==========================================================
+
+function renderQuestions() {
+
+    document
+        .getElementById(
+            "loading"
+        )
+        .classList.add(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "home-button"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "language-buttons"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+
+    const count =
+        document.getElementById(
+            "question-count"
+        );
+
+    count.classList.remove(
+        "hidden"
+    );
+
+
+    count.innerText =
+        `Total Questions: ${currentQuestions.length}`;
+
+
+    document
+        .getElementById(
+            "page-subtitle"
+        )
+        .innerText =
+        currentRun;
+
+
+    const content =
+        document.getElementById(
+            "content"
+        );
+
+    content.classList.remove(
+        "hidden"
+    );
+
+
+    let html = `
+
+        <div
+            class="
+                bg-white
+                border
+                border-slate-200
+                rounded-xl
+                p-5
+                mb-8
+            "
+        >
+
+            <h2
+                class="
+                    text-xl
+                    font-bold
+                    text-slate-900
+                "
+            >
+                ${escapeHtml(currentRun)}
+            </h2>
+
+            <p
+                class="
+                    text-sm
+                    text-slate-500
+                    mt-1
+                "
+            >
+                ${currentQuestions.length}
+                questions
+            </p>
+
+        </div>
+
+    `;
+
+
+    currentQuestions.forEach(
+        question => {
+
+            html +=
+                renderQuestion(
+                    question
+                );
+
+        }
+    );
+
+
+    content.innerHTML =
+        html;
+
+
+    setLanguage(
+        currentLanguage
+    );
+
+}
+
+
+// ==========================================================
+// QUESTION CARD
+// ==========================================================
+
+function renderQuestion(
+    question
+) {
+
+    const number =
+        escapeHtml(
+            question.number
+        );
+
+
+    const sourcePage =
+        question.source_page !==
+            undefined &&
+        question.source_page !==
+            null
+            ? `Source page ${escapeHtml(question.source_page)}`
+            : "";
+
+
+    let html = `
+
+        <article
+            class="
+                bg-white
+                rounded-xl
+                border
+                border-slate-200
+                shadow-sm
+                p-5
+                md:p-6
+                mb-8
+            "
+        >
+
 
             <div
                 class="
@@ -453,13 +1118,13 @@
                         py-1
                         rounded-lg
                         text-sm
-                        shadow-sm
                         border
                         border-indigo-100
                     "
                 >
-                    Question ${questionNumber}
+                    Question ${number}
                 </span>
+
 
                 ${
                     sourcePage
@@ -477,415 +1142,469 @@
                 }
 
             </div>
-        `;
+
+    `;
 
 
-        // ----------------------------------------------------
-        // QUESTION
-        // ----------------------------------------------------
+    // --------------------------------------------------------
+    // QUESTION TEXT
+    // --------------------------------------------------------
+
+    if (
+        question.question_hi
+    ) {
 
         html += `
+
             <div
                 class="
-                    mb-6
-                    flex
-                    flex-col
-                    gap-4
+                    lang-hi
+                    text-lg
+                    font-medium
+                    text-slate-900
+                    leading-relaxed
+                    preserve-lines
+                    mb-4
                 "
             >
-        `;
 
+                ${formatText(
+                    question.question_hi
+                )}
 
-        if (q.question_hi) {
-
-            html += `
-                <div
-                    class="
-                        lang-hi
-                        text-lg
-                        font-medium
-                        text-slate-900
-                        leading-relaxed
-                        preserve-lines
-                    "
-                >
-                    ${formatText(q.question_hi)}
-                </div>
-            `;
-        }
-
-
-        if (q.image_hi) {
-
-            html += `
-                <div class="lang-hi mt-1">
-                    <img
-                        src="${imageUrl(q.image_hi)}"
-                        class="
-                            max-w-full
-                            rounded-lg
-                            border
-                            border-slate-200
-                            shadow-sm
-                            mx-auto
-                        "
-                        alt="Hindi question visual"
-                        loading="lazy"
-                    >
-                </div>
-            `;
-        }
-
-
-        if (q.question_en) {
-
-            html += `
-                <div
-                    class="
-                        lang-en
-                        text-base
-                        text-slate-600
-                        leading-relaxed
-                        preserve-lines
-                        ${
-                            q.question_hi
-                                ? "border-t border-slate-100 pt-4"
-                                : ""
-                        }
-                    "
-                >
-                    ${formatText(q.question_en)}
-                </div>
-            `;
-        }
-
-
-        if (q.image_en) {
-
-            html += `
-                <div class="lang-en mt-1">
-                    <img
-                        src="${imageUrl(q.image_en)}"
-                        class="
-                            max-w-full
-                            rounded-lg
-                            border
-                            border-slate-200
-                            shadow-sm
-                            mx-auto
-                        "
-                        alt="English question visual"
-                        loading="lazy"
-                    >
-                </div>
-            `;
-        }
-
-
-        html += `
             </div>
+
         `;
 
+    }
 
-        // ----------------------------------------------------
-        // OPTIONS
-        // ----------------------------------------------------
+
+    if (
+        question.image_hi
+    ) {
 
         html += `
-            <div class="space-y-3">
+
+            <div
+                class="
+                    lang-hi
+                    mb-5
+                "
+            >
+
+                <img
+                    src="${assetUrl(
+                        currentRun,
+                        question.image_hi
+                    )}"
+                    alt="Hindi question visual"
+                    loading="lazy"
+                    class="
+                        max-w-full
+                        rounded-lg
+                        border
+                        border-slate-200
+                        mx-auto
+                    "
+                >
+
+            </div>
+
         `;
 
-
-        if (
-            Array.isArray(q.options)
-        ) {
-
-            q.options.forEach(
-                opt => {
-
-                    const label =
-                        escapeHtml(
-                            opt.label
-                        );
-
-                    const hasHindi =
-                        Boolean(
-                            opt.hi
-                        );
-
-                    const hasEnglish =
-                        Boolean(
-                            opt.en
-                        );
-
-                    let optionBody = "";
+    }
 
 
-                    if (hasHindi) {
+    if (
+        question.question_en
+    ) {
 
-                        optionBody += `
-                            <div
-                                class="
-                                    lang-hi
-                                    text-sm
-                                    text-slate-900
-                                    preserve-lines
-                                "
-                            >
-                                ${formatText(opt.hi)}
-                            </div>
-                        `;
+        html += `
+
+            <div
+                class="
+                    lang-en
+                    text-base
+                    text-slate-600
+                    leading-relaxed
+                    preserve-lines
+                    ${
+                        question.question_hi
+                            ? `
+                                border-t
+                                border-slate-100
+                                pt-4
+                            `
+                            : ""
                     }
+                    mb-4
+                "
+            >
+
+                ${formatText(
+                    question.question_en
+                )}
+
+            </div>
+
+        `;
+
+    }
 
 
-                    if (hasEnglish) {
+    if (
+        question.image_en
+    ) {
 
-                        optionBody += `
-                            <div
-                                class="
-                                    lang-en
-                                    text-sm
-                                    text-slate-600
-                                    preserve-lines
-                                    ${
-                                        hasHindi
-                                            ? "border-t border-slate-200/60 pt-2"
-                                            : ""
-                                    }
-                                "
-                            >
-                                ${formatText(opt.en)}
-                            </div>
-                        `;
-                    }
+        html += `
+
+            <div
+                class="
+                    lang-en
+                    mb-5
+                "
+            >
+
+                <img
+                    src="${assetUrl(
+                        currentRun,
+                        question.image_en
+                    )}"
+                    alt="English question visual"
+                    loading="lazy"
+                    class="
+                        max-w-full
+                        rounded-lg
+                        border
+                        border-slate-200
+                        mx-auto
+                    "
+                >
+
+            </div>
+
+        `;
+
+    }
 
 
-                    html += `
+    // --------------------------------------------------------
+    // OPTIONS
+    // --------------------------------------------------------
+
+    html += `
+
+        <div
+            class="
+                mt-6
+                space-y-3
+            "
+        >
+
+    `;
+
+
+    if (
+        Array.isArray(
+            question.options
+        )
+    ) {
+
+        question.options.forEach(
+            option => {
+
+                const label =
+                    escapeHtml(
+                        option.label
+                    );
+
+
+                html += `
+
+                    <div
+                        class="
+                            flex
+                            items-start
+                            bg-slate-50
+                            border
+                            border-slate-200
+                            rounded-lg
+                            p-3
+                        "
+                    >
+
+                        <span
+                            class="
+                                font-bold
+                                text-indigo-600
+                                w-9
+                                flex-shrink-0
+                            "
+                        >
+                            (${label})
+                        </span>
+
+
                         <div
                             class="
+                                flex-grow
                                 flex
-                                items-start
-                                bg-slate-50
-                                border
-                                border-slate-200
-                                rounded-lg
-                                p-3
-                                transition
-                                hover:bg-indigo-50
+                                flex-col
+                                gap-2
                             "
                         >
 
-                            <span
-                                class="
-                                    font-bold
-                                    text-indigo-600
-                                    w-9
-                                    flex-shrink-0
-                                    mt-0.5
-                                "
-                            >
-                                (${label})
-                            </span>
-
-                            <div
-                                class="
-                                    flex-grow
-                                    flex
-                                    flex-col
-                                    gap-2
-                                "
-                            >
-                                ${optionBody}
-                            </div>
-
-                        </div>
-                    `;
-                }
-            );
-        }
-
-
-        html += `
-            </div>
-        `;
-
-
-        card.innerHTML = html;
-
-        return card;
-    }
-
-
-    // ========================================================
-    // LOAD QUESTION BANK
-    // ========================================================
-
-    async function loadQuestions() {
-
-        const loading =
-            document.getElementById(
-                "loading"
-            );
-
-        const container =
-            document.getElementById(
-                "questions-container"
-            );
-
-        const errorContainer =
-            document.getElementById(
-                "error-container"
-            );
-
-
-        try {
-
-            const response =
-                await fetch(
-                    "question_bank.json",
-                    {
-                        cache: "no-cache"
-                    }
-                );
-
-
-            if (!response.ok) {
-
-                throw new Error(
-                    `HTTP ${response.status}`
-                );
-            }
-
-
-            const data =
-                await response.json();
-
-
-            questionBank =
-                Array.isArray(
-                    data.questions
-                )
-                    ? data.questions
-                    : [];
-
-
-            loading.classList.add(
-                "hidden"
-            );
-
-
-            document
-                .getElementById(
-                    "question-count"
-                )
-                .innerText =
-                `Total Questions: ${questionBank.length}`;
-
-
-            container.innerHTML = "";
-
-
-            if (!questionBank.length) {
-
-                container.innerHTML = `
-                    <div
-                        class="
-                            bg-white
-                            rounded-xl
-                            shadow-sm
-                            border
-                            border-slate-200
-                            p-8
-                            text-center
-                            text-slate-500
-                        "
-                    >
-                        No questions found.
-                    </div>
                 `;
 
-                return;
-            }
 
+                if (
+                    option.hi
+                ) {
 
-            questionBank.forEach(
-                question => {
+                    html += `
 
-                    container.appendChild(
-                        renderQuestion(
-                            question
-                        )
-                    );
+                        <div
+                            class="
+                                lang-hi
+                                text-sm
+                                text-slate-900
+                                preserve-lines
+                            "
+                        >
+                            ${formatText(
+                                option.hi
+                            )}
+                        </div>
+
+                    `;
+
                 }
-            );
 
 
-            // Start bilingual.
-            setLanguage(
-                "both"
-            );
+                if (
+                    option.en
+                ) {
+
+                    html += `
+
+                        <div
+                            class="
+                                lang-en
+                                text-sm
+                                text-slate-600
+                                preserve-lines
+                                ${
+                                    option.hi
+                                        ? `
+                                            border-t
+                                            border-slate-200
+                                            pt-2
+                                        `
+                                        : ""
+                                }
+                            "
+                        >
+                            ${formatText(
+                                option.en
+                            )}
+                        </div>
+
+                    `;
+
+                }
 
 
-            await typesetMath();
+                html += `
 
+                        </div>
 
-        } catch (error) {
+                    </div>
 
-            console.error(
-                "Question bank loading error:",
-                error
-            );
+                `;
 
+            }
+        );
 
-            loading.classList.add(
-                "hidden"
-            );
-
-
-            errorContainer.classList.remove(
-                "hidden"
-            );
-
-
-            errorContainer.innerHTML = `
-                <div
-                    class="
-                        bg-red-50
-                        border
-                        border-red-200
-                        text-red-700
-                        p-6
-                        rounded-xl
-                        text-center
-                    "
-                >
-
-                    <p class="font-bold">
-                        Could not load question_bank.json
-                    </p>
-
-                    <p class="text-sm mt-2">
-                        Make sure this index.html is placed in
-                        the same folder as question_bank.json.
-                    </p>
-
-                    <p class="text-xs mt-3 text-red-500">
-                        ${escapeHtml(error.message)}
-                    </p>
-
-                </div>
-            `;
-        }
     }
 
 
-    // ========================================================
-    // START
-    // ========================================================
+    html += `
 
-    loadQuestions();
+        </div>
+
+        </article>
+
+    `;
+
+
+    return html;
+
+}
+
+
+// ==========================================================
+// HOME
+// ==========================================================
+
+function showHome() {
+
+    currentRun = null;
+
+    currentQuestions = [];
+
+    window.history.pushState(
+        {},
+        "",
+        window.location.pathname
+    );
+
+
+    loadCatalog()
+        .then(
+            renderHome
+        )
+        .catch(
+            showError
+        );
+
+}
+
+
+// ==========================================================
+// ERROR
+// ==========================================================
+
+function showError(
+    error
+) {
+
+    console.error(
+        error
+    );
+
+
+    document
+        .getElementById(
+            "loading"
+        )
+        .classList.add(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "content"
+        )
+        .classList.add(
+            "hidden"
+        );
+
+
+    const errorElement =
+        document.getElementById(
+            "error"
+        );
+
+
+    errorElement.classList.remove(
+        "hidden"
+    );
+
+
+    errorElement.innerHTML = `
+
+        <div
+            class="
+                bg-red-50
+                border
+                border-red-200
+                rounded-xl
+                p-8
+                text-center
+                text-red-700
+            "
+        >
+
+            <h2
+                class="font-bold text-lg"
+            >
+                Could not load question bank
+            </h2>
+
+            <p class="mt-2 text-sm">
+                ${escapeHtml(
+                    error.message
+                )}
+            </p>
+
+        </div>
+
+    `;
+
+}
+
+
+// ==========================================================
+// INITIALIZATION
+// ==========================================================
+
+async function init() {
+
+    try {
+
+        const catalog =
+            await loadCatalog();
+
+
+        const parameters =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const run =
+            parameters.get(
+                "run"
+            );
+
+
+        if (run) {
+
+            await loadRun(
+                run
+            );
+
+        } else {
+
+            renderHome(
+                catalog
+            );
+
+        }
+
+    } catch (error) {
+
+        showError(
+            error
+        );
+
+    }
+
+}
+
+
+window.onpopstate = (
+    () => {
+        init();
+    }
+);
+
+
+init();
 
 </script>
 
 </body>
+
 </html>
