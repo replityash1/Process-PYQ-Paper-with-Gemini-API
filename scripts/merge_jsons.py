@@ -19,9 +19,8 @@ OUTPUT_ROOT = Path(
     "output"
 )
 
-# FIXED: Check inside input/ folder
 DRIVE_INFO_PATH = Path(
-    "input/.drive_file_info"
+    "input/drive_info.txt"
 )
 
 DEFAULT_RUN_NAME = (
@@ -135,7 +134,7 @@ def sanitize_slug(
 def load_drive_info():
     info_path = DRIVE_INFO_PATH
     if not info_path.exists():
-        info_path = Path(".drive_file_info")
+        info_path = Path("drive_info.txt")
         
     if not info_path.exists():
         return {
@@ -388,10 +387,6 @@ def deduplicate_questions(
 def sort_questions(
     questions,
 ):
-
-    # Printed exam number is authoritative.
-    #
-    # source_page is only the secondary tie-breaker.
 
     return sorted(
         questions,
