@@ -35,10 +35,10 @@ PDF_PATH = (
     / "exam_paper.pdf"
 )
 
-# FIXED: Save the tracking info inside the input folder
+# FIXED: Removed the dot to prevent artifact zipping issues
 DRIVE_INFO_PATH = (
     INPUT_DIR
-    / ".drive_file_info"
+    / "drive_info.txt"
 )
 
 
@@ -234,10 +234,9 @@ def save_drive_info(
 
 def load_drive_info():
     
-    # Check input folder first, fallback to root if needed
     info_path = DRIVE_INFO_PATH
     if not info_path.exists():
-        info_path = Path(".drive_file_info")
+        info_path = Path("drive_info.txt")
         
     if not info_path.exists():
         return None
@@ -255,7 +254,7 @@ def load_drive_info():
 
     if len(lines) < 2:
         raise RuntimeError(
-            ".drive_file_info is malformed."
+            "drive_info.txt is malformed."
         )
 
     file_id = lines[0].strip()
@@ -481,8 +480,6 @@ def main():
 
             result = fetch_latest_pdf()
 
-            # No PDF is a normal condition for the
-            # scheduled workflow.
             if result is None:
                 sys.exit(0)
 
