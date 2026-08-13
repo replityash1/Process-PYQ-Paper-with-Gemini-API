@@ -87,6 +87,34 @@ function toggleAnalysis(id) {
 }
 
 // ==========================================================
+// FRONTEND DATA CLEANER (REMOVES DUPLICATE OPTIONS)
+// ==========================================================
+function cleanQuestionText(text, options, lang) {
+    if (!text || !Array.isArray(options)) return text || "";
+
+    let cleaned = text;
+
+    // Loop backwards (from Option 5 down to 1) to peel them off the bottom
+    for (let i = options.length - 1; i >= 0; i--) {
+        const opt = options[i];
+        const label = String(opt.label).trim();
+        const optText = opt[lang] ? String(opt[lang]).trim() : "";
+
+        if (!optText || optText.length < 2) continue;
+
+        // Escape regex characters so Math/Brackets don't break the search
+        const escapedText = optText.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+
+        // Regex matches the option label (like "(1)" or "1.") and the text strictly at the END ($) of the block
+        const pattern = new RegExp(`(?:\\n|\\s)*(?:\\(${label}\\)|${label}\\.|${label}\\))?\\s*${escapedText}(?:\\n|\\s)*$`, 'i');
+
+        cleaned = cleaned.replace(pattern, '');
+    }
+
+    return cleaned.trim();
+}
+
+// ==========================================================
 // LANGUAGE & MATHJAX
 // ==========================================================
 function setLanguage(language) {
@@ -205,6 +233,10 @@ function renderQuestion(question) {
     const number = escapeHtml(question.number);
     const meta = question.metadata || {};
     
+    // Clean duplicate options from the question text
+    const cleanHi = cleanQuestionText(question.question_hi, question.options, 'hi');
+    const cleanEn = cleanQuestionText(question.question_en, question.options, 'en');
+
     // Difficulty color mapping
     let diffColor = "bg-slate-100 text-slate-800";
     if (meta.difficulty === "Easy") diffColor = "bg-emerald-100 text-emerald-800";
@@ -237,11 +269,11 @@ function renderQuestion(question) {
             </div>`;
     }
 
-    // QUESTION TEXT & IMAGES
-    if (question.question_hi) html += `<div class="lang-hi text-lg font-medium text-slate-900 leading-relaxed preserve-lines mb-4">${formatText(question.question_hi)}</div>`;
+    // QUESTION TEXT & IMAGES (Using the cleaned text variables)
+    if (cleanHi) html += `<div class="lang-hi text-lg font-medium text-slate-900 leading-relaxed preserve-lines mb-4">${formatText(cleanHi)}</div>`;
     if (question.image_hi) html += `<div class="lang-hi mb-5"><img src="${assetUrl(currentRun, question.image_hi)}" class="max-w-full rounded-lg border border-slate-200 mx-auto"></div>`;
     
-    if (question.question_en) html += `<div class="lang-en text-base text-slate-600 leading-relaxed preserve-lines ${question.question_hi ? 'border-t border-slate-100 pt-4' : ''} mb-4">${formatText(question.question_en)}</div>`;
+    if (cleanEn) html += `<div class="lang-en text-base text-slate-600 leading-relaxed preserve-lines ${cleanHi ? 'border-t border-slate-100 pt-4' : ''} mb-4">${formatText(cleanEn)}</div>`;
     if (question.image_en) html += `<div class="lang-en mb-5"><img src="${assetUrl(currentRun, question.image_en)}" class="max-w-full rounded-lg border border-slate-200 mx-auto"></div>`;
 
     // OPTIONS
