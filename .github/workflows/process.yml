@@ -16,17 +16,14 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
-
       - name: Install poppler-utils
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
-
       - name: Generate Matrix
         id: set-matrix
         run: |
           PDF=$(find input -type f -iname "*.pdf" | head -n 1)
           if [ -z "$PDF" ]; then echo "No PDF found in input/"; exit 1; fi
           PAGES=$(pdfinfo "$PDF" | grep Pages | awk '{print $2}')
-          echo "PDF Has $PAGES Pages."
           echo "matrix=$(seq 1 $PAGES | jq -R . | jq -s -c 'map(tonumber)')" >> $GITHUB_OUTPUT
 
   process:
@@ -34,28 +31,24 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 1   # <--- TAMES RATE LIMITS (Keeps requests well under 15 RPM)
+      max-parallel: 1   # <--- Pacing & Concurrency Control: Serializes requests to stay under rate limits
       matrix:
         page: ${{ fromJson(needs.prep.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
-
       - name: Install Dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y poppler-utils
-          python3 -m pip install google-genai pydantic tenacity
-
+          python3 -m pip install google-genai pydantic tenacity pillow
       - name: Render Page
         run: |
           mkdir -p pages output
           PDF=$(find input -type f -iname "*.pdf" | head -n 1)
           pdftoppm -f ${{ matrix.page }} -l ${{ matrix.page }} -singlefile -jpeg -r 150 "$PDF" pages/page_${{ matrix.page }}
-
       - name: Extract Questions with Gemini API
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python3 scripts/extract_api.py ${{ matrix.page }}
-
       - uses: actions/upload-artifact@v4
         with:
           name: output-page-${{ matrix.page }}
@@ -66,29 +59,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Download all outputs
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           path: downloaded_outputs
-
-      - name: Merge and Clean JSONs
+      - name: Merge, Deduplicate & Stitch
         run: python3 scripts/merge_jsons.py
-
       - name: Organize Images and Commit
         run: |
           mkdir -p images
           find downloaded_outputs -type f -name "*.jpg" -exec cp {} images/ \;
-          
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
           git add question_bank.json images/
-          
           if ! git diff --cached --quiet; then
-            git commit -m "AI: Extract PYQs via Gemini Structured API"
+            git commit -m "AI: Process PYQs via Gemini 2.5 Flash API with crop support"
             git pull --rebase origin main
             git push
-          else
-            echo "No changes to commit."
           fi
