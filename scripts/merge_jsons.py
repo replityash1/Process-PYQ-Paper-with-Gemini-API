@@ -18,8 +18,6 @@ def main():
 
     if not json_files:
         print("WARNING: No JSON files found to merge.")
-        with open("question_bank.json", 'w', encoding='utf-8') as f:
-            json.dump({"questions": []}, f)
         return
 
     # Sort files naturally by page number
@@ -34,10 +32,9 @@ def main():
         except Exception as e:
             print(f"Error reading {file_path}: {e}")
 
-    # Handle Cross-Page Boundary Spills & Deduplication
     seen_fingerprints = []
     
-    for i, q in enumerate(raw_questions):
+    for q in raw_questions:
         q_hi = (q.get("question_hi") or "").strip()
         q_en = (q.get("question_en") or "").strip()
         raw_text = re.sub(r'\s+', '', q_hi + q_en)
@@ -45,7 +42,8 @@ def main():
         if len(raw_text) < 10:
             continue
             
-        fingerprint = raw_text[:100]
+        # INCREASED FINGERPRINT: 300 chars prevents deleting questions with identical starting instructions
+        fingerprint = raw_text[:300] 
         is_duplicate = False
         
         for seen in seen_fingerprints:
@@ -56,7 +54,6 @@ def main():
         if is_duplicate:
             continue
             
-        # Check for Spill: If options look empty/default but next element has spill text, merge them
         seen_fingerprints.append(fingerprint)
         all_questions.append(q)
 
@@ -67,7 +64,7 @@ def main():
     with open("question_bank.json", 'w', encoding='utf-8') as out_file:
         json.dump({"questions": all_questions}, out_file, ensure_ascii=False, indent=4)
 
-    print(f"\nSUCCESS: Successfully merged and cleaned {len(all_questions)} unique questions.")
+    print(f"\nSUCCESS: Merged {len(all_questions)} questions.")
 
 if __name__ == "__main__":
     main()
