@@ -140,8 +140,8 @@ jobs:
             exit 1
           fi
 
-          if [ ! -f ".drive_file_info" ]; then
-            echo "ERROR: .drive_file_info is missing."
+          if [ ! -f "input/.drive_file_info" ]; then
+            echo "ERROR: input/.drive_file_info is missing."
             exit 1
           fi
 
@@ -150,7 +150,7 @@ jobs:
 
           echo ""
           echo "Drive metadata:"
-          cat .drive_file_info
+          cat input/.drive_file_info
 
           echo ""
           echo "Source files verified."
@@ -159,9 +159,8 @@ jobs:
       # --------------------------------------------------------
       # Upload source files
       #
-      # IMPORTANT:
-      # Keep the paths exactly like this.
-      # The process jobs download the artifact to repository root.
+      # Uploading the input/ directory explicitly packages
+      # the PDF and tracking file together perfectly.
       # --------------------------------------------------------
 
       - name: Upload source files
@@ -171,11 +170,7 @@ jobs:
 
         with:
           name: source-pdf
-
-          path: |
-            input/exam_paper.pdf
-            .drive_file_info
-
+          path: input/
           retention-days: 1
 
 
@@ -193,21 +188,8 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-
-      # A bad page should not immediately cancel
-      # all other page workers.
       fail-fast: false
-
-      # ======================================================
-      # CHANGE THIS NUMBER TO CONTROL PARALLEL WORKERS
-      #
-      # 5  = five pages at a time
-      # 10 = ten pages at a time
-      # 20 = twenty pages at a time
-      # ======================================================
-
       max-parallel: 5
-
       matrix:
         page: ${{ fromJson(needs.prep.outputs.matrix) }}
 
@@ -250,20 +232,6 @@ jobs:
 
       # --------------------------------------------------------
       # Download source artifact
-      #
-      # IMPORTANT FIX:
-      #
-      # DO NOT use:
-      #
-      #   path: input/
-      #
-      # Because the artifact already contains input/exam_paper.pdf.
-      #
-      # Downloading to input/ would create:
-      #
-      #   input/input/exam_paper.pdf
-      #
-      # Instead download to repository root.
       # --------------------------------------------------------
 
       - name: Download source files
@@ -271,7 +239,7 @@ jobs:
 
         with:
           name: source-pdf
-          path: .
+          path: input/
 
 
       # --------------------------------------------------------
@@ -325,10 +293,10 @@ jobs:
           fi
 
 
-          if [ ! -f ".drive_file_info" ]; then
+          if [ ! -f "input/.drive_file_info" ]; then
 
             echo "ERROR:"
-            echo ".drive_file_info was not found."
+            echo "input/.drive_file_info was not found."
 
             echo ""
             echo "Repository files:"
@@ -347,7 +315,7 @@ jobs:
 
           echo ""
           echo "Drive metadata:"
-          cat .drive_file_info
+          cat input/.drive_file_info
 
           echo ""
           echo "Source files verified successfully."
@@ -566,14 +534,7 @@ jobs:
 
 
       # --------------------------------------------------------
-      # Restore Drive metadata
-      #
-      # download-artifact places the artifact files under:
-      #
-      # downloaded_outputs/
-      #
-      # Search recursively because there may be multiple
-      # artifact directories.
+      # Restore Drive metadata into input/
       # --------------------------------------------------------
 
       - name: Restore Drive metadata
@@ -592,13 +553,14 @@ jobs:
 
             echo "Found Drive metadata:"
             echo "$DRIVE_INFO"
-
-            cp "$DRIVE_INFO" .
+            
+            mkdir -p input
+            cp "$DRIVE_INFO" input/
 
             echo ""
-            echo "Restored .drive_file_info"
+            echo "Restored input/.drive_file_info"
 
-            cat .drive_file_info
+            cat input/.drive_file_info
 
           else
 
