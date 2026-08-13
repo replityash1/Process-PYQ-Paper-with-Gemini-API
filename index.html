@@ -2,119 +2,890 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>RPSC Question Bank Viewer</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         window.MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true },
-            startup: { typeset: false }
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ],
+                processEscapes: true
+            },
+
+            startup: {
+                typeset: false
+            }
         };
     </script>
-    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>.preserve-lines { white-space: pre-wrap; word-break: break-word; }</style>
+
+    <script
+        id="MathJax-script"
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <style>
+        .preserve-lines {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        img {
+            max-height: 900px;
+            object-fit: contain;
+        }
+    </style>
 </head>
+
+
 <body class="bg-slate-50 text-slate-800 min-h-screen">
-    <header class="bg-indigo-700 text-white shadow-md py-5 px-4 mb-8 sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <h1 class="text-2xl font-bold tracking-wide">RPSC Exam Question Bank</h1>
-            <div class="flex items-center gap-4">
-                <div class="flex bg-indigo-900 p-1 rounded-lg text-sm font-medium shadow-inner">
-                    <button id="btn-hi" onclick="setLanguage('hi')" class="px-4 py-1.5 rounded-md bg-white text-indigo-900 shadow">Hindi</button>
-                    <button id="btn-en" onclick="setLanguage('en')" class="px-4 py-1.5 rounded-md text-indigo-100 hover:text-white">English</button>
-                    <button id="btn-both" onclick="setLanguage('both')" class="px-4 py-1.5 rounded-md text-indigo-100 hover:text-white">Bilingual</button>
-                </div>
-                <span id="question-count" class="bg-indigo-100 text-indigo-800 text-sm px-3 py-1.5 rounded-full font-bold shadow-sm">Loading...</span>
-            </div>
+
+<header
+    class="
+        bg-indigo-700
+        text-white
+        shadow-md
+        py-5
+        px-4
+        mb-8
+        sticky
+        top-0
+        z-50
+    "
+>
+
+    <div
+        class="
+            max-w-5xl
+            mx-auto
+            flex
+            flex-col
+            md:flex-row
+            justify-between
+            items-center
+            gap-4
+        "
+    >
+
+        <div class="text-center md:text-left">
+
+            <h1 class="text-2xl font-bold tracking-wide">
+                RPSC Exam Question Bank
+            </h1>
+
+            <div
+                id="run-name"
+                class="text-indigo-200 text-xs mt-1"
+            ></div>
+
         </div>
-    </header>
 
-    <main class="max-w-4xl mx-auto px-4 pb-12">
-        <div id="questions-container" class="space-y-8"></div>
-    </main>
 
-    <script>
-        function formatText(text) {
-            if (!text) return "";
-            let formatted = text.trim().replace(/\n/g, '<br>');
-            formatted = formatted.replace(/\s([A-E]\.)\s/g, '<br><span class="font-semibold text-indigo-700 ml-4">$1</span> ');
-            return formatted;
+        <div class="flex items-center gap-3 flex-wrap justify-center">
+
+            <div
+                class="
+                    flex
+                    bg-indigo-900
+                    p-1
+                    rounded-lg
+                    text-sm
+                    font-medium
+                    shadow-inner
+                "
+            >
+
+                <button
+                    id="btn-hi"
+                    onclick="setLanguage('hi')"
+                    class="
+                        px-4
+                        py-1.5
+                        rounded-md
+                        bg-white
+                        text-indigo-900
+                        shadow
+                    "
+                >
+                    Hindi
+                </button>
+
+                <button
+                    id="btn-en"
+                    onclick="setLanguage('en')"
+                    class="
+                        px-4
+                        py-1.5
+                        rounded-md
+                        text-indigo-100
+                        hover:text-white
+                    "
+                >
+                    English
+                </button>
+
+                <button
+                    id="btn-both"
+                    onclick="setLanguage('both')"
+                    class="
+                        px-4
+                        py-1.5
+                        rounded-md
+                        text-indigo-100
+                        hover:text-white
+                    "
+                >
+                    Bilingual
+                </button>
+
+            </div>
+
+
+            <span
+                id="question-count"
+                class="
+                    bg-indigo-100
+                    text-indigo-800
+                    text-sm
+                    px-3
+                    py-1.5
+                    rounded-full
+                    font-bold
+                    shadow-sm
+                "
+            >
+                Loading...
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main
+    class="max-w-5xl mx-auto px-4 pb-12"
+>
+
+    <div
+        id="loading"
+        class="
+            bg-white
+            rounded-xl
+            shadow-sm
+            border
+            border-slate-200
+            p-8
+            text-center
+            text-slate-500
+        "
+    >
+        Loading question bank...
+    </div>
+
+
+    <div
+        id="questions-container"
+        class="space-y-8"
+    ></div>
+
+
+    <div
+        id="error-container"
+        class="hidden"
+    ></div>
+
+</main>
+
+
+<script>
+
+    // ========================================================
+    // STATE
+    // ========================================================
+
+    let questionBank = [];
+
+
+    // ========================================================
+    // HTML ESCAPING
+    // ========================================================
+
+    function escapeHtml(value) {
+
+        if (value === null || value === undefined) {
+            return "";
         }
 
-        function setLanguage(lang) {
-            ['hi', 'en', 'both'].forEach(b => {
-                const el = document.getElementById(`btn-${b}`);
-                el.className = b === lang 
-                    ? "px-4 py-1.5 rounded-md bg-white text-indigo-900 shadow"
-                    : "px-4 py-1.5 rounded-md text-indigo-100 hover:text-white";
-            });
-            document.querySelectorAll('.lang-hi').forEach(el => {
-                if (lang === 'hi' || lang === 'both') el.classList.remove('hidden'); else el.classList.add('hidden');
-            });
-            document.querySelectorAll('.lang-en').forEach(el => {
-                if (lang === 'en' || lang === 'both') el.classList.remove('hidden'); else el.classList.add('hidden');
-            });
+        const div = document.createElement("div");
+
+        div.textContent = String(value);
+
+        return div.innerHTML;
+    }
+
+
+    // ========================================================
+    // TEXT FORMATTING
+    // ========================================================
+
+    function formatText(text) {
+
+        if (!text) {
+            return "";
         }
 
-        async function loadQuestions() {
+        let formatted = escapeHtml(text);
+
+        // Preserve newlines.
+        formatted = formatted.replace(
+            /\n/g,
+            "<br>"
+        );
+
+        return formatted;
+    }
+
+
+    // ========================================================
+    // LANGUAGE SWITCHING
+    // ========================================================
+
+    function setLanguage(lang) {
+
+        ["hi", "en", "both"].forEach(
+            buttonLanguage => {
+
+                const element =
+                    document.getElementById(
+                        `btn-${buttonLanguage}`
+                    );
+
+                if (!element) {
+                    return;
+                }
+
+                element.className =
+                    buttonLanguage === lang
+
+                        ? `
+                            px-4
+                            py-1.5
+                            rounded-md
+                            bg-white
+                            text-indigo-900
+                            shadow
+                        `
+
+                        : `
+                            px-4
+                            py-1.5
+                            rounded-md
+                            text-indigo-100
+                            hover:text-white
+                        `;
+            }
+        );
+
+
+        document
+            .querySelectorAll(".lang-hi")
+            .forEach(element => {
+
+                if (
+                    lang === "hi" ||
+                    lang === "both"
+                ) {
+                    element.classList.remove(
+                        "hidden"
+                    );
+                } else {
+                    element.classList.add(
+                        "hidden"
+                    );
+                }
+            });
+
+
+        document
+            .querySelectorAll(".lang-en")
+            .forEach(element => {
+
+                if (
+                    lang === "en" ||
+                    lang === "both"
+                ) {
+                    element.classList.remove(
+                        "hidden"
+                    );
+                } else {
+                    element.classList.add(
+                        "hidden"
+                    );
+                }
+            });
+
+
+        // Re-render MathJax after changing visibility.
+        setTimeout(
+            typesetMath,
+            50
+        );
+    }
+
+
+    // ========================================================
+    // MATHJAX
+    // ========================================================
+
+    async function typesetMath() {
+
+        if (
+            window.MathJax &&
+            typeof MathJax.typesetPromise === "function"
+        ) {
+
             try {
-                const response = await fetch('question_bank.json');
-                const data = await response.json();
-                const rawQuestions = data.questions || [];
-                
-                document.getElementById('question-count').innerText = `Total Questions: ${rawQuestions.length}`;
-                const container = document.getElementById('questions-container');
-                container.innerHTML = '';
 
-                rawQuestions.forEach((q) => {
-                    const card = document.createElement('div');
-                    card.className = 'bg-white rounded-xl shadow-sm border border-slate-200 p-6 transition hover:shadow-md';
+                MathJax.typesetClear();
 
-                    let html = `<div class="border-b border-slate-100 pb-3 mb-4"><span class="bg-indigo-50 text-indigo-700 font-bold px-3 py-1 rounded-lg text-sm shadow-sm border border-indigo-100">Question ${q.number}</span></div>`;
+                await MathJax.typesetPromise();
 
-                    html += `<div class="mb-6 flex flex-col gap-3">`;
-                    
-                    // Display text if available
-                    if (q.question_hi) html += `<div class="lang-hi text-lg font-medium text-slate-900 leading-relaxed preserve-lines">${formatText(q.question_hi)}</div>`;
-                    
-                    // Display Full Hindi Image Block
-                    if (q.image_hi) html += `<div class="lang-hi mt-2"><img src="${q.image_hi}" class="max-w-full rounded-lg border border-slate-200 shadow-sm" alt="Hindi Question Block"></div>`;
-                    
-                    if (q.question_en) html += `<div class="lang-en text-base text-slate-600 leading-relaxed preserve-lines ${q.question_hi ? 'border-t border-slate-100 pt-3' : ''}">${formatText(q.question_en)}</div>`;
-                    
-                    // Display Full English Image Block
-                    if (q.image_en) html += `<div class="lang-en mt-2"><img src="${q.image_en}" class="max-w-full rounded-lg border border-slate-200 shadow-sm" alt="English Question Block"></div>`;
-                    
-                    html += `</div>`;
-
-                    html += `<div class="space-y-3">`;
-                    if (q.options) {
-                        q.options.forEach(opt => {
-                            // If option has no text (because it's a dummy visual option), just render the button label
-                            const hasText = opt.hi || opt.en;
-                            
-                            if (!hasText) {
-                                html += `<div class="flex items-center bg-slate-50 hover:bg-indigo-50 cursor-pointer border border-slate-200 rounded-lg p-3 transition"><span class="font-bold text-indigo-600 w-8 flex-shrink-0">(${opt.label})</span></div>`;
-                            } else {
-                                html += `<div class="flex items-start bg-slate-50 hover:bg-indigo-50 cursor-pointer border border-slate-200 rounded-lg p-3 transition"><span class="font-bold text-indigo-600 w-8 flex-shrink-0 mt-0.5">(${opt.label})</span><div class="flex-grow flex flex-col gap-2">`;
-                                if (opt.hi) html += `<div class="lang-hi text-sm text-slate-900 preserve-lines">${formatText(opt.hi)}</div>`;
-                                if (opt.en) html += `<div class="lang-en text-sm text-slate-500 preserve-lines ${opt.hi ? 'border-t border-slate-200/60 pt-2' : ''}">${formatText(opt.en)}</div>`;
-                                html += `</div></div>`;
-                            }
-                        });
-                    }
-                    html += `</div>`;
-                    card.innerHTML = html;
-                    container.appendChild(card);
-                });
-
-                setLanguage('both');
-                setTimeout(() => { if (window.MathJax) { MathJax.typesetClear(); MathJax.typeset(); } }, 300);
             } catch (error) {
-                document.getElementById('questions-container').innerHTML = `<div class="bg-red-50 text-red-700 p-6 rounded-xl text-center"><p class="font-bold">Error loading question_bank.json</p></div>`;
+
+                console.warn(
+                    "MathJax typesetting failed:",
+                    error
+                );
+
             }
         }
-        loadQuestions();
-    </script>
+    }
+
+
+    // ========================================================
+    // IMAGE URL
+    // ========================================================
+
+    function imageUrl(path) {
+
+        if (!path) {
+            return "";
+        }
+
+        return escapeHtml(
+            path.replace(
+                /^\/+/,
+                ""
+            )
+        );
+    }
+
+
+    // ========================================================
+    // RENDER QUESTION
+    // ========================================================
+
+    function renderQuestion(q) {
+
+        const card =
+            document.createElement("article");
+
+        card.className = `
+            bg-white
+            rounded-xl
+            shadow-sm
+            border
+            border-slate-200
+            p-5
+            md:p-6
+            transition
+            hover:shadow-md
+        `;
+
+
+        const questionNumber =
+            escapeHtml(q.number);
+
+
+        const sourcePage =
+            q.source_page !== undefined &&
+            q.source_page !== null
+                ? `Page ${escapeHtml(q.source_page)}`
+                : "";
+
+
+        let html = `
+
+            <div
+                class="
+                    border-b
+                    border-slate-100
+                    pb-3
+                    mb-5
+                    flex
+                    justify-between
+                    items-center
+                    gap-3
+                "
+            >
+
+                <span
+                    class="
+                        bg-indigo-50
+                        text-indigo-700
+                        font-bold
+                        px-3
+                        py-1
+                        rounded-lg
+                        text-sm
+                        shadow-sm
+                        border
+                        border-indigo-100
+                    "
+                >
+                    Question ${questionNumber}
+                </span>
+
+                ${
+                    sourcePage
+                        ? `
+                            <span
+                                class="
+                                    text-xs
+                                    text-slate-400
+                                "
+                            >
+                                ${sourcePage}
+                            </span>
+                        `
+                        : ""
+                }
+
+            </div>
+        `;
+
+
+        // ----------------------------------------------------
+        // QUESTION
+        // ----------------------------------------------------
+
+        html += `
+            <div
+                class="
+                    mb-6
+                    flex
+                    flex-col
+                    gap-4
+                "
+            >
+        `;
+
+
+        if (q.question_hi) {
+
+            html += `
+                <div
+                    class="
+                        lang-hi
+                        text-lg
+                        font-medium
+                        text-slate-900
+                        leading-relaxed
+                        preserve-lines
+                    "
+                >
+                    ${formatText(q.question_hi)}
+                </div>
+            `;
+        }
+
+
+        if (q.image_hi) {
+
+            html += `
+                <div class="lang-hi mt-1">
+                    <img
+                        src="${imageUrl(q.image_hi)}"
+                        class="
+                            max-w-full
+                            rounded-lg
+                            border
+                            border-slate-200
+                            shadow-sm
+                            mx-auto
+                        "
+                        alt="Hindi question visual"
+                        loading="lazy"
+                    >
+                </div>
+            `;
+        }
+
+
+        if (q.question_en) {
+
+            html += `
+                <div
+                    class="
+                        lang-en
+                        text-base
+                        text-slate-600
+                        leading-relaxed
+                        preserve-lines
+                        ${
+                            q.question_hi
+                                ? "border-t border-slate-100 pt-4"
+                                : ""
+                        }
+                    "
+                >
+                    ${formatText(q.question_en)}
+                </div>
+            `;
+        }
+
+
+        if (q.image_en) {
+
+            html += `
+                <div class="lang-en mt-1">
+                    <img
+                        src="${imageUrl(q.image_en)}"
+                        class="
+                            max-w-full
+                            rounded-lg
+                            border
+                            border-slate-200
+                            shadow-sm
+                            mx-auto
+                        "
+                        alt="English question visual"
+                        loading="lazy"
+                    >
+                </div>
+            `;
+        }
+
+
+        html += `
+            </div>
+        `;
+
+
+        // ----------------------------------------------------
+        // OPTIONS
+        // ----------------------------------------------------
+
+        html += `
+            <div class="space-y-3">
+        `;
+
+
+        if (
+            Array.isArray(q.options)
+        ) {
+
+            q.options.forEach(
+                opt => {
+
+                    const label =
+                        escapeHtml(
+                            opt.label
+                        );
+
+                    const hasHindi =
+                        Boolean(
+                            opt.hi
+                        );
+
+                    const hasEnglish =
+                        Boolean(
+                            opt.en
+                        );
+
+                    let optionBody = "";
+
+
+                    if (hasHindi) {
+
+                        optionBody += `
+                            <div
+                                class="
+                                    lang-hi
+                                    text-sm
+                                    text-slate-900
+                                    preserve-lines
+                                "
+                            >
+                                ${formatText(opt.hi)}
+                            </div>
+                        `;
+                    }
+
+
+                    if (hasEnglish) {
+
+                        optionBody += `
+                            <div
+                                class="
+                                    lang-en
+                                    text-sm
+                                    text-slate-600
+                                    preserve-lines
+                                    ${
+                                        hasHindi
+                                            ? "border-t border-slate-200/60 pt-2"
+                                            : ""
+                                    }
+                                "
+                            >
+                                ${formatText(opt.en)}
+                            </div>
+                        `;
+                    }
+
+
+                    html += `
+                        <div
+                            class="
+                                flex
+                                items-start
+                                bg-slate-50
+                                border
+                                border-slate-200
+                                rounded-lg
+                                p-3
+                                transition
+                                hover:bg-indigo-50
+                            "
+                        >
+
+                            <span
+                                class="
+                                    font-bold
+                                    text-indigo-600
+                                    w-9
+                                    flex-shrink-0
+                                    mt-0.5
+                                "
+                            >
+                                (${label})
+                            </span>
+
+                            <div
+                                class="
+                                    flex-grow
+                                    flex
+                                    flex-col
+                                    gap-2
+                                "
+                            >
+                                ${optionBody}
+                            </div>
+
+                        </div>
+                    `;
+                }
+            );
+        }
+
+
+        html += `
+            </div>
+        `;
+
+
+        card.innerHTML = html;
+
+        return card;
+    }
+
+
+    // ========================================================
+    // LOAD QUESTION BANK
+    // ========================================================
+
+    async function loadQuestions() {
+
+        const loading =
+            document.getElementById(
+                "loading"
+            );
+
+        const container =
+            document.getElementById(
+                "questions-container"
+            );
+
+        const errorContainer =
+            document.getElementById(
+                "error-container"
+            );
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "question_bank.json",
+                    {
+                        cache: "no-cache"
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `HTTP ${response.status}`
+                );
+            }
+
+
+            const data =
+                await response.json();
+
+
+            questionBank =
+                Array.isArray(
+                    data.questions
+                )
+                    ? data.questions
+                    : [];
+
+
+            loading.classList.add(
+                "hidden"
+            );
+
+
+            document
+                .getElementById(
+                    "question-count"
+                )
+                .innerText =
+                `Total Questions: ${questionBank.length}`;
+
+
+            container.innerHTML = "";
+
+
+            if (!questionBank.length) {
+
+                container.innerHTML = `
+                    <div
+                        class="
+                            bg-white
+                            rounded-xl
+                            shadow-sm
+                            border
+                            border-slate-200
+                            p-8
+                            text-center
+                            text-slate-500
+                        "
+                    >
+                        No questions found.
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            questionBank.forEach(
+                question => {
+
+                    container.appendChild(
+                        renderQuestion(
+                            question
+                        )
+                    );
+                }
+            );
+
+
+            // Start bilingual.
+            setLanguage(
+                "both"
+            );
+
+
+            await typesetMath();
+
+
+        } catch (error) {
+
+            console.error(
+                "Question bank loading error:",
+                error
+            );
+
+
+            loading.classList.add(
+                "hidden"
+            );
+
+
+            errorContainer.classList.remove(
+                "hidden"
+            );
+
+
+            errorContainer.innerHTML = `
+                <div
+                    class="
+                        bg-red-50
+                        border
+                        border-red-200
+                        text-red-700
+                        p-6
+                        rounded-xl
+                        text-center
+                    "
+                >
+
+                    <p class="font-bold">
+                        Could not load question_bank.json
+                    </p>
+
+                    <p class="text-sm mt-2">
+                        Make sure this index.html is placed in
+                        the same folder as question_bank.json.
+                    </p>
+
+                    <p class="text-xs mt-3 text-red-500">
+                        ${escapeHtml(error.message)}
+                    </p>
+
+                </div>
+            `;
+        }
+    }
+
+
+    // ========================================================
+    // START
+    // ========================================================
+
+    loadQuestions();
+
+</script>
+
 </body>
 </html>
