@@ -1,7 +1,6 @@
 name: Automated RPSC Drive Pipeline
 
 on:
-
   workflow_dispatch:
 
   schedule:
@@ -12,7 +11,7 @@ permissions:
 
 
 # ============================================================
-# PREP
+# PREP JOB
 # ============================================================
 
 jobs:
@@ -27,15 +26,29 @@ jobs:
 
     steps:
 
+      # --------------------------------------------------------
+      # Checkout
+      # --------------------------------------------------------
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
 
+      # --------------------------------------------------------
+      # System dependencies
+      # --------------------------------------------------------
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y poppler-utils jq
+          sudo apt-get install -y \
+            poppler-utils \
+            jq
 
+
+      # --------------------------------------------------------
+      # Python dependencies
+      # --------------------------------------------------------
 
       - name: Install Python dependencies
         run: |
@@ -47,8 +60,13 @@ jobs:
             pillow
 
 
-      - name: Fetch latest PDF from Drive
+      # --------------------------------------------------------
+      # Fetch PDF from Google Drive
+      # --------------------------------------------------------
+
+      - name: Check Drive and fetch PDF
         id: check
+
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
 
@@ -60,12 +78,20 @@ jobs:
 
             echo "has_file=true" >> "$GITHUB_OUTPUT"
 
+            echo "PDF successfully downloaded."
+
           else
 
             echo "has_file=false" >> "$GITHUB_OUTPUT"
 
+            echo "No PDF available."
+
           fi
 
+
+      # --------------------------------------------------------
+      # Generate page matrix
+      # --------------------------------------------------------
 
       - name: Generate page matrix
         id: matrix
@@ -79,7 +105,12 @@ jobs:
             awk '/^Pages:/ {print $2}'
           )
 
-          echo "Total pages: $PAGE_COUNT"
+          if [ -z "$PAGE_COUNT" ]; then
+            echo "ERROR: Could not determine PDF page count."
+            exit 1
+          fi
+
+          echo "PDF page count: $PAGE_COUNT"
 
           MATRIX=$(
             seq 1 "$PAGE_COUNT" |
@@ -87,10 +118,53 @@ jobs:
             jq -s -c 'map(tonumber)'
           )
 
+          echo "Generated matrix:"
+          echo "$MATRIX"
+
           echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
 
 
-      - name: Upload source PDF
+      # --------------------------------------------------------
+      # Verify source files before artifact upload
+      # --------------------------------------------------------
+
+      - name: Verify source files
+        if: steps.check.outputs.has_file == 'true'
+
+        run: |
+
+          echo "Checking source files..."
+
+          if [ ! -f "input/exam_paper.pdf" ]; then
+            echo "ERROR: input/exam_paper.pdf is missing."
+            exit 1
+          fi
+
+          if [ ! -f ".drive_file_info" ]; then
+            echo "ERROR: .drive_file_info is missing."
+            exit 1
+          fi
+
+          echo "PDF:"
+          ls -lh input/exam_paper.pdf
+
+          echo ""
+          echo "Drive metadata:"
+          cat .drive_file_info
+
+          echo ""
+          echo "Source files verified."
+
+
+      # --------------------------------------------------------
+      # Upload source files
+      #
+      # IMPORTANT:
+      # Keep the paths exactly like this.
+      # The process jobs download the artifact to repository root.
+      # --------------------------------------------------------
+
+      - name: Upload source files
         if: steps.check.outputs.has_file == 'true'
 
         uses: actions/upload-artifact@v4
@@ -105,9 +179,10 @@ jobs:
           retention-days: 1
 
 
-# ============================================================
-# PROCESS EACH PAGE
-# ============================================================
+  # ============================================================
+  # PROCESS JOB
+  # One worker per PDF page
+  # ============================================================
 
   process:
 
@@ -119,7 +194,17 @@ jobs:
 
     strategy:
 
+      # A bad page should not immediately cancel
+      # all other page workers.
       fail-fast: false
+
+      # ======================================================
+      # CHANGE THIS NUMBER TO CONTROL PARALLEL WORKERS
+      #
+      # 5  = five pages at a time
+      # 10 = ten pages at a time
+      # 20 = twenty pages at a time
+      # ======================================================
 
       max-parallel: 5
 
@@ -129,15 +214,28 @@ jobs:
 
     steps:
 
+      # --------------------------------------------------------
+      # Checkout repository
+      # --------------------------------------------------------
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
 
+      # --------------------------------------------------------
+      # System dependencies
+      # --------------------------------------------------------
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y poppler-utils
+          sudo apt-get install -y \
+            poppler-utils
 
+
+      # --------------------------------------------------------
+      # Python dependencies
+      # --------------------------------------------------------
 
       - name: Install Python dependencies
         run: |
@@ -150,32 +248,134 @@ jobs:
             pillow
 
 
-      - name: Download source PDF
+      # --------------------------------------------------------
+      # Download source artifact
+      #
+      # IMPORTANT FIX:
+      #
+      # DO NOT use:
+      #
+      #   path: input/
+      #
+      # Because the artifact already contains input/exam_paper.pdf.
+      #
+      # Downloading to input/ would create:
+      #
+      #   input/input/exam_paper.pdf
+      #
+      # Instead download to repository root.
+      # --------------------------------------------------------
+
+      - name: Download source files
         uses: actions/download-artifact@v4
 
         with:
           name: source-pdf
-          path: input/
+          path: .
 
 
-      - name: Prepare directories
+      # --------------------------------------------------------
+      # Verify artifact structure
+      # --------------------------------------------------------
+
+      - name: Verify downloaded source files
         run: |
+
+          echo "Current working directory:"
+          pwd
+
+          echo ""
+          echo "Relevant files:"
+          find . \
+            -maxdepth 3 \
+            -type f \
+            \( \
+              -name "exam_paper.pdf" \
+              -o \
+              -name ".drive_file_info" \
+            \) \
+            -print \
+            | sort
+
+          echo ""
+
+          if [ ! -f "input/exam_paper.pdf" ]; then
+
+            echo "ERROR:"
+            echo "input/exam_paper.pdf was not found."
+
+            echo ""
+            echo "Full input directory:"
+            find input \
+              -maxdepth 3 \
+              -type f \
+              -print \
+              2>/dev/null \
+              | sort || true
+
+            echo ""
+            echo "Repository files:"
+            find . \
+              -maxdepth 3 \
+              -type f \
+              | sort
+
+            exit 1
+
+          fi
+
+
+          if [ ! -f ".drive_file_info" ]; then
+
+            echo "ERROR:"
+            echo ".drive_file_info was not found."
+
+            echo ""
+            echo "Repository files:"
+            find . \
+              -maxdepth 3 \
+              -type f \
+              | sort
+
+            exit 1
+
+          fi
+
+
+          echo "Source PDF:"
+          ls -lh input/exam_paper.pdf
+
+          echo ""
+          echo "Drive metadata:"
+          cat .drive_file_info
+
+          echo ""
+          echo "Source files verified successfully."
+
+
+      # --------------------------------------------------------
+      # Prepare temporary directories
+      # --------------------------------------------------------
+
+      - name: Prepare processing directories
+        run: |
+
           mkdir -p pages
           mkdir -p output_temp
 
+          echo "Directories prepared."
 
-      - name: Restore Drive metadata
-        run: |
 
-          if [ -f "input/.drive_file_info" ]; then
-            cp input/.drive_file_info .
-          fi
-
+      # --------------------------------------------------------
+      # Render one page from PDF
+      # --------------------------------------------------------
 
       - name: Render page
         run: |
 
-          echo "Rendering page ${{ matrix.page }}"
+          echo "======================================"
+          echo "RENDERING PAGE ${{ matrix.page }}"
+          echo "======================================"
 
           pdftoppm \
             -f ${{ matrix.page }} \
@@ -186,9 +386,27 @@ jobs:
             input/exam_paper.pdf \
             pages/page_${{ matrix.page }}
 
+
+          if [ ! -f "pages/page_${{ matrix.page }}.jpg" ]; then
+
+            echo "ERROR:"
+            echo "Page image was not created."
+
+            exit 1
+
+          fi
+
+
+          echo ""
+          echo "Rendered page image:"
+
           ls -lh \
             pages/page_${{ matrix.page }}.jpg
 
+
+      # --------------------------------------------------------
+      # Gemini extraction
+      # --------------------------------------------------------
 
       - name: Extract questions with Gemini
         env:
@@ -196,10 +414,51 @@ jobs:
 
         run: |
 
+          echo "======================================"
+          echo "GEMINI EXTRACTION"
+          echo "PAGE: ${{ matrix.page }}"
+          echo "======================================"
+
           python3 \
             scripts/extract_api.py \
             ${{ matrix.page }}
 
+
+      # --------------------------------------------------------
+      # Verify page output before uploading artifact
+      # --------------------------------------------------------
+
+      - name: Verify page output
+        run: |
+
+          echo "Generated output files:"
+
+          find output_temp \
+            -maxdepth 1 \
+            -type f \
+            -print \
+            | sort
+
+
+          if [ ! -f \
+            "output_temp/page_${{ matrix.page }}.json"
+          ]; then
+
+            echo "ERROR:"
+            echo "Expected page JSON was not generated."
+
+            exit 1
+
+          fi
+
+
+          echo ""
+          echo "Page output verified."
+
+
+      # --------------------------------------------------------
+      # Upload page result
+      # --------------------------------------------------------
 
       - name: Upload page output
         uses: actions/upload-artifact@v4
@@ -212,9 +471,9 @@ jobs:
           retention-days: 1
 
 
-# ============================================================
-# MERGE EVERYTHING
-# ============================================================
+  # ============================================================
+  # MERGE JOB
+  # ============================================================
 
   merge:
 
@@ -224,9 +483,17 @@ jobs:
 
     steps:
 
+      # --------------------------------------------------------
+      # Checkout
+      # --------------------------------------------------------
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
+
+      # --------------------------------------------------------
+      # Drive dependencies
+      # --------------------------------------------------------
 
       - name: Install Drive dependencies
         run: |
@@ -238,22 +505,76 @@ jobs:
             google-auth
 
 
-      - name: Download all page artifacts
+      # --------------------------------------------------------
+      # Download ALL page artifacts
+      # --------------------------------------------------------
+
+      - name: Download all page outputs
         uses: actions/download-artifact@v4
 
         with:
           path: downloaded_outputs
 
 
-      - name: Inspect downloaded artifacts
+      # --------------------------------------------------------
+      # Inspect downloaded artifacts
+      # --------------------------------------------------------
+
+      - name: Verify downloaded page outputs
         run: |
 
-          echo "Downloaded files:"
+          echo "======================================"
+          echo "DOWNLOADED ARTIFACTS"
+          echo "======================================"
+
+          if [ ! -d "downloaded_outputs" ]; then
+
+            echo "ERROR: downloaded_outputs does not exist."
+
+            exit 1
+
+          fi
+
 
           find downloaded_outputs \
-            -type f |
-            sort
+            -type f \
+            -print \
+            | sort
 
+
+          JSON_COUNT=$(
+            find downloaded_outputs \
+              -type f \
+              -name "*.json" \
+              ! -name "*_raw.json" \
+              | wc -l
+          )
+
+
+          echo ""
+          echo "JSON files found: $JSON_COUNT"
+
+
+          if [ "$JSON_COUNT" -eq 0 ]; then
+
+            echo "ERROR:"
+            echo "No page JSON files were downloaded."
+
+            exit 1
+
+          fi
+
+
+      # --------------------------------------------------------
+      # Restore Drive metadata
+      #
+      # download-artifact places the artifact files under:
+      #
+      # downloaded_outputs/
+      #
+      # Search recursively because there may be multiple
+      # artifact directories.
+      # --------------------------------------------------------
 
       - name: Restore Drive metadata
         run: |
@@ -266,25 +587,79 @@ jobs:
               -quit
           )
 
+
           if [ -n "$DRIVE_INFO" ]; then
+
+            echo "Found Drive metadata:"
+            echo "$DRIVE_INFO"
 
             cp "$DRIVE_INFO" .
 
-            echo "Drive metadata restored."
+            echo ""
+            echo "Restored .drive_file_info"
+
+            cat .drive_file_info
 
           else
 
-            echo "WARNING: Drive metadata not found."
+            echo "ERROR:"
+            echo ".drive_file_info was not found."
+
+            exit 1
 
           fi
 
 
+      # --------------------------------------------------------
+      # Merge questions
+      # --------------------------------------------------------
+
       - name: Merge question bank
         run: |
+
+          echo "======================================"
+          echo "MERGING QUESTION BANK"
+          echo "======================================"
 
           python3 \
             scripts/merge_jsons.py
 
+
+      # --------------------------------------------------------
+      # Verify final output
+      # --------------------------------------------------------
+
+      - name: Verify final output
+        run: |
+
+          echo "======================================"
+          echo "FINAL OUTPUT"
+          echo "======================================"
+
+          find output \
+            -maxdepth 4 \
+            -type f \
+            -print \
+            | sort
+
+
+          if [ ! -f "output/catalog.json" ]; then
+
+            echo "ERROR:"
+            echo "output/catalog.json was not created."
+
+            exit 1
+
+          fi
+
+
+          echo ""
+          echo "Catalog verified."
+
+
+      # --------------------------------------------------------
+      # Archive processed PDF in Google Drive
+      # --------------------------------------------------------
 
       - name: Archive processed PDF
         env:
@@ -292,12 +667,18 @@ jobs:
 
         run: |
 
+          echo "Archiving processed PDF..."
+
           python3 \
             scripts/drive_sync.py \
             archive
 
 
-      - name: Commit generated database
+      # --------------------------------------------------------
+      # Commit result
+      # --------------------------------------------------------
+
+      - name: Commit generated question bank
         run: |
 
           git config user.name \
@@ -306,21 +687,29 @@ jobs:
           git config user.email \
             "41898282+github-actions[bot]@users.noreply.github.com"
 
+
           git add output/
+
 
           if git diff --cached --quiet; then
 
-            echo "No output changes."
+            echo "No generated output changes."
 
           else
 
+            echo "Generated output changed."
+
             git commit \
               -m "AI: Process RPSC exam paper"
+
 
             git pull \
               --rebase \
               origin main
 
+
             git push
+
+            echo "Changes pushed successfully."
 
           fi
