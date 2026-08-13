@@ -1,1610 +1,417 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPSC PYQ Question Bank</title>
-
-
     <script src="https://cdn.tailwindcss.com"></script>
-
-
     <script>
-
         window.MathJax = {
-
             tex: {
-
-                inlineMath: [
-                    ['$', '$'],
-                    ['\\(', '\\)']
-                ],
-
-                displayMath: [
-                    ['$$', '$$'],
-                    ['\\[', '\\]']
-                ],
-
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
                 processEscapes: true
             },
-
-            startup: {
-                typeset: false
-            }
+            startup: { typeset: false }
         };
-
     </script>
-
-
-    <script
-        id="MathJax-script"
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
-
-
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-
-        .preserve-lines {
-            white-space: pre-wrap;
-            word-break: break-word;
-        }
-
-        img {
-            max-height: 900px;
-            object-fit: contain;
-        }
-
+        .preserve-lines { white-space: pre-wrap; word-break: break-word; }
+        img { max-height: 900px; object-fit: contain; }
     </style>
-
 </head>
-
-
-<body
-    class="
-        bg-slate-50
-        text-slate-800
-        min-h-screen
-    "
->
-
+<body class="bg-slate-50 text-slate-800 min-h-screen">
 
 <!-- ========================================================
      HEADER
 ========================================================= -->
-
-<header
-    class="
-        bg-indigo-700
-        text-white
-        shadow-md
-        sticky
-        top-0
-        z-50
-    "
->
-
-    <div
-        class="
-            max-w-6xl
-            mx-auto
-            px-4
-            py-5
-        "
-    >
-
-        <div
-            class="
-                flex
-                flex-col
-                md:flex-row
-                justify-between
-                items-center
-                gap-4
-            "
-        >
-
+<header class="bg-indigo-700 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-5">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-
-                <h1 class="text-2xl font-bold">
-                    RPSC PYQ Question Bank
-                </h1>
-
-                <p
-                    id="page-subtitle"
-                    class="
-                        text-indigo-200
-                        text-sm
-                        mt-1
-                    "
-                >
-                    Previous Year Questions
-                </p>
-
+                <h1 class="text-2xl font-bold">RPSC PYQ Question Bank</h1>
+                <p id="page-subtitle" class="text-indigo-200 text-sm mt-1">Previous Year Questions</p>
             </div>
-
-
-            <div
-                class="
-                    flex
-                    items-center
-                    gap-3
-                    flex-wrap
-                    justify-center
-                "
-            >
-
-                <button
-                    id="home-button"
-                    onclick="showHome()"
-                    class="
-                        hidden
-                        bg-indigo-900
-                        hover:bg-indigo-950
-                        px-4
-                        py-2
-                        rounded-lg
-                        text-sm
-                    "
-                >
-                    All Papers
-                </button>
-
-
-                <div
-                    id="language-buttons"
-                    class="hidden"
-                >
-
-                    <div
-                        class="
-                            flex
-                            bg-indigo-900
-                            p-1
-                            rounded-lg
-                            text-sm
-                            font-medium
-                        "
-                    >
-
-                        <button
-                            id="btn-hi"
-                            onclick="setLanguage('hi')"
-                            class="
-                                px-4
-                                py-1.5
-                                rounded-md
-                            "
-                        >
-                            Hindi
-                        </button>
-
-
-                        <button
-                            id="btn-en"
-                            onclick="setLanguage('en')"
-                            class="
-                                px-4
-                                py-1.5
-                            "
-                        >
-                            English
-                        </button>
-
-
-                        <button
-                            id="btn-both"
-                            onclick="setLanguage('both')"
-                            class="
-                                px-4
-                                py-1.5
-                            "
-                        >
-                            Bilingual
-                        </button>
-
+            <div class="flex items-center gap-3 flex-wrap justify-center">
+                <button id="home-button" onclick="showHome()" class="hidden bg-indigo-900 hover:bg-indigo-950 px-4 py-2 rounded-lg text-sm">All Papers</button>
+                <div id="language-buttons" class="hidden">
+                    <div class="flex bg-indigo-900 p-1 rounded-lg text-sm font-medium">
+                        <button id="btn-hi" onclick="setLanguage('hi')" class="px-4 py-1.5 rounded-md">Hindi</button>
+                        <button id="btn-en" onclick="setLanguage('en')" class="px-4 py-1.5">English</button>
+                        <button id="btn-both" onclick="setLanguage('both')" class="px-4 py-1.5">Bilingual</button>
                     </div>
-
                 </div>
-
-
-                <span
-                    id="question-count"
-                    class="
-                        hidden
-                        bg-indigo-100
-                        text-indigo-800
-                        text-sm
-                        px-3
-                        py-1.5
-                        rounded-full
-                        font-bold
-                    "
-                ></span>
-
+                <span id="question-count" class="hidden bg-indigo-100 text-indigo-800 text-sm px-3 py-1.5 rounded-full font-bold"></span>
             </div>
-
         </div>
-
     </div>
-
 </header>
-
 
 <!-- ========================================================
      MAIN
 ========================================================= -->
-
-<main
-    class="
-        max-w-6xl
-        mx-auto
-        px-4
-        py-8
-    "
->
-
-
-    <div
-        id="loading"
-        class="
-            bg-white
-            rounded-xl
-            border
-            border-slate-200
-            p-8
-            text-center
-            text-slate-500
-        "
-    >
-
-        Loading...
-
-    </div>
-
-
-    <div
-        id="content"
-        class="hidden"
-    ></div>
-
-
-    <div
-        id="error"
-        class="hidden"
-    ></div>
-
-
+<main class="max-w-6xl mx-auto px-4 py-8">
+    <div id="loading" class="bg-white rounded-xl border border-slate-200 p-8 text-center text-slate-500">Loading...</div>
+    <div id="content" class="hidden"></div>
+    <div id="error" class="hidden"></div>
 </main>
 
-
 <script>
-
-
 // ==========================================================
-// STATE
+// STATE & UTILS
 // ==========================================================
-
 let currentRun = null;
-
 let currentQuestions = [];
-
 let currentLanguage = "both";
 
-
-// ==========================================================
-// HTML ESCAPE
-// ==========================================================
-
 function escapeHtml(value) {
-
-    if (
-        value === null ||
-        value === undefined
-    ) {
-        return "";
-    }
-
-    const element =
-        document.createElement(
-            "div"
-        );
-
-    element.textContent =
-        String(value);
-
+    if (value === null || value === undefined) return "";
+    const element = document.createElement("div");
+    element.textContent = String(value);
     return element.innerHTML;
 }
 
-
-// ==========================================================
-// TEXT
-// ==========================================================
-
 function formatText(text) {
+    if (!text) return "";
+    return escapeHtml(text).replace(/\n/g, "<br>");
+}
 
-    if (!text) {
-        return "";
+function toggleAnalysis(id) {
+    const el = document.getElementById(id);
+    if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+    } else {
+        el.classList.add('hidden');
     }
-
-    let result =
-        escapeHtml(text);
-
-    result =
-        result.replace(
-            /\n/g,
-            "<br>"
-        );
-
-    return result;
 }
 
-
 // ==========================================================
-// LANGUAGE
+// LANGUAGE & MATHJAX
 // ==========================================================
+function setLanguage(language) {
+    currentLanguage = language;
+    ["hi", "en", "both"].forEach(btnLang => {
+        const element = document.getElementById(`btn-${btnLang}`);
+        if (!element) return;
+        element.className = btnLang === language
+            ? `px-4 py-1.5 rounded-md bg-white text-indigo-900 shadow`
+            : `px-4 py-1.5 rounded-md text-indigo-100 hover:text-white`;
+    });
 
-function setLanguage(
-    language
-) {
+    document.querySelectorAll(".lang-hi").forEach(el => {
+        if (language === "hi" || language === "both") el.classList.remove("hidden");
+        else el.classList.add("hidden");
+    });
 
-    currentLanguage =
-        language;
-
-
-    ["hi", "en", "both"]
-        .forEach(
-            buttonLanguage => {
-
-                const element =
-                    document.getElementById(
-                        `btn-${buttonLanguage}`
-                    );
-
-                if (!element) {
-                    return;
-                }
-
-
-                element.className =
-                    buttonLanguage === language
-
-                        ? `
-                            px-4
-                            py-1.5
-                            rounded-md
-                            bg-white
-                            text-indigo-900
-                            shadow
-                        `
-
-                        : `
-                            px-4
-                            py-1.5
-                            rounded-md
-                            text-indigo-100
-                            hover:text-white
-                        `;
-
-            }
-        );
-
-
-    document
-        .querySelectorAll(
-            ".lang-hi"
-        )
-        .forEach(
-            element => {
-
-                if (
-                    language === "hi" ||
-                    language === "both"
-                ) {
-
-                    element.classList.remove(
-                        "hidden"
-                    );
-
-                } else {
-
-                    element.classList.add(
-                        "hidden"
-                    );
-                }
-
-            }
-        );
-
-
-    document
-        .querySelectorAll(
-            ".lang-en"
-        )
-        .forEach(
-            element => {
-
-                if (
-                    language === "en" ||
-                    language === "both"
-                ) {
-
-                    element.classList.remove(
-                        "hidden"
-                    );
-
-                } else {
-
-                    element.classList.add(
-                        "hidden"
-                    );
-                }
-
-            }
-        );
-
-
+    document.querySelectorAll(".lang-en").forEach(el => {
+        if (language === "en" || language === "both") el.classList.remove("hidden");
+        else el.classList.add("hidden");
+    });
     typesetMath();
-
 }
-
-
-// ==========================================================
-// MATHJAX
-// ==========================================================
 
 async function typesetMath() {
-
-    if (
-        window.MathJax &&
-        typeof MathJax.typesetPromise ===
-            "function"
-    ) {
-
+    if (window.MathJax && typeof MathJax.typesetPromise === "function") {
         try {
-
             MathJax.typesetClear();
-
             await MathJax.typesetPromise();
-
-        } catch (error) {
-
-            console.warn(
-                "MathJax error:",
-                error
-            );
-
-        }
-
+        } catch (error) { console.warn("MathJax error:", error); }
     }
 }
 
-
-// ==========================================================
-// ASSET URL
-// ==========================================================
-
-function assetUrl(
-    runId,
-    relativePath
-) {
-
-    if (!relativePath) {
-        return "";
-    }
-
-    return (
-        "output/"
-        + encodeURIComponent(
-            runId
-        )
-        + "/"
-        + relativePath
-            .split("/")
-            .map(
-                part =>
-                    encodeURIComponent(
-                        part
-                    )
-            )
-            .join("/")
-    );
-
+function assetUrl(runId, relativePath) {
+    if (!relativePath) return "";
+    return "output/" + encodeURIComponent(runId) + "/" + relativePath.split("/").map(part => encodeURIComponent(part)).join("/");
 }
 
-
 // ==========================================================
-// LOAD CATALOG
+// LOAD DATA
 // ==========================================================
-
 async function loadCatalog() {
-
-    const response =
-        await fetch(
-            "output/catalog.json",
-            {
-                cache: "no-cache"
-            }
-        );
-
-
-    if (!response.ok) {
-
-        throw new Error(
-            `Catalog HTTP ${response.status}`
-        );
-
-    }
-
-
+    const response = await fetch("output/catalog.json", { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
     return await response.json();
-
 }
 
-
-// ==========================================================
-// HOME PAGE
-// ==========================================================
-
-function renderHome(
-    catalog
-) {
-
-    document
-        .getElementById(
-            "loading"
-        )
-        .classList.add(
-            "hidden"
-        );
-
-
-    document
-        .getElementById(
-            "home-button"
-        )
-        .classList.add(
-            "hidden"
-        );
-
-
-    document
-        .getElementById(
-            "language-buttons"
-        )
-        .classList.add(
-            "hidden"
-        );
-
-
-    document
-        .getElementById(
-            "question-count"
-        )
-        .classList.add(
-            "hidden"
-        );
-
-
-    document
-        .getElementById(
-            "page-subtitle"
-        )
-        .innerText =
-        "Select an examination paper";
-
-
-    const content =
-        document.getElementById(
-            "content"
-        );
-
-    content.classList.remove(
-        "hidden"
-    );
-
-
-    if (
-        !catalog.runs ||
-        !catalog.runs.length
-    ) {
-
-        content.innerHTML = `
-
-            <div
-                class="
-                    bg-white
-                    rounded-xl
-                    border
-                    border-slate-200
-                    p-10
-                    text-center
-                "
-            >
-
-                <h2
-                    class="
-                        text-xl
-                        font-bold
-                        text-slate-800
-                    "
-                >
-                    No question papers yet
-                </h2>
-
-                <p
-                    class="
-                        text-slate-500
-                        mt-2
-                    "
-                >
-                    Run the GitHub Actions workflow
-                    to process your first RPSC paper.
-                </p>
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    let html = `
-
-        <div
-            class="
-                flex
-                flex-col
-                gap-2
-                mb-6
-            "
-        >
-
-            <h2
-                class="
-                    text-2xl
-                    font-bold
-                    text-slate-900
-                "
-            >
-                RPSC Question Papers
-            </h2>
-
-            <p
-                class="text-slate-500"
-            >
-                ${catalog.runs.length}
-                processed paper(s)
-            </p>
-
-        </div>
-
-
-        <div
-            class="
-                grid
-                grid-cols-1
-                md:grid-cols-2
-                gap-5
-            "
-        >
-    `;
-
-
-    catalog.runs.forEach(
-        run => {
-
-            const name =
-                escapeHtml(
-                    run.name
-                );
-
-
-            const questions =
-                escapeHtml(
-                    run.question_count
-                );
-
-
-            const visual =
-                escapeHtml(
-                    run.visual_question_count
-                );
-
-
-            const updated =
-                run.updated_at
-                    ? new Date(
-                        run.updated_at
-                    ).toLocaleString()
-                    : "";
-
-
-            html += `
-
-                <button
-                    onclick="openRun('${encodeURIComponent(run.id)}')"
-                    class="
-                        text-left
-                        bg-white
-                        border
-                        border-slate-200
-                        rounded-xl
-                        p-6
-                        shadow-sm
-                        hover:shadow-md
-                        hover:border-indigo-300
-                        transition
-                    "
-                >
-
-                    <div
-                        class="
-                            flex
-                            justify-between
-                            items-start
-                            gap-3
-                        "
-                    >
-
-                        <h3
-                            class="
-                                text-lg
-                                font-bold
-                                text-indigo-700
-                                break-words
-                            "
-                        >
-                            ${name}
-                        </h3>
-
-                        <span
-                            class="
-                                bg-indigo-50
-                                text-indigo-700
-                                px-2.5
-                                py-1
-                                rounded-full
-                                text-xs
-                                font-bold
-                            "
-                        >
-                            ${questions} Q
-                        </span>
-
-                    </div>
-
-
-                    <div
-                        class="
-                            flex
-                            gap-4
-                            text-sm
-                            text-slate-500
-                            mt-4
-                            flex-wrap
-                        "
-                    >
-
-                        <span>
-                            ${visual}
-                            visual questions
-                        </span>
-
-                    </div>
-
-
-                    ${
-                        updated
-                            ? `
-                                <div
-                                    class="
-                                        text-xs
-                                        text-slate-400
-                                        mt-4
-                                    "
-                                >
-                                    Updated ${escapeHtml(updated)}
-                                </div>
-                            `
-                            : ""
-                    }
-
-                </button>
-
-            `;
-
-        }
-    );
-
-
-    html += `
-        </div>
-    `;
-
-
-    content.innerHTML =
-        html;
-
+async function openRun(encodedRunId) {
+    const runId = decodeURIComponent(encodedRunId);
+    window.history.pushState({}, "", `?run=${encodeURIComponent(runId)}`);
+    await loadRun(runId);
 }
 
-
-// ==========================================================
-// OPEN RUN
-// ==========================================================
-
-async function openRun(
-    encodedRunId
-) {
-
-    const runId =
-        decodeURIComponent(
-            encodedRunId
-        );
-
-    window.history.pushState(
-        {},
-        "",
-        `?run=${encodeURIComponent(runId)}`
-    );
-
-
-    await loadRun(
-        runId
-    );
-
-}
-
-
-// ==========================================================
-// LOAD RUN
-// ==========================================================
-
-async function loadRun(
-    runId
-) {
-
-    document
-        .getElementById(
-            "loading"
-        )
-        .classList.remove(
-            "hidden"
-        );
-
-
-    document
-        .getElementById(
-            "content"
-        )
-        .classList.add(
-            "hidden"
-        );
-
-
-    const response =
-        await fetch(
-            `output/${encodeURIComponent(runId)}/question_bank.json`,
-            {
-                cache: "no-cache"
-            }
-        );
-
-
-    if (!response.ok) {
-
-        throw new Error(
-            `Question bank HTTP ${response.status}`
-        );
-
-    }
-
-
-    const data =
-        await response.json();
-
-
-    currentRun =
-        runId;
-
-
-    currentQuestions =
-        Array.isArray(
-            data.questions
-        )
-            ? data.questions
-            : [];
-
-
+async function loadRun(runId) {
+    document.getElementById("loading").classList.remove("hidden");
+    document.getElementById("content").classList.add("hidden");
+    const response = await fetch(`output/${encodeURIComponent(runId)}/question_bank.json`, { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Question bank HTTP ${response.status}`);
+    const data = await response.json();
+    currentRun = runId;
+    currentQuestions = Array.isArray(data.questions) ? data.questions : [];
     renderQuestions();
-
 }
 
+// ==========================================================
+// RENDERING
+// ==========================================================
+function renderHome(catalog) {
+    document.getElementById("loading").classList.add("hidden");
+    document.getElementById("home-button").classList.add("hidden");
+    document.getElementById("language-buttons").classList.add("hidden");
+    document.getElementById("question-count").classList.add("hidden");
+    document.getElementById("page-subtitle").innerText = "Select an examination paper";
+    
+    const content = document.getElementById("content");
+    content.classList.remove("hidden");
 
-// ==========================================================
-// QUESTION PAGE
-// ==========================================================
+    if (!catalog.runs || !catalog.runs.length) {
+        content.innerHTML = `<div class="bg-white rounded-xl border border-slate-200 p-10 text-center"><h2 class="text-xl font-bold text-slate-800">No question papers yet</h2><p class="text-slate-500 mt-2">Run the GitHub Actions workflow to process your first RPSC paper.</p></div>`;
+        return;
+    }
+
+    let html = `<div class="flex flex-col gap-2 mb-6"><h2 class="text-2xl font-bold text-slate-900">RPSC Question Papers</h2><p class="text-slate-500">${catalog.runs.length} processed paper(s)</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-5">`;
+    
+    catalog.runs.forEach(run => {
+        const name = escapeHtml(run.name);
+        const questions = escapeHtml(run.question_count);
+        const visual = escapeHtml(run.visual_question_count);
+        const updated = run.updated_at ? new Date(run.updated_at).toLocaleString() : "";
+        html += `<button onclick="openRun('${encodeURIComponent(run.id)}')" class="text-left bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition"><div class="flex justify-between items-start gap-3"><h3 class="text-lg font-bold text-indigo-700 break-words">${name}</h3><span class="bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-full text-xs font-bold">${questions} Q</span></div><div class="flex gap-4 text-sm text-slate-500 mt-4 flex-wrap"><span>${visual} visual questions</span></div>${updated ? `<div class="text-xs text-slate-400 mt-4">Updated ${escapeHtml(updated)}</div>` : ""}</button>`;
+    });
+    html += `</div>`;
+    content.innerHTML = html;
+}
 
 function renderQuestions() {
+    document.getElementById("loading").classList.add("hidden");
+    document.getElementById("home-button").classList.remove("hidden");
+    document.getElementById("language-buttons").classList.remove("hidden");
+    
+    const count = document.getElementById("question-count");
+    count.classList.remove("hidden");
+    count.innerText = `Total Questions: ${currentQuestions.length}`;
+    document.getElementById("page-subtitle").innerText = currentRun;
+    
+    const content = document.getElementById("content");
+    content.classList.remove("hidden");
 
-    document
-        .getElementById(
-            "loading"
-        )
-        .classList.add(
-            "hidden"
-        );
-
-
-    document
-        .getElementById(
-            "home-button"
-        )
-        .classList.remove(
-            "hidden"
-        );
-
-
-    document
-        .getElementById(
-            "language-buttons"
-        )
-        .classList.remove(
-            "hidden"
-        );
-
-
-    const count =
-        document.getElementById(
-            "question-count"
-        );
-
-    count.classList.remove(
-        "hidden"
-    );
-
-
-    count.innerText =
-        `Total Questions: ${currentQuestions.length}`;
-
-
-    document
-        .getElementById(
-            "page-subtitle"
-        )
-        .innerText =
-        currentRun;
-
-
-    const content =
-        document.getElementById(
-            "content"
-        );
-
-    content.classList.remove(
-        "hidden"
-    );
-
-
-    let html = `
-
-        <div
-            class="
-                bg-white
-                border
-                border-slate-200
-                rounded-xl
-                p-5
-                mb-8
-            "
-        >
-
-            <h2
-                class="
-                    text-xl
-                    font-bold
-                    text-slate-900
-                "
-            >
-                ${escapeHtml(currentRun)}
-            </h2>
-
-            <p
-                class="
-                    text-sm
-                    text-slate-500
-                    mt-1
-                "
-            >
-                ${currentQuestions.length}
-                questions
-            </p>
-
-        </div>
-
-    `;
-
-
-    currentQuestions.forEach(
-        question => {
-
-            html +=
-                renderQuestion(
-                    question
-                );
-
-        }
-    );
-
-
-    content.innerHTML =
-        html;
-
-
-    setLanguage(
-        currentLanguage
-    );
-
+    let html = `<div class="bg-white border border-slate-200 rounded-xl p-5 mb-8"><h2 class="text-xl font-bold text-slate-900">${escapeHtml(currentRun)}</h2><p class="text-sm text-slate-500 mt-1">${currentQuestions.length} questions</p></div>`;
+    currentQuestions.forEach(question => { html += renderQuestion(question); });
+    content.innerHTML = html;
+    setLanguage(currentLanguage);
 }
 
-
-// ==========================================================
-// QUESTION CARD
-// ==========================================================
-
-function renderQuestion(
-    question
-) {
-
-    const number =
-        escapeHtml(
-            question.number
-        );
-
-
-    const sourcePage =
-        question.source_page !==
-            undefined &&
-        question.source_page !==
-            null
-            ? `Source page ${escapeHtml(question.source_page)}`
-            : "";
-
+function renderQuestion(question) {
+    const number = escapeHtml(question.number);
+    const meta = question.metadata || {};
+    
+    // Difficulty color mapping
+    let diffColor = "bg-slate-100 text-slate-800";
+    if (meta.difficulty === "Easy") diffColor = "bg-emerald-100 text-emerald-800";
+    if (meta.difficulty === "Medium") diffColor = "bg-amber-100 text-amber-800";
+    if (meta.difficulty === "Hard") diffColor = "bg-rose-100 text-rose-800";
 
     let html = `
+        <article class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 md:p-6 mb-8">
+            
+            <!-- HEADER -->
+            <div class="border-b border-slate-100 pb-4 mb-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="bg-indigo-600 text-white font-bold px-3 py-1 rounded-lg text-sm shadow-sm">Q ${number}</span>
+                    <span class="text-sm font-medium text-slate-500">${escapeHtml(meta.branch || 'Unknown')} &rsaquo; ${escapeHtml(meta.subtopic || 'General')}</span>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs font-bold">
+                    <span class="${diffColor} px-2 py-1 rounded border border-white/20">${escapeHtml(meta.difficulty || 'N/A')}</span>
+                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded">${escapeHtml(meta.blooms_level || 'N/A')}</span>
+                    <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded">⏱ ${escapeHtml(meta.estimated_seconds || '0')}s</span>
+                    <span class="bg-slate-100 text-slate-600 px-2 py-1 rounded">${escapeHtml(meta.archetype || 'MCQ')}</span>
+                </div>
+            </div>`;
 
-        <article
-            class="
-                bg-white
-                rounded-xl
-                border
-                border-slate-200
-                shadow-sm
-                p-5
-                md:p-6
-                mb-8
-            "
-        >
-
-
-            <div
-                class="
-                    border-b
-                    border-slate-100
-                    pb-3
-                    mb-5
-                    flex
-                    justify-between
-                    items-center
-                    gap-3
-                "
-            >
-
-                <span
-                    class="
-                        bg-indigo-50
-                        text-indigo-700
-                        font-bold
-                        px-3
-                        py-1
-                        rounded-lg
-                        text-sm
-                        border
-                        border-indigo-100
-                    "
-                >
-                    Question ${number}
-                </span>
-
-
-                ${
-                    sourcePage
-                        ? `
-                            <span
-                                class="
-                                    text-xs
-                                    text-slate-400
-                                "
-                            >
-                                ${sourcePage}
-                            </span>
-                        `
-                        : ""
-                }
-
-            </div>
-
-    `;
-
-
-    // --------------------------------------------------------
-    // QUESTION TEXT
-    // --------------------------------------------------------
-
-    if (
-        question.question_hi
-    ) {
-
+    // TRANSLATION WARNING
+    if (meta.has_translation_discrepancy) {
         html += `
-
-            <div
-                class="
-                    lang-hi
-                    text-lg
-                    font-medium
-                    text-slate-900
-                    leading-relaxed
-                    preserve-lines
-                    mb-4
-                "
-            >
-
-                ${formatText(
-                    question.question_hi
-                )}
-
-            </div>
-
-        `;
-
+            <div class="bg-rose-50 border border-rose-200 text-rose-700 p-3 rounded-lg text-sm mb-5">
+                <strong class="font-bold flex items-center gap-2">⚠️ Translation Discrepancy Detected</strong>
+                <span class="mt-1 block">${formatText(meta.discrepancy_note || 'The Hindi and English versions of this question contain differing information.')}</span>
+            </div>`;
     }
 
+    // QUESTION TEXT & IMAGES
+    if (question.question_hi) html += `<div class="lang-hi text-lg font-medium text-slate-900 leading-relaxed preserve-lines mb-4">${formatText(question.question_hi)}</div>`;
+    if (question.image_hi) html += `<div class="lang-hi mb-5"><img src="${assetUrl(currentRun, question.image_hi)}" class="max-w-full rounded-lg border border-slate-200 mx-auto"></div>`;
+    
+    if (question.question_en) html += `<div class="lang-en text-base text-slate-600 leading-relaxed preserve-lines ${question.question_hi ? 'border-t border-slate-100 pt-4' : ''} mb-4">${formatText(question.question_en)}</div>`;
+    if (question.image_en) html += `<div class="lang-en mb-5"><img src="${assetUrl(currentRun, question.image_en)}" class="max-w-full rounded-lg border border-slate-200 mx-auto"></div>`;
 
-    if (
-        question.image_hi
-    ) {
-
-        html += `
-
-            <div
-                class="
-                    lang-hi
-                    mb-5
-                "
-            >
-
-                <img
-                    src="${assetUrl(
-                        currentRun,
-                        question.image_hi
-                    )}"
-                    alt="Hindi question visual"
-                    loading="lazy"
-                    class="
-                        max-w-full
-                        rounded-lg
-                        border
-                        border-slate-200
-                        mx-auto
-                    "
-                >
-
-            </div>
-
-        `;
-
-    }
-
-
-    if (
-        question.question_en
-    ) {
-
-        html += `
-
-            <div
-                class="
-                    lang-en
-                    text-base
-                    text-slate-600
-                    leading-relaxed
-                    preserve-lines
-                    ${
-                        question.question_hi
-                            ? `
-                                border-t
-                                border-slate-100
-                                pt-4
-                            `
-                            : ""
-                    }
-                    mb-4
-                "
-            >
-
-                ${formatText(
-                    question.question_en
-                )}
-
-            </div>
-
-        `;
-
-    }
-
-
-    if (
-        question.image_en
-    ) {
-
-        html += `
-
-            <div
-                class="
-                    lang-en
-                    mb-5
-                "
-            >
-
-                <img
-                    src="${assetUrl(
-                        currentRun,
-                        question.image_en
-                    )}"
-                    alt="English question visual"
-                    loading="lazy"
-                    class="
-                        max-w-full
-                        rounded-lg
-                        border
-                        border-slate-200
-                        mx-auto
-                    "
-                >
-
-            </div>
-
-        `;
-
-    }
-
-
-    // --------------------------------------------------------
     // OPTIONS
-    // --------------------------------------------------------
+    html += `<div class="mt-6 space-y-3">`;
+    if (Array.isArray(question.options)) {
+        question.options.forEach(opt => {
+            html += `
+                <div class="flex items-start bg-slate-50 border border-slate-200 rounded-lg p-3">
+                    <span class="font-bold text-slate-400 w-9 flex-shrink-0">(${escapeHtml(opt.label)})</span>
+                    <div class="flex-grow flex flex-col gap-2">`;
+            if (opt.hi) html += `<div class="lang-hi text-sm text-slate-900 preserve-lines">${formatText(opt.hi)}</div>`;
+            if (opt.en) html += `<div class="lang-en text-sm text-slate-600 preserve-lines ${opt.hi ? 'border-t border-slate-200 pt-2' : ''}">${formatText(opt.en)}</div>`;
+            html += `</div></div>`;
+        });
+    }
+    html += `</div>`;
 
+    // ANALYSIS BUTTON
+    const analysisId = `analysis-${number}`;
     html += `
+        <div class="mt-6 pt-4 border-t border-slate-100">
+            <button onclick="toggleAnalysis('${analysisId}')" class="w-full py-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold rounded-lg transition border border-indigo-200 shadow-sm flex justify-center items-center gap-2">
+                View Deep Analysis & Solution
+            </button>
+        </div>`;
 
-        <div
-            class="
-                mt-6
-                space-y-3
-            "
-        >
+    // ==========================================
+    // HIDDEN ANALYSIS SECTION
+    // ==========================================
+    html += `<div id="${analysisId}" class="hidden mt-6 pt-6 border-t-2 border-slate-200 space-y-8">`;
 
-    `;
+    // EXPLANATION
+    html += `
+        <div>
+            <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">Step-by-Step Solution</h3>
+            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl text-emerald-900">
+                ${question.explanation_hi ? `<div class="lang-hi preserve-lines">${formatText(question.explanation_hi)}</div>` : ''}
+                ${question.explanation_en ? `<div class="lang-en preserve-lines ${question.explanation_hi ? 'mt-3 pt-3 border-t border-emerald-200/50' : ''}">${formatText(question.explanation_en)}</div>` : ''}
+            </div>
+        </div>`;
 
-
-    if (
-        Array.isArray(
-            question.options
-        )
-    ) {
-
-        question.options.forEach(
-            option => {
-
-                const label =
-                    escapeHtml(
-                        option.label
-                    );
-
-
-                html += `
-
-                    <div
-                        class="
-                            flex
-                            items-start
-                            bg-slate-50
-                            border
-                            border-slate-200
-                            rounded-lg
-                            p-3
-                        "
-                    >
-
-                        <span
-                            class="
-                                font-bold
-                                text-indigo-600
-                                w-9
-                                flex-shrink-0
-                            "
-                        >
-                            (${label})
-                        </span>
-
-
-                        <div
-                            class="
-                                flex-grow
-                                flex
-                                flex-col
-                                gap-2
-                            "
-                        >
-
-                `;
-
-
-                if (
-                    option.hi
-                ) {
-
-                    html += `
-
-                        <div
-                            class="
-                                lang-hi
-                                text-sm
-                                text-slate-900
-                                preserve-lines
-                            "
-                        >
-                            ${formatText(
-                                option.hi
-                            )}
-                        </div>
-
-                    `;
-
-                }
-
-
-                if (
-                    option.en
-                ) {
-
-                    html += `
-
-                        <div
-                            class="
-                                lang-en
-                                text-sm
-                                text-slate-600
-                                preserve-lines
-                                ${
-                                    option.hi
-                                        ? `
-                                            border-t
-                                            border-slate-200
-                                            pt-2
-                                        `
-                                        : ""
-                                }
-                            "
-                        >
-                            ${formatText(
-                                option.en
-                            )}
-                        </div>
-
-                    `;
-
-                }
-
-
-                html += `
-
-                        </div>
-
+    // RATIONALES
+    if (Array.isArray(question.option_rationales)) {
+        html += `<div><h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">Option Analysis</h3><div class="grid gap-3">`;
+        question.option_rationales.forEach(rat => {
+            const isCorrect = rat.is_correct;
+            const bgClass = isCorrect ? "bg-emerald-50 border-emerald-200" : "bg-white border-slate-200";
+            const textClass = isCorrect ? "text-emerald-800 font-medium" : "text-slate-600";
+            const icon = isCorrect ? "✅" : "❌";
+            
+            html += `
+                <div class="flex items-start border rounded-lg p-3 shadow-sm ${bgClass}">
+                    <span class="w-8 font-bold flex-shrink-0 ${isCorrect ? 'text-emerald-600' : 'text-slate-400'}">${icon} (${escapeHtml(rat.label)})</span>
+                    <div class="flex-grow flex flex-col gap-1 text-sm ${textClass}">
+                        ${rat.rationale_hi ? `<div class="lang-hi preserve-lines">${formatText(rat.rationale_hi)}</div>` : ''}
+                        ${rat.rationale_en ? `<div class="lang-en preserve-lines ${rat.rationale_hi ? 'border-t border-slate-200/50 pt-1 mt-1' : ''}">${formatText(rat.rationale_en)}</div>` : ''}
                     </div>
-
-                `;
-
-            }
-        );
-
+                </div>`;
+        });
+        html += `</div></div>`;
     }
 
+    // PEDAGOGICAL INSIGHTS GRID
+    html += `<h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-[-1rem]">Pedagogical Insights</h3>`;
+    html += `<div class="grid grid-cols-1 md:grid-cols-2 gap-4">`;
+    
+    if (meta.conceptual_trap_hi || meta.conceptual_trap_en) {
+        html += `
+            <div class="bg-rose-50 border border-rose-200 p-4 rounded-xl">
+                <strong class="text-rose-800 text-xs uppercase tracking-wider mb-2 block">Conceptual Trap</strong>
+                <div class="text-sm text-rose-700">
+                    ${meta.conceptual_trap_hi ? `<div class="lang-hi">${formatText(meta.conceptual_trap_hi)}</div>` : ''}
+                    ${meta.conceptual_trap_en ? `<div class="lang-en ${meta.conceptual_trap_hi ? 'mt-2 pt-2 border-t border-rose-200/50' : ''}">${formatText(meta.conceptual_trap_en)}</div>` : ''}
+                </div>
+            </div>`;
+    }
 
-    html += `
+    if (meta.shortcut_hack_hi || meta.shortcut_hack_en) {
+        html += `
+            <div class="bg-sky-50 border border-sky-200 p-4 rounded-xl">
+                <strong class="text-sky-800 text-xs uppercase tracking-wider mb-2 block">Shortcut / Hack</strong>
+                <div class="text-sm text-sky-700">
+                    ${meta.shortcut_hack_hi ? `<div class="lang-hi">${formatText(meta.shortcut_hack_hi)}</div>` : ''}
+                    ${meta.shortcut_hack_en ? `<div class="lang-en ${meta.shortcut_hack_hi ? 'mt-2 pt-2 border-t border-sky-200/50' : ''}">${formatText(meta.shortcut_hack_en)}</div>` : ''}
+                </div>
+            </div>`;
+    }
 
-        </div>
+    if (meta.ncert_mapping || meta.prerequisite_topic || meta.formula_law_dependency) {
+        html += `
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                ${meta.ncert_mapping ? `<div><strong class="text-slate-500 text-xs uppercase block mb-1">NCERT Mapping</strong><span class="text-sm font-medium text-slate-800">${formatText(meta.ncert_mapping)}</span></div>` : ''}
+                ${meta.formula_law_dependency ? `<div><strong class="text-slate-500 text-xs uppercase block mb-1">Core Formula/Law</strong><span class="text-sm font-medium text-slate-800">${formatText(meta.formula_law_dependency)}</span></div>` : ''}
+                ${meta.prerequisite_topic ? `<div><strong class="text-slate-500 text-xs uppercase block mb-1">Prerequisite Topic</strong><span class="text-sm font-medium text-slate-800">${formatText(meta.prerequisite_topic)}</span></div>` : ''}
+            </div>`;
+    }
+    html += `</div>`; // End insights grid
 
-        </article>
+    // CLONE VARIANT
+    if (meta.clone_variant && meta.clone_variant.options) {
+        const cv = meta.clone_variant;
+        html += `
+            <div class="border-2 border-indigo-100 bg-indigo-50/30 rounded-xl p-5 mt-4 relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-indigo-200 text-indigo-800 text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Practice Clone</div>
+                <h3 class="text-sm font-bold text-indigo-800 mb-3">Test Your Understanding</h3>
+                
+                ${cv.question_hi ? `<div class="lang-hi text-sm font-medium text-slate-900 mb-3 preserve-lines">${formatText(cv.question_hi)}</div>` : ''}
+                ${cv.question_en ? `<div class="lang-en text-sm text-slate-700 mb-4 preserve-lines">${formatText(cv.question_en)}</div>` : ''}
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">`;
+        
+        cv.options.forEach(opt => {
+            const isAns = opt.label === cv.correct_label;
+            html += `
+                <div class="p-2 border rounded bg-white flex gap-2 ${isAns ? 'border-emerald-400 shadow-[0_0_0_1px_#34d399]' : 'border-slate-200'}">
+                    <span class="font-bold ${isAns ? 'text-emerald-600' : 'text-slate-400'}">(${opt.label})</span>
+                    <div class="text-sm">
+                        ${opt.hi ? `<div class="lang-hi">${formatText(opt.hi)}</div>` : ''}
+                        ${opt.en ? `<div class="lang-en ${opt.hi ? 'text-slate-500' : ''}">${formatText(opt.en)}</div>` : ''}
+                    </div>
+                </div>`;
+        });
+        
+        html += `</div>
+                <div class="text-xs text-indigo-700 bg-indigo-100/50 p-3 rounded border border-indigo-100">
+                    <strong>Solution:</strong> ${formatText(cv.explanation_en)}
+                </div>
+            </div>`;
+    }
 
-    `;
+    // KEYWORDS
+    if (Array.isArray(meta.keywords) && meta.keywords.length > 0) {
+        html += `<div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-100">`;
+        meta.keywords.forEach(kw => {
+            html += `<span class="bg-slate-100 text-slate-500 px-2 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider">#${escapeHtml(kw)}</span>`;
+        });
+        html += `</div>`;
+    }
 
-
+    html += `</div></article>`; // End Analysis div & Article
     return html;
-
 }
-
-
-// ==========================================================
-// HOME
-// ==========================================================
 
 function showHome() {
-
     currentRun = null;
-
     currentQuestions = [];
-
-    window.history.pushState(
-        {},
-        "",
-        window.location.pathname
-    );
-
-
-    loadCatalog()
-        .then(
-            renderHome
-        )
-        .catch(
-            showError
-        );
-
+    window.history.pushState({}, "", window.location.pathname);
+    loadCatalog().then(renderHome).catch(showError);
 }
 
-
-// ==========================================================
-// ERROR
-// ==========================================================
-
-function showError(
-    error
-) {
-
-    console.error(
-        error
-    );
-
-
-    document
-        .getElementById(
-            "loading"
-        )
-        .classList.add(
-            "hidden"
-        );
-
-
-    document
-        .getElementById(
-            "content"
-        )
-        .classList.add(
-            "hidden"
-        );
-
-
-    const errorElement =
-        document.getElementById(
-            "error"
-        );
-
-
-    errorElement.classList.remove(
-        "hidden"
-    );
-
-
-    errorElement.innerHTML = `
-
-        <div
-            class="
-                bg-red-50
-                border
-                border-red-200
-                rounded-xl
-                p-8
-                text-center
-                text-red-700
-            "
-        >
-
-            <h2
-                class="font-bold text-lg"
-            >
-                Could not load question bank
-            </h2>
-
-            <p class="mt-2 text-sm">
-                ${escapeHtml(
-                    error.message
-                )}
-            </p>
-
-        </div>
-
-    `;
-
+function showError(error) {
+    document.getElementById("loading").classList.add("hidden");
+    document.getElementById("content").classList.add("hidden");
+    const errorElement = document.getElementById("error");
+    errorElement.classList.remove("hidden");
+    errorElement.innerHTML = `<div class="bg-red-50 border border-red-200 rounded-xl p-8 text-center text-red-700"><h2 class="font-bold text-lg">Could not load question bank</h2><p class="mt-2 text-sm">${escapeHtml(error.message)}</p></div>`;
 }
-
-
-// ==========================================================
-// INITIALIZATION
-// ==========================================================
 
 async function init() {
-
     try {
-
-        const catalog =
-            await loadCatalog();
-
-
-        const parameters =
-            new URLSearchParams(
-                window.location.search
-            );
-
-
-        const run =
-            parameters.get(
-                "run"
-            );
-
-
-        if (run) {
-
-            await loadRun(
-                run
-            );
-
-        } else {
-
-            renderHome(
-                catalog
-            );
-
-        }
-
-    } catch (error) {
-
-        showError(
-            error
-        );
-
-    }
-
+        const catalog = await loadCatalog();
+        const parameters = new URLSearchParams(window.location.search);
+        const run = parameters.get("run");
+        if (run) await loadRun(run);
+        else renderHome(catalog);
+    } catch (error) { showError(error); }
 }
 
-
-window.onpopstate = (
-    () => {
-        init();
-    }
-);
-
-
+window.onpopstate = () => { init(); };
 init();
-
 </script>
-
 </body>
-
 </html>
