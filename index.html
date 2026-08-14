@@ -742,9 +742,8 @@ function renderQuestion(question, idx) {
             <div class="flex items-start rounded-xl p-3" style="background: var(--paper-alt); border: 1px solid var(--rule);">
                 <span class="font-mono font-bold w-8 flex-shrink-0 text-sm pt-0.5" style="color: var(--ink-faint);">(${escapeHtml(opt.label)})</span>
                 <div class="flex-grow flex flex-col gap-1.5 min-w-0">`;
-        if (opt.hi) html += `<div class="lang-hi text-sm preserve-lines" style="color: var(--ink);">${formatText(opt.hi)}</div>`;
-        if (opt.en) html += `<div class="lang-en text-sm preserve-lines ${opt.hi ? 'pt-1.5 divider-rule' : ''}" style="color: var(--ink-soft);">${formatText(opt.en)}</div>`;
-        const optionVisual = renderOptionVisual(opt);
+        if (opt.hi) html += `<div class="lang-hi text-sm preserve-lines" style="color: var(--ink);">${formatText(cleanOptionText(opt.hi, opt.label))}</div>`;
+        if (opt.en) html += `<div class="lang-en text-sm preserve-lines ${opt.hi ? 'pt-1.5 divider-rule' : ''}" style="color: var(--ink-soft);">${formatText(cleanOptionText(opt.en, opt.label))}</div>`;        const optionVisual = renderOptionVisual(opt);
         if (optionVisual) html += `<div class="mt-2">${optionVisual}</div>`;
         html += `</div></div>`;
     });
