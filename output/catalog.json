@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-08-14T11:42:45.820967+00:00",
+  "runs": [
+    {
+      "id": "367B5D9D-FFD1-4DB0-9F7E-5AA9C13FEE82_removed",
+      "name": "367B5D9D-FFD1-4DB0-9F7E-5AA9C13FEE82_removed",
+      "question_count": 65,
+      "visual_question_count": 14,
+      "question_bank": "output/367B5D9D-FFD1-4DB0-9F7E-5AA9C13FEE82_removed/question_bank.json",
+      "updated_at": "2026-08-14T11:42:45.816036+00:00"
+    }
+  ]
+}
