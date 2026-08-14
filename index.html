@@ -487,6 +487,55 @@ function assetUrl(runId, relativePath) {
 }
 
 // ==========================================================
+// VISUAL RENDERING (Tier-2 inline SVG, with graceful fallbacks)
+// Priority per language: audited SVG > legacy per-language crop
+// > full-block crop > image-gen-prompt placeholder note.
+// Nothing here removes or changes the original image_hi/image_en
+// rendering path — it's just tried first when no SVG exists yet.
+// ==========================================================
+function renderInlineSvg(svgMarkup) {
+    if (!svgMarkup) return "";
+    // Basic guard: only trust strings that actually look like SVG.
+    const trimmed = svgMarkup.trim();
+    if (!trimmed.startsWith("<svg")) return "";
+    return `<div class="rounded-xl p-3 mx-auto" style="border: 1px solid var(--rule); background: #fff; max-width: 100%; overflow-x: auto;">${trimmed}</div>`;
+}
+function renderPromptPlaceholder(prompt) {
+    if (!prompt) return "";
+    return `
+        <div class="rounded-xl p-3.5 text-sm flex gap-2.5" style="background: var(--info-bg); border: 1px solid var(--info-border); color: var(--info);">
+            <span class="shrink-0">🎨</span>
+            <div>
+                <strong class="font-semibold block mb-0.5">Diagram pending generation</strong>
+                <span style="color: var(--ink-soft);">${formatText(prompt)}</span>
+            </div>
+        </div>`;
+}
+function renderQuestionVisual(question, lang) {
+    const svg = lang === "hi" ? question.svg_hi : question.svg_en;
+    if (svg) return `<div class="mb-5">${renderInlineSvg(svg)}</div>`;
+
+    const legacyImage = lang === "hi" ? question.image_hi : question.image_en;
+    if (legacyImage) {
+        return `<div class="mb-5"><img src="${assetUrl(currentRun, legacyImage)}" class="max-w-full max-h-[70vh] rounded-xl mx-auto" style="border: 1px solid var(--rule);"></div>`;
+    }
+
+    if (question.image_full) {
+        return `<div class="mb-5"><img src="${assetUrl(currentRun, question.image_full)}" class="max-w-full max-h-[70vh] rounded-xl mx-auto" style="border: 1px solid var(--rule);"></div>`;
+    }
+
+    const prompt = lang === "hi" ? question.image_gen_prompt_hi : question.image_gen_prompt_en;
+    if (prompt) return `<div class="mb-5">${renderPromptPlaceholder(prompt)}</div>`;
+
+    return "";
+}
+function renderOptionVisual(option) {
+    if (option.svg) return renderInlineSvg(option.svg);
+    if (option.image_gen_prompt) return renderPromptPlaceholder(option.image_gen_prompt);
+    return "";
+}
+
+// ==========================================================
 // LOAD DATA
 // ==========================================================
 async function loadCatalog() {
@@ -674,6 +723,7 @@ function renderQuestion(question, idx) {
                     <span class="chip" style="${diffStyle}">${escapeHtml(meta.difficulty || 'N/A')}</span>
                     <span class="chip" style="background: var(--info-bg); color: var(--info); border:1px solid var(--info-border);">${escapeHtml(meta.blooms_level || 'N/A')}</span>
                     <span class="chip" style="background: var(--paper-alt); color: var(--ink-soft); border:1px solid var(--rule-strong);">⏱ ${escapeHtml(meta.estimated_seconds || '0')}s</span>
+                    ${question.audited ? `<span class="chip" style="background: var(--good-bg); color: var(--good); border:1px solid var(--good-border);">✓ Reviewed</span>` : ''}
                 </div>
             </div>`;
 
@@ -689,10 +739,10 @@ function renderQuestion(question, idx) {
     }
 
     if (cleanHi) html += `<div class="lang-hi text-lg font-medium leading-relaxed preserve-lines mb-4" style="color: var(--ink);">${formatText(cleanHi)}</div>`;
-    if (question.image_hi) html += `<div class="lang-hi mb-5"><img src="${assetUrl(currentRun, question.image_hi)}" class="max-w-full max-h-[70vh] rounded-xl mx-auto" style="border: 1px solid var(--rule);"></div>`;
+    html += `<div class="lang-hi">${renderQuestionVisual(question, 'hi')}</div>`;
 
     if (cleanEn) html += `<div class="lang-en text-base leading-relaxed preserve-lines ${cleanHi ? 'pt-4 divider-rule' : ''} mb-4" style="color: var(--ink-soft);">${formatText(cleanEn)}</div>`;
-    if (question.image_en) html += `<div class="lang-en mb-5"><img src="${assetUrl(currentRun, question.image_en)}" class="max-w-full max-h-[70vh] rounded-xl mx-auto" style="border: 1px solid var(--rule);"></div>`;
+    html += `<div class="lang-en">${renderQuestionVisual(question, 'en')}</div>`;
 
     // OPTIONS
     html += `<div class="mt-5 space-y-2.5">`;
@@ -703,6 +753,8 @@ function renderQuestion(question, idx) {
                 <div class="flex-grow flex flex-col gap-1.5 min-w-0">`;
         if (opt.hi) html += `<div class="lang-hi text-sm preserve-lines" style="color: var(--ink);">${formatText(opt.hi)}</div>`;
         if (opt.en) html += `<div class="lang-en text-sm preserve-lines ${opt.hi ? 'pt-1.5 divider-rule' : ''}" style="color: var(--ink-soft);">${formatText(opt.en)}</div>`;
+        const optionVisual = renderOptionVisual(opt);
+        if (optionVisual) html += `<div class="mt-2">${optionVisual}</div>`;
         html += `</div></div>`;
     });
     html += `</div>`;
