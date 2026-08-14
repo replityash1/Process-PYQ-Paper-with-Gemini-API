@@ -146,11 +146,27 @@ class Question(BaseModel):
 
     has_visuals: bool
 
+    visual_location: Literal[
+        "question",
+        "options",
+        "both",
+        "none",
+    ] = "none"
+
     box_hi: list[int] | None = None
     box_en: list[int] | None = None
 
+    # Full-block bounding box: from the question number down through
+    # option 5. This is the new primary crop used for the Tier-2
+    # (Gemini 3.7 Flash) SVG/audit pass and for human review/sub-cropping.
+    box_full: list[int] | None = None
+
     image_hi: str | None = None
     image_en: str | None = None
+
+    # Populated after cropping using box_full. This is the "full block"
+    # image referenced in the human review step.
+    image_full: str | None = None
 
     options: list[Option] = Field(
         description=(
@@ -337,13 +353,54 @@ YOU MUST STILL EXTRACT ALL READABLE TEXT.
 
 Do not delete readable options.
 
-If the visual is important, provide:
+------------------------------------------------------------
+visual_location
+------------------------------------------------------------
+
+When has_visuals = true, also set visual_location to exactly one of:
+
+- "question"  -> the visual is only inside the question stem
+- "options"   -> each option (or some options) contains its own
+                 distinct visual (e.g. circuit A/B/C/D, four graphs)
+- "both"      -> the question stem AND the options each contain visuals
+- "none"      -> use this when has_visuals = false
+
+When has_visuals = false, always set visual_location = "none".
+
+------------------------------------------------------------
+box_full (REQUIRED whenever has_visuals = true)
+------------------------------------------------------------
+
+Provide a SINGLE wide bounding box that captures the ENTIRE question
+block as one rectangle:
 
 [ymin, xmin, ymax, xmax]
 
 Coordinates are normalized 0-1000 over the COMPLETE PAGE IMAGE.
 
-The crop should include:
+This box_full crop must start at the question number and extend
+all the way down to the bottom of option 5, including:
+
+- question number
+- full question text
+- any diagram/graph/table inside the question
+- all five official options
+- any diagrams inside individual options
+
+Be generous rather than tight: it is far better to include a little
+extra surrounding whitespace than to cut off part of a diagram or an
+option. This full-block image will later be reviewed by a human and
+used to generate vector diagrams, so completeness matters more than
+pixel-perfect tightness.
+
+------------------------------------------------------------
+box_hi / box_en (optional, legacy narrow crops)
+------------------------------------------------------------
+
+You may additionally provide box_hi and/or box_en as tighter
+per-language crops if useful, using the same [ymin, xmin, ymax, xmax]
+0-1000 normalized format. These are optional and independent of
+box_full. The crop should include:
 
 - question number
 - question text
@@ -444,6 +501,10 @@ Before returning JSON verify:
 10. Every rationale matches its option.
 11. Clone contains exactly four options.
 12. Metadata uses null when appropriate.
+13. Every question with has_visuals = true has visual_location set
+    (not "none") and box_full provided.
+14. Every question with has_visuals = false has visual_location = "none"
+    and box_full = null.
 
 Return ONLY JSON matching the provided schema.
 """
@@ -700,6 +761,36 @@ def validate_question_bank(
             f"Question {question.number} box_en",
         )
 
+        validate_box(
+            question.box_full,
+            f"Question {question.number} box_full",
+        )
+
+        # ----------------------------------------------------
+        # visual_location / box_full consistency
+        # ----------------------------------------------------
+        # These are intentionally *soft* corrections rather than hard
+        # failures: the model occasionally forgets to set one of the
+        # two fields even though it clearly means to flag a visual.
+        # We normalize instead of rejecting the whole page.
+
+        if not question.has_visuals:
+            question.visual_location = "none"
+            question.box_full = None
+
+        elif question.has_visuals and question.visual_location == "none":
+            # Model flagged a visual but forgot to classify location.
+            # Default to "question" (the most common case) rather than
+            # silently dropping the visual.
+            question.visual_location = "question"
+
+        if question.has_visuals and not question.box_full:
+            print(
+                f"WARNING: Question {question.number} has_visuals=true "
+                "but no box_full was provided. The full-block crop "
+                "will be skipped for this question."
+            )
+
         # ----------------------------------------------------
         # Clone
         # ----------------------------------------------------
@@ -928,6 +1019,42 @@ def create_visual_crops(
             ):
                 question.image_en = (
                     filename
+                )
+
+        # ----------------------------------------------------
+        # Full-block crop (question number -> option 5)
+        # Used by the human review step and by the Tier-2
+        # (Gemini 3.7 Flash) SVG/audit pass.
+        # ----------------------------------------------------
+
+        if question.box_full:
+
+            filename = (
+                f"page{page_number}"
+                f"_q{question.number}"
+                f"_full.jpg"
+            )
+
+            destination = (
+                os.path.join(
+                    OUTPUT_DIR,
+                    filename,
+                )
+            )
+
+            if crop_box(
+                image,
+                question.box_full,
+                destination,
+            ):
+                question.image_full = (
+                    filename
+                )
+            else:
+                print(
+                    f"WARNING: Full-block crop failed for "
+                    f"question {question.number} on page "
+                    f"{page_number} (box too small/invalid)."
                 )
 
 
@@ -1221,6 +1348,11 @@ def main():
             None,
         )
 
+        question.pop(
+            "box_full",
+            None,
+        )
+
     # --------------------------------------------------------
     # Save
     # --------------------------------------------------------
@@ -1272,6 +1404,16 @@ def main():
 
     print(
         f"Visual questions: {visual_count}"
+    )
+
+    full_crop_count = sum(
+        1
+        for q in bank.questions
+        if q.image_full
+    )
+
+    print(
+        f"Full-block crops saved: {full_crop_count}"
     )
 
     print(
