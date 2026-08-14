@@ -1,1 +1,192 @@
+name: RPSC Refinement & SVG Pipeline (Workflow 2)
 
+# ============================================================
+# Manually triggered second workflow.
+#
+# Run this AFTER Workflow 1 (Automated RPSC Drive Pipeline) has
+# already committed output/<RUN_ID>/question_bank.json and its
+# images/ folder to the repo, and AFTER you've optionally added
+# hand-cropped option images into that same images/ folder using
+# the q{number}_full.jpg / q{number}_question.jpg / q{number}_optN.jpg
+# naming convention.
+#
+# Trigger from the Actions tab -> "RPSC Refinement & SVG Pipeline
+# (Workflow 2)" -> "Run workflow", and enter the run_id (the folder
+# name under output/, e.g. "RPSC_2024_Exam").
+# ============================================================
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Run folder name under output/ (e.g. RPSC_2024_Exam)"
+        required: true
+        type: string
+      batch_size:
+        description: "Questions per Gemini 3.7 Flash request"
+        required: false
+        default: "15"
+        type: string
+      delay:
+        description: "Seconds to wait between batches"
+        required: false
+        default: "15"
+        type: string
+      force:
+        description: "Re-audit questions that were already audited"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+
+  refine:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # --------------------------------------------------------
+      # Checkout
+      # --------------------------------------------------------
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # --------------------------------------------------------
+      # Python dependencies
+      # --------------------------------------------------------
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+
+          python3 -m pip install \
+            google-genai \
+            pydantic \
+            pillow
+
+
+      # --------------------------------------------------------
+      # Verify the run exists before spending any API calls
+      # --------------------------------------------------------
+
+      - name: Verify run directory
+        run: |
+
+          RUN_DIR="output/${{ inputs.run_id }}"
+
+          echo "Looking for: $RUN_DIR/question_bank.json"
+
+          if [ ! -f "$RUN_DIR/question_bank.json" ]; then
+
+            echo "ERROR:"
+            echo "$RUN_DIR/question_bank.json was not found."
+            echo ""
+            echo "Available runs:"
+            find output -maxdepth 1 -mindepth 1 -type d -print | sort || true
+
+            exit 1
+
+          fi
+
+          echo "Found question bank:"
+          ls -lh "$RUN_DIR/question_bank.json"
+
+          echo ""
+          echo "Images available:"
+          find "$RUN_DIR/images" -maxdepth 1 -type f 2>/dev/null | wc -l
+
+
+      # --------------------------------------------------------
+      # Run Workflow 2
+      # --------------------------------------------------------
+
+      - name: Run Gemini 3.7 Flash refinement pass
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+        run: |
+
+          echo "======================================"
+          echo "WORKFLOW 2: REFINEMENT & SVG EMBEDDING"
+          echo "RUN: ${{ inputs.run_id }}"
+          echo "======================================"
+
+          FORCE_FLAG=""
+          if [ "${{ inputs.force }}" = "true" ]; then
+            FORCE_FLAG="--force"
+          fi
+
+          python3 \
+            scripts/refine_svg.py \
+            "${{ inputs.run_id }}" \
+            --batch-size "${{ inputs.batch_size }}" \
+            --delay "${{ inputs.delay }}" \
+            $FORCE_FLAG
+
+
+      # --------------------------------------------------------
+      # Refresh catalog.json (question/visual counts etc. are
+      # unchanged by refinement, but this keeps updated_at honest)
+      # --------------------------------------------------------
+
+      - name: Verify refined output
+        run: |
+
+          RUN_DIR="output/${{ inputs.run_id }}"
+
+          echo "Refined question bank:"
+          ls -lh "$RUN_DIR/question_bank.json"
+
+          AUDITED_COUNT=$(
+            python3 -c "import json; data=json.load(open('$RUN_DIR/question_bank.json', encoding='utf-8')); qs=data.get('questions', []); a=sum(1 for q in qs if q.get('audited')); print(f'{a}/{len(qs)}')"
+          )
+
+          echo "Audited questions: $AUDITED_COUNT"
+
+
+      # --------------------------------------------------------
+      # Commit result
+      # --------------------------------------------------------
+
+      - name: Commit refined question bank
+        run: |
+
+          git config user.name \
+            "github-actions[bot]"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+
+          git add "output/${{ inputs.run_id }}/question_bank.json"
+          git add "output/${{ inputs.run_id }}/refine_batch_"*"_raw.txt" 2>/dev/null || true
+
+
+          if git diff --cached --quiet; then
+
+            echo "No refinement changes to commit."
+
+          else
+
+            echo "Refinement changes detected."
+
+            git commit \
+              -m "AI: Refine & embed SVGs for ${{ inputs.run_id }}"
+
+
+            git pull \
+              --rebase \
+              origin main
+
+
+            git push
+
+            echo "Changes pushed successfully."
+
+          fi
