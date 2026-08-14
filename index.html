@@ -381,58 +381,49 @@ function toggleExpandAll() {
 }
 
 // ==========================================================
-// FIXED "GUILLOTINE" CLEANER
-// Handles: (1) labels baked directly into option text,
-//          (2) partial per-option regex matches,
-//          via a structural fallback so options never leak
-//          into the visible question body.
+// CLEANERS (Safe from truncating statements)
 // ==========================================================
+function cleanOptionText(text, label) {
+    if (!text) return "";
+    const escaped = String(label).replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    const regex = new RegExp(`^\\s*(?:\\(${escaped}\\)|\\[${escaped}\\]|${escaped}\\.|${escaped}\\-|${escaped}\\))\\s*`, 'i');
+    return text.replace(regex, '').trim();
+}
+
 function cleanQuestionText(text, options, lang) {
     if (!text || !Array.isArray(options) || options.length === 0) return text || "";
 
     let chopIndex = -1;
-    let matchedCount = 0;
-    let validOptionCount = 0;
 
+    // 1. Only chop if there is an explicit "Code -" or "कूट -" header followed immediately by options
+    const codeMatch = text.match(/\n\s*(?:Code|कूट|Codes|कोड्स)\s*[-:]\s*\n\s*(?:\(1\)|\[1\]|1\.)/i);
+    if (codeMatch) {
+        return text.substring(0, codeMatch.index).trim();
+    }
+
+    // 2. Safely match exact option strings if they are duplicated at the bottom of the question text
     options.forEach(opt => {
         const label = String(opt.label).trim();
         let optText = opt[lang] ? String(opt[lang]).trim() : "";
-        if (!optText || optText.length < 2) return;
-        validOptionCount++;
+        if (!optText || optText.length < 3) return;
 
-        const escapedLabel = label.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-        const bakedLabelPattern = new RegExp(`^\\s*(?:\\(${escapedLabel}\\)|\\[${escapedLabel}\\]|${escapedLabel}\\.|${escapedLabel}\\-|${escapedLabel}\\))\\s*`, 'i');
-        optText = optText.replace(bakedLabelPattern, '').trim();
-        if (!optText || optText.length < 2) return;
+        optText = cleanOptionText(optText, label);
+        if (optText.length < 3) return;
 
         const escapedText = optText.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-        const pattern = new RegExp(`(?:\\n|\\r|<br>)+\\s*(?:\\(${escapedLabel}\\)|\\[${escapedLabel}\\]|${escapedLabel}\\.|${escapedLabel}\\-)\\s*${escapedText}`, 'i');
+        const pattern = new RegExp(`\\n\\s*(?:\\(${label}\\)|\\[${label}\\]|${label}\\.)\\s*${escapedText}`, 'i');
         const match = text.match(pattern);
-        if (match) {
-            matchedCount++;
-            if (chopIndex === -1 || match.index < chopIndex) chopIndex = match.index;
+        if (match && (chopIndex === -1 || match.index < chopIndex)) {
+            chopIndex = match.index;
         }
     });
 
-    let structuralIndex = -1;
-    const structuralMatch = text.match(/\n\s*(?:\(1\)|\[1\]|1\.|1\-|\(A\)|\[A\]|A\.|A\-)\s*\S/i);
-    if (structuralMatch && structuralMatch.index > 10) {
-        const tail = text.substring(structuralMatch.index);
-        if (/\n\s*(?:\(2\)|\[2\]|2\.|2\-|\(B\)|\[B\]|B\.|B\-)/i.test(tail)) {
-            structuralIndex = structuralMatch.index;
-        }
+    if (chopIndex !== -1) {
+        return text.substring(0, chopIndex).trim();
     }
 
-    if (chopIndex !== -1 && matchedCount >= Math.max(1, validOptionCount - 1)) {
-        if (structuralIndex === -1 || chopIndex <= structuralIndex) {
-            return text.substring(0, chopIndex).trim();
-        }
-    }
-    if (structuralIndex !== -1) return text.substring(0, structuralIndex).trim();
-    if (chopIndex !== -1) return text.substring(0, chopIndex).trim();
     return text.trim();
 }
-
 // De-dupe safeguard: if, after cleaning, an option's text still appears
 // verbatim inside the rendered options list more than once (rare malformed
 // data), keep only the first occurrence per label so nothing double-renders.
