@@ -343,6 +343,21 @@ Set has_visuals = true ONLY when a question requires a non-textual graphic:
 Standard chemical reactions (e.g., CH4 + O2 -> CO2), math formulas, and matrix matching tables are PLAIN TEXT / LATEX.
 Set has_visuals = false for standard reactions, formulas, and tables.
 
+
+============================================================
+DIAGRAM-BASED OPTIONS & BOUNDING BOX RULES
+============================================================
+
+1. OPTIONS CONTAINING ONLY DIAGRAMS / FIGURES:
+   - If an option consists entirely of a drawn diagram, chemical structure, or graph without printed text, DO NOT invent placeholder text like "Ring structure 1" or "Figure 1".
+   - Set "hi": "" and "en": "" (empty strings) for purely diagrammatic options. The diagram will be viewed directly from the cropped image.
+   - Always retain the full text for Option 5 ("Question not attempted" / "अनुत्तरित प्रश्न").
+
+2. STRICT BOUNDING BOX BOUNDARIES (box_full):
+   - Ensure box_full [ymin, xmin, ymax, xmax] starts EXACTLY at the current question number and ends EXACTLY below its Option (5).
+   - DO NOT capture text, options, or numbers from the preceding question above or the succeeding question below.
+
+   
 ------------------------------------------------------------
 visual_location
 ------------------------------------------------------------
