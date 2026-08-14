@@ -292,66 +292,56 @@ has_translation_discrepancy = true
 and explain why.
 
 ============================================================
-STATEMENT-BASED QUESTIONS
+STATEMENT & MATCHING QUESTIONS (MANDATORY FIDELITY)
 ============================================================
 
-Preserve every statement separately.
+1. STATEMENT-BASED QUESTIONS:
+   Preserve every statement separately (Statement I, II, III, IV or (A), (B), (C), (D)).
+   Do not summarize or delete any statement.
 
-For example:
-
-Statement I
-Statement II
-Statement III
-Statement IV
-
-must remain four statements.
-
-Do not summarize them.
-
-============================================================
-MATHEMATICS / SCIENCE
-============================================================
-
-Preserve numerical values exactly.
-
-Use LaTeX when appropriate:
-
-$...$
-
-and
-
-$$...$$
-
-Do not change numbers.
-
-10^-3 must not become 10^-2.
-
-H2SO4 must not become H2SO3.
-
-1/2 must not become 12.
+2. MATRIX / MATCHING QUESTIONS:
+   You MUST extract BOTH Column-I (or List-I) AND Column-II (or List-II) completely into the question text.
+   Format clearly:
+   Column-I
+   (A) ...
+   (B) ...
+   Column-II
+   (i) ...
+   (ii) ...
+   NEVER stop extracting after Column-I. Both columns are mandatory.
 
 ============================================================
-VISUAL QUESTIONS
+MATHEMATICS / SCIENCE & LATEX RULES
 ============================================================
 
-Set has_visuals = true when the question materially depends on:
+1. ALL mathematical symbols, units, formulas, charges, and Greek letters MUST be wrapped in inline LaTeX delimiters: $...$
+   - Correct: "$6000\\text{ \\AA}$" or "6000 Å", NEVER bare "\\AA".
+   - Correct: "$\\lambda_{\\text{max}}$", NEVER bare "\\lambda_{max}".
+   - Correct: "$E^\\circ = -0.25\\text{ V}$", NEVER bare "\\text{V}".
 
-- diagram
-- circuit
-- graph
-- map
-- chemical structure
-- biological figure
-- table
-- matrix
-- flowchart
-- complex visual layout
+2. Inside the "options" array, NEVER use display math ($$...$$). ALWAYS use inline math ($...$).
 
-Even when has_visuals = true:
+3. DO NOT include option numbers inside the option text strings:
+   - Correct: label = "1", en = "Partial Reduction"
+   - Incorrect: label = "1", en = "(1) Partial Reduction"
 
-YOU MUST STILL EXTRACT ALL READABLE TEXT.
+4. Avoid OCR character corruptions:
+   - Carbocation is "$\\text{C}^\\oplus$" or "$\\text{C}^+$", NEVER "Ŧ".
+   - Bisexual flower symbol is "$\\oplus$" and "$\\text{⚥}$", NEVER Arabic/Persian script like "تعالی".
 
-Do not delete readable options.
+============================================================
+VISUAL QUESTIONS DEFINITION
+============================================================
+
+Set has_visuals = true ONLY when a question requires a non-textual graphic:
+- Circuit diagrams
+- Geometry / ray diagrams
+- Complex graphs & plots
+- Biological anatomical figures
+- Skeletal organic structural formulas that cannot be represented in LaTeX
+
+Standard chemical reactions (e.g., CH4 + O2 -> CO2), math formulas, and matrix matching tables are PLAIN TEXT / LATEX.
+Set has_visuals = false for standard reactions, formulas, and tables.
 
 ------------------------------------------------------------
 visual_location
