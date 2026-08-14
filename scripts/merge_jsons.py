@@ -506,6 +506,22 @@ def normalize_image_references(
                 ).name
             )
 
+        if question.get(
+            "image_full"
+        ):
+
+            question[
+                "image_full"
+            ] = (
+                "images/"
+                +
+                Path(
+                    question[
+                        "image_full"
+                    ]
+                ).name
+            )
+
         question.pop(
             "_source_file",
             None,
