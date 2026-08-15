@@ -1,13 +1,31 @@
+"""
+RPSC Science PYQ extraction — page-level worker.
+
+This script sends ONE rendered page image to Gemini and asks it to return
+a structured, bilingual, SVG-based question extraction that matches the
+"master prompt" schema (see EXTRACTION_PROMPT below). It intentionally
+does NOT crop bounding boxes out of the page image for diagrams — per the
+prompt, diagrams/figures/graphs/tables/matching-columns etc. must be
+reconstructed as inline SVG (or left null with a note if reconstruction is
+genuinely impossible), not represented as raster crops.
+
+Because the master prompt describes a *paper-level* JSON object (with a
+top-level "paper" block, "paper_statistics", and "validation"), and this
+script only ever sees one page at a time, this worker only produces the
+per-page "questions" array. A separate merge step (not included here)
+should concatenate every page's "questions" array, fill in the shared
+"paper" metadata once, and compute "paper_statistics" / "validation" over
+the full set.
+"""
+
 import json
 import os
-import shutil
 import sys
 import time
 from typing import Literal
 
 from google import genai
 from google.genai import types
-from PIL import Image
 from pydantic import BaseModel, Field, ValidationError
 
 
@@ -27,492 +45,379 @@ PAGES_DIR = "pages"
 
 
 # ============================================================
-# SCHEMAS
+# SCHEMA
+# (mirrors the JSON structure described in the master prompt,
+#  sections 6-25 and 32)
 # ============================================================
 
+QuestionType = Literal[
+    "single_choice",
+    "multiple_choice",
+    "assertion_reason",
+    "statement_based",
+    "statement_correctness",
+    "matching",
+    "matrix_matching",
+    "column_matching",
+    "sequence_ordering",
+    "true_false",
+    "multiple_statements",
+    "numerical",
+    "diagram_based",
+    "graph_based",
+    "table_based",
+    "image_based",
+    "passage_based",
+    "case_based",
+    "formula_based",
+    "fill_in_the_blank",
+    "other",
+]
+
+ContentOriginValue = Literal["source", "reconstructed", "generated", "inferred"]
+
+
+class BilingualText(BaseModel):
+    english: str | None = None
+    hindi: str | None = None
+
+
+class Visual(BaseModel):
+    type: Literal["svg"] = "svg"
+    purpose: str | None = Field(
+        default=None,
+        description="e.g. question_diagram, option_diagram, graph, table_visual",
+    )
+    placement: str | None = Field(
+        default=None,
+        description="e.g. question_body, option_A, option_B",
+    )
+    svg: str = Field(
+        description="A complete, self-contained, renderable SVG string. "
+        "Must start with '<svg' and end with '</svg>'."
+    )
+    description: str = Field(
+        description="Plain-text accessibility/search description of what the SVG shows."
+    )
+    source_fidelity: ContentOriginValue = "reconstructed"
+
+
 class Option(BaseModel):
-    label: Literal["1", "2", "3", "4", "5"]
-
-    hi: str = Field(
-        description=(
-            "Exact visible Hindi text of this official exam option. "
-            "Do not translate, paraphrase, correct, or invent."
-        )
-    )
-
-    en: str = Field(
-        description=(
-            "Exact visible English text of this official exam option. "
-            "Do not translate, paraphrase, correct, or invent."
-        )
-    )
+    label: str = Field(description="e.g. A, B, C, D")
+    english: str | None = None
+    hindi: str | None = None
+    visuals: list[Visual] = []
 
 
-class OptionRationale(BaseModel):
-    label: Literal["1", "2", "3", "4", "5"]
-
-    is_correct: bool = Field(
-        description=(
-            "True only if this option is the correct answer to the "
-            "original exam question. Option 5 is the official "
-            "'Question not attempted' OMR choice."
-        )
-    )
-
-    rationale_hi: str
-    rationale_en: str
+class Statement(BaseModel):
+    id: str = Field(description="e.g. I, II, III, IV or A, B, C, D")
+    english: str | None = None
+    hindi: str | None = None
 
 
-class QuestionVariantOption(BaseModel):
-    label: Literal["1", "2", "3", "4"]
-    hi: str
-    en: str
+class MatchingItem(BaseModel):
+    id: str
+    english: str | None = None
+    hindi: str | None = None
 
 
-class QuestionVariant(BaseModel):
-    question_hi: str
-    question_en: str
-
-    options: list[QuestionVariantOption] = Field(
-        description="Exactly four normal answer choices."
-    )
-
-    correct_label: Literal["1", "2", "3", "4"]
-
-    explanation_en: str
+class MappingPair(BaseModel):
+    key: str
+    value: str
 
 
-class QuestionMetadata(BaseModel):
+class MatchingOptionMapping(BaseModel):
+    label: str
+    mapping: list[MappingPair] = []
 
-    subject: str
-    branch: str
-    subtopic: str
 
-    archetype: Literal[
-        "Direct Fact",
-        "Numerical/Calculative",
-        "Assertion-Reasoning",
-        "Statement-Based",
-        "Matrix Matching",
-        "Diagram/Visual",
-        "Table-Based",
-        "Other",
-    ]
+class MatchingData(BaseModel):
+    left_column: list[MatchingItem] = []
+    right_column: list[MatchingItem] = []
+    option_mappings: list[MatchingOptionMapping] = []
 
-    has_translation_discrepancy: bool
 
-    discrepancy_note: str | None = None
+class MatrixData(BaseModel):
+    rows: list[MatchingItem] = []
+    columns: list[MatchingItem] = []
+    option_mappings: list[MatchingOptionMapping] = []
 
-    difficulty: Literal[
-        "Easy",
-        "Medium",
-        "Hard",
-    ]
 
-    blooms_level: Literal[
-        "Remember",
-        "Understand",
-        "Apply",
-        "Analyze",
-        "Evaluate",
-    ]
+class TableCell(BaseModel):
+    english: str | None = None
+    hindi: str | None = None
 
-    keywords: list[str]
 
-    estimated_seconds: int
+class TableRow(BaseModel):
+    cells: list[TableCell] = []
 
-    conceptual_trap_hi: str | None = None
-    conceptual_trap_en: str | None = None
 
-    prerequisite_topic: str | None = None
+class Table(BaseModel):
+    headers: list[TableCell] = []
+    rows: list[TableRow] = []
 
-    ncert_mapping: str | None = None
 
-    formula_law_dependency: str | None = None
+class Answer(BaseModel):
+    status: Literal["determined", "uncertain"] = "determined"
+    correct_option: str | None = None
+    answer_text: BilingualText | None = None
+    mapping: list[MappingPair] = []
+    value: str | None = Field(default=None, description="For numerical answers.")
+    unit: str | None = None
+    method: str | None = None
+    confidence: Literal["high", "medium", "low"] | None = None
 
-    shortcut_hack_hi: str | None = None
-    shortcut_hack_en: str | None = None
 
-    clone_variant: QuestionVariant
+class Explanation(BaseModel):
+    english: str | None = None
+    hindi: str | None = None
+    steps: list[str] = []
+
+
+class OptionAnalysis(BaseModel):
+    label: str
+    is_correct: bool
+    explanation: BilingualText | None = None
+
+
+class Metadata(BaseModel):
+    subject: str | None = None
+    sub_subject: str | None = None
+    topic: str | None = None
+    subtopic: str | None = None
+    difficulty: Literal["easy", "moderate", "hard"] | None = None
+    cognitive_level: Literal["recall", "understanding", "application", "analysis"] | None = None
+    question_category: str | None = None
+    concepts: list[str] = []
+    keywords: list[str] = []
+
+
+class SyllabusMapping(BaseModel):
+    subject: str | None = None
+    unit: str | None = None
+    chapter: str | None = None
+    topic: str | None = None
+
+
+class SourceReference(BaseModel):
+    page: int | None = None
+    question_location: str | None = None
+    source_question_number: str | None = None
+
+
+class ContentOrigin(BaseModel):
+    question_text: ContentOriginValue = "source"
+    options: ContentOriginValue = "source"
+    diagram: ContentOriginValue | None = None
+    answer: ContentOriginValue = "generated"
+    explanation: ContentOriginValue = "generated"
+    metadata: ContentOriginValue = "generated"
+
+
+class Quality(BaseModel):
+    ocr_confidence: float | None = None
+    structure_confidence: float | None = None
+    answer_confidence: float | None = None
+    needs_manual_review: bool = False
 
 
 class Question(BaseModel):
+    id: str = Field(description="e.g. q27")
+    question_number: int
+    question_type: QuestionType
+    question_type_display: str
 
-    source_page: int
+    question_text: BilingualText
+    instructions: BilingualText | None = None
 
-    number: int
+    statements: list[Statement] = []
+    assertion: BilingualText | None = None
+    reason: BilingualText | None = None
+    matching_data: MatchingData | None = None
+    matrix: MatrixData | None = None
+    table: Table | None = None
 
-    question_hi: str
-    question_en: str
+    visuals: list[Visual] = []
 
-    has_visuals: bool
+    options: list[Option]
 
-    visual_location: Literal[
-        "question",
-        "options",
-        "both",
-        "none",
-    ] = "none"
+    answer: Answer
+    explanation: Explanation
+    option_analysis: list[OptionAnalysis] = []
 
-    box_hi: list[int] | None = None
-    box_en: list[int] | None = None
+    metadata: Metadata
+    syllabus_mapping: SyllabusMapping
+    source_reference: SourceReference
+    content_origin: ContentOrigin
+    quality: Quality
 
-    # Full-block bounding box: from the question number down through
-    # option 5. This is the new primary crop used for the Tier-2
-    # (Gemini 3.7 Flash) SVG/audit pass and for human review/sub-cropping.
-    box_full: list[int] | None = None
-
-    image_hi: str | None = None
-    image_en: str | None = None
-
-    # Populated after cropping using box_full. This is the "full block"
-    # image referenced in the human review step.
-    image_full: str | None = None
-
-    options: list[Option] = Field(
-        description=(
-            "Exactly FIVE official exam options. "
-            "Options 1-4 are normal choices. "
-            "Option 5 is the compulsory 'Question not attempted' "
-            "OMR option."
-        )
-    )
-
-    explanation_hi: str
-    explanation_en: str
-
-    option_rationales: list[OptionRationale]
-
-    metadata: QuestionMetadata
+    notes: list[str] = []
 
 
-class QuestionBank(BaseModel):
+class PageExtraction(BaseModel):
     questions: list[Question]
 
 
 # ============================================================
 # PROMPT
+# (adapted from the supplied master prompt; the paper-level
+#  framing has been narrowed to "this one page" since the
+#  worker only ever sees a single rendered page)
 # ============================================================
 
 EXTRACTION_PROMPT = r"""
-You are an expert multimodal competitive-exam paper extraction system.
+You are an expert exam-paper digitization, OCR, educational-content
+structuring, and question-bank generation system.
 
-You are processing ONE rendered page from an RPSC examination paper.
+You are processing ONE rendered page from an RPSC 2nd Grade Science
+Previous Year Question (PYQ) paper. The paper is bilingual (English +
+Hindi) and may contain diagrams, figures, chemical structures,
+mathematical notation, matching tables, assertion-reason questions,
+statement-based questions, matrix questions, and other complex layouts.
 
-Your first responsibility is EXACT TRANSCRIPTION.
-Your second responsibility is QUESTION ANALYSIS.
-
-Never sacrifice source fidelity to make the output look complete.
-
-============================================================
-OFFICIAL EXAM OPTION FORMAT
-============================================================
-
-THIS EXAM HAS FIVE OFFICIAL OPTIONS.
-
-1 = normal answer choice
-2 = normal answer choice
-3 = normal answer choice
-4 = normal answer choice
-5 = Question not attempted
-
-Option 5 is a genuine official examination/OMR option.
-
-DO NOT delete option 5.
-
-DO NOT replace option 5.
-
-DO NOT create option 5 yourself after extraction.
-
-Extract the actual visible wording of option 5.
+Extract every question visible on THIS page accurately and return a JSON
+object containing a "questions" array, following the rules below.
 
 ============================================================
-EXACT TRANSCRIPTION RULES
+ACCURACY RULE
 ============================================================
-
-Extract EVERY multiple-choice question visibly present on this page.
-
-Preserve exactly:
-
-- original printed question number
-- Hindi wording
-- English wording
-- punctuation
-- option order
-- numbers
-- units
-- mathematical notation
-- scientific notation
-- negative signs
-- fractions
-- percentages
-- statement numbering
-- table/matrix relationships
-
-Do not:
-
-- paraphrase
-- summarize
-- improve grammar
-- correct spelling
-- silently fix printing errors
-- invent missing words
-- invent missing options
-- use outside knowledge to reconstruct unclear text
-
-The PAGE IMAGE is the source of truth.
+Treat the page image as the source of truth.
+- Do not "improve" wording because another phrasing looks more natural.
+- Do not silently invent missing text.
+- If text is genuinely unreadable, preserve the most probable reading and
+  set quality.needs_manual_review = true; do not fabricate.
+- Never represent inferred/generated information as original paper text.
 
 ============================================================
-UNCLEAR / ILLEGIBLE TEXT
+BILINGUAL HANDLING
 ============================================================
-
-If text is visibly present but cannot be reliably read, write:
-
-[UNCLEAR]
-
-If a region is present but genuinely illegible, write:
-
-[ILLEGIBLE]
-
-NEVER guess missing text because the question looks familiar.
+For every question, option, statement, assertion/reason, table cell, and
+matching/matrix item, preserve English and Hindi SEPARATELY. Do not merge
+the two languages into one string. If only one language is actually
+present on the page for a given element, set the other to null. Do not
+translate the source; translation is out of scope for this pass.
 
 ============================================================
-HINDI AND ENGLISH
+QUESTION ORDER AND IDENTITY
 ============================================================
-
-Extract Hindi and English independently.
-
-Do not translate one language into the other.
-
-Do not use one language to silently repair the other.
-
-If the Hindi and English versions materially differ in meaning:
-
-has_translation_discrepancy = true
-
-and explain why.
+Preserve the exact printed question_number for each question on this
+page. Set "id" to "q" + question_number (e.g. "q27"). Do not renumber
+based on OCR guesses.
 
 ============================================================
-STATEMENT & MATCHING QUESTIONS (MANDATORY FIDELITY)
+QUESTION TYPE DETECTION
 ============================================================
-
-1. STATEMENT-BASED QUESTIONS:
-   Preserve every statement separately (Statement I, II, III, IV or (A), (B), (C), (D)).
-   Do not summarize or delete any statement.
-
-2. MATRIX / MATCHING QUESTIONS:
-   You MUST extract BOTH Column-I (or List-I) AND Column-II (or List-II) completely into the question text.
-   Format clearly:
-   Column-I
-   (A) ...
-   (B) ...
-   Column-II
-   (i) ...
-   (ii) ...
-   NEVER stop extracting after Column-I. Both columns are mandatory.
+Classify every question's "question_type" accurately (single_choice,
+multiple_choice, assertion_reason, statement_based, statement_correctness,
+matching, matrix_matching, column_matching, sequence_ordering, true_false,
+multiple_statements, numerical, diagram_based, graph_based, table_based,
+image_based, passage_based, case_based, formula_based, fill_in_the_blank,
+other). Do not force every question into single_choice. Also set
+"question_type_display" to a human-readable label.
 
 ============================================================
-MATHEMATICS / SCIENCE & LATEX RULES
+ASSERTION-REASON / STATEMENTS / MATCHING / MATRIX / TABLES
 ============================================================
-
-1. ALL mathematical symbols, units, formulas, charges, and Greek letters MUST be wrapped in inline LaTeX delimiters: $...$
-   - Correct: "$6000\\text{ \\AA}$" or "6000 Å", NEVER bare "\\AA".
-   - Correct: "$\\lambda_{\\text{max}}$", NEVER bare "\\lambda_{max}".
-   - Correct: "$E^\\circ = -0.25\\text{ V}$", NEVER bare "\\text{V}".
-
-2. Inside the "options" array, NEVER use display math ($$...$$). ALWAYS use inline math ($...$).
-
-3. DO NOT include option numbers inside the option text strings:
-   - Correct: label = "1", en = "Partial Reduction"
-   - Incorrect: label = "1", en = "(1) Partial Reduction"
-
-4. Avoid OCR character corruptions:
-   - Carbocation is "$\\text{C}^\\oplus$" or "$\\text{C}^+$", NEVER "Ŧ".
-   - Bisexual flower symbol is "$\\oplus$" and "$\\text{⚥}$", NEVER Arabic/Persian script like "تعالی".
+- Assertion-reason: put the assertion in "assertion" and the reason in
+  "reason" (each bilingual), never inside question_text.
+- Statement-based: put every statement (I, II, III... or A, B, C...) as a
+  separate entry in "statements". Never collapse statements into one
+  paragraph.
+- Matching: populate matching_data.left_column and right_column
+  separately, plus option_mappings (label -> list of key/value pairs)
+  when the options encode a mapping (e.g. P-2, Q-4, R-1, S-3).
+- Matrix matching: populate matrix.rows and matrix.columns the same way.
+- Tables: populate "table" with headers/rows structurally. Never collapse
+  a table into plain text.
 
 ============================================================
-VISUAL QUESTIONS DEFINITION
+DIAGRAMS, FIGURES, GRAPHS, CHEMICAL STRUCTURES
 ============================================================
+Whenever a question OR an individual option contains a meaningful visual
+(diagram, graph, circuit, ray diagram, apparatus, biological figure,
+chemical/molecular structure, reaction scheme, taxonomy tree, labeled
+figure, or a purely visual answer choice), do NOT rely on a raster image
+crop. Instead, reconstruct it as a complete, valid, self-contained SVG:
+- Starts with "<svg" and ends with "</svg>".
+- Uses a sensible viewBox and standard elements (line, path, circle, rect,
+  polygon, polyline, text, etc.).
+- Preserves labels, arrows, directions, relationships, and relative
+  proportions faithfully — a wrong arrow or missing label can change the
+  correct answer.
+- No external images, external CSS, or unavailable file references.
+Attach the visual to "visuals" on the question if it belongs to the
+question stem, or inside the specific option's "visuals" list if it
+belongs to that option only. Always also fill "description" with a plain
+text summary for accessibility/search. For simple inline math (e.g.
+v = u + at), plain text/LaTeX-style notation in the text fields is fine —
+reserve SVG for genuinely visual structures.
 
-Set has_visuals = true ONLY when a question requires a non-textual graphic:
-- Circuit diagrams
-- Geometry / ray diagrams
-- Complex graphs & plots
-- Biological anatomical figures
-- Skeletal organic structural formulas that cannot be represented in LaTeX
-
-Standard chemical reactions (e.g., CH4 + O2 -> CO2), math formulas, and matrix matching tables are PLAIN TEXT / LATEX.
-Set has_visuals = false for standard reactions, formulas, and tables.
-
-
-============================================================
-DIAGRAM-BASED OPTIONS & BOUNDING BOX RULES
-============================================================
-
-1. OPTIONS CONTAINING ONLY DIAGRAMS / FIGURES:
-   - If an option consists entirely of a drawn diagram, chemical structure, or graph without printed text, DO NOT invent placeholder text like "Ring structure 1" or "Figure 1".
-   - Set "hi": "" and "en": "" (empty strings) for purely diagrammatic options. The diagram will be viewed directly from the cropped image.
-   - Always retain the full text for Option 5 ("Question not attempted" / "अनुत्तरित प्रश्न").
-
-2. STRICT BOUNDING BOX BOUNDARIES (box_full):
-   - Ensure box_full [ymin, xmin, ymax, xmax] starts EXACTLY at the current question number and ends EXACTLY below its Option (5).
-   - DO NOT capture text, options, or numbers from the preceding question above or the succeeding question below.
-
-   
-------------------------------------------------------------
-visual_location
-------------------------------------------------------------
-
-When has_visuals = true, also set visual_location to exactly one of:
-
-- "question"  -> the visual is only inside the question stem
-- "options"   -> each option (or some options) contains its own
-                 distinct visual (e.g. circuit A/B/C/D, four graphs)
-- "both"      -> the question stem AND the options each contain visuals
-- "none"      -> use this when has_visuals = false
-
-When has_visuals = false, always set visual_location = "none".
-
-------------------------------------------------------------
-box_full (REQUIRED whenever has_visuals = true)
-------------------------------------------------------------
-
-Provide a SINGLE wide bounding box that captures the ENTIRE question
-block as one rectangle:
-
-[ymin, xmin, ymax, xmax]
-
-Coordinates are normalized 0-1000 over the COMPLETE PAGE IMAGE.
-
-This box_full crop must start at the question number and extend
-all the way down to the bottom of option 5, including:
-
-- question number
-- full question text
-- any diagram/graph/table inside the question
-- all five official options
-- any diagrams inside individual options
-
-Be generous rather than tight: it is far better to include a little
-extra surrounding whitespace than to cut off part of a diagram or an
-option. This full-block image will later be reviewed by a human and
-used to generate vector diagrams, so completeness matters more than
-pixel-perfect tightness.
-
-------------------------------------------------------------
-box_hi / box_en (optional, legacy narrow crops)
-------------------------------------------------------------
-
-You may additionally provide box_hi and/or box_en as tighter
-per-language crops if useful, using the same [ymin, xmin, ymax, xmax]
-0-1000 normalized format. These are optional and independent of
-box_full. The crop should include:
-
-- question number
-- question text
-- relevant visual
-- all five official options
+If, and only if, faithful SVG reconstruction is genuinely impossible for
+a specific visual, leave the svg field as a minimal placeholder
+("<svg viewBox='0 0 10 10'></svg>"), set source_fidelity to "inferred",
+and explain the limitation in that question's "notes" array plus set
+quality.needs_manual_review = true. This should be rare.
 
 ============================================================
-QUESTIONS SPANNING PAGES
+ANSWERS AND EXPLANATIONS
 ============================================================
+Determine the correct answer whenever you reliably can:
+- MCQ: answer.correct_option = the option label, plus answer.answer_text.
+- Matching/matrix: answer.mapping = list of key/value pairs.
+- Numerical: answer.value / answer.unit / answer.method.
+- If you cannot reliably determine the answer, set answer.status =
+  "uncertain" and leave correct_option/answer_text null. Never invent an
+  answer just to fill the field.
 
-If a question is partially visible:
+Provide a concise bilingual "explanation" (english/hindi) with "steps" for
+calculations. For assertion-reason questions, explicitly assess in the
+explanation whether the assertion is true, whether the reason is true,
+and whether the reason correctly explains the assertion. Explanations
+must not contradict the chosen answer.
 
-extract only what is actually visible.
-
-Do not invent the continuation.
-
-============================================================
-SOLVING
-============================================================
-
-After extraction, solve the ORIGINAL question.
-
-Use the extracted wording, not an imagined corrected version.
-
-Provide:
-
-- Hindi explanation
-- English explanation
-- rationale for every option 1-5
-
-Option 5 is the official "Question not attempted" option.
-It is not a normal knowledge option.
+Populate "option_analysis" (is_correct + short bilingual explanation per
+option) especially for conceptual, statement, assertion-reason, and
+tricky MCQs.
 
 ============================================================
 METADATA
 ============================================================
-
-Be conservative.
-
-Use null when the information cannot be established confidently.
-
-Do not invent:
-
-- NCERT mappings
-- formulas
-- prerequisites
-- shortcuts
-- mnemonics
-- conceptual traps
-
-just to fill a field.
+Fill "metadata" (subject/sub_subject/topic/subtopic/difficulty/
+cognitive_level/concepts/keywords) conservatively — use null rather than
+inventing an overly specific classification. Fill "syllabus_mapping"
+using the likely RPSC/Rajasthan science syllabus context; do not claim
+exact official wording unless visible on the page or reliably known.
 
 ============================================================
-BLOOM
+SOURCE TRACEABILITY AND CONTENT ORIGIN
 ============================================================
-
-Use:
-
-Remember
-Understand
-Apply
-Analyze
-Evaluate
-
-Do not use Create for an ordinary MCQ.
+Set source_reference.source_question_number to the printed question
+number as a string (page/question_location may be left null if not
+determinable — do not invent page numbers, the caller fills page).
+Set content_origin to distinguish source text ("source") from
+reconstructed diagrams ("reconstructed") and generated answer/
+explanation/metadata ("generated").
 
 ============================================================
-PRACTICE CLONE
+QUALITY
 ============================================================
-
-Generate a NEW question testing the same underlying concept.
-
-The clone must:
-
-- be independently solvable
-- use different wording and/or numbers
-- have exactly 4 normal options
-- have exactly one correct answer
-- have an explanation
-
-The clone must NOT contain the exam's option 5.
+Set quality.ocr_confidence / structure_confidence / answer_confidence as
+numbers between 0 and 1, and needs_manual_review = true for unclear
+scans, ambiguous diagrams, uncertain option ordering, or uncertain
+answers.
 
 ============================================================
-FINAL CHECK
+FINAL CHECK BEFORE RETURNING
 ============================================================
+Verify, in order: question numbering -> bilingual text completeness ->
+option order -> special question-type structures (assertion/reason,
+statements, matching, matrix, table) -> every visual is valid SVG
+(starts with "<svg", ends with "</svg>") and attached at the right level
+(question vs specific option) -> answer/explanation consistency ->
+metadata -> valid JSON with no question silently omitted from this page.
 
-Before returning JSON verify:
-
-1. Every visible question was extracted.
-2. Every original question has exactly 5 official options.
-3. Labels are exactly 1,2,3,4,5.
-4. Option 5 was preserved.
-5. No source text was invented.
-6. Hindi and English were not silently translated.
-7. Numbers and formulas were preserved.
-8. Statement-based questions remain intact.
-9. Visual questions retain readable text.
-10. Every rationale matches its option.
-11. Clone contains exactly four options.
-12. Metadata uses null when appropriate.
-13. Every question with has_visuals = true has visual_location set
-    (not "none") and box_full provided.
-14. Every question with has_visuals = false has visual_location = "none"
-    and box_full = null.
-
-Return ONLY JSON matching the provided schema.
+Return ONLY JSON matching the provided schema — no markdown fences, no
+commentary before or after the JSON.
 """
 
 
@@ -522,7 +427,6 @@ Return ONLY JSON matching the provided schema.
 
 def is_permanent_error(exc: Exception) -> bool:
     text = str(exc).lower()
-
     permanent_markers = [
         "authentication",
         "unauthorized",
@@ -532,35 +436,18 @@ def is_permanent_error(exc: Exception) -> bool:
         "invalid argument",
         "invalid request",
     ]
-
-    return any(
-        marker in text
-        for marker in permanent_markers
-    )
+    return any(marker in text for marker in permanent_markers)
 
 
-def call_gemini_with_retry(
-    client,
-    image_bytes: bytes,
-):
-
+def call_gemini_with_retry(client, image_bytes: bytes):
     last_error = None
 
-    for attempt in range(
-        1,
-        MAX_ATTEMPTS + 1,
-    ):
-
+    for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
-
-            print(
-                f"Gemini attempt "
-                f"{attempt}/{MAX_ATTEMPTS}"
-            )
+            print(f"Gemini attempt {attempt}/{MAX_ATTEMPTS}")
 
             return client.models.generate_content(
                 model=MODEL_NAME,
-
                 contents=[
                     types.Part.from_bytes(
                         data=image_bytes,
@@ -568,49 +455,33 @@ def call_gemini_with_retry(
                     ),
                     EXTRACTION_PROMPT,
                 ],
-
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
-                    response_schema=QuestionBank,
+                    response_schema=PageExtraction,
                 ),
             )
 
         except Exception as exc:
-
             last_error = exc
-
-            print(
-                f"Gemini attempt {attempt} failed:"
-            )
-
+            print(f"Gemini attempt {attempt} failed:")
             print(exc)
 
             if is_permanent_error(exc):
-                print(
-                    "Permanent API error detected; "
-                    "stopping retries."
-                )
+                print("Permanent API error detected; stopping retries.")
                 raise
 
             if attempt == MAX_ATTEMPTS:
                 break
 
             delay = min(
-                RETRY_BASE_SECONDS * (
-                    2 ** (attempt - 1)
-                ),
+                RETRY_BASE_SECONDS * (2 ** (attempt - 1)),
                 RETRY_MAX_SECONDS,
             )
-
-            print(
-                f"Retrying in {delay} seconds..."
-            )
-
+            print(f"Retrying in {delay} seconds...")
             time.sleep(delay)
 
     raise RuntimeError(
-        "Gemini request failed after "
-        f"{MAX_ATTEMPTS} attempts."
+        f"Gemini request failed after {MAX_ATTEMPTS} attempts."
     ) from last_error
 
 
@@ -618,514 +489,99 @@ def call_gemini_with_retry(
 # VALIDATION
 # ============================================================
 
-def validate_box(
-    box,
-    name: str,
-):
-
-    if box is None:
-        return
-
-    if (
-        not isinstance(box, list)
-        or len(box) != 4
-    ):
-        raise ValueError(
-            f"{name} must be "
-            "[ymin,xmin,ymax,xmax]."
-        )
-
-    if not all(
-        isinstance(x, int)
-        for x in box
-    ):
-        raise ValueError(
-            f"{name} must contain integers."
-        )
-
-    ymin, xmin, ymax, xmax = box
-
-    if not all(
-        0 <= x <= 1000
-        for x in box
-    ):
-        raise ValueError(
-            f"{name} coordinates must "
-            "be between 0 and 1000."
-        )
-
-    if ymax <= ymin:
-        raise ValueError(
-            f"{name}: ymax <= ymin."
-        )
-
-    if xmax <= xmin:
-        raise ValueError(
-            f"{name}: xmax <= xmin."
-        )
-
-
-def validate_question_bank(
-    bank: QuestionBank,
-):
-
-    questions_by_number = {}
-
-    for question in bank.questions:
-
-        if question.number <= 0:
-            raise ValueError(
-                f"Invalid question number: "
-                f"{question.number}"
-            )
-
-        if question.number in questions_by_number:
-            raise ValueError(
-                f"Duplicate question number "
-                f"{question.number} on page "
-                f"{question.source_page}"
-            )
-
-        questions_by_number[
-            question.number
-        ] = question
-
-        if (
-            not question.question_hi.strip()
-            and not question.question_en.strip()
-        ):
-            raise ValueError(
-                f"Question {question.number} "
-                "has no text."
-            )
-
-        # ----------------------------------------------------
-        # Five official options
-        # ----------------------------------------------------
-
-        expected_labels = [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-        ]
-
-        if len(question.options) != 5:
-            raise ValueError(
-                f"Question {question.number} "
-                "does not have exactly "
-                "five options."
-            )
-
-        actual_labels = [
-            option.label
-            for option in question.options
-        ]
-
-        if actual_labels != expected_labels:
-            raise ValueError(
-                f"Question {question.number} "
-                f"has invalid option labels: "
-                f"{actual_labels}"
-            )
-
-        # ----------------------------------------------------
-        # Rationales
-        # ----------------------------------------------------
-
-        if len(
-            question.option_rationales
-        ) != 5:
-            raise ValueError(
-                f"Question {question.number} "
-                "does not have five rationales."
-            )
-
-        rationale_labels = [
-            r.label
-            for r in question.option_rationales
-        ]
-
-        if rationale_labels != expected_labels:
-            raise ValueError(
-                f"Question {question.number} "
-                "has invalid rationale labels."
-            )
-
-        # ----------------------------------------------------
-        # Boxes
-        # ----------------------------------------------------
-
-        validate_box(
-            question.box_hi,
-            f"Question {question.number} box_hi",
-        )
-
-        validate_box(
-            question.box_en,
-            f"Question {question.number} box_en",
-        )
-
-        validate_box(
-            question.box_full,
-            f"Question {question.number} box_full",
-        )
-
-        # ----------------------------------------------------
-        # visual_location / box_full consistency
-        # ----------------------------------------------------
-        # These are intentionally *soft* corrections rather than hard
-        # failures: the model occasionally forgets to set one of the
-        # two fields even though it clearly means to flag a visual.
-        # We normalize instead of rejecting the whole page.
-
-        if not question.has_visuals:
-            question.visual_location = "none"
-            question.box_full = None
-
-        elif question.has_visuals and question.visual_location == "none":
-            # Model flagged a visual but forgot to classify location.
-            # Default to "question" (the most common case) rather than
-            # silently dropping the visual.
-            question.visual_location = "question"
-
-        if question.has_visuals and not question.box_full:
-            print(
-                f"WARNING: Question {question.number} has_visuals=true "
-                "but no box_full was provided. The full-block crop "
-                "will be skipped for this question."
-            )
-
-        # ----------------------------------------------------
-        # Clone
-        # ----------------------------------------------------
-
-        clone = (
-            question.metadata.clone_variant
-        )
-
-        if len(clone.options) != 4:
-            raise ValueError(
-                f"Question {question.number} "
-                "clone must have exactly "
-                "four options."
-            )
-
-        clone_labels = [
-            option.label
-            for option in clone.options
-        ]
-
-        if clone_labels != [
-            "1",
-            "2",
-            "3",
-            "4",
-        ]:
-            raise ValueError(
-                f"Question {question.number} "
-                "clone labels are invalid."
-            )
-
-        # ----------------------------------------------------
-        # Time
-        # ----------------------------------------------------
-
-        if not (
-            5
-            <= question.metadata.estimated_seconds
-            <= 1800
-        ):
-            raise ValueError(
-                f"Question {question.number} "
-                "has unreasonable solving time."
-            )
-
-
-# ============================================================
-# IMAGE CROPPING
-# ============================================================
-
-def crop_box(
-    image: Image.Image,
-    box: list[int] | None,
-    destination: str,
-) -> bool:
-
-    if box is None:
-        return False
-
-    validate_box(
-        box,
-        "crop_box",
-    )
-
-    image_width, image_height = (
-        image.size
-    )
-
-    ymin, xmin, ymax, xmax = box
-
-    left = (
-        xmin / 1000
-    ) * image_width
-
-    top = (
-        ymin / 1000
-    ) * image_height
-
-    right = (
-        xmax / 1000
-    ) * image_width
-
-    bottom = (
-        ymax / 1000
-    ) * image_height
-
-    padding = 12
-
-    left = max(
-        0,
-        left - padding,
-    )
-
-    top = max(
-        0,
-        top - padding,
-    )
-
-    right = min(
-        image_width,
-        right + padding,
-    )
-
-    bottom = min(
-        image_height,
-        bottom + padding,
-    )
-
-    if (
-        right <= left
-        or bottom <= top
-    ):
-        return False
-
-    width = right - left
-    height = bottom - top
-
-    if (
-        width < 25
-        or height < 25
-    ):
-        return False
-
-    if height > (
-        image_height * 0.95
-    ):
-        return False
-
-    cropped = image.crop(
-        (
-            int(left),
-            int(top),
-            int(right),
-            int(bottom),
-        )
-    )
-
-    cropped.save(
-        destination,
-        format="JPEG",
-        quality=95,
-        optimize=True,
-    )
-
-    return True
-
-
-def create_visual_crops(
-    page_number: int,
-    bank: QuestionBank,
-):
-
-    page_path = (
-        os.path.join(
-            PAGES_DIR,
-            f"page_{page_number}.jpg",
-        )
-    )
-
-    if not os.path.exists(
-        page_path
-    ):
-        print(
-            f"WARNING: page image "
-            f"not found: {page_path}"
-        )
-        return
-
-    os.makedirs(
-        OUTPUT_DIR,
-        exist_ok=True,
-    )
-
-    image = Image.open(
-        page_path
-    )
-
-    for question in bank.questions:
-
-        if not question.has_visuals:
-            continue
-
-        if question.box_hi:
-
-            filename = (
-                f"page{page_number}"
-                f"_q{question.number}"
-                f"_hi.jpg"
-            )
-
-            destination = (
-                os.path.join(
-                    OUTPUT_DIR,
-                    filename,
-                )
-            )
-
-            if crop_box(
-                image,
-                question.box_hi,
-                destination,
+def validate_svg(svg: str, where: str):
+    stripped = svg.strip()
+    if not stripped.startswith("<svg"):
+        raise ValueError(f"{where}: SVG does not start with '<svg'.")
+    if not stripped.endswith("</svg>"):
+        raise ValueError(f"{where}: SVG does not end with '</svg>'.")
+
+
+def validate_page(extraction: PageExtraction):
+    seen_numbers = set()
+
+    for question in extraction.questions:
+        where = f"Question {question.question_number} ({question.id})"
+
+        if question.question_number <= 0:
+            raise ValueError(f"Invalid question number: {question.question_number}")
+
+        if question.question_number in seen_numbers:
+            raise ValueError(f"Duplicate question number {question.question_number} on this page.")
+        seen_numbers.add(question.question_number)
+
+        if not (question.question_text.english or question.question_text.hindi):
+            raise ValueError(f"{where}: question_text has no English or Hindi content.")
+
+        if not question.options:
+            # Some question types (numerical, fill_in_the_blank) may legitimately
+            # have no discrete options — only enforce for choice-style types.
+            if question.question_type in (
+                "single_choice",
+                "multiple_choice",
+                "assertion_reason",
+                "statement_based",
+                "statement_correctness",
+                "matching",
+                "matrix_matching",
+                "column_matching",
+                "sequence_ordering",
+                "true_false",
+                "multiple_statements",
             ):
-                question.image_hi = (
-                    filename
-                )
+                raise ValueError(f"{where}: choice-style question has no options.")
 
-        if question.box_en:
+        option_labels = [opt.label for opt in question.options]
+        if len(option_labels) != len(set(option_labels)):
+            raise ValueError(f"{where}: duplicate option labels {option_labels}.")
 
-            filename = (
-                f"page{page_number}"
-                f"_q{question.number}"
-                f"_en.jpg"
+        if question.answer.correct_option and question.answer.correct_option not in option_labels:
+            raise ValueError(
+                f"{where}: answer.correct_option '{question.answer.correct_option}' "
+                f"not among option labels {option_labels}."
             )
 
-            destination = (
-                os.path.join(
-                    OUTPUT_DIR,
-                    filename,
-                )
-            )
+        # Validate every SVG, wherever it appears.
+        for visual in question.visuals:
+            validate_svg(visual.svg, f"{where} (question visual)")
 
-            if crop_box(
-                image,
-                question.box_en,
-                destination,
-            ):
-                question.image_en = (
-                    filename
-                )
+        for option in question.options:
+            for visual in option.visuals:
+                validate_svg(visual.svg, f"{where} option {option.label} visual")
 
-        # ----------------------------------------------------
-        # Full-block crop (question number -> option 5)
-        # Used by the human review step and by the Tier-2
-        # (Gemini 3.7 Flash) SVG/audit pass.
-        # ----------------------------------------------------
-
-        if question.box_full:
-
-            filename = (
-                f"page{page_number}"
-                f"_q{question.number}"
-                f"_full.jpg"
-            )
-
-            destination = (
-                os.path.join(
-                    OUTPUT_DIR,
-                    filename,
-                )
-            )
-
-            if crop_box(
-                image,
-                question.box_full,
-                destination,
-            ):
-                question.image_full = (
-                    filename
-                )
-            else:
-                print(
-                    f"WARNING: Full-block crop failed for "
-                    f"question {question.number} on page "
-                    f"{page_number} (box too small/invalid)."
-                )
+        if not (0 <= (question.quality.ocr_confidence or 0) <= 1):
+            raise ValueError(f"{where}: ocr_confidence out of range.")
+        if not (0 <= (question.quality.structure_confidence or 0) <= 1):
+            raise ValueError(f"{where}: structure_confidence out of range.")
+        if not (0 <= (question.quality.answer_confidence or 0) <= 1):
+            raise ValueError(f"{where}: answer_confidence out of range.")
 
 
 # ============================================================
 # RESPONSE PARSER
 # ============================================================
 
-def parse_response(
-    response_text: str,
-) -> QuestionBank:
-
+def parse_response(response_text: str) -> PageExtraction:
     if not response_text:
-        raise ValueError(
-            "Gemini returned an empty response."
-        )
+        raise ValueError("Gemini returned an empty response.")
 
     cleaned = response_text.strip()
 
-    if cleaned.startswith(
-        "```"
-    ):
-
-        lines = (
-            cleaned.splitlines()
-        )
-
-        if (
-            lines
-            and lines[0].strip().startswith(
-                "```"
-            )
-        ):
+    if cleaned.startswith("```"):
+        lines = cleaned.splitlines()
+        if lines and lines[0].strip().startswith("```"):
             lines = lines[1:]
-
-        if (
-            lines
-            and lines[-1].strip()
-            == "```"
-        ):
+        if lines and lines[-1].strip() == "```":
             lines = lines[:-1]
-
-        cleaned = "\n".join(
-            lines
-        ).strip()
+        cleaned = "\n".join(lines).strip()
 
     try:
-
-        bank = (
-            QuestionBank.model_validate_json(
-                cleaned
-            )
-        )
-
+        extraction = PageExtraction.model_validate_json(cleaned)
     except ValidationError as exc:
+        raise ValueError(f"Gemini output failed schema validation:\n{exc}") from exc
 
-        raise ValueError(
-            "Gemini output failed schema validation:\n"
-            f"{exc}"
-        ) from exc
-
-    validate_question_bank(
-        bank
-    )
-
-    return bank
+    validate_page(extraction)
+    return extraction
 
 
 # ============================================================
@@ -1133,327 +589,94 @@ def parse_response(
 # ============================================================
 
 def main():
-
     if len(sys.argv) < 2:
-        print(
-            "Usage: "
-            "python3 scripts/extract_api.py <page>"
-        )
+        print("Usage: python3 scripts/extract_api.py <page>")
         sys.exit(1)
 
     try:
-        page_number = int(
-            sys.argv[1]
-        )
+        page_number = int(sys.argv[1])
     except ValueError:
-        print(
-            "ERROR: Page number must be an integer."
-        )
+        print("ERROR: Page number must be an integer.")
         sys.exit(1)
 
-    page_path = (
-        os.path.join(
-            PAGES_DIR,
-            f"page_{page_number}.jpg",
-        )
-    )
+    page_path = os.path.join(PAGES_DIR, f"page_{page_number}.jpg")
+    output_path = os.path.join(OUTPUT_DIR, f"page_{page_number}.json")
 
-    output_path = (
-        os.path.join(
-            OUTPUT_DIR,
-            f"page_{page_number}.json",
-        )
-    )
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    os.makedirs(
-        OUTPUT_DIR,
-        exist_ok=True,
-    )
-
-    # --------------------------------------------------------
-    # Check input
-    # --------------------------------------------------------
-
-    if not os.path.exists(
-        page_path
-    ):
-        print(
-            f"ERROR: Page image does not exist:"
-            f" {page_path}"
-        )
+    if not os.path.exists(page_path):
+        print(f"ERROR: Page image does not exist: {page_path}")
         sys.exit(1)
 
-    # --------------------------------------------------------
-    # API key
-    # --------------------------------------------------------
-
-    api_key = os.environ.get(
-        "GEMINI_API_KEY"
-    )
-
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print(
-            "ERROR: GEMINI_API_KEY is not set."
-        )
+        print("ERROR: GEMINI_API_KEY is not set.")
         sys.exit(1)
-
-    # --------------------------------------------------------
-    # Read image
-    # --------------------------------------------------------
 
     try:
-
-        with open(
-            page_path,
-            "rb",
-        ) as file:
-
-            image_bytes = (
-                file.read()
-            )
-
+        with open(page_path, "rb") as file:
+            image_bytes = file.read()
     except OSError as exc:
-
-        print(
-            f"ERROR reading image: {exc}"
-        )
+        print(f"ERROR reading image: {exc}")
         sys.exit(1)
 
     if not image_bytes:
-        print(
-            "ERROR: Page image is empty."
-        )
+        print("ERROR: Page image is empty.")
         sys.exit(1)
 
-    # --------------------------------------------------------
-    # Gemini
-    # --------------------------------------------------------
+    client = genai.Client(api_key=api_key)
 
-    client = genai.Client(
-        api_key=api_key
-    )
-
-    print(
-        "======================================"
-    )
-
-    print(
-        f"PROCESSING PAGE {page_number}"
-    )
-
-    print(
-        f"MODEL: {MODEL_NAME}"
-    )
-
-    print(
-        "======================================"
-    )
+    print("======================================")
+    print(f"PROCESSING PAGE {page_number}")
+    print(f"MODEL: {MODEL_NAME}")
+    print("======================================")
 
     try:
-
-        response = (
-            call_gemini_with_retry(
-                client,
-                image_bytes,
-            )
-        )
-
+        response = call_gemini_with_retry(client, image_bytes)
     except Exception as exc:
-
-        print(
-            f"ERROR: Gemini failed:\n{exc}"
-        )
+        print(f"ERROR: Gemini failed:\n{exc}")
         sys.exit(1)
 
-    # --------------------------------------------------------
-    # Parse
-    # --------------------------------------------------------
-
     try:
-
-        bank = parse_response(
-            response.text
-        )
-
+        extraction = parse_response(response.text)
     except Exception as exc:
+        print(f"ERROR: Output validation failed:\n{exc}")
 
-        print(
-            f"ERROR: Output validation failed:\n{exc}"
-        )
-
-        raw_path = (
-            os.path.join(
-                OUTPUT_DIR,
-                f"page_{page_number}_raw.txt",
-            )
-        )
-
-        with open(
-            raw_path,
-            "w",
-            encoding="utf-8",
-        ) as file:
-
-            file.write(
-                response.text
-                if response.text
-                else "<EMPTY>"
-            )
-
-        print(
-            f"Raw response saved to {raw_path}"
-        )
+        raw_path = os.path.join(OUTPUT_DIR, f"page_{page_number}_raw.txt")
+        with open(raw_path, "w", encoding="utf-8") as file:
+            file.write(response.text if response.text else "<EMPTY>")
+        print(f"Raw response saved to {raw_path}")
 
         sys.exit(1)
 
-    # --------------------------------------------------------
-    # Source page is authoritative from worker
-    # --------------------------------------------------------
+    # Fill in the page number as the authoritative source_reference.page
+    for question in extraction.questions:
+        question.source_reference.page = page_number
 
-    for question in bank.questions:
-        question.source_page = (
-            page_number
-        )
-
-    # --------------------------------------------------------
-    # Create crops
-    # --------------------------------------------------------
+    data = {
+        "page_number": page_number,
+        "questions": [q.model_dump(mode="json") for q in extraction.questions],
+    }
 
     try:
-
-        create_visual_crops(
-            page_number,
-            bank,
-        )
-
-    except Exception as exc:
-
-        print(
-            f"ERROR creating image crops: {exc}"
-        )
-        sys.exit(1)
-
-    # --------------------------------------------------------
-    # Persist the raw source page image alongside this page's
-    # JSON/crops. Run 1's merge step folds this into
-    # output/<run>/raw_pages/page_N/ so Workflow 2 (page-level
-    # refinement) can later compare its audit directly against
-    # the actual PDF page, not just the crops.
-    # --------------------------------------------------------
-
-    try:
-
-        shutil.copy2(
-            page_path,
-            os.path.join(
-                OUTPUT_DIR,
-                f"page_{page_number}_source.jpg",
-            ),
-        )
-
+        with open(output_path, "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
     except OSError as exc:
-
-        print(
-            f"WARNING: Could not persist "
-            f"source page image: {exc}"
-        )
-
-    # --------------------------------------------------------
-    # Serialize
-    # --------------------------------------------------------
-
-    data = bank.model_dump(
-        mode="json"
-    )
-
-    for question in data["questions"]:
-
-        # Bounding boxes are intermediate data.
-        question.pop(
-            "box_hi",
-            None,
-        )
-
-        question.pop(
-            "box_en",
-            None,
-        )
-
-        question.pop(
-            "box_full",
-            None,
-        )
-
-    # --------------------------------------------------------
-    # Save
-    # --------------------------------------------------------
-
-    try:
-
-        with open(
-            output_path,
-            "w",
-            encoding="utf-8",
-        ) as file:
-
-            json.dump(
-                data,
-                file,
-                ensure_ascii=False,
-                indent=4,
-            )
-
-    except OSError as exc:
-
-        print(
-            f"ERROR saving output: {exc}"
-        )
+        print(f"ERROR saving output: {exc}")
         sys.exit(1)
 
-    # --------------------------------------------------------
-    # Summary
-    # --------------------------------------------------------
-
-    visual_count = sum(
-        1
-        for q in bank.questions
-        if q.has_visuals
-    )
+    visual_count = sum(1 for q in extraction.questions if q.visuals or any(o.visuals for o in q.options))
+    review_count = sum(1 for q in extraction.questions if q.quality.needs_manual_review)
 
     print()
-    print(
-        "SUCCESS"
-    )
+    print("SUCCESS")
+    print(f"Page: {page_number}")
+    print(f"Questions: {len(extraction.questions)}")
+    print(f"Questions with visuals: {visual_count}")
+    print(f"Questions flagged for manual review: {review_count}")
+    print(f"Saved: {output_path}")
 
-    print(
-        f"Page: {page_number}"
-    )
-
-    print(
-        f"Questions: {len(bank.questions)}"
-    )
-
-    print(
-        f"Visual questions: {visual_count}"
-    )
-
-    full_crop_count = sum(
-        1
-        for q in bank.questions
-        if q.image_full
-    )
-
-    print(
-        f"Full-block crops saved: {full_crop_count}"
-    )
-
-    print(
-        f"Saved: {output_path}"
-    )
-
-    time.sleep(
-        FINAL_SLEEP_SECONDS
-    )
+    time.sleep(FINAL_SLEEP_SECONDS)
 
 
 if __name__ == "__main__":
