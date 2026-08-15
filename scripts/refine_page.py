@@ -57,7 +57,7 @@ from pydantic import BaseModel, Field, ValidationError
 
 MODEL_NAME = os.environ.get(
     "REFINE_MODEL_NAME",
-    "gemini-3.7-flash",
+    "gemini-3.5-flash-lite",
 )
 
 MAX_ATTEMPTS = 6
