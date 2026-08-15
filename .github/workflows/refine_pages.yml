@@ -1,0 +1,400 @@
+name: RPSC Page-Level Refinement Pipeline (Workflow 2)
+
+# ============================================================
+# Manually triggered second workflow — page-level version.
+#
+# Run this AFTER Workflow 1 (Automated RPSC Drive Pipeline) has
+# already committed output/<RUN_ID>/question_bank.json AND
+# output/<RUN_ID>/raw_pages/page_<N>/ (source page image, that
+# page's draft JSON, and its question/option crops) to the repo.
+#
+# Unlike the old batch-by-question-count refinement, this runs one
+# worker per PAGE — same matrix pattern as Workflow 1 — and sends
+# each page's ACTUAL SOURCE IMAGE back to Gemini, so the audit is a
+# real compare-against-the-PDF check instead of an audit of crops
+# alone.
+#
+# Trigger from the Actions tab -> "RPSC Page-Level Refinement
+# Pipeline (Workflow 2)" -> "Run workflow", and enter the run_id
+# (the folder name under output/, e.g. "RPSC_2024_Exam").
+# ============================================================
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Run folder name under output/ (e.g. RPSC_2024_Exam)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+
+# ============================================================
+# PREP JOB
+# ============================================================
+
+jobs:
+
+  prep:
+
+    runs-on: ubuntu-latest
+
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+      has_pages: ${{ steps.matrix.outputs.has_pages }}
+
+    steps:
+
+      # --------------------------------------------------------
+      # Checkout
+      # --------------------------------------------------------
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # --------------------------------------------------------
+      # System dependencies
+      # --------------------------------------------------------
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+
+      # --------------------------------------------------------
+      # Verify the run exists before spending any API calls
+      # --------------------------------------------------------
+
+      - name: Verify run directory
+        run: |
+
+          RUN_DIR="output/${{ inputs.run_id }}"
+
+          echo "Looking for: $RUN_DIR/raw_pages"
+
+          if [ ! -d "$RUN_DIR/raw_pages" ]; then
+
+            echo "ERROR:"
+            echo "$RUN_DIR/raw_pages was not found."
+            echo ""
+            echo "This run may predate raw_pages preservation, or"
+            echo "the run_id is wrong. Available runs:"
+            find output -maxdepth 1 -mindepth 1 -type d -print | sort || true
+
+            exit 1
+
+          fi
+
+          echo "Found raw_pages directory."
+
+
+      # --------------------------------------------------------
+      # Generate page matrix from raw_pages/
+      # --------------------------------------------------------
+
+      - name: Generate page matrix
+        id: matrix
+
+        run: |
+
+          RUN_DIR="output/${{ inputs.run_id }}"
+
+          PAGES=$(
+            find "$RUN_DIR/raw_pages" \
+              -maxdepth 1 \
+              -mindepth 1 \
+              -type d \
+              -name "page_*" \
+              -print \
+            | sed -E 's/.*page_([0-9]+)$/\1/' \
+            | sort -n
+          )
+
+          if [ -z "$PAGES" ]; then
+            echo "ERROR: No page_N directories found under $RUN_DIR/raw_pages."
+            echo "has_pages=false" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+
+          echo "Pages found:"
+          echo "$PAGES"
+
+          MATRIX=$(
+            echo "$PAGES" |
+            jq -R . |
+            jq -s -c 'map(tonumber)'
+          )
+
+          echo "Generated matrix:"
+          echo "$MATRIX"
+
+          echo "has_pages=true" >> "$GITHUB_OUTPUT"
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+
+
+  # ============================================================
+  # REFINE JOB
+  # One worker per page
+  # ============================================================
+
+  refine:
+
+    needs: prep
+
+    if: needs.prep.outputs.has_pages == 'true'
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        page: ${{ fromJson(needs.prep.outputs.matrix) }}
+
+
+    steps:
+
+      # --------------------------------------------------------
+      # Checkout repository (raw_pages/ + crops are committed)
+      # --------------------------------------------------------
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # --------------------------------------------------------
+      # Python dependencies
+      # --------------------------------------------------------
+
+      - name: Install Python dependencies
+        run: |
+
+          python3 -m pip install --upgrade pip
+
+          python3 -m pip install \
+            google-genai \
+            pydantic \
+            pillow
+
+
+      # --------------------------------------------------------
+      # Verify this page's raw bundle exists
+      # --------------------------------------------------------
+
+      - name: Verify raw page bundle
+        run: |
+
+          RAW_DIR="output/${{ inputs.run_id }}/raw_pages/page_${{ matrix.page }}"
+
+          echo "Checking: $RAW_DIR"
+
+          if [ ! -f "$RAW_DIR/page_${{ matrix.page }}.json" ]; then
+            echo "ERROR: $RAW_DIR/page_${{ matrix.page }}.json not found."
+            exit 1
+          fi
+
+          if [ ! -f "$RAW_DIR/page_${{ matrix.page }}_source.jpg" ]; then
+            echo "ERROR: $RAW_DIR/page_${{ matrix.page }}_source.jpg not found."
+            exit 1
+          fi
+
+          echo "Raw page bundle verified:"
+          ls -lh "$RAW_DIR"
+
+
+      # --------------------------------------------------------
+      # Gemini page-level audit
+      # --------------------------------------------------------
+
+      - name: Refine page against source image
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+        run: |
+
+          echo "======================================"
+          echo "PAGE-LEVEL REFINEMENT"
+          echo "RUN: ${{ inputs.run_id }}"
+          echo "PAGE: ${{ matrix.page }}"
+          echo "======================================"
+
+          python3 \
+            scripts/refine_page.py \
+            "${{ inputs.run_id }}" \
+            ${{ matrix.page }}
+
+
+      # --------------------------------------------------------
+      # Verify refined output before uploading artifact
+      # --------------------------------------------------------
+
+      - name: Verify refined page output
+        run: |
+
+          if [ ! -f "refined_temp/page_${{ matrix.page }}.json" ]; then
+            echo "ERROR: Expected refined page JSON was not generated."
+            exit 1
+          fi
+
+          echo "Refined page output verified:"
+          ls -lh "refined_temp/page_${{ matrix.page }}.json"
+
+
+      # --------------------------------------------------------
+      # Upload refined page result
+      # --------------------------------------------------------
+
+      - name: Upload refined page output
+        uses: actions/upload-artifact@v4
+
+        with:
+          name: refined-page-${{ matrix.page }}
+
+          path: refined_temp/
+
+          retention-days: 1
+
+
+  # ============================================================
+  # MERGE JOB
+  # ============================================================
+
+  merge:
+
+    needs: refine
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # --------------------------------------------------------
+      # Checkout (raw_pages/ images live here, not in artifacts)
+      # --------------------------------------------------------
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # --------------------------------------------------------
+      # Download ALL refined page artifacts
+      # --------------------------------------------------------
+
+      - name: Download all refined page outputs
+        uses: actions/download-artifact@v4
+
+        with:
+          path: downloaded_refined
+
+
+      # --------------------------------------------------------
+      # Inspect downloaded artifacts
+      # --------------------------------------------------------
+
+      - name: Verify downloaded refined outputs
+        run: |
+
+          echo "======================================"
+          echo "DOWNLOADED REFINED PAGES"
+          echo "======================================"
+
+          find downloaded_refined -type f -print | sort
+
+          JSON_COUNT=$(
+            find downloaded_refined \
+              -type f \
+              -name "page_*.json" \
+              ! -name "*_raw.json" \
+              | wc -l
+          )
+
+          echo ""
+          echo "Refined page JSON files found: $JSON_COUNT"
+
+          if [ "$JSON_COUNT" -eq 0 ]; then
+            echo "ERROR: No refined page JSON files were downloaded."
+            exit 1
+          fi
+
+
+      # --------------------------------------------------------
+      # Merge refined pages back into the run's question bank
+      # --------------------------------------------------------
+
+      - name: Merge refined pages
+
+        run: |
+
+          echo "======================================"
+          echo "MERGING REFINED PAGES"
+          echo "RUN: ${{ inputs.run_id }}"
+          echo "======================================"
+
+          python3 \
+            scripts/merge_refined_pages.py \
+            "${{ inputs.run_id }}"
+
+
+      # --------------------------------------------------------
+      # Verify final output
+      # --------------------------------------------------------
+
+      - name: Verify refined question bank
+        run: |
+
+          RUN_DIR="output/${{ inputs.run_id }}"
+
+          echo "Refined question bank:"
+          ls -lh "$RUN_DIR/question_bank.json"
+
+          AUDITED_COUNT=$(
+            python3 -c "import json; data=json.load(open('$RUN_DIR/question_bank.json', encoding='utf-8')); qs=data.get('questions', []); a=sum(1 for q in qs if q.get('audited')); print(f'{a}/{len(qs)}')"
+          )
+
+          echo "Audited questions: $AUDITED_COUNT"
+
+
+      # --------------------------------------------------------
+      # Commit result
+      # --------------------------------------------------------
+
+      - name: Commit refined question bank
+        run: |
+
+          git config user.name \
+            "github-actions[bot]"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+
+          git add "output/${{ inputs.run_id }}/question_bank.json"
+          git add "output/${{ inputs.run_id }}/images/"
+          git add "output/catalog.json"
+
+
+          if git diff --cached --quiet; then
+
+            echo "No refinement changes to commit."
+
+          else
+
+            echo "Refinement changes detected."
+
+            git commit \
+              -m "AI: Page-level refine ${{ inputs.run_id }}"
+
+
+            git pull \
+              --rebase \
+              origin main
+
+
+            git push
+
+            echo "Changes pushed successfully."
+
+          fi
