@@ -347,8 +347,8 @@
         {
             "source_page": 1,
             "number": 7,
-            "question_hi": "दिए गए कथनों पर विचार कर नीचे दिए गए कूट के उपयोग से सही उत्तर का चयन कीजिए -\nकथन I: उच्च सक्रिय ऊर्जा एंजाइमों की उपस्थिति में तीव्र अभिक्रियाओं को प्रेरित करती है।\nकथन II: एंजाइम, अभिक्रिया की एंथैल्पी परिवर्तन ($\\Delta H$) को कम करके कार्य करते हैं।\nकूट -\n(1) कथन I असत्य है, कथन II सत्य है।\n(2) कथन I सत्य है, कथन II असत्य है।\n(3) दोनों कथन सत्य हैं।\n(4) दोनों कथन असत्य हैं।\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Consider the given statements and select the correct answer using the code given below -\nStatement I : High activation energy favors faster reactions in the absence of enzymes.\nStatement II : Enzymes act by decreasing the enthalpy change ($\\Delta H$) of the reaction.\nCode -\n(1) Statement I is false, Statement II is true.\n(2) Statement I is true, Statement II is false.\n(3) Both statements are true.\n(4) Both statements are false.\n(5) Question not attempted",
+            "question_hi": "दिए गए कथनों पर विचार कर नीचे दिए गए कूट के उपयोग से सही उत्तर का चयन कीजिए -\nकथन I: उच्च सक्रिय ऊर्जा एंजाइमों की उपस्थिति में तीव्र अभिक्रियाओं को प्रेरित करती है।\nकथन II: एंजाइम, अभिक्रिया की एंथैल्पी परिवर्तन ($\\Delta H$) को कम करके कार्य करते हैं।\nकूट -\n",
+            "question_en": "Consider the given statements and select the correct answer using the code given below -\nStatement I : High activation energy favors faster reactions in the absence of enzymes.\nStatement II : Enzymes act by decreasing the enthalpy change ($\\Delta H$) of the reaction.\n",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -358,27 +358,42 @@
                 {
                     "label": "1",
                     "hi": "(1) कथन I असत्य है, कथन II सत्य है।",
-                    "en": "(1) Statement I is false, Statement II is true."
+                    "en": "(1) Statement I is false, Statement II is true.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(2) कथन I सत्य है, कथन II असत्य है।",
-                    "en": "(2) Statement I is true, Statement II is false."
+                    "en": "(2) Statement I is true, Statement II is false.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(3) दोनों कथन सत्य हैं।",
-                    "en": "(3) Both statements are true."
+                    "en": "(3) Both statements are true.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "(4) दोनों कथन असत्य हैं।",
-                    "en": "(4) Both statements are false."
+                    "en": "(4) Both statements are false.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "कथन I असत्य है क्योंकि उच्च सक्रिय ऊर्जा (Activation energy) के कारण अभिक्रिया धीमी होती है, न कि तीव्र। कथन II भी असत्य है क्योंकि एंजाइम अभिक्रिया की सक्रिय ऊर्जा को कम करते हैं, न कि एंथैल्पी परिवर्तन ($\\Delta H$) को। एंथैल्पी परिवर्तन प्रारंभिक और अंतिम अवस्थाओं पर निर्भर करता है और उत्प्रेरक द्वारा अपरिवर्तित रहता है। अतः दोनों कथन असत्य हैं।",
@@ -467,7 +482,11 @@
                     "correct_label": "1",
                     "explanation_en": "Enzymes act as catalysts by lowering the activation energy barrier, thereby increasing the reaction rate without changing $\\Delta H$ or equilibrium constants."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T05:52:32.193Z"
         },
         {
             "source_page": 2,
