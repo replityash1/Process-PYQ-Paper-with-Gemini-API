@@ -3,8 +3,8 @@
         {
             "source_page": 1,
             "number": 5,
-            "question_hi": "पादप फैमিলি (कॉलम-I) का विशिष्ट पुष्पक्रम (कॉलम-II) के साथ मिलान कीजिए एवं नीचे दिए गए कूट की सहायता से सही उत्तर चुनिए -\nकॉलम-I\n(पादप फैमিলি)\n(A) एस्टेरेसी\n(B) लैमिएसी\n(C) एपिएसी\n(D) फेबेसी\n(E) मोरेसी\nकूट -\n(1) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)\n(2) (A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)\n(4) (A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Match the Plant Families given in Column-I with characteristic Inflorescence given in Column-II and select the correct answer using the code given below -\nColumn-I\n(Plant family)\n(A) Asteraceae\n(B) Lamiaceae\n(C) Apiaceae\n(D) Fabaceae\n(E) Moraceae\nCode -\n(1) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)\n(2) (A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)\n(4) (A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)\n(5) Question not attempted",
+            "question_hi": "पादप फैमिली (कॉलम-I) का विशिष्ट पुष्पक्रम (कॉलम-II) के साथ मिलान कीजिए एवं नीचे दिए गए कूट की सहायता से सही उत्तर चुनिए -\n\n\n[table]",
+            "question_en": "Match the Plant Families given in Column-I with characteristic Inflorescence given in Column-II and select the correct answer using the code given below -\nColumn-I\n(Plant family)\n(A) Asteraceae\n(B) Lamiaceae\n(C) Apiaceae\n(D) Fabaceae\n(E) Moraceae\nCode -\n(1) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)\n(2) (A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)\n(4) (A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)\n(5) Question not attempted\n\n[table]",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -14,31 +14,46 @@
                 {
                     "label": "1",
                     "hi": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)",
-                    "en": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)"
+                    "en": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)",
-                    "en": "(A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)"
+                    "en": "(A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)",
-                    "en": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)"
+                    "en": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "(A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)",
-                    "en": "(A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)"
+                    "en": "(A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "एस्ट्रेसी (Asteraceae) कुल का विशिष्ट पुष्पक्रम कैपिटुलम (Capitulum) या मुण्डक होता है। लैमिएसी (Lamiaceae) कुल का विशिष्ट पुष्पक्रम वर्टिसिलास्टर (Verticillaster) होता है। एपिएसी (Apiaceae) कुल में कम्पाउण्ड अम्बेल (Compound Umbel) या छत्रक पाया जाता है। फेबेसी (Fabaceae) कुल में रेसिम (Raceme) या असीमाक्ष पुष्पक्रम होता है। मोरेसी (Moraceae) कुल का विशिष्ट पुष्पक्रम हाइपैन्थोडियम (Hypanthodium) होता है। अतः सही मिलान (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v) है।",
-            "explanation_en": "Asteraceae family is characterized by Capitulum inflorescence. Lamiaceae has Verticillaster inflorescence. Apiaceae possesses Compound Umbel. Fabaceae has Raceme inflorescence. Moraceae is characterized by Hypanthodium inflorescence. Thus, the correct matching is (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v).",
+            "explanation_en": "Asteraceae family is characterized by Capitulum inflorescence. Lamiaceae has Verticillaster inflorescence. Apiaceae possesses Compound Umbel. Fabaceae has Raceme inflorescence. Moraceae is characterized by Hypanthodium inflorescence. \n\nThus, the correct matching is (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v).",
             "option_rationales": [
                 {
                     "label": "1",
@@ -55,8 +70,8 @@
                 {
                     "label": "3",
                     "is_correct": true,
-                    "rationale_hi": "यह सही मिलान है: A-i, B-ii, C-iii, D-iv, E-v.",
-                    "rationale_en": "This is the correct matching: A-i, B-ii, C-iii, D-iv, E-v."
+                    "rationale_hi": "यह विकल्प गलत सुमेलन दर्शाता है।",
+                    "rationale_en": "This option shows incorrect matching."
                 },
                 {
                     "label": "4",
@@ -126,7 +141,83 @@
                     "correct_label": "1",
                     "explanation_en": "Asteraceae characteristically features a Capitulum (head) inflorescence."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "content_hi": [
+                {
+                    "type": "text",
+                    "text": "पादप फैमिली (कॉलम-I) का विशिष्ट पुष्पक्रम (कॉलम-II) के साथ मिलान कीजिए एवं नीचे दिए गए कूट की सहायता से सही उत्तर चुनिए -\n"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(पादप फैमिली)",
+                            "(विशिष्ट पुष्पक्रम)"
+                        ],
+                        [
+                            "(A) एस्टेरेसी",
+                            "(i) कैपिटुलम"
+                        ],
+                        [
+                            "(B) लैमिएसी",
+                            "(ii) वर्टिसिलास्टर  "
+                        ],
+                        [
+                            "(C) एपिएसी",
+                            "(iii) कम्पाउण्ड अम्बेल"
+                        ],
+                        [
+                            "(D) फेबेसी",
+                            "(iv) रेसिम "
+                        ],
+                        [
+                            "(E) मोरेसी",
+                            "(v) हाइपैन्थोडियम "
+                        ]
+                    ]
+                }
+            ],
+            "content_en": [
+                {
+                    "type": "text",
+                    "text": "Match the Plant Families given in Column-I with characteristic Inflorescence given in Column-II and select the correct answer using the code given below -\nColumn-I\n(Plant family)\n(A) Asteraceae\n(B) Lamiaceae\n(C) Apiaceae\n(D) Fabaceae\n(E) Moraceae\nCode -\n(1) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)\n(2) (A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)\n(4) (A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)\n(5) Question not attempted"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(Plant family)",
+                            "(Characteristic Inflorescence)"
+                        ],
+                        [
+                            "(A) Asteraceae",
+                            "(i) Capitulum"
+                        ],
+                        [
+                            "(B) Lamiaceae",
+                            "(ii) Verticillaster"
+                        ],
+                        [
+                            "(C) Apiaceae",
+                            "(iii) Compound Umbel"
+                        ],
+                        [
+                            "(D) Fabaceae",
+                            "(iv) Raceme"
+                        ],
+                        [
+                            "(E) Moraceae",
+                            "(v) Hypanthodium"
+                        ]
+                    ]
+                }
+            ],
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T05:32:17.079Z"
         },
         {
             "source_page": 1,
