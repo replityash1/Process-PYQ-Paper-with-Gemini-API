@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 import sys
 import time
 from typing import Literal
@@ -1331,6 +1332,31 @@ def main():
             f"ERROR creating image crops: {exc}"
         )
         sys.exit(1)
+
+    # --------------------------------------------------------
+    # Persist the raw source page image alongside this page's
+    # JSON/crops. Run 1's merge step folds this into
+    # output/<run>/raw_pages/page_N/ so Workflow 2 (page-level
+    # refinement) can later compare its audit directly against
+    # the actual PDF page, not just the crops.
+    # --------------------------------------------------------
+
+    try:
+
+        shutil.copy2(
+            page_path,
+            os.path.join(
+                OUTPUT_DIR,
+                f"page_{page_number}_source.jpg",
+            ),
+        )
+
+    except OSError as exc:
+
+        print(
+            f"WARNING: Could not persist "
+            f"source page image: {exc}"
+        )
 
     # --------------------------------------------------------
     # Serialize

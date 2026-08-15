@@ -284,6 +284,7 @@ html.dark .mode-switch .knob { transform: translateX(24px); }
                     <option value="Hard">Hard</option>
                 </select>
                 <button id="expand-all-btn" onclick="toggleExpandAll()" class="text-xs font-semibold rounded-lg px-3 py-2 btn-ghost transition">Expand all</button>
+                <a id="review-link" href="review.html" class="text-xs font-semibold rounded-lg px-3 py-2 btn-ghost transition" style="text-decoration:none;" title="Review questions against the source page">📝 Review</a>
             </div>
         </div>
     </div>
@@ -522,8 +523,34 @@ function renderQuestionVisual(question, lang) {
 }
 function renderOptionVisual(option) {
     if (option.svg) return renderInlineSvg(option.svg);
+    if (option.image) return `<div class="mb-2"><img src="${assetUrl(currentRun, option.image)}" class="max-w-full max-h-[40vh] rounded-xl mx-auto" style="border: 1px solid var(--rule);"></div>`;
     if (option.image_gen_prompt) return renderPromptPlaceholder(option.image_gen_prompt);
     return "";
+}
+
+// ==========================================================
+// STRUCTURED CONTENT (content_hi / content_en block arrays)
+// Written by review.html's "Structured (image/table)" editor —
+// ordered text / image / table blocks, so an image or a table
+// can sit at any position inside the statement instead of only
+// before/after it. Falls back to the plain question_hi/en +
+// legacy image slots wherever a question has no blocks.
+// ==========================================================
+function blocksToHtml(blocks, textClass, textStyle) {
+    if (!Array.isArray(blocks)) return "";
+    return blocks.map(b => {
+        if (b.type === "text") {
+            return b.text ? `<div class="${textClass} preserve-lines mb-4" style="${textStyle}">${formatText(b.text)}</div>` : "";
+        }
+        if (b.type === "image") {
+            return `<div class="mb-5"><img src="${assetUrl(currentRun, b.path)}" class="max-w-full max-h-[70vh] rounded-xl mx-auto" style="border: 1px solid var(--rule);"></div>`;
+        }
+        if (b.type === "table") {
+            const rows = b.rows || [];
+            return `<div class="mb-5 overflow-x-auto"><table style="border-collapse:collapse; font-size:14px;">${rows.map((row, ri) => `<tr>${row.map(cell => (b.header && ri === 0) ? `<th style="border:1px solid var(--rule-strong); padding:6px 10px; background:var(--paper-alt); text-align:left;">${formatText(cell)}</th>` : `<td style="border:1px solid var(--rule-strong); padding:6px 10px;">${formatText(cell)}</td>`).join("")}</tr>`).join("")}</table></div>`;
+        }
+        return "";
+    }).join("");
 }
 
 // ==========================================================
@@ -550,6 +577,8 @@ async function loadRun(runId) {
     currentQuestions = Array.isArray(data.questions) ? data.questions : [];
     filteredQuestions = currentQuestions;
     renderQuestions();
+    const reviewLink = document.getElementById("review-link");
+    if (reviewLink) reviewLink.href = `review.html?run=${encodeURIComponent(runId)}`;
 }
 
 // ==========================================================
@@ -632,6 +661,7 @@ function renderHome(catalog) {
                     <span>🖼 ${visual} visual</span>
                 </div>
                 ${updated ? `<div class="text-xs mt-4 pt-3 divider-rule" style="color: var(--ink-faint);">Updated ${escapeHtml(updated)}</div>` : ""}
+                <span onclick="event.stopPropagation(); location.href='review.html?run=${encodeURIComponent(run.id)}';" class="text-xs font-semibold underline mt-2 inline-block" style="color: var(--accent);">📝 Review this paper</span>
             </button>`;
     });
     html += `</div>`;
@@ -694,8 +724,14 @@ function renderQuestion(question, idx) {
     const meta = question.metadata || {};
     const options = dedupeOptions(question.options);
 
-    const cleanHi = cleanQuestionText(question.question_hi, options, 'hi');
-    const cleanEn = cleanQuestionText(question.question_en, options, 'en');
+    const hiStructured = Array.isArray(question.content_hi) && question.content_hi.length > 0;
+    const enStructured = Array.isArray(question.content_en) && question.content_en.length > 0;
+
+    // Structured content (tables / inline images built in review.html)
+    // is human-curated already, so it's rendered as-is rather than run
+    // through the OCR-cleanup pass below.
+    const cleanHi = hiStructured ? "" : cleanQuestionText(question.question_hi, options, 'hi');
+    const cleanEn = enStructured ? "" : cleanQuestionText(question.question_en, options, 'en');
 
     let diffStyle = "background: var(--paper-alt); color: var(--ink-soft); border: 1px solid var(--rule-strong);";
     if (meta.difficulty === "Easy")   diffStyle = "background: var(--good-bg); color: var(--good); border: 1px solid var(--good-border);";
@@ -729,11 +765,19 @@ function renderQuestion(question, idx) {
             </div>`;
     }
 
-    if (cleanHi) html += `<div class="lang-hi text-lg font-medium leading-relaxed preserve-lines mb-4" style="color: var(--ink);">${formatText(cleanHi)}</div>`;
-    html += `<div class="lang-hi">${renderQuestionVisual(question, 'hi')}</div>`;
+    if (hiStructured) {
+        html += `<div class="lang-hi">${blocksToHtml(question.content_hi, "text-lg font-medium leading-relaxed", "color: var(--ink);")}</div>`;
+    } else {
+        if (cleanHi) html += `<div class="lang-hi text-lg font-medium leading-relaxed preserve-lines mb-4" style="color: var(--ink);">${formatText(cleanHi)}</div>`;
+        html += `<div class="lang-hi">${renderQuestionVisual(question, 'hi')}</div>`;
+    }
 
-    if (cleanEn) html += `<div class="lang-en text-base leading-relaxed preserve-lines ${cleanHi ? 'pt-4 divider-rule' : ''} mb-4" style="color: var(--ink-soft);">${formatText(cleanEn)}</div>`;
-    html += `<div class="lang-en">${renderQuestionVisual(question, 'en')}</div>`;
+    if (enStructured) {
+        html += `<div class="lang-en ${(hiStructured || cleanHi) ? 'pt-4 divider-rule' : ''}">${blocksToHtml(question.content_en, "text-base leading-relaxed", "color: var(--ink-soft);")}</div>`;
+    } else {
+        if (cleanEn) html += `<div class="lang-en text-base leading-relaxed preserve-lines ${cleanHi ? 'pt-4 divider-rule' : ''} mb-4" style="color: var(--ink-soft);">${formatText(cleanEn)}</div>`;
+        html += `<div class="lang-en">${renderQuestionVisual(question, 'en')}</div>`;
+    }
 
     // OPTIONS
     html += `<div class="mt-5 space-y-2.5">`;

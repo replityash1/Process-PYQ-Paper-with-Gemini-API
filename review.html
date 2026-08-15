@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review — RPSC Question Bank</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    window.MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true },
+        startup: { typeset: false }
+    };
+</script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #F6EFDD; --bg-soft: #FBF6E9; --paper: #FFFDF6; --paper-alt: #FAF3E1;
+    --ink: #2B2417; --ink-soft: #5B5240; --ink-faint: #8C816A;
+    --rule: #E4D8B8; --rule-strong: #D6C79A;
+    --accent: #9B5B2A; --accent-soft: #C98A4B; --accent-bg: #F1E2C4;
+    --good: #3D7A4E; --good-bg: #E8F1E4; --good-border: #BEDCC0;
+    --bad: #B54A3F; --bad-bg: #FBEAE6; --bad-border: #EFC5BC;
+    --info: #3E6C8E; --info-bg: #E6EFF5; --info-border: #C2D9E8;
+    --shadow: 0 1px 2px rgba(43,36,23,0.04), 0 3px 12px rgba(43,36,23,0.06);
+}
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: 'Noto Serif', 'Noto Sans Devanagari', Georgia, serif; min-height: 100vh; }
+.font-display { font-family: 'Fraunces', 'Noto Serif', serif; }
+.font-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.preserve-lines { white-space: pre-wrap; word-break: break-word; }
+textarea, input, select { font-family: inherit; }
+.card { background: var(--paper); border: 1px solid var(--rule); box-shadow: var(--shadow); border-radius: 14px; }
+.field-label { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 4px; display: block; }
+.field-input { width: 100%; background: var(--paper-alt); border: 1px solid var(--rule-strong); border-radius: 8px; padding: 8px 10px; font-size: 14px; color: var(--ink); }
+.field-input:focus { outline: none; border-color: var(--accent); }
+textarea.field-input { resize: vertical; min-height: 64px; line-height: 1.5; }
+.btn { font-size: 13px; font-weight: 600; border-radius: 9px; padding: 7px 13px; transition: all .15s ease; cursor: pointer; border: 1px solid var(--rule-strong); background: var(--paper-alt); color: var(--ink-soft); }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-primary { background: var(--accent); color: #FFFDF6; border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent-soft); color: #fff; border-color: var(--accent-soft); }
+.btn-danger { color: var(--bad); }
+.btn-danger:hover { border-color: var(--bad); color: var(--bad); }
+.chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: 10.5px; font-weight: 700; letter-spacing: .02em; font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
+.slot-box { border: 1.5px dashed var(--rule-strong); border-radius: 10px; padding: 6px; background: var(--paper-alt); }
+.slot-box img { max-height: 90px; border-radius: 6px; margin: 0 auto; display: block; }
+.slot-box.has-pending { border-color: var(--info); background: var(--info-bg); }
+#crop-canvas { cursor: crosshair; touch-action: none; }
+.q-nav-item { display: block; width: 100%; text-align: left; padding: 6px 9px; border-radius: 8px; font-size: 12.5px; font-family: 'JetBrains Mono', monospace; color: var(--ink-soft); }
+.q-nav-item:hover { background: var(--paper-alt); }
+.q-nav-item.active { background: var(--accent); color: #fff; font-weight: 700; }
+.dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+.toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 200; padding: 10px 18px; border-radius: 10px; font-size: 13.5px; font-weight: 600; box-shadow: var(--shadow); max-width: 90vw; }
+.tab-btn { font-size: 12.5px; }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<header class="sticky top-0 z-40" style="background: var(--paper); border-bottom: 1px solid var(--rule); box-shadow: var(--shadow);">
+    <div class="max-w-[1500px] mx-auto px-4 py-2.5 flex items-center gap-3 flex-wrap">
+        <a href="index.html" class="btn shrink-0" title="Back to viewer">← Viewer</a>
+        <div class="min-w-0">
+            <h1 class="font-display text-base font-semibold leading-tight truncate" style="color: var(--ink);">Question Review</h1>
+            <p id="run-label" class="text-xs truncate" style="color: var(--ink-faint);">Select a paper to review</p>
+        </div>
+        <div class="flex-grow"></div>
+        <div id="gh-status" class="chip" style="background: var(--paper-alt); color: var(--ink-faint); border: 1px solid var(--rule-strong);">GitHub: not connected</div>
+        <button id="connect-btn" class="btn" onclick="openConnectPanel()">Connect GitHub</button>
+    </div>
+    <div id="unsaved-bar" class="hidden max-w-[1500px] mx-auto px-4 pb-2.5 flex items-center gap-2 flex-wrap">
+        <span id="unsaved-count" class="chip" style="background: var(--accent-bg); color: var(--accent);"></span>
+        <button id="save-all-btn" class="btn btn-primary text-xs py-1.5 px-2.5" onclick="saveAllChanges()">💾 Save ALL changes now (1 commit)</button>
+        <button class="btn text-xs py-1.5 px-2.5" onclick="downloadFallback()">⬇ Download JSON (fallback)</button>
+        <span class="text-xs" style="color: var(--ink-faint);">Edits stay in this tab until you save — don't close the tab before saving.</span>
+    </div>
+</header>
+
+<!-- ===================== CONNECT PANEL (modal) ===================== -->
+<div id="connect-overlay" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4" style="background: rgba(20,16,8,0.45);">
+    <div class="card p-5 w-full max-w-md">
+        <h2 class="font-display text-lg font-semibold mb-1">Connect to GitHub</h2>
+        <p class="text-xs mb-4" style="color: var(--ink-faint);">Commits directly to your repo via the GitHub API. The token stays in this tab's memory only — never stored, never sent anywhere but api.github.com.</p>
+        <div class="space-y-3">
+            <div><label class="field-label">Owner / org</label><input id="gh-owner" class="field-input" placeholder="e.g. yourname"></div>
+            <div><label class="field-label">Repository</label><input id="gh-repo" class="field-input" placeholder="e.g. rpsc-question-bank"></div>
+            <div><label class="field-label">Branch</label><input id="gh-branch" class="field-input" value="main"></div>
+            <div>
+                <label class="field-label">Personal access token</label>
+                <input id="gh-token" type="password" class="field-input" placeholder="github_pat_… (fine-grained, scoped to this repo)">
+                <p class="text-xs mt-1" style="color: var(--ink-faint);">Needs Contents: Read & write on this repo only. Re-entered each session.</p>
+            </div>
+        </div>
+        <div id="connect-error" class="hidden mt-3 text-xs p-2.5 rounded-lg" style="background: var(--bad-bg); color: var(--bad); border: 1px solid var(--bad-border);"></div>
+        <div class="flex justify-end gap-2 mt-4">
+            <button class="btn" onclick="closeConnectPanel()">Cancel</button>
+            <button class="btn btn-primary" onclick="testAndSaveConnection()">Connect</button>
+        </div>
+    </div>
+</div>
+
+<!-- ===================== RUN PICKER ===================== -->
+<div id="run-picker" class="max-w-3xl mx-auto px-4 py-10">
+    <h2 class="font-display text-xl font-semibold mb-4">Pick a paper to review</h2>
+    <div id="run-picker-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+</div>
+
+<!-- ===================== MAIN REVIEW UI ===================== -->
+<main id="review-main" class="hidden max-w-[1500px] mx-auto px-3 sm:px-4 py-4 grid grid-cols-1 lg:grid-cols-[200px_1fr_1fr] gap-4">
+
+    <!-- Sidebar: question nav -->
+    <aside class="card p-3 lg:sticky lg:top-16 lg:max-h-[calc(100vh-90px)] overflow-y-auto order-3 lg:order-1">
+        <div class="flex items-center gap-2 mb-2">
+            <input id="jump-input" type="number" placeholder="Q#" class="field-input text-xs py-1.5" style="width: 64px;" onkeydown="if(event.key==='Enter') jumpToNumber()">
+            <button class="btn text-xs py-1.5 px-2" onclick="jumpToNumber()">Go</button>
+        </div>
+        <label class="flex items-center gap-1.5 text-xs mb-1" style="color: var(--ink-soft);"><input type="checkbox" id="filter-visual" onchange="renderNavList()"> Visual only</label>
+        <label class="flex items-center gap-1.5 text-xs mb-3" style="color: var(--ink-soft);"><input type="checkbox" id="filter-unreviewed" onchange="renderNavList()"> Unreviewed only</label>
+        <div id="nav-list" class="space-y-0.5"></div>
+    </aside>
+
+    <!-- Middle: source page image (tab 1) / live preview (tab 2) -->
+    <section class="card p-3 order-1 lg:order-2 lg:sticky lg:top-16 lg:max-h-[calc(100vh-90px)] overflow-y-auto">
+        <div class="flex items-center gap-2 mb-2">
+            <button id="tab-source" class="btn btn-primary tab-btn py-1.5 px-2.5" onclick="switchMiddleTab('source')">🖼 Source page</button>
+            <button id="tab-preview" class="btn tab-btn py-1.5 px-2.5" onclick="switchMiddleTab('preview')">👁 Live preview</button>
+        </div>
+
+        <div id="source-tab">
+            <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+                <span class="text-xs font-mono" style="color: var(--ink-faint);">Page <span id="page-label">—</span></span>
+                <div class="flex gap-1.5">
+                    <button class="btn text-xs py-1.5 px-2" onclick="zoomSource(0.8)">−</button>
+                    <button class="btn text-xs py-1.5 px-2" onclick="zoomSource(1.25)">+</button>
+                    <button class="btn text-xs py-1.5 px-2" onclick="resetZoom()">Reset</button>
+                    <button id="crop-toggle-btn" class="btn text-xs py-1.5 px-2" onclick="toggleCropMode()">✂ Crop region</button>
+                </div>
+            </div>
+            <p class="text-xs mb-2" style="color: var(--ink-faint);">Toggle crop, drag a box over the page, then choose where it goes — a fixed slot, an option, or straight into the statement at whatever position you like.</p>
+            <div id="canvas-wrap" class="overflow-auto border rounded-lg" style="border-color: var(--rule); max-height: 74vh;">
+                <canvas id="crop-canvas"></canvas>
+            </div>
+        </div>
+
+        <div id="preview-tab" class="hidden"></div>
+    </section>
+
+    <!-- Right: editable question form -->
+    <section id="form-panel" class="order-2 lg:order-3 space-y-4"></section>
+</main>
+
+<!-- Assign-crop popup -->
+<div id="assign-popup" class="hidden fixed z-50 card p-2" style="min-width: 220px; max-height: 70vh; overflow-y-auto;">
+    <p class="text-xs font-semibold px-1.5 pb-1.5" style="color: var(--ink-faint);">Assign this crop to:</p>
+    <div id="assign-options" class="space-y-0.5"></div>
+</div>
+
+<div id="toast-host"></div>
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+let owner = "", repoName = "", branch = "main", token = "";
+let runId = null, catalog = null;
+let questions = [];         // working copy, mutated in place, persists across navigation
+let currentIndex = -1;
+let pendingCrops = {};      // idx -> [{slot, filename, blob, previewUrl}], not yet committed
+let dirtyIndex = new Set(); // indices edited locally but not yet pushed to GitHub
+let pristineCanvas = document.createElement("canvas");
+let sourceLoadedPage = null;
+let zoom = 1;
+let cropMode = false;
+let dragStart = null, dragRect = null;
+let previewTimer = null;
+let isSaving = false;
+
+const NAMING_HELP = "Files are auto-named page{N}_q{num}_{slot}.jpg — you never type a filename.";
+
+// ============================================================
+// INIT
+// ============================================================
+window.addEventListener("DOMContentLoaded", init);
+window.addEventListener("beforeunload", (e) => {
+    if (dirtyIndex.size > 0) { e.preventDefault(); e.returnValue = ""; }
+});
+
+async function init() {
+    owner = localStorage.getItem("review-gh-owner") || guessOwner();
+    repoName = localStorage.getItem("review-gh-repo") || guessRepo();
+    branch = localStorage.getItem("review-gh-branch") || "main";
+
+    const params = new URLSearchParams(location.search);
+    const requestedRun = params.get("run");
+
+    try {
+        const res = await fetch(`output/catalog.json?v=${Date.now()}`, { cache: "no-store" });
+        catalog = await res.json();
+    } catch (e) { catalog = { runs: [] }; }
+
+    if (requestedRun) await loadRun(requestedRun);
+    else renderRunPicker();
+}
+
+function guessOwner() {
+    const h = location.hostname;
+    return h.endsWith(".github.io") ? h.split(".")[0] : "";
+}
+function guessRepo() {
+    const h = location.hostname;
+    const parts = location.pathname.split("/").filter(Boolean);
+    if (h.endsWith(".github.io") && parts.length > 0) return parts[0];
+    if (h.endsWith(".github.io")) return h;
+    return "";
+}
+
+function renderRunPicker() {
+    document.getElementById("run-picker").classList.remove("hidden");
+    document.getElementById("review-main").classList.add("hidden");
+    const list = document.getElementById("run-picker-list");
+    if (!catalog.runs || !catalog.runs.length) {
+        list.innerHTML = `<p style="color: var(--ink-faint);">No papers found in output/catalog.json.</p>`;
+        return;
+    }
+    list.innerHTML = catalog.runs.map(r => `
+        <button class="card p-4 text-left" onclick="location.href='review.html?run=${encodeURIComponent(r.id)}'">
+            <div class="font-display font-semibold" style="color: var(--accent);">${escapeHtml(r.name)}</div>
+            <div class="text-xs mt-1 font-mono" style="color: var(--ink-faint);">${r.question_count} questions · ${r.visual_question_count} visual</div>
+        </button>`).join("");
+}
+
+async function loadRun(id) {
+    document.getElementById("run-picker").classList.add("hidden");
+    document.getElementById("review-main").classList.remove("hidden");
+    runId = id;
+    document.getElementById("run-label").textContent = id;
+    const res = await fetch(`output/${encodeURIComponent(runId)}/question_bank.json?v=${Date.now()}`, { cache: "no-store" });
+    const data = await res.json();
+    questions = Array.isArray(data.questions) ? data.questions : [];
+    renderNavList();
+    if (questions.length) selectQuestion(0);
+}
+
+function assetUrl(relativePath) {
+    if (!relativePath) return "";
+    return "output/" + encodeURIComponent(runId) + "/" + relativePath.split("/").map(encodeURIComponent).join("/");
+}
+function sourceImageUrl(page) {
+    return `output/${encodeURIComponent(runId)}/raw_pages/page_${page}/page_${page}_source.jpg`;
+}
+function escapeHtml(value) {
+    if (value === null || value === undefined) return "";
+    const el = document.createElement("div");
+    el.textContent = String(value);
+    return el.innerHTML;
+}
+function formatText(t) { if (!t) return ""; return escapeHtml(t).replace(/\n/g, "<br>"); }
+function toast(msg, kind = "info") {
+    const el = document.createElement("div");
+    const bg = kind === "error" ? "var(--bad-bg)" : kind === "good" ? "var(--good-bg)" : "var(--info-bg)";
+    const fg = kind === "error" ? "var(--bad)" : kind === "good" ? "var(--good)" : "var(--info)";
+    el.className = "toast";
+    el.style.background = bg; el.style.color = fg;
+    el.style.border = `1px solid ${kind === "error" ? "var(--bad-border)" : kind === "good" ? "var(--good-border)" : "var(--info-border)"}`;
+    el.textContent = msg;
+    document.getElementById("toast-host").appendChild(el);
+    setTimeout(() => el.remove(), 4200);
+}
+
+// ============================================================
+// GITHUB CONNECT
+// ============================================================
+function openConnectPanel() {
+    document.getElementById("gh-owner").value = owner;
+    document.getElementById("gh-repo").value = repoName;
+    document.getElementById("gh-branch").value = branch;
+    document.getElementById("gh-token").value = "";
+    document.getElementById("connect-error").classList.add("hidden");
+    document.getElementById("connect-overlay").classList.remove("hidden");
+}
+function closeConnectPanel() { document.getElementById("connect-overlay").classList.add("hidden"); }
+async function testAndSaveConnection() {
+    const o = document.getElementById("gh-owner").value.trim();
+    const r = document.getElementById("gh-repo").value.trim();
+    const b = document.getElementById("gh-branch").value.trim() || "main";
+    const t = document.getElementById("gh-token").value.trim();
+    const errBox = document.getElementById("connect-error");
+    errBox.classList.add("hidden");
+    if (!o || !r || !t) { errBox.textContent = "Owner, repo, and token are all required."; errBox.classList.remove("hidden"); return; }
+    try {
+        const res = await fetch(`https://api.github.com/repos/${o}/${r}`, { headers: { Authorization: `Bearer ${t}`, Accept: "application/vnd.github+json" } });
+        if (!res.ok) throw new Error(`GitHub said: ${res.status} ${res.statusText}`);
+        owner = o; repoName = r; branch = b; token = t;
+        localStorage.setItem("review-gh-owner", owner);
+        localStorage.setItem("review-gh-repo", repoName);
+        localStorage.setItem("review-gh-branch", branch);
+        setGhStatus(true);
+        closeConnectPanel();
+        toast("Connected to GitHub ✓", "good");
+    } catch (e) {
+        errBox.textContent = "Couldn't connect — " + e.message;
+        errBox.classList.remove("hidden");
+    }
+}
+function setGhStatus(connected) {
+    const el = document.getElementById("gh-status");
+    if (connected) {
+        el.textContent = `GitHub: ${owner}/${repoName}@${branch}`;
+        el.style.background = "var(--good-bg)"; el.style.color = "var(--good)"; el.style.borderColor = "var(--good-border)";
+    } else {
+        el.textContent = "GitHub: not connected";
+        el.style.background = "var(--paper-alt)"; el.style.color = "var(--ink-faint)"; el.style.borderColor = "var(--rule-strong)";
+    }
+}
+async function ghApi(path, opts = {}) {
+    const res = await fetch(`https://api.github.com${path}`, {
+        ...opts,
+        headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json", ...(opts.headers || {}) }
+    });
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(body.message || `${res.status} ${res.statusText}`);
+    return body;
+}
+function utf8ToBase64(str) {
+    const bytes = new TextEncoder().encode(str);
+    let binary = "";
+    const chunk = 0x8000;
+    for (let i = 0; i < bytes.length; i += chunk) binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+    return btoa(binary);
+}
+function blobToBase64(blob) {
+    return new Promise((resolve, reject) => {
+        const fr = new FileReader();
+        fr.onload = () => resolve(fr.result.split(",")[1]);
+        fr.onerror = reject;
+        fr.readAsDataURL(blob);
+    });
+}
+
+// Atomic multi-file commit via the Git Data API (blob -> tree -> commit -> ref update).
+async function commitFiles(files, message) {
+    if (!token) { openConnectPanel(); throw new Error("Connect to GitHub first."); }
+    const refData = await ghApi(`/repos/${owner}/${repoName}/git/ref/heads/${branch}`);
+    const baseCommitSha = refData.object.sha;
+    const commitData = await ghApi(`/repos/${owner}/${repoName}/git/commits/${baseCommitSha}`);
+    const baseTreeSha = commitData.tree.sha;
+
+    const treeEntries = [];
+    for (const f of files) {
+        const blob = await ghApi(`/repos/${owner}/${repoName}/git/blobs`, { method: "POST", body: JSON.stringify({ content: f.base64, encoding: "base64" }) });
+        treeEntries.push({ path: f.path, mode: "100644", type: "blob", sha: blob.sha });
+    }
+    const newTree = await ghApi(`/repos/${owner}/${repoName}/git/trees`, { method: "POST", body: JSON.stringify({ base_tree: baseTreeSha, tree: treeEntries }) });
+    const newCommit = await ghApi(`/repos/${owner}/${repoName}/git/commits`, { method: "POST", body: JSON.stringify({ message, tree: newTree.sha, parents: [baseCommitSha] }) });
+    await ghApi(`/repos/${owner}/${repoName}/git/refs/heads/${branch}`, { method: "PATCH", body: JSON.stringify({ sha: newCommit.sha }) });
+    return newCommit.sha;
+}
+
+// ============================================================
+// NAV LIST
+// ============================================================
+function renderNavList() {
+    const onlyVisual = document.getElementById("filter-visual")?.checked;
+    const onlyUnreviewed = document.getElementById("filter-unreviewed")?.checked;
+    const list = document.getElementById("nav-list");
+    list.innerHTML = questions.map((q, i) => {
+        if (onlyVisual && !q.has_visuals) return "";
+        if (onlyUnreviewed && q.human_reviewed) return "";
+        const dotColor = dirtyIndex.has(i) ? "var(--info)" : q.human_reviewed ? "var(--good)" : (q.has_visuals ? "var(--accent)" : "var(--rule-strong)");
+        return `<button class="q-nav-item ${i === currentIndex ? "active" : ""}" onclick="selectQuestion(${i})">
+            <span class="dot" style="background:${dotColor}"></span>Q${escapeHtml(q.number)} <span style="opacity:.6">· p${escapeHtml(q.source_page)}</span>
+        </button>`;
+    }).join("");
+}
+function updateUnsavedBadge() {
+    const bar = document.getElementById("unsaved-bar");
+    const count = dirtyIndex.size;
+    if (count > 0) {
+        bar.classList.remove("hidden");
+        document.getElementById("unsaved-count").textContent = `${count} question(s) edited locally — not yet on GitHub`;
+    } else {
+        bar.classList.add("hidden");
+    }
+}
+function jumpToNumber() {
+    const n = parseInt(document.getElementById("jump-input").value, 10);
+    const idx = questions.findIndex(q => q.number === n);
+    if (idx >= 0) selectQuestion(idx);
+    else toast(`Q${n} not found`, "error");
+}
+
+// ============================================================
+// SELECT / RENDER QUESTION
+// Edits are persisted into the in-memory `questions` array whenever
+// you navigate away — nothing is discarded. "Dirty" means "edited
+// locally, not yet committed to GitHub", not "unsaved".
+// ============================================================
+async function selectQuestion(idx) {
+    if (currentIndex >= 0) collectFormIntoQuestion(currentIndex);
+    currentIndex = idx;
+    renderNavList();
+    const q = questions[idx];
+    document.getElementById("page-label").textContent = q.source_page;
+    document.getElementById("jump-input").value = q.number;
+    await loadSourcePage(q.source_page);
+    renderForm(idx);
+}
+function navRelative(delta) {
+    const next = currentIndex + delta;
+    if (next >= 0 && next < questions.length) selectQuestion(next);
+}
+
+async function loadSourcePage(page) {
+    if (sourceLoadedPage === page) return;
+    sourceLoadedPage = page;
+    const img = new Image();
+    await new Promise((resolve) => {
+        img.onload = resolve; img.onerror = resolve;
+        img.src = sourceImageUrl(page) + `?v=${Date.now()}`;
+    });
+    pristineCanvas.width = img.naturalWidth || 1000;
+    pristineCanvas.height = img.naturalHeight || 1400;
+    const ctx = pristineCanvas.getContext("2d");
+    ctx.clearRect(0, 0, pristineCanvas.width, pristineCanvas.height);
+    if (img.naturalWidth) ctx.drawImage(img, 0, 0);
+    else { ctx.fillStyle = "#eee"; ctx.fillRect(0,0,pristineCanvas.width,pristineCanvas.height); ctx.fillStyle="#999"; ctx.font="20px sans-serif"; ctx.fillText("Source page image not found", 20, 40); }
+    zoom = 1;
+    redrawCanvas();
+}
+function redrawCanvas() {
+    const canvas = document.getElementById("crop-canvas");
+    canvas.width = pristineCanvas.width;
+    canvas.height = pristineCanvas.height;
+    canvas.style.width = (pristineCanvas.width * zoom) + "px";
+    canvas.style.height = (pristineCanvas.height * zoom) + "px";
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(pristineCanvas, 0, 0);
+    if (dragRect) {
+        ctx.strokeStyle = "#9B5B2A"; ctx.lineWidth = 3;
+        ctx.strokeRect(dragRect.x, dragRect.y, dragRect.w, dragRect.h);
+        ctx.fillStyle = "rgba(155,91,42,0.12)";
+        ctx.fillRect(dragRect.x, dragRect.y, dragRect.w, dragRect.h);
+    }
+}
+function zoomSource(factor) { zoom = Math.max(0.2, Math.min(4, zoom * factor)); redrawCanvas(); }
+function resetZoom() { zoom = 1; redrawCanvas(); }
+function toggleCropMode() {
+    cropMode = !cropMode;
+    document.getElementById("crop-toggle-btn").classList.toggle("btn-primary", cropMode);
+    document.getElementById("crop-canvas").style.cursor = cropMode ? "crosshair" : "default";
+}
+function switchMiddleTab(which) {
+    document.getElementById("source-tab").classList.toggle("hidden", which !== "source");
+    document.getElementById("preview-tab").classList.toggle("hidden", which !== "preview");
+    document.getElementById("tab-source").classList.toggle("btn-primary", which === "source");
+    document.getElementById("tab-preview").classList.toggle("btn-primary", which === "preview");
+    if (which === "preview") renderLivePreview();
+}
+
+// ---- crop drag handlers ----
+const canvasEl = () => document.getElementById("crop-canvas");
+document.addEventListener("mousedown", (e) => {
+    if (!cropMode || e.target.id !== "crop-canvas") return;
+    const rect = canvasEl().getBoundingClientRect();
+    const scaleX = canvasEl().width / rect.width, scaleY = canvasEl().height / rect.height;
+    dragStart = { x: (e.clientX - rect.left) * scaleX, y: (e.clientY - rect.top) * scaleY };
+    dragRect = { x: dragStart.x, y: dragStart.y, w: 0, h: 0 };
+});
+document.addEventListener("mousemove", (e) => {
+    if (!dragStart) return;
+    const rect = canvasEl().getBoundingClientRect();
+    const scaleX = canvasEl().width / rect.width, scaleY = canvasEl().height / rect.height;
+    const cx = (e.clientX - rect.left) * scaleX, cy = (e.clientY - rect.top) * scaleY;
+    dragRect = { x: Math.min(dragStart.x, cx), y: Math.min(dragStart.y, cy), w: Math.abs(cx - dragStart.x), h: Math.abs(cy - dragStart.y) };
+    redrawCanvas();
+});
+document.addEventListener("mouseup", (e) => {
+    if (!dragStart) return;
+    dragStart = null;
+    if (dragRect && dragRect.w > 12 && dragRect.h > 12) openAssignPopup(e.clientX, e.clientY, { ...dragRect });
+    else { dragRect = null; redrawCanvas(); }
+});
+
+function openAssignPopup(clientX, clientY, rect) {
+    const q = questions[currentIndex];
+    const slots = [
+        { key: "inlinehi", label: "↳ Insert inline — Hindi statement" },
+        { key: "inlineen", label: "↳ Insert inline — English statement" },
+        { key: "full", label: "Full question block" },
+        { key: "hi", label: "Hindi stem (legacy single image)" },
+        { key: "en", label: "English stem (legacy single image)" },
+        ...(q.options || []).map(o => ({ key: `opt${o.label}`, label: `Option ${o.label} diagram` })),
+        { key: "extra", label: "Extra / additional image" },
+    ];
+    const popup = document.getElementById("assign-popup");
+    popup.style.left = Math.min(clientX, window.innerWidth - 240) + "px";
+    popup.style.top = Math.min(clientY, window.innerHeight - 300) + "px";
+    document.getElementById("assign-options").innerHTML = slots.map(s => `<button class="q-nav-item" style="width:100%" onclick="assignCrop('${s.key}')">${s.label}</button>`).join("");
+    popup.classList.remove("hidden");
+    popup._rect = rect;
+}
+document.addEventListener("click", (e) => {
+    const popup = document.getElementById("assign-popup");
+    if (!popup.classList.contains("hidden") && !popup.contains(e.target) && e.target.id !== "crop-canvas") {
+        popup.classList.add("hidden");
+        dragRect = null; redrawCanvas();
+    }
+});
+
+function assignCrop(slotKey) {
+    const popup = document.getElementById("assign-popup");
+    const rect = popup._rect;
+    popup.classList.add("hidden");
+    const q = questions[currentIndex];
+
+    const cropCanvas = document.createElement("canvas");
+    cropCanvas.width = Math.round(rect.w);
+    cropCanvas.height = Math.round(rect.h);
+    cropCanvas.getContext("2d").drawImage(pristineCanvas, rect.x, rect.y, rect.w, rect.h, 0, 0, rect.w, rect.h);
+
+    cropCanvas.toBlob((blob) => {
+        let slot = slotKey;
+        if (slot === "extra") {
+            const n = ((pendingCrops[currentIndex] || []).filter(p => p.slot.startsWith("extra")).length) + ((q.extra_images || []).length) + 1;
+            slot = `extra${n}`;
+        } else if (slot === "inlinehi" || slot === "inlineen") {
+            const lang = slot === "inlinehi" ? "hi" : "en";
+            const existing = (q[`content_${lang}`] || []).filter(b => b.type === "image").length;
+            const pendingSame = (pendingCrops[currentIndex] || []).filter(p => p.slot.startsWith(slot)).length;
+            slot = `${slot}${existing + pendingSame + 1}`;
+        }
+        const filename = `page${q.source_page}_q${q.number}_${slot}.jpg`;
+        const previewUrl = URL.createObjectURL(blob);
+        if (!pendingCrops[currentIndex]) pendingCrops[currentIndex] = [];
+        pendingCrops[currentIndex] = pendingCrops[currentIndex].filter(p => p.slot !== slot);
+        pendingCrops[currentIndex].push({ slot, filename, blob, previewUrl });
+        dirtyIndex.add(currentIndex);
+        updateUnsavedBadge(); renderNavList();
+        dragRect = null; redrawCanvas();
+        renderForm(currentIndex);
+        toast(`Crop captured — ${NAMING_HELP}`, "info");
+    }, "image/jpeg", 0.92);
+}
+
+function removePendingCrop(slot) {
+    if (pendingCrops[currentIndex]) pendingCrops[currentIndex] = pendingCrops[currentIndex].filter(p => p.slot !== slot);
+    renderForm(currentIndex);
+}
+function clearImageSlot(field) {
+    questions[currentIndex][field] = null;
+    dirtyIndex.add(currentIndex); updateUnsavedBadge();
+    removePendingCrop(field);
+    renderForm(currentIndex);
+}
+function clearOptionImage(label) {
+    const opt = questions[currentIndex].options.find(o => o.label === label);
+    if (opt) opt.image = null;
+    dirtyIndex.add(currentIndex); updateUnsavedBadge();
+    removePendingCrop(`opt${label}`);
+    renderForm(currentIndex);
+}
+
+// ============================================================
+// STRUCTURED CONTENT BLOCKS (inline images / tables in the stem)
+// ============================================================
+function toggleStructured(lang) {
+    collectFormIntoQuestion(currentIndex);
+    const q = questions[currentIndex];
+    const field = `content_${lang}`;
+    if (q[field] && q[field].length) {
+        if (!confirm("Switch back to plain text? Any tables in this statement will be lost (images stay in the repo, just unlinked from display).")) return;
+        q[field] = null;
+    } else {
+        const flat = lang === "hi" ? q.question_hi : q.question_en;
+        q[field] = [{ type: "text", text: flat || "" }];
+    }
+    markDirty();
+    renderForm(currentIndex);
+}
+function addTextBlock(lang) { collectFormIntoQuestion(currentIndex); const q = questions[currentIndex]; q[`content_${lang}`] = q[`content_${lang}`] || []; q[`content_${lang}`].push({ type: "text", text: "" }); markDirty(); renderForm(currentIndex); }
+function addTableBlock(lang) { collectFormIntoQuestion(currentIndex); const q = questions[currentIndex]; q[`content_${lang}`] = q[`content_${lang}`] || []; q[`content_${lang}`].push({ type: "table", header: true, rows: [["",""],["",""]] }); markDirty(); renderForm(currentIndex); }
+function moveBlock(lang, i, dir) { collectFormIntoQuestion(currentIndex); const arr = questions[currentIndex][`content_${lang}`]; const j = i + dir; if (j < 0 || j >= arr.length) return; [arr[i], arr[j]] = [arr[j], arr[i]]; markDirty(); renderForm(currentIndex); }
+function removeBlock(lang, i) { collectFormIntoQuestion(currentIndex); questions[currentIndex][`content_${lang}`].splice(i, 1); markDirty(); renderForm(currentIndex); }
+function tableAddRow(lang, i) { collectFormIntoQuestion(currentIndex); const b = questions[currentIndex][`content_${lang}`][i]; const cols = (b.rows[0] || [""]).length; b.rows.push(new Array(cols).fill("")); markDirty(); renderForm(currentIndex); }
+function tableRemoveRow(lang, i, r) { collectFormIntoQuestion(currentIndex); const b = questions[currentIndex][`content_${lang}`][i]; if (b.rows.length > 1) b.rows.splice(r, 1); markDirty(); renderForm(currentIndex); }
+function tableAddCol(lang, i) { collectFormIntoQuestion(currentIndex); const b = questions[currentIndex][`content_${lang}`][i]; b.rows.forEach(row => row.push("")); markDirty(); renderForm(currentIndex); }
+function tableRemoveCol(lang, i) { collectFormIntoQuestion(currentIndex); const b = questions[currentIndex][`content_${lang}`][i]; if ((b.rows[0] || []).length > 1) b.rows.forEach(row => row.pop()); markDirty(); renderForm(currentIndex); }
+
+function renderBlocksEditor(lang) {
+    const q = questions[currentIndex];
+    const blocks = q[`content_${lang}`] || [];
+    return `
+        <div class="space-y-2">${blocks.map((b, i) => blockEditorRow(lang, b, i, blocks.length)).join("")}</div>
+        <div class="flex gap-2 mt-2">
+            <button class="btn text-xs" onclick="addTextBlock('${lang}')">+ Text</button>
+            <button class="btn text-xs" onclick="addTableBlock('${lang}')">+ Table</button>
+            <span class="text-[10.5px] self-center" style="color: var(--ink-faint);">Add images via the crop tool on the source page →</span>
+        </div>`;
+}
+function blockEditorRow(lang, b, i, total) {
+    const moveButtons = `<div class="flex flex-col shrink-0">
+        <button class="btn text-[10px] py-0 px-1" ${i === 0 ? "disabled" : ""} onclick="moveBlock('${lang}',${i},-1)">↑</button>
+        <button class="btn text-[10px] py-0 px-1" ${i === total - 1 ? "disabled" : ""} onclick="moveBlock('${lang}',${i},1)">↓</button>
+    </div>`;
+    const removeBtn = `<button class="btn btn-danger text-[10px] py-1 px-1.5 shrink-0" onclick="removeBlock('${lang}',${i})" title="Remove block">✕</button>`;
+    let body = "";
+    if (b.type === "text") {
+        body = `<textarea class="field-input" rows="3" data-block-lang="${lang}" data-block-i="${i}" data-block-field="text" oninput="markDirty()">${escapeHtml(b.text)}</textarea>`;
+    } else if (b.type === "image") {
+        body = `<div class="slot-box" style="max-width:170px;"><img src="${assetUrl(b.path)}"><p class="text-[10px] text-center mt-1" style="color: var(--ink-faint);">${escapeHtml((b.path || "").split("/").pop())}</p></div>`;
+    } else if (b.type === "table") {
+        body = tableEditorHtml(lang, b, i);
+    }
+    return `<div class="flex items-start gap-2 border rounded-lg p-2" style="border-color: var(--rule-strong);">${moveButtons}<div class="flex-grow min-w-0">${body}</div>${removeBtn}</div>`;
+}
+function tableEditorHtml(lang, b, i) {
+    const rows = b.rows || [];
+    let html = `<label class="flex items-center gap-1.5 text-[11px] mb-1"><input type="checkbox" data-block-lang="${lang}" data-block-i="${i}" data-block-field="header" ${b.header ? "checked" : ""} onchange="markDirty()"> First row is header</label>`;
+    html += `<div class="overflow-x-auto"><table class="text-xs mb-1.5" style="border-collapse:collapse;">`;
+    rows.forEach((row, r) => {
+        html += "<tr>";
+        row.forEach((cell, c) => {
+            html += `<td style="padding:1px;"><input class="field-input" style="width:90px; padding:3px 5px;" data-block-lang="${lang}" data-block-i="${i}" data-cell-r="${r}" data-cell-c="${c}" value="${escapeHtml(cell)}" oninput="markDirty()"></td>`;
+        });
+        html += `<td><button class="btn text-[10px] py-0.5 px-1" onclick="tableRemoveRow('${lang}',${i},${r})">−row</button></td></tr>`;
+    });
+    html += `</table></div>`;
+    html += `<div class="flex gap-1.5">
+        <button class="btn text-[10px] py-1 px-1.5" onclick="tableAddRow('${lang}',${i})">+ row</button>
+        <button class="btn text-[10px] py-1 px-1.5" onclick="tableAddCol('${lang}',${i})">+ col</button>
+        <button class="btn text-[10px] py-1 px-1.5" onclick="tableRemoveCol('${lang}',${i})">− col</button>
+    </div>`;
+    return html;
+}
+
+// ============================================================
+// LIVE PREVIEW (mirrors index.html's actual rendering)
+// ============================================================
+function blocksToHtml(blocks, textStyle) {
+    if (!Array.isArray(blocks)) return "";
+    return blocks.map(b => {
+        if (b.type === "text") return b.text ? `<div class="preserve-lines mb-3" style="${textStyle}">${formatText(b.text)}</div>` : "";
+        if (b.type === "image") return `<div class="mb-3"><img src="${assetUrl(b.path)}" style="max-width:100%; max-height:320px; border-radius:10px; border:1px solid var(--rule); margin:0 auto; display:block;"></div>`;
+        if (b.type === "table") {
+            const rows = b.rows || [];
+            return `<div class="mb-3 overflow-x-auto"><table style="border-collapse:collapse; font-size:12.5px;">${rows.map((row, ri) => `<tr>${row.map(cell => (b.header && ri === 0) ? `<th style="border:1px solid var(--rule-strong); padding:5px 8px; background:var(--paper-alt); text-align:left;">${formatText(cell)}</th>` : `<td style="border:1px solid var(--rule-strong); padding:5px 8px;">${formatText(cell)}</td>`).join("")}</tr>`).join("")}</table></div>`;
+        }
+        return "";
+    }).join("");
+}
+function renderPreviewCard(q) {
+    const opts = q.options || [];
+    const rats = q.option_rationales || [];
+    let html = `<div class="px-1">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="flex items-center justify-center w-9 h-9 rounded-full text-sm shrink-0" style="background:var(--accent); color:#fff; font-family:'Fraunces',serif; font-weight:700;">${escapeHtml(q.number)}</span>
+            <span class="text-xs" style="color: var(--ink-faint);">as it will appear on the live site (both languages shown)</span>
+        </div>`;
+
+    if (q.content_hi && q.content_hi.length) html += blocksToHtml(q.content_hi, "color:var(--ink); font-size:16px; font-weight:500;");
+    else if (q.question_hi) {
+        html += `<div class="preserve-lines mb-3" style="color:var(--ink); font-size:16px; font-weight:500;">${formatText(q.question_hi)}</div>`;
+        if (q.image_full) html += `<div class="mb-3"><img src="${assetUrl(q.image_full)}" style="max-width:100%; max-height:300px; border-radius:10px; border:1px solid var(--rule); display:block; margin:0 auto;"></div>`;
+        else if (q.image_hi) html += `<div class="mb-3"><img src="${assetUrl(q.image_hi)}" style="max-width:100%; max-height:300px; border-radius:10px; border:1px solid var(--rule); display:block; margin:0 auto;"></div>`;
+    }
+
+    if (q.content_en && q.content_en.length) html += blocksToHtml(q.content_en, "color:var(--ink-soft); font-size:14.5px; border-top:1px dashed var(--rule-strong); padding-top:10px;");
+    else if (q.question_en) {
+        html += `<div class="preserve-lines mb-3" style="color:var(--ink-soft); font-size:14.5px; border-top:1px dashed var(--rule-strong); padding-top:10px;">${formatText(q.question_en)}</div>`;
+        if (!q.image_full && q.image_en) html += `<div class="mb-3"><img src="${assetUrl(q.image_en)}" style="max-width:100%; max-height:300px; border-radius:10px; border:1px solid var(--rule); display:block; margin:0 auto;"></div>`;
+    }
+
+    html += `<div class="mt-3 space-y-1.5">`;
+    opts.forEach(o => {
+        const rat = rats.find(r => r.label === o.label) || {};
+        const good = rat.is_correct;
+        html += `<div class="rounded-lg p-2 text-sm" style="border:1px solid ${good ? "var(--good-border)" : "var(--rule-strong)"}; background:${good ? "var(--good-bg)" : "var(--paper-alt)"};">
+            <b>${escapeHtml(o.label)}.</b> ${formatText(o.hi)} <span style="color:var(--ink-faint);">/ ${formatText(o.en)}</span>
+            ${o.image ? `<div class="mt-1"><img src="${assetUrl(o.image)}" style="max-height:120px; border-radius:8px;"></div>` : ""}
+            ${good ? `<span class="chip mt-1 inline-block" style="background:var(--good); color:#fff;">✓ correct</span>` : ""}
+        </div>`;
+    });
+    html += `</div>`;
+    if (q.explanation_hi || q.explanation_en) {
+        html += `<div class="mt-3 pt-3 text-xs" style="border-top:1px dashed var(--rule-strong); color:var(--ink-soft);"><b>Explanation:</b><br>${formatText(q.explanation_hi)}<br>${formatText(q.explanation_en)}</div>`;
+    }
+    html += `</div>`;
+    return html;
+}
+function renderLivePreview() {
+    if (currentIndex < 0) return;
+    collectFormIntoQuestion(currentIndex);
+    const wrap = document.getElementById("preview-tab");
+    if (wrap) wrap.innerHTML = renderPreviewCard(questions[currentIndex]);
+    typesetMath();
+}
+function schedulePreview() {
+    clearTimeout(previewTimer);
+    previewTimer = setTimeout(() => { if (!document.getElementById("preview-tab").classList.contains("hidden")) renderLivePreview(); }, 300);
+}
+function markDirty() { dirtyIndex.add(currentIndex); updateUnsavedBadge(); renderNavListLight(); schedulePreview(); }
+function renderNavListLight() {
+    // cheap dot-color refresh without a full re-render while typing
+    const btn = document.querySelectorAll("#nav-list .q-nav-item")[currentIndex >= 0 ? [...questions.keys()].indexOf(currentIndex) : -1];
+}
+async function typesetMath() {
+    if (window.MathJax && typeof MathJax.typesetPromise === "function") { try { await MathJax.typesetPromise(); } catch (e) {} }
+}
+
+// ============================================================
+// FORM RENDERING
+// ============================================================
+function imgSlotHtml(field, title, currentPath) {
+    const pending = (pendingCrops[currentIndex] || []).find(p => p.slot === field);
+    let inner;
+    if (pending) inner = `<img src="${pending.previewUrl}"><p class="text-[10px] text-center mt-1" style="color: var(--info);">pending: ${pending.filename}</p>`;
+    else if (currentPath) inner = `<img src="${assetUrl(currentPath)}"><p class="text-[10px] text-center mt-1" style="color: var(--ink-faint);">${escapeHtml(currentPath.split("/").pop())}</p>`;
+    else inner = `<p class="text-xs text-center py-4" style="color: var(--ink-faint);">No image</p>`;
+    return `<div class="slot-box ${pending ? "has-pending" : ""}">
+        <p class="text-[10px] font-semibold mb-1" style="color: var(--ink-faint);">${title}</p>
+        ${inner}
+        <div class="flex gap-1 mt-1.5">
+            ${pending ? `<button class="btn text-[10px] py-1 px-1.5 flex-1" onclick="removePendingCrop('${field}')">Undo crop</button>` : ""}
+            ${currentPath && !pending ? `<button class="btn btn-danger text-[10px] py-1 px-1.5 flex-1" onclick="${field.startsWith('opt') ? `clearOptionImage('${field.replace('opt','')}')` : `clearImageSlot('${field}')`}">Remove</button>` : ""}
+        </div>
+    </div>`;
+}
+
+function renderForm(idx) {
+    const q = questions[idx];
+    const panel = document.getElementById("form-panel");
+    const rationales = q.option_rationales || [];
+    const hiStructured = q.content_hi && q.content_hi.length;
+    const enStructured = q.content_en && q.content_en.length;
+
+    panel.innerHTML = `
+        <input type="hidden" id="form-mounted-marker" value="${idx}">
+        <div class="card p-4">
+            <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+                <div class="flex items-center gap-2">
+                    <span class="chip" style="background: var(--accent-bg); color: var(--accent);">Q${escapeHtml(q.number)}</span>
+                    <span class="chip" style="background: var(--paper-alt); color: var(--ink-faint); border: 1px solid var(--rule-strong);">page ${escapeHtml(q.source_page)}</span>
+                    ${q.human_reviewed ? `<span class="chip" style="background: var(--good-bg); color: var(--good); border:1px solid var(--good-border);">✓ reviewed</span>` : ""}
+                    ${dirtyIndex.has(idx) ? `<span class="chip" style="background: var(--info-bg); color: var(--info); border:1px solid var(--info-border);">● local edits</span>` : ""}
+                </div>
+                <div class="flex items-center gap-2">
+                    <button class="btn" onclick="navRelative(-1)">← Prev</button>
+                    <button class="btn" onclick="navRelative(1)">Next →</button>
+                </div>
+            </div>
+            <label class="flex items-center gap-2 text-xs mb-3" style="color: var(--ink-soft);">
+                <input type="checkbox" id="f-has-visuals" ${q.has_visuals ? "checked" : ""} onchange="markDirty()"> Has visuals
+                <select id="f-visual-location" class="field-input" style="width:auto; padding:4px 8px;" onchange="markDirty()">
+                    ${["none","question","options","both"].map(v => `<option value="${v}" ${q.visual_location===v?"selected":""}>${v}</option>`).join("")}
+                </select>
+            </label>
+
+            <div class="flex items-center justify-between mb-1">
+                <label class="field-label mb-0">Question — Hindi</label>
+                <button class="btn text-[10px] py-1 px-2" onclick="toggleStructured('hi')">${hiStructured ? "↩ Plain text" : "⊕ Structured (image/table)"}</button>
+            </div>
+            ${hiStructured ? renderBlocksEditor("hi") : `<textarea id="f-question-hi" class="field-input" rows="5" oninput="markDirty()">${escapeHtml(q.question_hi)}</textarea>`}
+
+            <div class="flex items-center justify-between mb-1 mt-3">
+                <label class="field-label mb-0">Question — English</label>
+                <button class="btn text-[10px] py-1 px-2" onclick="toggleStructured('en')">${enStructured ? "↩ Plain text" : "⊕ Structured (image/table)"}</button>
+            </div>
+            ${enStructured ? renderBlocksEditor("en") : `<textarea id="f-question-en" class="field-input" rows="5" oninput="markDirty()">${escapeHtml(q.question_en)}</textarea>`}
+
+            <p class="field-label mt-3">Legacy question-level image slots <span class="normal-case font-normal">— older single-image fields, still supported</span></p>
+            <div class="grid grid-cols-3 gap-2">
+                ${imgSlotHtml("full", "Full block", q.image_full)}
+                ${imgSlotHtml("hi", "Hindi stem", q.image_hi)}
+                ${imgSlotHtml("en", "English stem", q.image_en)}
+            </div>
+            ${(q.svg_hi || q.svg_en) ? `
+            <p class="field-label mt-3">AI-generated SVG (from Tier-2 pass)</p>
+            <div class="grid grid-cols-2 gap-2">
+                <textarea class="field-input font-mono text-[11px]" rows="3" oninput="markDirty()" id="f-svg-hi">${escapeHtml(q.svg_hi || "")}</textarea>
+                <textarea class="field-input font-mono text-[11px]" rows="3" oninput="markDirty()" id="f-svg-en">${escapeHtml(q.svg_en || "")}</textarea>
+            </div>` : ""}
+        </div>
+
+        <div class="card p-4">
+            <p class="field-label mb-2">Options — ↑↓ to reorder, mark the correct one, fix the label if OCR mismatched it</p>
+            <div id="options-list" class="space-y-2">
+                ${(q.options || []).map((o, i) => {
+                    const rat = rationales.find(r => r.label === o.label) || {};
+                    return `
+                    <div class="border rounded-xl p-2.5" style="border-color: var(--rule-strong);" data-opt-idx="${i}">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <div class="flex flex-col">
+                                <button class="btn text-[10px] py-0 px-1" onclick="moveOption(${i},-1)">↑</button>
+                                <button class="btn text-[10px] py-0 px-1" onclick="moveOption(${i},1)">↓</button>
+                            </div>
+                            <select class="field-input" style="width:64px;" data-opt-field="label" data-opt-i="${i}" onchange="markDirty()">
+                                ${["1","2","3","4","5"].map(l => `<option value="${l}" ${o.label===l?"selected":""}>${l}</option>`).join("")}
+                            </select>
+                            <label class="flex items-center gap-1 text-xs font-semibold" style="color: var(--good);">
+                                <input type="radio" name="correct-opt" ${rat.is_correct ? "checked" : ""} data-opt-i="${i}" onchange="markDirty()"> correct
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <textarea class="field-input" rows="2" data-opt-field="hi" data-opt-i="${i}" oninput="markDirty()">${escapeHtml(o.hi)}</textarea>
+                            <textarea class="field-input" rows="2" data-opt-field="en" data-opt-i="${i}" oninput="markDirty()">${escapeHtml(o.en)}</textarea>
+                        </div>
+                        <div class="mt-1.5" style="max-width:160px;">${imgSlotHtml(`opt${o.label}`, `Opt ${o.label} image`, o.image)}</div>
+                        <textarea class="field-input mt-1.5 text-xs" rows="2" placeholder="Rationale (Hindi)" data-rat-field="rationale_hi" data-opt-i="${i}" oninput="markDirty()">${escapeHtml(rat.rationale_hi || "")}</textarea>
+                        <textarea class="field-input mt-1.5 text-xs" rows="2" placeholder="Rationale (English)" data-rat-field="rationale_en" data-opt-i="${i}" oninput="markDirty()">${escapeHtml(rat.rationale_en || "")}</textarea>
+                    </div>`;
+                }).join("")}
+            </div>
+        </div>
+
+        <div class="card p-4">
+            <label class="field-label">Explanation — Hindi</label>
+            <textarea id="f-explanation-hi" class="field-input" rows="3" oninput="markDirty()">${escapeHtml(q.explanation_hi)}</textarea>
+            <label class="field-label mt-2">Explanation — English</label>
+            <textarea id="f-explanation-en" class="field-input" rows="3" oninput="markDirty()">${escapeHtml(q.explanation_en)}</textarea>
+        </div>
+
+        <details class="card p-4">
+            <summary class="font-semibold text-sm cursor-pointer" style="color: var(--ink-soft);">Metadata &amp; flags (advanced)</summary>
+            <div class="mt-2 grid grid-cols-2 gap-2 text-xs">
+                <label class="flex items-center gap-1.5"><input type="checkbox" id="f-is-dup" ${q.is_duplicate ? "checked" : ""} onchange="markDirty()"> is_duplicate</label>
+                <input class="field-input" id="f-dup-of" type="number" placeholder="duplicate_of_number" value="${q.duplicate_of_number ?? ""}" oninput="markDirty()">
+            </div>
+            ${q.audit_notes ? `<p class="text-xs mt-2 p-2 rounded-lg" style="background: var(--info-bg); color: var(--info); border:1px solid var(--info-border);">Tier-2 note: ${escapeHtml(q.audit_notes)}</p>` : ""}
+            <label class="field-label mt-3">metadata (raw JSON)</label>
+            <textarea id="f-metadata" class="field-input font-mono text-[11px]" rows="8" oninput="markDirty()">${escapeHtml(JSON.stringify(q.metadata || {}, null, 2))}</textarea>
+            <p id="metadata-error" class="hidden text-xs mt-1" style="color: var(--bad);">Invalid JSON — won't be saved until fixed.</p>
+        </details>
+
+        <div class="card p-4">
+            <p class="text-xs mb-2" style="color: var(--ink-faint);">${NAMING_HELP}<br>Prefer the "Save ALL changes" bar at the top to review several questions and push everything in one commit. The button below commits just this one question right now.</p>
+            <div class="flex gap-2 flex-wrap">
+                <button class="btn" onclick="downloadFallback()">Download JSON</button>
+                <button id="save-btn" class="btn btn-primary" onclick="saveCurrentQuestion()">Save just this question (1 commit)</button>
+            </div>
+        </div>
+    `;
+    typesetMath();
+    if (!document.getElementById("preview-tab").classList.contains("hidden")) renderLivePreview();
+}
+
+function moveOption(i, dir) {
+    const q = questions[currentIndex];
+    const j = i + dir;
+    if (j < 0 || j >= q.options.length) return;
+    collectFormIntoQuestion(currentIndex);
+    [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+    if (q.option_rationales && q.option_rationales.length === q.options.length) {
+        [q.option_rationales[i], q.option_rationales[j]] = [q.option_rationales[j], q.option_rationales[i]];
+    }
+    dirtyIndex.add(currentIndex); updateUnsavedBadge();
+    renderForm(currentIndex);
+}
+
+// ============================================================
+// COLLECT FORM -> DATA
+// ============================================================
+function collectFormIntoQuestion(idx) {
+    const q = questions[idx];
+    if (!q || !document.getElementById("form-mounted-marker")) return true;
+    const g = (id) => document.getElementById(id);
+
+    q.has_visuals = g("f-has-visuals").checked;
+    q.visual_location = g("f-visual-location").value;
+
+    ["hi", "en"].forEach(lang => {
+        const field = `content_${lang}`;
+        if (q[field] && q[field].length) {
+            q[field].forEach((block, i) => {
+                if (block.type === "text") {
+                    const el = document.querySelector(`[data-block-lang="${lang}"][data-block-i="${i}"][data-block-field="text"]`);
+                    if (el) block.text = el.value;
+                } else if (block.type === "table") {
+                    const headerEl = document.querySelector(`[data-block-lang="${lang}"][data-block-i="${i}"][data-block-field="header"]`);
+                    if (headerEl) block.header = headerEl.checked;
+                    (block.rows || []).forEach((row, r) => row.forEach((cell, c) => {
+                        const cellEl = document.querySelector(`[data-block-lang="${lang}"][data-block-i="${i}"][data-cell-r="${r}"][data-cell-c="${c}"]`);
+                        if (cellEl) row[c] = cellEl.value;
+                    }));
+                }
+            });
+            // Keep a plain-text fallback in sync so search on the main viewer still works.
+            q[`question_${lang}`] = q[field].map(b => b.type === "text" ? b.text : (b.type === "image" ? "[image]" : "[table]")).join("\n\n");
+        } else {
+            const el = g(`f-question-${lang}`);
+            if (el) q[`question_${lang}`] = el.value;
+        }
+    });
+
+    if (g("f-svg-hi")) q.svg_hi = g("f-svg-hi").value || null;
+    if (g("f-svg-en")) q.svg_en = g("f-svg-en").value || null;
+    q.explanation_hi = g("f-explanation-hi").value;
+    q.explanation_en = g("f-explanation-en").value;
+    q.is_duplicate = g("f-is-dup").checked;
+    const dupOf = g("f-dup-of").value;
+    q.duplicate_of_number = dupOf === "" ? null : parseInt(dupOf, 10);
+
+    const optRows = document.querySelectorAll("[data-opt-idx]");
+    const newOptions = [], newRationales = [];
+    optRows.forEach((row, i) => {
+        const label = row.querySelector(`[data-opt-field="label"][data-opt-i="${i}"]`).value;
+        const hi = row.querySelector(`[data-opt-field="hi"][data-opt-i="${i}"]`).value;
+        const en = row.querySelector(`[data-opt-field="en"][data-opt-i="${i}"]`).value;
+        const isCorrect = row.querySelector(`input[type="radio"][data-opt-i="${i}"]`).checked;
+        const rHi = row.querySelector(`[data-rat-field="rationale_hi"][data-opt-i="${i}"]`).value;
+        const rEn = row.querySelector(`[data-rat-field="rationale_en"][data-opt-i="${i}"]`).value;
+        const orig = q.options[i] || {};
+        newOptions.push({ label, hi, en, svg: orig.svg ?? null, image_gen_prompt: orig.image_gen_prompt ?? null, image: orig.image ?? null });
+        newRationales.push({ label, is_correct: isCorrect, rationale_hi: rHi, rationale_en: rEn });
+    });
+    q.options = newOptions;
+    q.option_rationales = newRationales;
+
+    const metaEl = g("f-metadata");
+    const metaErr = g("metadata-error");
+    if (metaEl) {
+        try { q.metadata = JSON.parse(metaEl.value || "{}"); metaErr.classList.add("hidden"); }
+        catch (e) { metaErr.classList.remove("hidden"); return false; }
+    }
+    return true;
+}
+
+// ============================================================
+// APPLY PENDING IMAGES
+// ============================================================
+function applyPendingImagePaths(idx) {
+    const q = questions[idx];
+    const crops = pendingCrops[idx] || [];
+    for (const c of crops) {
+        const path = `images/${c.filename}`;
+        if (c.slot === "full") q.image_full = path;
+        else if (c.slot === "hi") q.image_hi = path;
+        else if (c.slot === "en") q.image_en = path;
+        else if (c.slot.startsWith("opt")) {
+            const label = c.slot.replace("opt", "");
+            const opt = q.options.find(o => o.label === label);
+            if (opt) opt.image = path;
+        } else if (c.slot.startsWith("inlinehi") || c.slot.startsWith("inlineen")) {
+            const lang = c.slot.startsWith("inlinehi") ? "hi" : "en";
+            const field = `content_${lang}`;
+            if (!q[field] || !q[field].length) {
+                const flatVal = lang === "hi" ? q.question_hi : q.question_en;
+                q[field] = flatVal ? [{ type: "text", text: flatVal }] : [];
+            }
+            q[field].push({ type: "image", path });
+        } else if (c.slot.startsWith("extra")) {
+            q.extra_images = q.extra_images || [];
+            q.extra_images = q.extra_images.filter(e => e.slot !== c.slot);
+            q.extra_images.push({ slot: c.slot, path });
+        }
+    }
+}
+
+// ============================================================
+// SAVE / COMMIT
+// ============================================================
+function downloadFallback() {
+    if (currentIndex >= 0) collectFormIntoQuestion(currentIndex);
+    const idxList = Array.from(dirtyIndex);
+    let imageBlobs = [];
+    idxList.forEach(idx => {
+        applyPendingImagePaths(idx);
+        questions[idx].human_reviewed = true;
+        questions[idx].human_reviewed_at = new Date().toISOString();
+        (pendingCrops[idx] || []).forEach(c => imageBlobs.push(c));
+    });
+    const blob = new Blob([JSON.stringify({ questions }, null, 4)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `question_bank_${runId}.json`;
+    a.click();
+    imageBlobs.forEach((c, i) => {
+        setTimeout(() => {
+            const ia = document.createElement("a");
+            ia.href = URL.createObjectURL(c.blob);
+            ia.download = c.filename;
+            ia.click();
+        }, (i + 1) * 400);
+    });
+    toast(`Downloaded question_bank.json${imageBlobs.length ? ` + ${imageBlobs.length} image file(s)` : ""}. This replaces the whole file — put images in output/${runId}/images/ and overwrite question_bank.json manually.`, "info");
+}
+
+async function saveCurrentQuestion() {
+    if (isSaving) return;
+    const idx = currentIndex;
+    const ok = collectFormIntoQuestion(idx);
+    if (!ok) { toast("Fix the metadata JSON before saving.", "error"); return; }
+    if (!token) { openConnectPanel(); return; }
+
+    isSaving = true;
+    const saveBtn = document.getElementById("save-btn");
+    saveBtn.disabled = true; saveBtn.textContent = "Saving…";
+
+    try {
+        applyPendingImagePaths(idx);
+        const q = questions[idx];
+        q.human_reviewed = true;
+        q.human_reviewed_at = new Date().toISOString();
+
+        let freshData;
+        try {
+            const freshRes = await fetch(`output/${encodeURIComponent(runId)}/question_bank.json?v=${Date.now()}`, { cache: "no-store" });
+            freshData = await freshRes.json();
+        } catch (e) { freshData = { questions }; }
+        const freshList = Array.isArray(freshData.questions) ? freshData.questions : questions;
+        const matchIdx = freshList.findIndex(fq => fq.source_page === q.source_page && fq.number === q.number);
+        if (matchIdx >= 0) freshList[matchIdx] = q; else freshList.push(q);
+        const mergedData = { ...freshData, questions: freshList };
+
+        const files = [{ path: `output/${runId}/question_bank.json`, base64: utf8ToBase64(JSON.stringify(mergedData, null, 4)) }];
+        for (const c of (pendingCrops[idx] || [])) files.push({ path: `output/${runId}/images/${c.filename}`, base64: await blobToBase64(c.blob) });
+
+        await commitFiles(files, `Review: update Q${q.number} (page ${q.source_page})`);
+
+        pendingCrops[idx] = [];
+        dirtyIndex.delete(idx);
+        updateUnsavedBadge(); renderNavList(); renderForm(idx);
+        toast(`Saved Q${q.number} to GitHub ✓`, "good");
+    } catch (e) {
+        toast("Save failed — " + e.message + " (use Download JSON as a backup).", "error");
+    } finally {
+        isSaving = false;
+        saveBtn.disabled = false; saveBtn.textContent = "Save just this question (1 commit)";
+    }
+}
+
+async function saveAllChanges() {
+    if (isSaving) return;
+    if (currentIndex >= 0) {
+        const ok = collectFormIntoQuestion(currentIndex);
+        if (!ok) { toast("Fix the metadata JSON on the current question before saving.", "error"); return; }
+    }
+    const idxList = Array.from(dirtyIndex);
+    if (!idxList.length) { toast("Nothing to save.", "info"); return; }
+    if (!token) { openConnectPanel(); return; }
+
+    isSaving = true;
+    const btn = document.getElementById("save-all-btn");
+    btn.disabled = true; btn.textContent = "Saving…";
+
+    try {
+        let freshData;
+        try {
+            const freshRes = await fetch(`output/${encodeURIComponent(runId)}/question_bank.json?v=${Date.now()}`, { cache: "no-store" });
+            freshData = await freshRes.json();
+        } catch (e) { freshData = { questions }; }
+        const freshList = Array.isArray(freshData.questions) ? freshData.questions : questions.slice();
+
+        const files = [];
+        let imageCount = 0;
+        for (const idx of idxList) {
+            const q = questions[idx];
+            applyPendingImagePaths(idx);
+            q.human_reviewed = true;
+            q.human_reviewed_at = new Date().toISOString();
+            const matchIdx = freshList.findIndex(fq => fq.source_page === q.source_page && fq.number === q.number);
+            if (matchIdx >= 0) freshList[matchIdx] = q; else freshList.push(q);
+            for (const c of (pendingCrops[idx] || [])) {
+                files.push({ path: `output/${runId}/images/${c.filename}`, base64: await blobToBase64(c.blob) });
+                imageCount++;
+            }
+        }
+        const mergedData = { ...freshData, questions: freshList };
+        files.unshift({ path: `output/${runId}/question_bank.json`, base64: utf8ToBase64(JSON.stringify(mergedData, null, 4)) });
+
+        await commitFiles(files, `Review: update ${idxList.length} question(s)${imageCount ? `, ${imageCount} image(s)` : ""}`);
+
+        idxList.forEach(idx => { pendingCrops[idx] = []; });
+        dirtyIndex.clear();
+        updateUnsavedBadge(); renderNavList();
+        if (currentIndex >= 0) renderForm(currentIndex);
+        toast(`Saved ${idxList.length} question(s) to GitHub in one commit ✓`, "good");
+    } catch (e) {
+        toast("Batch save failed — " + e.message + " (use Download JSON as backup, nothing was lost).", "error");
+    } finally {
+        isSaving = false;
+        btn.disabled = false; btn.textContent = "💾 Save ALL changes now (1 commit)";
+    }
+}
+</script>
+</body>
+</html>

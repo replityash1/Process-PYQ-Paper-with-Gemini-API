@@ -199,6 +199,83 @@ def extract_page_number(
     return 10**9
 
 
+def preserve_raw_pages(
+    json_files,
+    raw_pages_root: Path,
+):
+    """
+    Copies each page's untouched worker output (page_N.json, the
+    source page image, and every question/option crop for that page)
+    into output/<run>/raw_pages/page_N/ BEFORE dedup/merge happens.
+
+    This is what Workflow 2's page-level refinement pass reads back
+    later: it lets that pass compare each question against the
+    actual source page image instead of only the crops Run 1 made.
+    """
+
+    raw_pages_root.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    pages_written = 0
+    files_copied = 0
+
+    for json_file in json_files:
+
+        page_number = extract_page_number(
+            json_file
+        )
+
+        if page_number == 10**9:
+
+            print(
+                f"WARNING: Could not determine page "
+                f"number for {json_file}; skipping "
+                f"raw-page preservation for this file."
+            )
+            continue
+
+        page_dir = (
+            raw_pages_root
+            / f"page_{page_number}"
+        )
+
+        page_dir.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+        source_dir = json_file.parent
+
+        for item in source_dir.iterdir():
+
+            if not item.is_file():
+                continue
+
+            # Debug-only artifacts from failed extractions never
+            # belong in the committed raw-page bundle.
+            if item.name.endswith("_raw.txt"):
+                continue
+
+            shutil.copy2(
+                item,
+                page_dir / item.name,
+            )
+
+            files_copied += 1
+
+        pages_written += 1
+
+    print(
+        f"Raw pages preserved: {pages_written} "
+        f"page(s), {files_copied} file(s) "
+        f"-> {raw_pages_root}"
+    )
+
+    return pages_written
+
+
 def collect_json_files():
 
     if not DOWNLOAD_ROOT.exists():
@@ -792,6 +869,15 @@ def main():
     print(
         f"JSON artifacts: "
         f"{len(json_files)}"
+    )
+
+    # --------------------------------------------------------
+    # Preserve raw per-page bundles for Workflow 2
+    # --------------------------------------------------------
+
+    preserve_raw_pages(
+        json_files,
+        target_dir / "raw_pages",
     )
 
     # --------------------------------------------------------
