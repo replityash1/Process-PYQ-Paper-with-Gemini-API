@@ -342,7 +342,10 @@
                     "correct_label": "2",
                     "explanation_en": "Heterotrophic microbes naturally present in sewage are responsible for biological treatment (aeration tanks/activated sludge process)."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 1,
@@ -1827,7 +1830,10 @@
                     "correct_label": "3",
                     "explanation_en": "For 4p orbital, $n = 4$. Total nodes = $n - 1 = 4 - 1 = 3$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 4,
@@ -1952,7 +1958,10 @@
                     "correct_label": "1",
                     "explanation_en": "Due to the stability of fully-filled 2s orbital in Beryllium, its ionization enthalpy is higher than Boron. Thus the order is Li < B < Be < C."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 4,
@@ -2937,7 +2946,10 @@
                     "correct_label": "1",
                     "explanation_en": "Both statements are correct according to Fajans' rules. Larger anions are more easily polarized, increasing covalent character."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 6,
@@ -3060,7 +3072,10 @@
                     "correct_label": "1",
                     "explanation_en": "The decreasing order of acid strength is HI > HBr > HCl > HF due to decreasing bond strength down the group."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 6,
@@ -3184,7 +3199,10 @@
                     "correct_label": "2",
                     "explanation_en": "Glycerol decomposes at its normal boiling point, so it is purified by distillation under reduced pressure."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 6,
@@ -3369,7 +3387,7 @@
                     "en": "Question not attempted"
                 }
             ],
-            "explanation_hi": "गुरुत्वाकर्षण बल के मान:\n(I) कोश के अंदर (केंद्र पर नहीं): बल शून्य होता है ($F_I = 0$)।\n(II) कोश के अंदर (केंद्र पर): बल शून्य होता है ($F_{II} = 0$)।\n(III) कोश के बाहर केंद्र से $r$ दूरी पर: $F_{III} = \\frac{GMm}{r^2}$\n(IV) ठोस गोले के बाहर केंद्र से $2r$ दूरी पर: $F_{IV} = \\frac{GMm}{(2r)^2} = \\frac{GMm}{4r^2}$\nअतः बल का क्रम (सबसे कम से सबसे अधिक): $F_I = F_II < F_{IV} < F_{III}$ अर्थात (I) और (II) पर समान ($0$), फिर (IV), फिर (III)।",
+            "explanation_hi": "गुरुत्वाकर्षण बल के मान:\n(I) कोश के अंदर (केंद्र पर नहीं): बल शून्य होता है ($F_I = 0$)।\n(II) कोश के अंदर (केंद्र पर): बल शून्य होता है ($F_{II} = 0$)।\n(III) कोश के बाहर केंद्र से $r$ दूरी पर: $F_{III} = \\frac{GMm}{r^2}$\n(IV) ठोस गोले के बाहर केंद्र से $2r$ दूरी पर: $F_{IV} = \\frac{GMm}{(2r)^2} = \\frac{GMm}{4r^2}$\nअतः बल का क्रम (सबसे कम से सबसे अधिक): $F_I = F_{II} < F_{IV} < F_{III}$ अर्थात (I) और (II) पर समान ($0$), फिर (IV), फिर (III)।",
             "explanation_en": "Gravitational force magnitudes:\n(I) Inside the shell (not at center): force is zero ($F_I = 0$).\n(II) Inside the shell (at center): force is zero ($F_{II} = 0$).\n(III) Outside the spherical shell at distance $r$: $F_{III} = \\frac{GMm}{r^2}$\n(IV) Outside the solid sphere at distance $2r$: $F_{IV} = \\frac{GMm}{(2r)^2} = \\frac{GMm}{4r^2}$\nComparing magnitudes: $F_I = F_{II} = 0$, $F_{IV} = \\frac{GMm}{4r^2}$, $F_{III} = \\frac{GMm}{r^2}$.\nThus, least to greatest: Equal on (I) and (II) (which is zero), then (IV), then (III).",
             "option_rationales": [
                 {
@@ -3453,7 +3471,10 @@
                     "correct_label": "1",
                     "explanation_en": "Inside a spherical shell at the center, the gravitational force is zero ($F_I = 0$). Outside the shell, the force is non-zero. Therefore, the ratio $F_I / F_{II} = 0 / (\text{non-zero}) = 0$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 7,
@@ -3629,7 +3650,7 @@
                 {
                     "label": "4",
                     "hi": "$+Ka^2$",
-                    "en": "+Ka^2"
+                    "en": "$+Ka^2$"
                 },
                 {
                     "label": "5",
@@ -3721,7 +3742,10 @@
                     "correct_label": "1",
                     "explanation_en": "$W = -C \\int d(xy) = -C[xy]_{(0,0)}^{(b,b)} = -Cb^2$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 8,
@@ -4275,7 +4299,10 @@
                     "correct_label": "1",
                     "explanation_en": "Exponential or log phase exhibits the maximum relative growth rate."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 9,
@@ -4399,7 +4426,10 @@
                     "correct_label": "2",
                     "explanation_en": "High pH means low $\\text{H}^+$ concentration which favors association, whereas high temperature favors dissociation of oxyhemoglobin. Hence only statement B is correct."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 9,
@@ -4522,7 +4552,10 @@
                     "correct_label": "2",
                     "explanation_en": "Boerhaavia exhibits medullary vascular bundles in its pith as a feature of anomalous secondary growth."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 9,
@@ -4646,7 +4679,10 @@
                     "correct_label": "3",
                     "explanation_en": "In $\\text{C}_4$ plants, the Calvin cycle takes place in bundle-sheath cells, not in mesophyll cells."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 9,
@@ -5060,7 +5096,10 @@
                     "correct_label": "1",
                     "explanation_en": "$Q = 2 \\times 2.25 \\times 10^6 = 4.50 \\times 10^6\\text{ J}$. $W = P \\times \\frac{m}{\\rho_s} = 10^5 \\times \\frac{2}{0.6} = 3.33 \\times 10^5\\text{ J} = 0.33 \\times 10^6\\text{ J}$. $\\Delta U = 4.50 \\times 10^6 - 0.33 \\times 10^6 = 4.17 \\times 10^6\\text{ J}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 10,
@@ -5184,7 +5223,10 @@
                     "correct_label": "1",
                     "explanation_en": "$T_1 = 127 + 273 = 400\\text{ K}$. $\\eta_1 = 1 - \\frac{T_2}{400} = \\frac{1}{4} \\implies T_2 = 300\\text{ K}$. New efficiency $\\eta_2 = 1 - \\frac{T_2 - \\theta}{400} = \\frac{1}{2} \\implies \\frac{T_2 - \\theta}{400} = \\frac{1}{2} \\implies T_2 - \\theta = 200\\text{ K}$. Thus $\\theta = 300 - 200 = 100\\text{ K}$... Wait: $T_2 - \\theta = 200 \\implies 300 - \\theta = 200 \\implies \\theta = 100\\text{ K}$. Let's check: option 2 is $100\\text{ K}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 10,
@@ -5308,7 +5350,10 @@
                     "correct_label": "2",
                     "explanation_en": "For a 1D infinite potential well of width $a$, the energy levels are given by $E_n = \\frac{n^2 \\pi^2 \\hbar^2}{2 m a^2}$, which are proportional to $n^2$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 11,
@@ -5575,13 +5620,16 @@
                     "correct_label": "1",
                     "explanation_en": "Here $T = 2 \\implies \\omega_0 = \\pi$. Since amplitude drops to $1/e$ in $t = 23$, $kt = 1 \\implies k = 1/23$. Thus $\\omega = \\sqrt{\\pi^2 + (1/23)^2}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 11,
             "number": 87,
-            "question_hi": "एक हार्मोनिक दोलित्र की अवस्थाओं के लिए $<x^2>$, $\\frac{\\hbar}{2m\\omega}$ द्वारा दिया गया है। यहाँ $A$ का मान है -",
-            "question_en": "For the states of a harmonic oscillator is given by $\\frac{A\\hbar}{2m\\omega}$. Here value of A is -",
+            "question_hi": "एक हार्मोनिक दोलित्र की अवस्थाओं के लिए $<x^2>$, $\\frac{A\\hbar}{2m\\omega}$ द्वारा दिया गया है। यहाँ $A$ का मान है -",
+            "question_en": "For the states of a harmonic oscillator $<x^2>$ is given by $\\frac{A\\hbar}{2m\\omega}$. Here value of A is -",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -5614,7 +5662,7 @@
                     "en": "Question not attempted"
                 }
             ],
-            "explanation_hi": "क्वांटम हार्मोनिक दोलित्र के लिए स्थिति संकारक की प्रत्याशा का वर्ग माध्य <x^2> निम्न प्रकार दिया जाता है:\n$<x^2> = \\frac{\\hbar}{2m\\omega} (2n + 1)$\nअतः यहाँ $A = 2n + 1$ है।",
+            "explanation_hi": "क्वांटम हार्मोनिक दोलित्र के लिए स्थिति संकारक की प्रत्याशा का वर्ग माध्य $<x^2>$ निम्न प्रकार दिया जाता है:\n$<x^2> = \\frac{\\hbar}{2m\\omega} (2n + 1)$\nअतः यहाँ $A = 2n + 1$ है।",
             "explanation_en": "For a quantum harmonic oscillator, the expectation value of position squared $<x^2>$ in the $n$-th energy state is given by:\n$<x^2> = \\frac{\\hbar}{2m\\omega} (2n + 1)$\nComparing with $\\frac{A\\hbar}{2m\\omega}$, we get $A = 2n + 1$.",
             "option_rationales": [
                 {
@@ -5699,7 +5747,11 @@
                     "correct_label": "1",
                     "explanation_en": "Using $<p^2> = \\frac{m \\hbar \\omega}{2} (2n + 1) = m \\hbar \\omega (n + \\frac{1}{2})$. portanto option 1 is correct."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite",
+            "audit_notes": "Corrected minor transcription artifact in question_en stem."
         },
         {
             "source_page": 11,
@@ -5738,7 +5790,7 @@
                     "en": "Question not attempted"
                 }
             ],
-            "explanation_hi": "अध्रुवित प्रकाश $I$ जब $A$ से गुजरता है, तीव्रता $I_1 = \\frac{I}{2}$ हो जाती है।\nजब $C$ को $A$ और $B$ के बीच रखा जाता है, मान लीजिए $A$ और $C$ के बीच का कोण $\\theta$ है और चूँकि $A$ और $B$ के बीच मूल कोण $\\pi/2$ ($90^\\circ$) रहा होगा तभी तीव्रता अंत में $I/8$ हुई है (यह मानते हुए कि $A$ और $B$ लंबवत थे):\nमलु तीव्रता $I_0 = \\frac{I}{2}$ थी।\n$I_{final} = \\frac{I_0}{2} \\cos^2\\theta \\sin^2\\theta = \\frac{I}{2} \\left(\\frac{1}{2} \\sin(2\\theta)\\right)^2$\nदिया गया है कि $I_{final} = \\frac{I}{8}$:\n$\\frac{I}{2} \\cdot \\frac{1}{4} \\sin^2(2\\theta) = \\frac{I}{8} \\implies \\sin^2(2\\theta) = 1 \\implies \\sin(2\\theta) = 1$\nअतः $2\\theta = 90^\\circ \\implies \\theta = 45^\\circ$ है।",
+            "explanation_hi": "अध्रुवित प्रकाश $I$ जब $A$ से गुजरता है, तीव्रता $I_1 = \\frac{I}{2}$ हो जाती है।\nजब $C$ को $A$ और $B$ के बीच रखा जाता है, मान लीजिए $A$ और $C$ के बीच का कोण $\\theta$ है और चूँकि $A$ और $B$ के बीच मूल कोण $\\pi/2$ ($90^\\circ$) रहा होगा तभी तीव्रता अंत में $I/8$ हुई है (यह मानते हुए कि $A$ और $B$ लंबवत थे):\nमूल तीव्रता $I_0 = \\frac{I}{2}$ थी।\n$I_{final} = \\frac{I_0}{2} \\cos^2\\theta \\sin^2\\theta = \\frac{I}{2} \\left(\\frac{1}{2} \\sin(2\\theta)\\right)^2$\nदिया गया है कि $I_{final} = \\frac{I}{8}$:\n$\\frac{I}{2} \\cdot \\frac{1}{4} \\sin^2(2\\theta) = \\frac{I}{8} \\implies \\sin^2(2\\theta) = 1 \\implies \\sin(2\\theta) = 1$\nअतः $2\\theta = 90^\\circ \\implies \\theta = 45^\\circ$ है।",
             "explanation_en": "When unpolarised light of intensity $I$ passes through polarizer $A$, the intensity becomes $I_A = \\frac{I}{2}$.\nLet the angle between $A$ and $C$ be $\\theta$, and between $C$ and $B$ be $(90^\\circ - \\theta)$ since initial $A$ and $B$ were crossed ($90^\\circ$).\nThe final intensity after $B$ is:\n$I_f = I_A \\cos^2\\theta \\cos^2(90^\\circ - \\theta) = \\frac{I}{2} \\cos^2\\theta \\sin^2\\theta = \\frac{I}{8} \\sin^2(2\\theta)$\nGiven $I_f = \\frac{I}{8}$:\n$\\frac{I}{8} \\sin^2(2\\theta) = \\frac{I}{8} \\implies \\sin^2(2\\theta) = 1 \\implies 2\\theta = 90^\\circ \\implies \\theta = 45^\\circ$.",
             "option_rationales": [
                 {
@@ -5823,7 +5875,10 @@
                     "correct_label": "1",
                     "explanation_en": "Using Malus law: $I_f = \\frac{I}{2} \\cos^2(45^\\circ) \\cos^2(45^\\circ) = \\frac{I}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{I}{8}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 12,
@@ -5947,7 +6002,10 @@
                     "correct_label": "1",
                     "explanation_en": "Phase velocity $v_p = \\omega / k = (E/\\hbar) / (p/\\hbar) = E/p$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 12,
@@ -6072,7 +6130,10 @@
                     "correct_label": "1",
                     "explanation_en": "Since $\\lambda = \\frac{h}{p}$, if wavelengths are equal, their momenta must be equal, giving a ratio of $1 : 1$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 12,
@@ -6111,7 +6172,7 @@
                     "en": "Question not attempted"
                 }
             ],
-            "explanation_hi": "प्रणोदित दोलनों में, आयाम अनुनाद आवृत्ति $\\omega_r = \\sqrt{\\omega_0^2 - 2b^2}$ होती है जो प्राकृतिक आवृत्ति $\\omega_0$ से कम होती है, और वेग अनुनाद $\\omega = \\omega_0$ पर होता है। अतः कथन (A) सत्य है। आयाम अनुनाद पर कलांतर $\\phi = \\pi/2$ (या विस्थापन $\\pi/2$ पीछे रहता है) और वेग अनुनाद पर वेग चालक बल के समकला में होता है (कलांतर शून्य)। यहाँ कथन (B) में 'आयाम अनुनाद पर विस्थापन चालक बल से $\\pi$ पीछे रहता है' दिया गया है जबकि वास्तविक कलांतर $\\pi/2$ होता है (या अनुनाद पर कलांतर $\\pi/2$ होता है)। रुकिए, एक बार पुनरावलोकन करें: आयाम अनुनाद पर कला कोण $\\tan \\phi = \\frac{2br}{\\omega_0^2 - \\omega^2}$। आयाम अनुनाद पर आवृत्ति $\\omega = \\sqrt{\\omega_0^2 - 2b^2}$ होने पर $\\tan \\phi = \\frac{2b \\sqrt{\\omega_0^2 - 2b^2}}{2b^2} = \\frac{\\sqrt{\\omega_0^2 - 2b^2}}{b}$, जिससे $\\phi \\neq \\pi/2$ ($\\phi$ का मान अवमंदन पर निर्भर करता है और यह $\\pi/2$ के आसपास होता है, पर बहुत उच्च आवृत्ति पर $\\pi$ होता है)। अतः कथन (B) असत्य है। इस प्रकार कथन (A) सत्य है और कथन (B) असत्य है।",
+            "explanation_hi": "प्रणोदित दोलनों में, आयाम अनुनाद आवृत्ति $\\omega_r = \\sqrt{\\omega_0^2 - 2b^2}$ होती है जो प्राकृतिक आवृत्ति $\\omega_0$ से कम होती है, और वेग अनुनाद $\\omega = \\omega_0$ पर होता है। अतः कथन (A) सत्य है। आयाम अनुनाद पर कलांतर $\\phi = \\pi/2$ (या विस्थापन $\\pi/2$ पीछे रहता है) और वेग अनुनाद पर वेग चालक बल के समकला में होता है (कलांतर शून्य)। यहाँ कथन (B) में 'आयाम अनुनाद पर विस्थापन चालक बल से $\\pi$ पीछे रहता है' दिया गया है जबकि वास्तविक कलांतर $\\pi/2$ होता है (या अनुनाद पर कलांतर $\\pi/2$ होता है)। अतः कथन (A) सत्य है और कथन (B) असत्य है।",
             "explanation_en": "In forced oscillations, amplitude resonance occurs at $\\omega = \\sqrt{\\omega_0^2 - 2b^2}$ which is slightly less than the natural frequency $\\omega_0$, and velocity resonance occurs at $\\omega = \\omega_0$ regardless of damping. Thus, Statement (A) is true. At velocity resonance, velocity is in phase with the driving force. At amplitude resonance, the phase angle of displacement relative to the driving force is not $\\pi$ (it is typically around $\\pi/2$ depending on damping, and approaches $\\pi$ only at very high frequencies). Thus, Statement (B) is false. Therefore, Statement (A) is true and Statement (B) is false.",
             "option_rationales": [
                 {
@@ -6197,7 +6258,10 @@
                     "correct_label": "1",
                     "explanation_en": "Velocity resonance always occurs when the driving frequency equals the natural frequency, independent of the damping coefficient."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 13,
@@ -6321,7 +6385,10 @@
                     "correct_label": "1",
                     "explanation_en": "For first: $R_1 = \\frac{2\\times 10^8}{40} \\ln 2 = 0.05 \\times 10^8 \\ln 2$. For second: $R_2 = \\frac{4\\times 10^8}{80} \\ln 2 = 0.05 \\times 10^8 \\ln 2$. Both radioactivities are equal, so Assertion is true. Reason correctly states $R = \\lambda N$, which is the definition of radioactivity and explains why $R_1 = R_2$ depends on both $N$ and $\\lambda$ (or $T_{1/2}$)."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 13,
@@ -6909,7 +6976,10 @@
                     "correct_label": "2",
                     "explanation_en": "A catalyst provides an alternate pathway with lower activation energy."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 14,
@@ -7033,7 +7103,10 @@
                     "correct_label": "2",
                     "explanation_en": "The repulsive interaction decreases in the order: lp-lp > lp-bp > bp-bp, so increasing order is bp-bp < lp-bp < lp-lp."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 14,
@@ -7158,7 +7231,10 @@
                     "correct_label": "2",
                     "explanation_en": "Like cobalt complex, chromium complex with $[\\text{M}(\\text{AA})_2\\text{X}_2]$ formula also exhibits 3 stereoisomers (trans and two optically active cis forms)."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 15,
@@ -7282,7 +7358,10 @@
                     "correct_label": "1",
                     "explanation_en": "$Mg^{2+}$ ions stabilize the transition state in ATP-utilizing enzymes."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 15,
@@ -7406,7 +7485,10 @@
                     "correct_label": "2",
                     "explanation_en": "Proteins and gums stabilize oil-in-water emulsions."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 15,
@@ -7530,7 +7612,10 @@
                     "correct_label": "2",
                     "explanation_en": "$Li_2$ and $C_2$ have all paired electrons and are diamagnetic."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 15,
@@ -7653,7 +7738,10 @@
                     "correct_label": "1",
                     "explanation_en": "Poor shielding by 4f electrons causes lanthanoid contraction."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 15,
@@ -8229,7 +8317,10 @@
                     "correct_label": "1",
                     "explanation_en": "Galactose is the C-4 epimer of glucose."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "audited": true,
+            "audit_model": "gemini-3.5-flash-lite"
         },
         {
             "source_page": 16,
