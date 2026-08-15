@@ -3929,27 +3929,42 @@
                 {
                     "label": "1",
                     "hi": "$\\left(\\frac{8}{3}\\right) \\pi^2$",
-                    "en": "$\\left(\\frac{8}{3}\\right) \\pi^2$"
+                    "en": "$\\left(\\frac{8}{3}\\right) \\pi^2$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "$\\left(\\frac{2}{3}\\right) \\pi^2$",
-                    "en": "$\\left(\\frac{2}{3}\\right) \\pi^2$"
+                    "en": "$\\left(\\frac{2}{3}\\right) \\pi^2$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "$\\left(\\frac{5}{3}\\right) \\pi^2$",
-                    "en": "$\\left(\\frac{5}{3}\\right) \\pi^2$"
+                    "en": "$\\left(\\frac{5}{3}\\right) \\pi^2$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
-                    "hi": "$\\left(/frac{3}{2}\\right) \\pi^2$",
-                    "en": "$\\left(\\frac{3}{2}\\right) \\pi^2$"
+                    "hi": "$\\left(\\frac{3}{2}\\right) \\pi^2$",
+                    "en": "$\\left(\\frac{3}{2}\\right) \\pi^2$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "माना छड़ की लंबाई $L$ तथा द्रव्यमान $M$ है।\nछड़ का उसके केंद्र से गुजरने वाले लंबवत अक्ष के परितः जड़त्व आघूर्ण: $I = \\frac{M L^2}{12}$।\nजब छड़ को वलय में मोड़ा जाता है, तो वलय की परिधि $2\\pi R = L \\implies R = \\frac{L}{2\\pi}$।\nवलय का उसके व्यास के परितः जड़त्व आघूर्ण: $I' = \\frac{M R^2}{2} = \\frac{M}{2} \\left(\\frac{L}{2\\pi}\\right)^2 = \\frac{M L^2}{8 \\pi^2}$।\nअब अनुपात ज्ञात करते हैं:\n$\\frac{I}{I'} = \\frac{\\frac{M L^2}{12}}{\\frac{M L^2}{8 \\pi^2}} = \\frac{8 \\pi^2}{12} = \\frac{2}{3} \\pi^2$।",
@@ -4037,7 +4052,11 @@
                     "correct_label": "1",
                     "explanation_en": "Same derivation yields \\frac{2}{3}\\pi^2."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:40:42.075Z"
         },
         {
             "source_page": 8,
