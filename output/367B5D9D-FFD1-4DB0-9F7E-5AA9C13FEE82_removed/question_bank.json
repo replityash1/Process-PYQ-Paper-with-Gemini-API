@@ -6223,27 +6223,42 @@
                 {
                     "label": "1",
                     "hi": "$400\\text{ nm}$ और $667\\text{ nm}$",
-                    "en": "$400\\text{ nm}$ and $667\\text{ nm}$"
+                    "en": "$400\\text{ nm}$ and $667\\text{ nm}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "$420\\text{ nm}$ और $500\\text{ nm}$",
-                    "en": "$420\\text{ nm}$ and $500\\text{ nm}$"
+                    "en": "$420\\text{ nm}$ and $500\\text{ nm}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "$420\\text{ nm}$ और $667\\text{ nm}$",
-                    "en": "$420\\text{ nm}$ and $667\\text{ nm}$"
+                    "en": "$420\\text{ nm}$ and $667\\text{ nm}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "$400\\text{ nm}$ और $600\\text{ nm}$",
-                    "en": "$400\\text{ nm}$ and $600\\text{ nm}$"
+                    "en": "$400\\text{ nm}$ and $600\\text{ nm}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "विनाशकारी व्यतिकरण के लिए पथांतर निम्न होता है:\n$\\Delta x = \\frac{y d}{D} = (2n - 1) \\frac{\\lambda}{2}$\nयहाँ $y = 1.0\\text{ mm} = 10^{-3}\\text{ m}$, $d = 0.5\\text{ mm} = 0.5\\times 10^{-3}\\text{ m}$, $D = 50\\text{ cm} = 0.5\\text{ m}$\nपथांतर $\\Delta x = \\frac{10^{-3} \\times 0.5 \\times 10^{-3}}{0.5} = 10^{-6}\\text{ m} = 1000\\text{ nm}$\nअतः तरंगदैर्ध्य जो अनुपस्थित (विनाशकारी व्यतिकरण) होंगी उनके लिए:\n$\\lambda = \\frac{2 \\times 1000\\text{ nm}}{2n - 1}$\n- $n = 1$ के लिए: $\\lambda = \\frac{2000}{1} = 2000\\text{ nm}$ (सीमा से बाहर)\n- $n = 2$ के लिए: $\\lambda = \\frac{2000}{3} = 666.67\\text{ nm} \\approx 667\\text{ nm}$\n- $n = 3$ के लिए: $\\lambda = \\frac{2000}{5} = 400\\text{ nm}$\nअतः अनुपस्थित तरंगदैर्ध्य $400\\text{ nm}$ और $667\\text{ nm}$ हैं।",
@@ -6331,7 +6346,14 @@
                     "correct_label": "1",
                     "explanation_en": "Path difference $\\Delta x = \\frac{y d}{D} = \\frac{1.0\\times 10^{-3} \\times 1.0\\times 10^{-3}}{1} = 10^{-6}\\text{ m} = 1000\\text{ nm}$. For minima, $\\lambda = \\frac{2\\Delta x}{2n-1} = \\frac{2000}{2n-1}$. For $n=2$, $\\lambda = \\frac{2000}{3} = 667\\text{ nm}$. For $n=3$, $\\lambda = \\frac{2000}{5} = 400\\text{ nm}$. Thus $400\\text{ nm}$ is absent."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "full": null,
+            "hi": null,
+            "en": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:58:16.125Z"
         },
         {
             "source_page": 13,
