@@ -8944,8 +8944,8 @@
         {
             "source_page": 17,
             "number": 149,
-            "question_hi": "राष्ट्रीय पाठ्यचर्या की रूपरेखा 2005 के अनुसार, किस स्तर पर विद्यार्थियों को विज्ञान को एक समग्र विषय के रूप में सीखने में संलग्न होना चाहिए?\n(1) उच्च प्राथमिक स्तर\n(2) माध्यमिक स्तर\n(3) उच्च माध्यमिक स्तर\n(4) प्राथमिक स्तर\n(5) अनुत्तरित प्रश्न",
-            "question_en": "According to National Curriculum Framework 2005, at which stage students should be engaged in learning Science as a composite discipline?\n(1) Upper Primary Stage\n(2) Secondary Stage\n(3) Senior Secondary Stage\n(4) Primary Stage\n(5) Question not attempted",
+            "question_hi": "राष्ट्रीय पाठ्यचर्या की रूपरेखा 2005 के अनुसार, किस स्तर पर विद्यार्थियों को विज्ञान को एक समग्र विषय के रूप में सीखने में संलग्न होना चाहिए?",
+            "question_en": "According to National Curriculum Framework 2005, at which stage students should be engaged in learning Science as a composite discipline?",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -8955,27 +8955,42 @@
                 {
                     "label": "1",
                     "hi": "उच्च प्राथमिक स्तर",
-                    "en": "Upper Primary Stage"
+                    "en": "Upper Primary Stage",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": " माध्यमिक स्तर",
-                    "en": "Secondary Stage"
+                    "en": "Secondary Stage",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "उच्च माध्यमिक स्तर",
-                    "en": "Senior Secondary Stage"
+                    "en": "Senior Secondary Stage",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "प्राथमिक स्तर",
-                    "en": "Primary Stage"
+                    "en": "Primary Stage",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "राष्ट्रीय पाठ्यचर्या की रूपरेखा (NCF-2005) के अनुसार, उच्च प्राथमिक स्तर (Upper Primary Stage) पर विज्ञान को एक समग्र विषय (composite discipline) के रूप में पढ़ाया जाना चाहिए, जहाँ इसे पर्यावरण अध्ययन से आगे बढ़ाकर भौतिकी, रसायन और जीव विज्ञान के समेकित रूप में प्रस्तुत किया जाता है। अतः विकल्प (1) सही है।",
@@ -9063,13 +9078,17 @@
                     "correct_label": "1",
                     "explanation_en": "At the primary stage, science is taught as part of Environmental Studies (EVS) as per NCF-2005."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:05:11.688Z"
         },
         {
             "source_page": 17,
             "number": 150,
-            "question_hi": "परीक्षण पदों की वह विशेषता, जिसके अन्तर्गत एक परीक्षण वही मापता है जिसका मापन करने के लिए उसका निर्माण हुआ है, कहलाती है -\n(1) वैधता\n(2) विश्वसनीयता\n(3) प्रासंगिकता\n(4) वस्तुनिष्ठता\n(5) अनुत्तरित प्रश्न",
-            "question_en": "The characteristic of test items under which a test measures only what it is designed to measure, is called -\n(1) Validity\n(2) Reliability\n(3) Relevance\n(4) Objectivity\n(5) Question not attempted",
+            "question_hi": "परीक्षण पदों की वह विशेषता, जिसके अन्तर्गत एक परीक्षण वही मापता है जिसका मापन करने के लिए उसका निर्माण हुआ है, कहलाती है -",
+            "question_en": "The characteristic of test items under which a test measures only what it is designed to measure, is called -",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -9079,27 +9098,42 @@
                 {
                     "label": "1",
                     "hi": "वैधता",
-                    "en": "Validity"
+                    "en": "Validity",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "विश्वसनीयता",
-                    "en": "Reliability"
+                    "en": "Reliability",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "प्रासंगिकता",
-                    "en": "Relevance"
+                    "en": "Relevance",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "वस्तुनिष्ठता",
-                    "en": "Objectivity"
+                    "en": "Objectivity",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "वैधता (Validity) किसी परीक्षण की वह महत्वपूर्ण विशेषता है जो यह दर्शाती है कि परीक्षण वास्तव में उसी उद्देश्य या गुण का मापन करता है जिसके लिए उसे बनाया गया है। विश्वसनीयता (Reliability) परिणामों की स्थिरता (consistency) से संबंधित है, और वस्तुनिष्ठता (Objectivity) व्यक्तिगत पक्षपात से मुक्ति को दर्शाती है। अतः सही विकल्प (1) है।",
@@ -9187,7 +9221,11 @@
                     "correct_label": "2",
                     "explanation_en": "Consistency of test results upon repeated administration is known as reliability."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:05:11.688Z"
         }
     ]
 }
