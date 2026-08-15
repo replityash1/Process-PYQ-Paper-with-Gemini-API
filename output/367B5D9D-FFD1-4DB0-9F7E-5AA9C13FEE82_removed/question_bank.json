@@ -8800,8 +8800,8 @@
         {
             "source_page": 17,
             "number": 148,
-            "question_hi": "एन.सी.एफ.-2005 के अनुसार, अच्छी विज्ञान शिक्षा होनी चाहिए -\n(A) बच्चे के प्रति सच्ची\n(B) जीवन के प्रति सच्ची\n(C) अध्यापक के प्रति सच्ची\n(D) विज्ञान के प्रति सच्ची\nनीचे दिए गये कूट का उपयोग करके सही उत्तर का चयन करें -\n(1) (A), (B) एवं (D)\n(2) केवल (A) एवं (C)\n(3) (A), (C) एवं (D)\n(4) (A), (B) एवं (C)\n(5) अनुत्तरित प्रश्न",
-            "question_en": "As per NCF-2005, good Science education should be -\n(A) True to the child\n(B) True to life\n(C) True to the teacher\n(D) True to Science\nSelect the correct answer using the code given below -\n(1) (A), (B) and (D)\n(2) Only (A) and (C)\n(3) (A), (C) and (D)\n(4) (A), (B) and (C)\n(5) Question not attempted",
+            "question_hi": "एन.सी.एफ.-2005 के अनुसार, अच्छी विज्ञान शिक्षा होनी चाहिए -\n(A) बच्चे के प्रति सच्ची\n(B) जीवन के प्रति सच्ची\n(C) अध्यापक के प्रति सच्ची\n(D) विज्ञान के प्रति सच्ची\nनीचे दिए गये कूट का उपयोग करके सही उत्तर का चयन करें -",
+            "question_en": "As per NCF-2005, good Science education should be -\n(A) True to the child\n(B) True to life\n(C) True to the teacher\n(D) True to Science\nSelect the correct answer using the code given below -",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -8811,31 +8811,46 @@
                 {
                     "label": "1",
                     "hi": "(A), (B) एवं (D)",
-                    "en": "(A), (B) and (D)"
+                    "en": "(A), (B) and (D)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "केवल (A) एवं (C)",
-                    "en": "Only (A) and (C)"
+                    "en": "Only (A) and (C)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(A), (C) एवं (D)",
-                    "en": "(A), (C) and (D)"
+                    "en": "(A), (C) and (D)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "(A), (B) एवं (C)",
-                    "en": "(A), (B) and (C)"
+                    "en": "(A), (B) and (C)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
-            "explanation_hi": "राष्ट्रीय पाठ्यचर्या की रूपरेखा (NCF-2005) के अनुसार अच्छी विज्ञान शिक्षा के चार प्रमुख मानदंड (Validity) हैं: 1. बच्चे के प्रति सच्ची (True to the child), 2. जीवन के प्रति सच्ची (True to life), 3. विषय वस्तु (विज्ञान) के प्रति सच्ची (True to Science), और 4. प्रक्रिया के प्रति सच्ची (True to process)। इसके अनुसार कथन (A), (B) और (D) सही हैं। अत: कूट (1) सही है।",
-            "explanation_en": "According to NCF-2005, good science education should satisfy validity criteria: true to the child, true to life, and true to science. Therefore, statements (A), (B), and (D) are correct, making option (1) the correct answer.",
+            "explanation_hi": "राष्ट्रीय पाठ्यचर्या की रूपरेखा (NCF-2005) के अनुसार, अच्छी विज्ञान शिक्षा को तीन मुख्य आवश्यकताओं को पूरा करना चाहिए:\n* **बच्चे के प्रति सच्ची (True to the child):** विज्ञान बच्चे के समझ में आने योग्य होना चाहिए और उसे सार्थक अधिगम में व्यस्त रख सके।\n* **जीवन के प्रति सच्ची (True to life):** यह बच्चे के पर्यावरण से जुड़ी होनी चाहिए और उसे कार्य की दुनिया (world of work) के लिए तैयार करे।\n* **विज्ञान के प्रति सच्ची (True to science):** यह अपनी विषय-वस्तु को उपयुक्त स्तर पर प्रस्तुत करे और वैज्ञानिक ज्ञान प्राप्त करने की प्रक्रियाओं को बढ़ावा दे।\n\nइसके अनुसार कथन (A), (B) और (D) सही हैं। अतः कूट (1) सही उत्तर है।\n",
+            "explanation_en": "According to NCF-2005, good science education should satisfy three essential criteria:\n* **True to the child:** Science must be comprehensible and engage the child in meaningful, joyful learning.\n* **True to life:** It must relate to the environment of the child and prepare them for the world of work.\n* **True to science:** It must convey correct scientific information at an age-appropriate cognitive level.\n\nTherefore, statements (A), (B), and (D) are correct, making option (1) the correct answer.\n",
             "option_rationales": [
                 {
                     "label": "1",
@@ -8920,7 +8935,11 @@
                     "correct_label": "3",
                     "explanation_en": "True to administration is not a validity criterion defined in NCF-2005 for science education."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:03:54.570Z"
         },
         {
             "source_page": 17,
