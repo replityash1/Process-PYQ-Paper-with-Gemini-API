@@ -4,7 +4,7 @@
             "source_page": 1,
             "number": 5,
             "question_hi": "पादप फैमिली (कॉलम-I) का विशिष्ट पुष्पक्रम (कॉलम-II) के साथ मिलान कीजिए एवं नीचे दिए गए कूट की सहायता से सही उत्तर चुनिए -\n\n\n[table]",
-            "question_en": "Match the Plant Families given in Column-I with characteristic Inflorescence given in Column-II and select the correct answer using the code given below -\nColumn-I\n(Plant family)\n(A) Asteraceae\n(B) Lamiaceae\n(C) Apiaceae\n(D) Fabaceae\n(E) Moraceae\nCode -\n(1) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)\n(2) (A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)\n(4) (A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)\n(5) Question not attempted\n\n[table]",
+            "question_en": "Match the Plant Families given in Column-I with characteristic Inflorescence given in Column-II and select the correct answer using the code given below -\n\n\n[table]",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -183,7 +183,7 @@
             "content_en": [
                 {
                     "type": "text",
-                    "text": "Match the Plant Families given in Column-I with characteristic Inflorescence given in Column-II and select the correct answer using the code given below -\nColumn-I\n(Plant family)\n(A) Asteraceae\n(B) Lamiaceae\n(C) Apiaceae\n(D) Fabaceae\n(E) Moraceae\nCode -\n(1) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)\n(2) (A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)\n(4) (A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)\n(5) Question not attempted"
+                    "text": "Match the Plant Families given in Column-I with characteristic Inflorescence given in Column-II and select the correct answer using the code given below -\n"
                 },
                 {
                     "type": "table",
@@ -217,7 +217,7 @@
                 }
             ],
             "human_reviewed": true,
-            "human_reviewed_at": "2026-08-15T05:32:17.079Z"
+            "human_reviewed_at": "2026-08-15T05:36:17.872Z"
         },
         {
             "source_page": 1,
