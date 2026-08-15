@@ -8120,8 +8120,8 @@
         {
             "source_page": 16,
             "number": 129,
-            "question_hi": "कॉलम-I (रसायन) को कॉलम-II (जैविक कार्य) से सुमेलित कीजिए -\\nColumn-I (Chemical) \\n(i) Tetracycline \\n(ii) Furacine \\n(iii) Saccharin \\n(iv) Penicillin \\nColumn-II (Biological function) \\n(a) Bactericidal \\n(b) Bacteriostatic \\n(c) Artificial sweetener \\n(d) Antiseptic \\nसही कूट है -",
-            "question_en": "Match the Column-I (Chemical) with Column-II (Biological function) - \\nColumn-I (Chemical) \\n(i) Tetracycline \\n(ii) Furacine \\n(iii) Saccharin \\n(iv) Penicillin \\nColumn-II (Biological function) \\n(a) Bactericidal \\n(b) Bacteriostatic \\n(c) Artificial sweetener \\n(d) Antiseptic \\nCorrect code is -",
+            "question_hi": "कॉलम-I (रसायन) को कॉलम-II (जैविक कार्य) से सुमेलित कीजिए -\n\n[table]\n\nसही कूट है -",
+            "question_en": "Match the Column-I (Chemical) with Column-II (Biological function) - \n\n[table]\n\nCorrect code is -",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -8131,31 +8131,46 @@
                 {
                     "label": "1",
                     "hi": "(i)-(b), (ii)-(d), (iii)-(c), (iv)-(a)",
-                    "en": "(i)-(b), (ii)-(d), (iii)-(c), (iv)-(a)"
+                    "en": "(i)-(b), (ii)-(d), (iii)-(c), (iv)-(a)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(i)-(d), (ii)-(b), (iii)-(c), (iv)-(a)",
-                    "en": "(i)-(d), (ii)-(b), (iii)-(c), (iv)-(a)"
+                    "en": "(i)-(d), (ii)-(b), (iii)-(c), (iv)-(a)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(i)-(b), (ii)-(c), (iii)-(a), (iv)-(d)",
-                    "en": "(i)-(b), (ii)-(c), (iii)-(a), (iv)-(d)"
+                    "en": "(i)-(b), (ii)-(c), (iii)-(a), (iv)-(d)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)",
-                    "en": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)"
+                    "en": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
-            "explanation_hi": "(i) Tetracycline एक जीवाणुविरोधी (Bacteriostatic) एंटीबायोटिक है \\rightarrow (b)\\n(ii) Furacine एक प्रतिरोधी (Antiseptic) है \\rightarrow (d)\\n(iii) Saccharin एक कृत्रिम मधुरक (Artificial sweetener) है \\rightarrow (c)\\n(iv) Penicillin एक जीवाणुनाशी (Bactericidal) एंटीबायोटिक है \\rightarrow (a)\\nअतः सही मिलान (i)-(b), (ii)-(d), (iii)-(c), (iv)-(a) है जो विकल्प (1) में दिया गया है।",
-            "explanation_en": "(i) Tetracycline is a broad-spectrum bacteriostatic antibiotic $\\rightarrow$ (b)\\n(ii) Furacine is an antiseptic $\\rightarrow$ (d)\\n(iii) Saccharin is an artificial sweetener $\\rightarrow$ (c)\\n(iv) Penicillin is a bactericidal antibiotic $\\rightarrow$ (a)\\nThus, the correct match is (i)-(b), (ii)-(d), (iii)-(c), (iv)-(a).",
+            "explanation_hi": "(i) Tetracycline एक जीवाणुरोधी (Bacteriostatic) एंटीबायोटिक है $\\rightarrow$ (b)\n(ii) Furacine एक प्रतिरोधी (Antiseptic) है $\\rightarrow$ (d)\n(iii) Saccharin एक कृत्रिम मधुरक (Artificial sweetener) है $\\rightarrow$ (c)\n(iv) Penicillin एक जीवाणुनाशी (Bactericidal) एंटीबायोटिक है $\\rightarrow$ (a)\n\nअतः सही मिलान (i)-(b), (ii)-(d), (iii)-(c), (iv)-(a) है जो विकल्प (1) में दिया गया है।\n",
+            "explanation_en": "(i) Tetracycline is a broad-spectrum bacteriostatic antibiotic $\\rightarrow$ (b)\n(ii) Furacine is an antiseptic $\\rightarrow$ (d)\n(iii) Saccharin is an artificial sweetener $\\rightarrow$ (c)\n(iv) Penicillin is a bactericidal antibiotic $\\rightarrow$ (a)\n\nThus, the correct match is (i)-(b), (ii)-(d), (iii)-(c), (iv)-(a).\n",
             "option_rationales": [
                 {
                     "label": "1",
@@ -8240,7 +8255,83 @@
                     "correct_label": "1",
                     "explanation_en": "Saccharin is a well-known artificial sweetener."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "content_hi": [
+                {
+                    "type": "text",
+                    "text": "कॉलम-I (रसायन) को कॉलम-II (जैविक कार्य) से सुमेलित कीजिए -"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(रसायन)",
+                            "(जैविक कार्य)"
+                        ],
+                        [
+                            "(i) टेट्रासाइक्लिन",
+                            "(a) जीवाणुनाशी"
+                        ],
+                        [
+                            "(ii) फ्युरासिन",
+                            "(b) जीवाणुरोधी "
+                        ],
+                        [
+                            "(iii) सैकरीन",
+                            "(c) कृत्रिम मधुरक"
+                        ],
+                        [
+                            "(iv) पेनिसिलिन",
+                            "(d) प्रतिरोधी"
+                        ]
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": "सही कूट है -"
+                }
+            ],
+            "content_en": [
+                {
+                    "type": "text",
+                    "text": "Match the Column-I (Chemical) with Column-II (Biological function) - "
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(Chemical)",
+                            "(Biological function)"
+                        ],
+                        [
+                            "(i) Tetracycline ",
+                            "(a) Bactericidal"
+                        ],
+                        [
+                            "(ii) Furacine ",
+                            "(b) Bacteriostatic "
+                        ],
+                        [
+                            "(iii) Saccharin",
+                            "(c) Artificial sweetener"
+                        ],
+                        [
+                            "(iv) Penicillin ",
+                            "(d) Antiseptic"
+                        ]
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": "Correct code is -"
+                }
+            ],
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T07:55:28.133Z"
         },
         {
             "source_page": 16,
