@@ -3779,34 +3779,49 @@
             "question_en": "A block of mass $1\\text{ kg}$ is at rest on a rough horizontal surface having coefficient of static friction $0.2$ and kinetic friction $0.15$. Find the frictional force if a horizontal force $F = 1\\text{ N}$ is applied on the block -",
             "has_visuals": true,
             "visual_location": "question",
-            "image_hi": null,
-            "image_en": null,
+            "image_hi": "images/page8_q49_hi.jpg",
+            "image_en": "images/page8_q49_en.jpg",
             "image_full": "images/page8_q49_full.jpg",
             "options": [
                 {
                     "label": "1",
                     "hi": "$1\\text{ N}$",
-                    "en": "$1\\text{ N}$"
+                    "en": "$1\\text{ N}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "$1.96\\text{ N}$",
-                    "en": "$1.96\\text{ N}$"
+                    "en": "$1.96\\text{ N}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "$2\\text{ N}$",
-                    "en": "$2\\text{ N}$"
+                    "en": "$2\\text{ N}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "शून्य",
-                    "en": "Zero"
+                    "en": "Zero",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "ब्लॉक का द्रव्यमान $m = 1\\text{ kg}$, अभिलम्ब प्रतिक्रिया $N = mg = 1 \\times 9.8 = 9.8\\text{ N}$ (या $g = 10\\text{ लेने पर } 10\\text{ N}$)।\nअधिकतम स्थैतिक घर्षण बल $f_s(\\max) = \\mu_s N = 0.2 \\times 1 \\times 9.8 = 1.96\\text{ N}$ (यदि $g=9.8$) या $0.2 \\times 1 \\times 10 = 2\\text{ N}$ (यदि $g=10$) है।\nयहाँ लगाया गया बाहरी बल $F = 1\\text{ N}$ है, जो कि अधिकतम स्थैतिक घर्षण से कम है ($F < f_s(\\max)$)।\nअतः ब्लॉक स्थिर रहेगा और स्थैतिक घर्षण बल आरोपित बल के बराबर अर्थात $1\\text{ N}$ होगा।",
@@ -3894,7 +3909,11 @@
                     "correct_label": "1",
                     "explanation_en": "Max static friction = $0.5 \\times 2 \\times 10 = 10\\text{ N}$. Since $3\\text{ N} < 10\\text{ N}$, static friction equals applied force, i.e., $3\\text{ N}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:39:32.733Z"
         },
         {
             "source_page": 8,
