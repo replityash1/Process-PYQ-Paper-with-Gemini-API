@@ -700,8 +700,8 @@
         {
             "source_page": 2,
             "number": 19,
-            "question_hi": "टर्नर सिंड्रोम से ग्रसित मानव मादा -\n(1) में 45 गुणसूत्रमय XO स्थिति होती है।\n(2) में एक अतिरिक्त X गुणसूत्र होता है।\n(3) में एक अतिरिक्त Y गुणसूत्र होता है।\n(4) सामान्य पति से बच्चे उत्पन्न कर सकती है।\n(5) अनुत्तरित प्रश्न",
-            "question_en": "A human female with turner syndrome -\n(1) has 45 chromosomes with XO condition.\n(2) has one additional X chromosome.\n(3) has one additional Y chromosome.\n(4) is able to produce children with normal husband.\n(5) Question not attempted",
+            "question_hi": "टर्नर सिंड्रोम से ग्रसित मानव मादा -\n",
+            "question_en": "A human female with turner syndrome -\n",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -711,27 +711,42 @@
                 {
                     "label": "1",
                     "hi": "में 45 गुणसूत्रमय XO स्थिति होती है।",
-                    "en": "has 45 chromosomes with XO condition."
+                    "en": "has 45 chromosomes with XO condition.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "में एक अतिरिक्त X गुणसूत्र होता है।",
-                    "en": "has one additional X chromosome."
+                    "en": "has one additional X chromosome.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "में एक अतिरिक्त Y गुणसूत्र होता है।",
-                    "en": "has one additional Y chromosome."
+                    "en": "has one additional Y chromosome.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "सामान्य पति से बच्चे उत्पन्न करने में सक्षम है।",
-                    "en": "is able to produce children with normal husband."
+                    "en": "is able to produce children with normal husband.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "टर्नर सिंड्रोम (Turner's syndrome) एक गुणसूत्रीय विकार है जो एक X गुणसूत्र की अनुपस्थिति के कारण होता है यानी इसमें 45 गुणसूत्र (44 + XO) होते हैं। ऐसी मादाएं बंध्य (sterile) होती हैं क्योंकि उनकी अंडाशय रूग्ण (rudimentary) होती हैं, इसलिए वे बच्चे उत्पन्न नहीं कर सकतीं। अतः विकल्प (1) सही है।",
@@ -819,13 +834,17 @@
                     "correct_label": "2",
                     "explanation_en": "Klinefelter syndrome is caused due to the presence of an additional X chromosome resulting in a karyotype of 47, XXY."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:11:49.107Z"
         },
         {
             "source_page": 2,
             "number": 20,
-            "question_hi": "अभिकथन (A) और कारण (R) पर विचार करें और नीचे दिए गए कूट में से सही विकल्प चुनें -\nअभिकथन (A): टैक पॉलीमरेज़ तापस्थिर है और इसमें प्रूफ-रीडिंग क्रिया का अभाव है।\nकारण (R): टैक पॉलीमरेज़ में $3'$ से $5'$ एक्सोन्यूक्लियस क्रिया होती है।\nकूट -\n(1) (A) और (R) दोनों सही हैं लेकिन (R), (A) की सही व्याख्या नहीं है।\n(2) (A) सही है लेकिन (R) गलत है।\n(3) (A) गलत है लेकिन (R) सही है।\n(4) (A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है।\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Consider the Assertion (A) and Reason (R) and choose the correct option from the code given below -\nAssertion (A) : Taq polymerase is thermostable and lacks proof-reading activity.\nReason (R) : Taq polymerase possesses $3'$ to $5'$ exonuclease activity.\nCode -\n(1) Both (A) and (R) are correct but (R) is not the correct explanation of (A).\n(2) (A) is correct but (R) is incorrect.\n(3) (A) is incorrect but (R) is correct.\n(4) Both (A) and (R) are correct and (R) is the correct explanation of (A).\n(5) Question not attempted",
+            "question_hi": "अभिकथन (A) और कारण (R) पर विचार करें और नीचे दिए गए कूट में से सही विकल्प चुनें -\nअभिकथन (A): टैक पॉलीमरेज़ तापस्थिर है और इसमें प्रूफ-रीडिंग क्रिया का अभाव है।\nकारण (R): टैक पॉलीमरेज़ में $3'$ से $5'$ एक्सोन्यूक्लियस क्रिया होती है।\nकूट -\n",
+            "question_en": "Consider the Assertion (A) and Reason (R) and choose the correct option from the code given below -\nAssertion (A) : Taq polymerase is thermostable and lacks proof-reading activity.\nReason (R) : Taq polymerase possesses $3'$ to $5'$ exonuclease activity.\nCode -\n",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -835,27 +854,42 @@
                 {
                     "label": "1",
                     "hi": "दोनों (A) और (R) सही हैं लेकिन (R), (A) की सही व्याख्या नहीं है।",
-                    "en": "Both (A) and (R) are correct but (R) is not the correct explanation of (A)."
+                    "en": "Both (A) and (R) are correct but (R) is not the correct explanation of (A).",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(A) सही है लेकिन (R) गलत है।",
-                    "en": "(A) is correct but (R) is incorrect."
+                    "en": "(A) is correct but (R) is incorrect.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(A) गलत है लेकिन (R) सही है।",
-                    "en": "(A) is incorrect but (R) is incorrect."
+                    "en": "(A) is incorrect but (R) is incorrect.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "दोनों (A) और (R) सही हैं और (R), (A) की सही व्याख्या है।",
-                    "en": "Both (A) and (R) are correct and (R) is the correct explanation of (A)."
+                    "en": "Both (A) and (R) are correct and (R) is the correct explanation of (A).",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "टैक पॉलीमरेज़ (Taq polymerase) थर्मस एक्वैटिकस से प्राप्त एक तापस्थिर (thermostable) एंजाइम है जो पीसीआर (PCR) में प्रयुक्त होता है। इसमें $3'$ से $5'$ एक्सोन्यूक्लियस (proof-reading) गतिविधि का अभाव होता है, जिसके कारण कारण (R) असत्य है क्योंकि कारण में कहा गया है कि इसमें यह गतिविधि होती है। अतः (A) सही है लेकिन (R) गलत है।",
@@ -944,13 +978,17 @@
                     "correct_label": "2",
                     "explanation_en": "Taq polymerase is extracted from Thermus aquaticus and is thermostable, meaning it can withstand high denaturation temperatures during PCR."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:11:49.107Z"
         },
         {
             "source_page": 3,
             "number": 21,
-            "question_hi": "$\\text{BF}_3$ में आबंधन संकर कक्षकों को बनाने के लिए बोरॉन के कितने $2p$ परमाणु कक्षक संकरण में भाग लेते हैं?\n(1) तीन\n(2) एक\n(3) दो\n(4) शून्य\n(5) अनुत्तरित प्रश्न",
-            "question_en": "How many $2p$ atomic orbitals of boron participate in hybridisation to form the bonding hybrid orbitals in $\\text{BF}_3$?\n(1) Three\n(2) One\n(3) Two\n(4) Zero\n(5) Question not attempted",
+            "question_hi": "$\\text{BF}_3$ में आबंधन संकर कक्षकों को बनाने के लिए बोरॉन के कितने $2p$ परमाणु कक्षक संकरण में भाग लेते हैं?\n",
+            "question_en": "How many $2p$ atomic orbitals of boron participate in hybridisation to form the bonding hybrid orbitals in $\\text{BF}_3$?\n",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -960,27 +998,42 @@
                 {
                     "label": "1",
                     "hi": "तीन",
-                    "en": "Three"
+                    "en": "Three",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "एक",
-                    "en": "One"
+                    "en": "One",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "दो",
-                    "en": "Two"
+                    "en": "Two",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "शून्य",
-                    "en": "Zero"
+                    "en": "Zero",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "बोरॉन (परमाणु क्रमांक 5) काground state इलेक्ट्रॉनिक विन्यास $1s^2 2s^2 2p^1$ है। उत्तेजित अवस्था में इलेक्ट्रॉनिक विन्यास $1s^2 2s^1 2p_x^1 2p_y^1$ हो जाता है। $\\text{BF}_3$ अणु में बोरॉन $sp^2$ संकरण प्रदर्शित करता है जिसमें एक $2s$ कक्षक और दो $2p$ परमाणु कक्षक ($2p_x$ और $2p_y$) भाग लेते हैं। अतः भाग लेने वाले $2p$ कक्षकों की संख्या दो है।",
@@ -1068,13 +1121,17 @@
                     "correct_label": "1",
                     "explanation_en": "In $\\text{BeCl}_2$, Beryllium undergoes $sp$ hybridisation, which involves one $s$ orbital and one $p$ orbital. Therefore, only one $p$ atomic orbital participates."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:11:49.107Z"
         },
         {
             "source_page": 3,
             "number": 22,
-            "question_hi": "ॉलम-I (हाइड्रोकार्बनों की अभिक्रियाएँ) को कॉलम-II (अभिक्रिया के प्रकार) से सुमेलित कीजिए -\nकॉलम-I\n(हाइड्रोकार्बनों की अभिक्रिया)\n(i) $n-\\text{C}_6\\text{H}_{14} \\xrightarrow[\\text{773 K}]{\\text{Cr}_2\\text{O}_3} \\text{C}_6\\text{H}_6$\n$10-20\\text{ atm}$\n(ii) $\\text{CH}_3-\\text{C}\\equiv\\text{C}-\\text{H} + \\text{H}_2 \\xrightarrow{\\text{Pd/C}} \\text{CH}_3-\\text{CH}=\\text{CH}_2$\n(iii) $3\\text{CH}\\equiv\\text{CH} \\xrightarrow[873\\text{ K}]{\\text{Fe}} \\text{C}_6\\text{H}_6$\n(iv) $\\text{CH}_4 + \\text{O}_2 \\rightarrow \\text{C}(s) + 2\\text{H}_2\\text{O}$\nकॉलम-II\n(अभिक्रिया का प्रकार)\n(a) आंशिक अपचयन\n(b) चक्रीय बहुलीकरण\n(c) अपूर्ण दहन\n(d) पुनर्संभावन\nसही कूट का चयन करें -\n(1) (i)-(d), (ii)-(b), (iii)-(a), (iv)-(c)\n(2) (i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)\n(3) (i)-(b), (ii)-(d), (iii)-(a), (iv)-(c)\n(4) (i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Match the Column-I (Reactions of Hydrocarbons) with Column-II (Type of Reaction) -\nColumn-I\n(Reaction of Hydrocarbons)\n(i) $n-\\text{C}_6\\text{H}_{14} \\xrightarrow[\\text{773 K}]{\\text{Cr}_2\\text{O}_3} \\text{C}_6\\text{H}_6$\n$10-20\\text{ atm}$\n(ii) $\\text{CH}_3-\\text{C}\\equiv\\text{C}-\\text{H} + \\text{H}_2 \\xrightarrow{\\text{Pd/C}} \\text{CH}_3-\\text{CH}=\\text{CH}_2$\n(iii) $3\\text{CH}\\equiv\\text{CH} \\xrightarrow[873\\text{ K}]{\\text{Fe}} \\text{C}_6\\text{H}_6$\n(iv) $\\text{CH}_4 + \\text{O}_2 \\rightarrow \\text{C}(s) + 2\\text{H}_2\\text{O}$\nColumn-II\n(Type of Reaction)\n(a) Partial Reduction\n(b) Cyclic Polymerisation\n(c) Incomplete Combustion\n(d) Reforming\nChoose the correct code -\n(1) (i)-(d), (ii)-(b), (iii)-(a), (iv)-(c)\n(2) (i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)\n(3) (i)-(b), (ii)-(d), (iii)-(a), (iv)-(c)\n(4) (i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)\n(5) Question not attempted",
+            "question_hi": "कॉलम-I (हाइड्रोकार्बनों की अभिक्रियाएँ) को कॉलम-II (अभिक्रिया के प्रकार) से सुमेलित कीजिए -\n\n[table]\n\nसही कूट का चयन करें -",
+            "question_en": "Match the Column-I (Reactions of Hydrocarbons) with Column-II (Type of Reaction) -\n\n[table]\n\nChoose the correct code -",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -1084,27 +1141,42 @@
                 {
                     "label": "1",
                     "hi": "(i)-(d), (ii)-(b), (iii)-(a), (iv)-(c)",
-                    "en": "(i)-(d), (ii)-(b), (iii)-(a), (iv)-(c)"
+                    "en": "(i)-(d), (ii)-(b), (iii)-(a), (iv)-(c)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)",
-                    "en": "(i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)"
+                    "en": "(i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(i)-(b), (ii)-(d), (iii)-(a), (iv)-(c)",
-                    "en": "(i)-(b), (ii)-(d), (iii)-(a), (iv)-(c)"
+                    "en": "(i)-(b), (ii)-(d), (iii)-(a), (iv)-(c)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)",
-                    "en": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)"
+                    "en": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "आइए प्रत्येक अभिक्रिया का मिलान करें:\n(i) $n-\\text{C}_6\\text{H}_{14}$ को $\\text{Cr}_2\\text{O}_3/\\text{Al}_2\\text{O}_3$ उत्प्रेरक के साथ $773\\text{ K}$ और $10-20\\text{ atm}$ पर गर्म करने पर बेंजीन बनता है, जिसे एरोमैटिकरण या पुनर्संभावन (Reforming) कहते हैं $\\rightarrow$ (d)।\n(ii) प्रोपाइन का हाइड्रोजन द्वारा आंशिक अपचयन (Partial Reduction) होकर प्रोपीन बनता है $\\rightarrow$ (a)।\n(iii) एथाइन का रेड हॉट लोहे की नली में $873\\text{ K}$ पर चक्रीय बहुलीकरण (Cyclic Polymerisation) होकर बेंजीन बनता है $\\rightarrow$ (b)।\n(iv) मीथेन का ऑक्सीजन की सीमित मात्रा में दहन होने पर कार्बन ब्लैक बनता है, जो अपूर्ण दहन (Incomplete Combustion) है $\\rightarrow$ (c)।\nअतः सही मिलान (i)-(d), (ii)-(a), (iii)-(b), (iv)-(c) है, जो विकल्प (2) में दिया गया है।",
@@ -1193,13 +1265,89 @@
                     "correct_label": "1",
                     "explanation_en": "Cyclic polymerisation of ethyne (acetylene) when passed through red hot iron tube at $873\\text{ K}$ gives benzene."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "content_hi": [
+                {
+                    "type": "text",
+                    "text": "कॉलम-I (हाइड्रोकार्बनों की अभिक्रियाएँ) को कॉलम-II (अभिक्रिया के प्रकार) से सुमेलित कीजिए -"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(हाइड्रोकार्बनों की अभिक्रिया)",
+                            "(अभिक्रिया का प्रकार)"
+                        ],
+                        [
+                            "(i) $n-\\text{C}_6\\text{H}_{14} \\xrightarrow[\\text{773 K}]{\\text{Cr}_2\\text{O}_3} \\text{C}_6\\text{H}_6$ $10-20\\text{ atm}$",
+                            "(a) आंशिक अपचयन"
+                        ],
+                        [
+                            "(ii) $\\text{CH}_3-\\text{C}\\equiv\\text{C}-\\text{H} + \\text{H}_2 \\xrightarrow{\\text{Pd/C}} \\text{CH}_3-\\text{CH}=\\text{CH}_2$",
+                            "(b) चक्रीय बहुलीकरण"
+                        ],
+                        [
+                            "(iii) $3\\text{CH}\\equiv\\text{CH} \\xrightarrow[873\\text{ K}]{\\text{Fe}} \\text{C}_6\\text{H}_6$",
+                            "(c) अपूर्ण दहन"
+                        ],
+                        [
+                            "(iv) $\\text{CH}_4 + \\text{O}_2 \\rightarrow \\text{C}(s) + 2\\text{H}_2\\text{O}$",
+                            "(d) पुनर्संभावन"
+                        ]
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": "सही कूट का चयन करें -"
+                }
+            ],
+            "content_en": [
+                {
+                    "type": "text",
+                    "text": "Match the Column-I (Reactions of Hydrocarbons) with Column-II (Type of Reaction) -"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(Reaction of Hydrocarbons)",
+                            "(Type of Reaction)"
+                        ],
+                        [
+                            "(i) $n-\\text{C}_6\\text{H}_{14} \\xrightarrow[\\text{773 K}]{\\text{Cr}_2\\text{O}_3} \\text{C}_6\\text{H}_6$ $10-20\\text{ atm}$",
+                            "(a) Partial Reduction"
+                        ],
+                        [
+                            "(ii) $\\text{CH}_3-\\text{C}\\equiv\\text{C}-\\text{H} + \\text{H}_2 \\xrightarrow{\\text{Pd/C}} \\text{CH}_3-\\text{CH}=\\text{CH}_2$",
+                            "(b) Cyclic Polymerisation"
+                        ],
+                        [
+                            "(iii) $3\\text{CH}\\equiv\\text{CH} \\xrightarrow[873\\text{ K}]{\\text{Fe}} \\text{C}_6\\text{H}_6$",
+                            "(c) Incomplete Combustion"
+                        ],
+                        [
+                            "(iv) $\\text{CH}_4 + \\text{O}_2 \\rightarrow \\text{C}(s) + 2\\text{H}_2\\text{O}$",
+                            "(d) Reforming"
+                        ]
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": "Choose the correct code -"
+                }
+            ],
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:11:49.107Z"
         },
         {
             "source_page": 3,
             "number": 23,
-            "question_hi": "कॉलम-I में दी गई क्वांटम संख्याओं को कॉलम-II में दिए गए उनके संगत कक्षकों के साथ सुमेलित कीजिये -\nकॉलम-I\n(क्वांटम संख्याएं)\n(A) $n = 2, l = 1$\n(B) $n = 4, l = 0$\n(C) $n = 5, l = 3$\n(D) $n = 3, l = 2$\nSelect the correct option -\n(1) (A)-(ii), (B)-(i), (C)-(iv), (D)-(iii)\n(2) (A)-(iv), (B)-(ii), (C)-(i), (D)-(iii)\n(3) (A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)\n(4) (A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Match the Quantum Numbers in Column-I with the corresponding Orbitals in Column-II -\nColumn-I\n(Quantum Numbers)\n(A) $n = 2, l = 1$\n(B) $n = 4, l = 0$\n(C) $n = 5, l = 3$\n(D) $n = 3, l = 2$\nSelect the correct option -\n(1) (A)-(ii), (B)-(i), (C)-(iv), (D)-(iii)\n(2) (A)-(iv), (B)-(ii), (C)-(i), (D)-(iii)\n(3) (A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)\n(4) (A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)\n(5) Question not attempted",
+            "question_hi": "कॉलम-I में दी गई क्वांटम संख्याओं को कॉलम-II में दिए गए उनके संगत कक्षकों के साथ सुमेलित कीजिये -\n\n[table]\n\nSelect the correct option -",
+            "question_en": "Match the Quantum Numbers in Column-I with the corresponding Orbitals in Column-II -\n\n[table]\n\nSelect the correct option -",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -1209,27 +1357,42 @@
                 {
                     "label": "1",
                     "hi": "(A)-(ii), (B)-(i), (C)-(iv), (D)-(iii)",
-                    "en": "(A)-(ii), (B)-(i), (C)-(iv), (D)-(iii)"
+                    "en": "(A)-(ii), (B)-(i), (C)-(iv), (D)-(iii)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(A)-(iv), (B)-(ii), (C)-(i), (D)-(iii)",
-                    "en": "(A)-(iv), (B)-(ii), (C)-(i), (D)-(iii)"
+                    "en": "(A)-(iv), (B)-(ii), (C)-(i), (D)-(iii)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)",
-                    "en": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)"
+                    "en": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)",
-                    "en": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)"
+                    "en": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "दिग्ंशीय क्वांटम संख्या ($l$) के मान के आधार पर उपकोश इस प्रकार होते हैं: $l = 0 \\rightarrow s$, $l = 1 \\rightarrow p$, $l = 2 \\rightarrow d$, $l = 3 \\rightarrow f$.\n(A) $n = 2, l = 1 \\rightarrow 2p$ (ii)\n(B) $n = 4, l = 0 \\rightarrow 4s$ (i)\n(C) $n = 5, l = 3 \\rightarrow 5f$ (iv)\n(D) $n = 3, l = 2 \\rightarrow 3d$ (iii)\nअतः सही मिलान (A)-(ii), (B)-(i), (C)-(iv), (D)-(iii) है, जो विकल्प (1) में दिया गया है।",
@@ -1317,7 +1480,83 @@
                     "correct_label": "1",
                     "explanation_en": "For $n=3$ and $l=2$, $l=2$ corresponds to $d$ orbital. Thus, the orbital is $3d$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "content_hi": [
+                {
+                    "type": "text",
+                    "text": "कॉलम-I में दी गई क्वांटम संख्याओं को कॉलम-II में दिए गए उनके संगत कक्षकों के साथ सुमेलित कीजिये -"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(क्वांटम संख्याएं)",
+                            "(संगत कक्ष)"
+                        ],
+                        [
+                            "(A) $n = 2, l = 1$",
+                            "(i)  $4s$"
+                        ],
+                        [
+                            "(B) $n = 4, l = 0$",
+                            "(ii) $2p$ "
+                        ],
+                        [
+                            "(C) $n = 5, l = 3$",
+                            "(iii) $3d$ "
+                        ],
+                        [
+                            "(D) $n = 3, l = 2$",
+                            "(iv) $5f$ "
+                        ]
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": "Select the correct option -"
+                }
+            ],
+            "content_en": [
+                {
+                    "type": "text",
+                    "text": "Match the Quantum Numbers in Column-I with the corresponding Orbitals in Column-II -"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(Quantum Numbers)",
+                            "(Orbital)"
+                        ],
+                        [
+                            "(A) $n = 2, l = 1$",
+                            "(i)  $4s$"
+                        ],
+                        [
+                            "(B) $n = 4, l = 0$",
+                            "(ii) $2p$ "
+                        ],
+                        [
+                            "(C) $n = 5, l = 3$",
+                            "(iii) $3d$ "
+                        ],
+                        [
+                            "(D) $n = 3, l = 2$",
+                            "(iv) $5f$ "
+                        ]
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": "Select the correct option -"
+                }
+            ],
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:11:49.107Z"
         },
         {
             "source_page": 4,
@@ -1333,27 +1572,42 @@
                 {
                     "label": "1",
                     "hi": "1-एथिल-4-आयोडो-5-नाइट्रोबेन्जीन",
-                    "en": "1-Ethyl-4-iodo-5-nitrobenzene"
+                    "en": "1-Ethyl-4-iodo-5-nitrobenzene",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "1-आयोडो-4-एथिल-2-नाइट्रोबेन्जीन",
-                    "en": "1-Iodo-4-ethyl-2-nitrobenzene"
+                    "en": "1-Iodo-4-ethyl-2-nitrobenzene",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "4-एथिल-1-आयोडो-2-नाइट्रोबेन्जीन",
-                    "en": "4-Ethyl-1-iodo-2-nitrobenzene"
+                    "en": "4-Ethyl-1-iodo-2-nitrobenzene",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "1-एथिल-4-आयोडो-3-नाइट्रोबेन्जीन",
-                    "en": "1-Ethyl-4-iodo-3-nitrobenzene"
+                    "en": "1-Ethyl-4-iodo-3-nitrobenzene",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "दिए गए यौगिक (बेन्जीन वलय) में प्रतिस्थापी हैं: $-\\text{C}_2\\text{H}_5$ (एथिल), $-\\text{I}$ (आयोडो) तथा $-\\text{NO}_2$ (नाइट्रो)। वर्णमाला क्रम के अनुसार 'एथिल' (ethyl) पहले आता है, इसलिए कार्बन-1 एथिल समूह वाले कार्बन को देंगे। इसके बाद न्यूनतम लोकेंट नियम (lowest locant rule) का पालन करते हुए प्रतिस्थापियों को संख्यांकित करते हैं: 1 पर एथिल, 4 पर आयोडो, और 2 पर नाइट्रो। अतः सही IUPAC नाम '1-एथिल-4-आयोडो-2-नाइट्रोबेन्जीन' है।",
@@ -1441,7 +1695,14 @@
                     "correct_label": "1",
                     "explanation_en": "With substituents at positions 1, 3, and 4, the lowest locant set is already established. Citing them alphabetically (chloro, methyl, nitro) gives 1-chloro-3-methyl-4-nitrobenzene."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "full": null,
+            "hi": null,
+            "en": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:11:49.107Z"
         },
         {
             "source_page": 4,
