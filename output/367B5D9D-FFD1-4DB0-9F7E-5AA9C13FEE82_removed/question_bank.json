@@ -3105,27 +3105,42 @@
                 {
                     "label": "1",
                     "hi": "$28\\text{ N}$",
-                    "en": "$28\\text{ N}$"
+                    "en": "$28\\text{ N}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "$20\\text{ N}$",
-                    "en": "$20\\text{ N}$"
+                    "en": "$20\\text{ N}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "$16\\text{ N}$",
-                    "en": "$16\\text{ N}$"
+                    "en": "$16\\text{ N}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "$24\\text{ N}$",
-                    "en": "$24\\text{ N}$"
+                    "en": "$24\\text{ N}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "ऊर्ध्वाधर दिशा में बलों के संतुलन से:\nऊपर की ओर लगने वाले बल = नीचे की ओर लगने वाले बल\n$\\text{N} = mg + F_3$\nजहाँ $m = 2\\text{ kg}$, $g = 10\\text{ m/s}^2$, और $F_3 = 4.0\\text{ N}$ (चित्र से नीचे की ओर).\n$\\text{N} = (2 \\times 10) + 4 = 20 + 4 = 24\\text{ N}$.",
@@ -3213,7 +3228,14 @@
                     "correct_label": "2",
                     "explanation_en": "$\\text{N} = mg + 6 = (3 \\times 10) + 6 = 36\\text{ N}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "full": null,
+            "hi": null,
+            "en": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:34:01.598Z"
         },
         {
             "source_page": 7,
