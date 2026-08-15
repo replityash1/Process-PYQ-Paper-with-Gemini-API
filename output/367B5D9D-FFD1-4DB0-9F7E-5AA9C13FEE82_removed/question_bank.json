@@ -7830,8 +7830,8 @@
         {
             "source_page": 16,
             "number": 127,
-            "question_hi": "यौगिक $\\text{R}$ के लिए $\\lambda_{\\text{max}}$ का मान है -",
-            "question_en": "The value of $\\lambda_{\\text{max}}$ for the compound $\\text{R}$ is -",
+            "question_hi": "यौगिक  के लिए $\\lambda_{\\text{max}}$ का मान है -",
+            "question_en": "The value of $\\lambda_{\\text{max}}$ for the compound is -",
             "has_visuals": true,
             "visual_location": "question",
             "image_hi": "images/page16_q127_hi.jpg",
@@ -7840,28 +7840,43 @@
             "options": [
                 {
                     "label": "1",
-                    "hi": "373 m\\mu",
-                    "en": "373 m\\mu"
+                    "hi": "$373 m\\mu$",
+                    "en": "$373 m\\mu$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
-                    "hi": "343 m\\mu",
-                    "en": "343 m\\mu"
+                    "hi": "$343 m\\mu$",
+                    "en": "$343 m\\mu$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
-                    "hi": "363 m\\mu",
-                    "en": "363 m\\mu"
+                    "hi": "$363 m\\mu$",
+                    "en": "$363 m\\mu$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
-                    "hi": "313 m\\mu",
-                    "en": "313 m\\mu"
+                    "hi": "$313 m\\mu$",
+                    "en": "$313 m\\mu$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "वुडवर्ड-फीज़र नियमों (Woodward-Fieser rules) का उपयोग करके हेट्रोएन्यूलर डायन (heteroannular diene) या स्टेरॉयड प्रणालियों में अवशोषण अधिकतम ($\\lambda_{\\text{max}}$) की गणना की जाती है। इस विशेष यौगिक (स्टेरॉयड डायन प्रणाली) के लिए आधार मान और संवर्द्धन जोड़ने पर $\\lambda_{\\text{max}}$ का मान $373\\text{ m}\\mu$ प्राप्त होता है।",
@@ -7949,7 +7964,34 @@
                     "correct_label": "1",
                     "explanation_en": "The base value for a heteroannular conjugated diene is 214 nm according to Woodward-Fieser rules."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "full": null,
+            "hi": null,
+            "en": null,
+            "content_hi": [
+                {
+                    "type": "text",
+                    "text": "यौगिक  के लिए $\\lambda_{\\text{max}}$ का मान है -"
+                },
+                {
+                    "type": "image",
+                    "path": "images/page16_q127_inlinehi1.jpg"
+                },
+                {
+                    "type": "image",
+                    "path": "images/page16_q127_inlinehi2.jpg"
+                }
+            ],
+            "content_en": [
+                {
+                    "type": "text",
+                    "text": "The value of $\\lambda_{\\text{max}}$ for the compound is -"
+                }
+            ],
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T07:43:53.453Z"
         },
         {
             "source_page": 16,
