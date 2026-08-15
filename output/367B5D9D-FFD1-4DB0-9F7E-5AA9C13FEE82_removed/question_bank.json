@@ -2453,8 +2453,8 @@
         {
             "source_page": 5,
             "number": 31,
-            "question_hi": "निम्नलिखित में से कौन सा यौगिक ऐरोमैटिक नहीं है?\n(1) Benzene cation structure with positive charge\n(2) Bicyclic naphthalene-like structure\n(3) Bicyclic fused ring structure\n(4) Five-membered ring with negative charge\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Which one of the following compound is not aromatic?\n(1) Benzene cation structure with positive charge\n(2) Bicyclic naphthalene-like structure\n(3) Bicyclic fused ring structure\n(4) Five-membered ring with negative charge\n(5) Question not attempted",
+            "question_hi": "निम्नलिखित में से कौन सा यौगिक ऐरोमैटिक नहीं है?",
+            "question_en": "Which one of the following compound is not aromatic?",
             "has_visuals": true,
             "visual_location": "options",
             "image_hi": "images/page5_q31_hi.jpg",
@@ -2464,27 +2464,42 @@
                 {
                     "label": "1",
                     "hi": "",
-                    "en": ""
+                    "en": "",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": "images/page5_q31_opt1.jpg"
                 },
                 {
                     "label": "2",
                     "hi": "",
-                    "en": ""
+                    "en": "",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": "images/page5_q31_opt2.jpg"
                 },
                 {
                     "label": "3",
                     "hi": "",
-                    "en": ""
+                    "en": "",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": "images/page5_q31_opt3.jpg"
                 },
                 {
                     "label": "4",
                     "hi": "",
-                    "en": ""
+                    "en": "",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": "images/page5_q31_opt4.jpg"
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "ऐरोमैटिकता के लिए हकल के नियम ($4n+2$ $\\pi$ इलेक्ट्रॉन) का पालन होना आवश्यक है। विकल्प (1) में दिए गए चक्र में 4 $\\pi$ इलेक्ट्रॉन हैं ($n=0$ के लिए $4n$, जो कि प्रति-ऐरोमैटिक है)। अतः विकल्प (1) ऐरोमैटिक नहीं है। अन्य सभी यौगिक हकल नियम का पालन करते हैं।",
@@ -2572,7 +2587,14 @@
                     "correct_label": "2",
                     "explanation_en": "Cyclobutadiene has 4 pi electrons and is a classic example of an anti-aromatic compound."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": 0,
+            "hi": null,
+            "en": null,
+            "full": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:26:13.239Z"
         },
         {
             "source_page": 5,
