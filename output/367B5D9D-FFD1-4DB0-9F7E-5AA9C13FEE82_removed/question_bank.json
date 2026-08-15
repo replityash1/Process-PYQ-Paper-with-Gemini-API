@@ -2455,7 +2455,7 @@
             "number": 31,
             "question_hi": "निम्नलिखित में से कौन सा यौगिक ऐरोमैटिक नहीं है?",
             "question_en": "Which one of the following compound is not aromatic?",
-            "has_visuals": true,
+            "has_visuals": false,
             "visual_location": "options",
             "image_hi": "images/page5_q31_hi.jpg",
             "image_en": "images/page5_q31_en.jpg",
@@ -2594,7 +2594,7 @@
             "en": null,
             "full": null,
             "human_reviewed": true,
-            "human_reviewed_at": "2026-08-15T06:26:13.239Z"
+            "human_reviewed_at": "2026-08-15T06:31:24.492Z"
         },
         {
             "source_page": 5,
