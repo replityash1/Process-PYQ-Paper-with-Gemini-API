@@ -472,8 +472,8 @@
         {
             "source_page": 2,
             "number": 18,
-            "question_hi": "कॉॉलम-I में दिए गए पादप समूहों को कॉॉलम-II में दी गई उनकी विशिष्ट विशेषताओं से सुमेलित कर नीचे दिए गए कूट से सही उत्तर का चयन करें -\nकॉॉलम-I\n(पादप समूह)\n(A) हेपेटिकोप्सिडा\n(B) एंथोसेरोटोप्सिडा\n(C) ब्रायोप्सिडा\n(D) टेरोप्सिडा\nकॉॉलम-II\n(विशिष्ट विशेषता)\n(i) बीजाणु-उद्भिद में रंध्रों की उपस्थिति\n(ii) बीजाणु-उद्भिद में आधारीय विभज्योतकिय क्षेत्र होता है\n(iii) राइजॉइड्स युक्त थैलॉयड या पत्तीदार युग्मकोद्भिद\n(iv) बीजाणु-उद्भिद में उपस्थित वास्तविक जड़ें, तना और पत्तियाँ\nकूट -\n(1) (A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)\n(2) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)\n(3) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii)\n(4) (A)-(iv), (B)-(iii), (C)-(ii), (D)-(i)\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Match the Plant Groups given in Column-I with their Characteristic Features in Column-II and select the correct answer using the code given below -\nColumn-I\n(Plant Group)\n(A) Hepaticopsida\n(B) Anthocerotopsida\n(C) Bryopsida\n(D) Pteropsida\nColumn-II\n(Characteristic Feature)\n(i) Presence of stomata in sporophyte\n(ii) Sporophyte has a basal meristematic region\n(iii) Gametophytes thalloid or leafy with rhizoids\n(iv) True roots, stems and leaves present in sporophyte\nCode -\n(1) (A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)\n(2) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)\n(3) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii)\n(4) (A)-(iv), (B)-(iii), (C)-(ii), (D)-(i)\n(5) Question not attempted",
+            "question_hi": "कॉलम-I में दिए गए पादप समूहों को कॉलम-II में दी गई उनकी विशिष्ट विशेषताओं से सुमेलित कर नीचे दिए गए कूट से सही उत्तर का चयन करें -\n\n\n[table]",
+            "question_en": "Match the Plant Groups given in Column-I with their Characteristic Features in Column-II and select the correct answer using the code given below -\n\n\n\n[table]",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -483,31 +483,46 @@
                 {
                     "label": "1",
                     "hi": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)",
-                    "en": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)"
+                    "en": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)",
-                    "en": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)"
+                    "en": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii)",
-                    "en": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii)"
+                    "en": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "(A)-(iv), (B)-(iii), (C)-(ii), (D)-(i)",
-                    "en": "(A)-(iv), (B)-(iii), (C)-(ii), (D)-(i)"
+                    "en": "(A)-(iv), (B)-(iii), (C)-(ii), (D)-(i)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
-            "explanation_hi": "पादप समूहों और उनकी विशेषताओं का सही मिलान इस प्रकार है:\n(A) हेपेटिकोप्सिडा (लिवरवॉर्ट्स) - (iii) युग्मकोद्भिद थैलॉयड या पत्तीदार होते हैं और राइजॉइड्स युक्त होते हैं।\n(B) एंथोसेरोटोप्सिडा (हॉर्नवॉर्ट्स) - (ii) बीजाणु-उद्भिद में आधारीय विभज्योतकिय क्षेत्र (basal meristem) होता है जिससे यह निरंतर वृद्धि करता है।\n(C) ब्रायोप्सिडा (मॉस) - (i) बीजाणु-उद्भिद में रंध्रों (stomata) की उपस्थिति होती है।\n(D) टेरोप्सिडा - (iv) बीजाणु-उद्भिद में वास्तविक जड़ें, तना और पत्तियाँ उपस्थित होती हैं।\nअतः सही कूट (1) है।",
-            "explanation_en": "The correct matching of plant groups with their characteristic features is:\n(A) Hepaticopsida - (iii) Gametophytes thalloid or leafy with rhizoids\n(B) Anthocerotopsida - (ii) Sporophyte has a basal meristematic region\n(C) Bryopsida - (i) Presence of stomata in sporophyte\n(D) Pteropsida - (iv) True roots, stems and leaves present in sporophyte\nTherefore, the correct code is (1).",
+            "explanation_hi": "पादप समूहों और उनकी विशेषताओं का सही मिलान इस प्रकार है:\n(A) हेपेटिकोप्सिडा (लिवरवॉर्ट्स) - (iii) युग्मकोद्भिद थैलॉयड या पत्तीदार होते हैं और राइजॉइड्स युक्त होते हैं।\n(B) एंथोसेरोटोप्सिडा (हॉर्नवॉर्ट्स) - (ii) बीजाणु-उद्भिद में आधारीय विभज्योतकिय क्षेत्र (basal meristem) होता है जिससे यह निरंतर वृद्धि करता है।\n(C) ब्रायोप्सिडा (मॉस) - (i) बीजाणु-उद्भिद में रंध्रों (stomata) की उपस्थिति होती है।\n(D) टेरोप्सिडा - (iv) बीजाणु-उद्भिद में वास्तविक जड़ें, तना और पत्तियाँ उपस्थित होती हैं।\n\nअतः सही कूट (1) है।\n",
+            "explanation_en": "The correct matching of plant groups with their characteristic features is:\n(A) Hepaticopsida - (iii) Gametophytes thalloid or leafy with rhizoids\n(B) Anthocerotopsida - (ii) Sporophyte has a basal meristematic region\n(C) Bryopsida - (i) Presence of stomata in sporophyte\n(D) Pteropsida - (iv) True roots, stems and leaves present in sporophyte\n\nTherefore, the correct code is (1).\n",
             "option_rationales": [
                 {
                     "label": "1",
@@ -593,7 +608,75 @@
                     "correct_label": "3",
                     "explanation_en": "Both statements correctly describe the characteristics of Hepaticopsida and Anthocerotopsida respectively."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "content_hi": [
+                {
+                    "type": "text",
+                    "text": "कॉलम-I में दिए गए पादप समूहों को कॉलम-II में दी गई उनकी विशिष्ट विशेषताओं से सुमेलित कर नीचे दिए गए कूट से सही उत्तर का चयन करें -\n"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(पादप समूह)",
+                            "(विशिष्ट विशेषता)"
+                        ],
+                        [
+                            "(A) हेपेटिकोप्सिडा",
+                            "(i) बीजाणु-उद्भिद में रंध्रों की उपस्थिति"
+                        ],
+                        [
+                            "(B) एंथोसेरोटोप्सिडा",
+                            "(ii) बीजाणु-उद्भिद में आधारीय विभज्योतकिय क्षेत्र होता है"
+                        ],
+                        [
+                            "(C) ब्रायोप्सिडा",
+                            "(iii) राइजॉइड्स युक्त थैलॉयड या पत्तीदार युग्मकोद्भिद"
+                        ],
+                        [
+                            "(D) टेरोप्सिडा",
+                            "(iv) बीजाणु-उद्भिद में उपस्थित वास्तविक जड़ें, तना और पत्तियाँ"
+                        ]
+                    ]
+                }
+            ],
+            "content_en": [
+                {
+                    "type": "text",
+                    "text": "Match the Plant Groups given in Column-I with their Characteristic Features in Column-II and select the correct answer using the code given below -\n\n"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "(Plant Group)",
+                            "(Characteristic Feature)"
+                        ],
+                        [
+                            "(A) Hepaticopsida",
+                            "(i) Presence of stomata in sporophyte"
+                        ],
+                        [
+                            "(B) Anthocerotopsida",
+                            "(ii) Sporophyte has a basal meristematic region"
+                        ],
+                        [
+                            "(C) Bryopsida",
+                            "(iii) Gametophytes thalloid or leafy with rhizoids"
+                        ],
+                        [
+                            "(D) Pteropsida",
+                            "(iv) True roots, stems and leaves present in sporophyte"
+                        ]
+                    ]
+                }
+            ],
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T05:50:35.741Z"
         },
         {
             "source_page": 2,
