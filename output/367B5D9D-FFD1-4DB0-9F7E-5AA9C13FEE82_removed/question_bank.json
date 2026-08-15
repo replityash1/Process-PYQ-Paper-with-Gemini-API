@@ -7554,32 +7554,47 @@
             "options": [
                 {
                     "label": "1",
-                    "hi": "$$\\begin{matrix} \\text{CH}_3-\\text{CH}_2-\\text{CH}_2 \\\\ + \\end{matrix} \\qquad \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl}$$",
-                    "en": "$$\\begin{matrix} \\text{CH}_3-\\text{CH}_2-\\text{CH}_2 \\\\ + \\end{matrix} \\qquad \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl}$$"
+                    "hi": "$$\n\\begin{array}{c@{\\qquad\\qquad\\qquad}c}\n\\text{CH}_3-\\text{CH}_2-\\overset{+}{\\text{C}}\\text{H}_2 &&&& \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl}\n\\end{array}\n$$\n",
+                    "en": "$$\n\\begin{array}{c@{\\qquad\\qquad\\qquad}c}\n\\text{CH}_3-\\text{CH}_2-\\overset{+}{\\text{C}}\\text{H}_2 &&&& \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl}\n\\end{array}\n$$\n",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
-                    "hi": "$$\\begin{matrix} \\text{CH}_3-\\dot{\\text{CH}}-\\text{CH}_2 \\\\ \\quad \\text{Cl} \\end{matrix} \\qquad \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl}$$",
-                    "en": "$$\\begin{matrix} \\text{CH}_3-\\dot{\\text{CH}}-\\text{CH}_2 \\\\ \\quad \\text{Cl} \\end{matrix} \\qquad \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl}$$"
+                    "hi": "$$\n\\begin{array}{ccccccc@{\\qquad\\qquad\\qquad}c}\n\\text{CH}_3 & - & \\overset{\\bullet}{\\text{C}}\\text{H} & - & \\text{CH}_2 & & & \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl} \\\\\n& & & & | & & & \\\\\n& & & & \\text{Cl} & & & \n\\end{array}\n$$\n",
+                    "en": "$$\n\\begin{array}{ccccccc@{\\qquad\\qquad\\qquad}c}\n\\text{CH}_3 & - & \\overset{\\bullet}{\\text{C}}\\text{H} & - & \\text{CH}_2 & & & \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl} \\\\\n& & & & | & & & \\\\\n& & & & \\text{Cl} & & & \n\\end{array}\n$$\n",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
-                    "hi": "$$\\begin{matrix} \\text{CH}_3-\\text{CH}-\\text{CH}_3 \\\\ + \\end{matrix} \\qquad \\begin{matrix} \\text{CH}_3-\\text{CH}-\\text{CH}_3 \\\\ | \\\\ \\text{Cl} \\end{matrix}$$",
-                    "en": "$$\\begin{matrix} \\text{CH}_3-\\text{CH}-\\text{CH}_3 \\\\ + \\end{matrix} \\qquad \\begin{matrix} \\text{CH}_3-\\text{CH}-\\text{CH}_3 \\\\ | \\\\ \\text{Cl} \\end{matrix}$$"
+                    "hi": "$$\n\\begin{array}{c@{\\qquad\\qquad\\qquad}ccccc}\n\\text{CH}_3-\\overset{+}{\\text{C}}\\text{H}-\\text{CH}_3 &&&& \\text{CH}_3 & - & \\text{CH} & - & \\text{CH}_3 \\\\\n& &&& & & | & & \\\\\n& & &&& & \\text{Cl} & & \n\\end{array}\n$$\n",
+                    "en": "$$\n\\begin{array}{c@{\\qquad\\qquad\\qquad}ccccc}\n\\text{CH}_3-\\overset{+}{\\text{C}}\\text{H}-\\text{CH}_3 &&&& \\text{CH}_3 & - & \\text{CH} & - & \\text{CH}_3 \\\\\n& &&& & & | & & \\\\\n& & &&& & \\text{Cl} & & \n\\end{array}\n$$\n",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
-                    "hi": "$$\\begin{matrix} \\text{CH}_3-\\text{CH}-\\text{CH}_2 \\\\ | \\\\ \\text{Cl} \\end{matrix} \\qquad \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl}$$",
-                    "en": "$$\\begin{matrix} \\text{CH}_3-\\text{CH}-\\text{CH}_2 \\\\ | \\\\ \\text{Cl} \\end{matrix} \\qquad \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl}$$"
+                    "hi": "$$\n\\begin{array}{ccccc@{\\qquad\\qquad\\qquad}c}\n\\text{CH}_3 & - & \\text{CH} & - & \\overset{\\bullet}{\\text{C}}\\text{H}_2 &&& \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl} \\\\\n& & | & & & \\\\\n& & \\text{Cl} & & & \n\\end{array}\n$$\n",
+                    "en": "$$\n\\begin{array}{ccccc@{\\qquad\\qquad\\qquad}c}\n\\text{CH}_3 & - & \\text{CH} & - & \\overset{\\bullet}{\\text{C}}\\text{H}_2 &&& \\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{Cl} \\\\\n& & | & & & \\\\\n& & \\text{Cl} & & & \n\\end{array}\n$$\n",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
-            "explanation_hi": "यह एक बहुत ही प्रसिद्ध भ्रामक (trick) प्रश्न है! पेरोक्साइड प्रभाव (खराश प्रभाव) केवल HBr के साथ लागू होता है, HCl या HI के साथ नहीं क्योंकि H-Cl बंध को homolytically तोड़ना पेरोक्साइड द्वारा संभव नहीं होता है (अतः यह मुक्त मूलक तंत्र से नहीं गुजरता)। इस प्रकार, HCl के साथ मार्कोनीकॉफ नियम लागू होता है, जिससे मध्यवर्ती द्वितीयक कार्बोकेटायन ($$\\text{CH}_3-\\text{CH}^+-\\text{CH}_3$$) बनता है और मुख्य उत्पाद 2-क्लोरोप्रोपेन ($$\\text{CH}_3-\\text{CH(Cl)}-\\text{CH}_3$$) बनता है।",
-            "explanation_en": "This is a classic trick question! The peroxide effect (Kharash effect) works exclusively with HBr, not with HCl or HI. With HCl, addition follows standard Markownikoff's rule via an electrophilic addition mechanism, forming a secondary carbocation intermediate ($$\\text{CH}_3-\\text{CH}^+-\\text{CH}_3$$) and 2-chloropropane as the major product.",
+            "explanation_hi": "यह एक बहुत ही प्रसिद्ध भ्रामक (trick) प्रश्न है! पेरोक्साइड प्रभाव (खराश प्रभाव) केवल HBr के साथ लागू होता है, HCl या HI के साथ नहीं क्योंकि H-Cl बंध को homolytically तोड़ना पेरोक्साइड द्वारा संभव नहीं होता है (अतः यह मुक्त मूलक तंत्र से नहीं गुजरता)। इस प्रकार, HCl के साथ मार्कोनीकॉफ नियम लागू होता है, जिससे मध्यवर्ती द्वितीयक कार्बोकेटायन ($\\text{CH}_3-\\text{CH}^+-\\text{CH}_3$) बनता है और मुख्य उत्पाद 2-क्लोरोप्रोपेन ($\\text{CH}_3-\\text{CH(Cl)}-\\text{CH}_3$) बनता है।",
+            "explanation_en": "This is a classic trick question! The peroxide effect (Kharash effect) works exclusively with HBr, not with HCl or HI. With HCl, addition follows standard Markownikoff's rule via an electrophilic addition mechanism, forming a secondary carbocation intermediate ($\\text{CH}_3-\\text{CH}^+-\\text{CH}_3$) and 2-chloropropane ($\\text{CH}_3-\\text{CH(Cl)}-\\text{CH}_3$) as the major product.",
             "option_rationales": [
                 {
                     "label": "1",
@@ -7663,7 +7678,11 @@
                     "correct_label": "1",
                     "explanation_en": "In the presence of peroxide, HBr undergoes anti-Markownikoff addition to form 1-bromopropane."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T07:33:00.286Z"
         },
         {
             "source_page": 16,
