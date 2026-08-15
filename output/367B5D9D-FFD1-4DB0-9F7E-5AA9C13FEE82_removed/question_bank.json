@@ -6358,8 +6358,8 @@
         {
             "source_page": 13,
             "number": 103,
-            "question_hi": "एक एकल स्लिट से फ्राउनहोफर विवर्तन प्रतिरूप में केन्द्रीय उच्चिष्ठ की कोणीय चौड़ाई $6000\\text{ \\AA}$ तरंगदैर्ध्य के प्रकाश के उपयोग से मापी जाती है। जब इस स्लिट को एक अन्य तरंगदैर्ध्य से प्रकाशित किया जाता है, तो कोणीय चौड़ाई $30\\%$ कम हो जाती है। यह नई तरंगदैर्ध्य क्या है? (कोणीय चौड़ाई को अल्प मानें)",
-            "question_en": "Angular width of central maxima in the Fraunhofer diffraction pattern of a single slit is measured using light of wavelength $6000\\text{ \\AA}$. When the slit is illuminated by another wavelength, the angular width decreases by $30\\%$. What is this new wavelength? (Assume angular width to be very small)",
+            "question_hi": "एक एकल स्लिट से फ्राउनहोफर विवर्तन प्रतिरूप में केन्द्रीय उच्चिष्ठ की कोणीय चौड़ाई $6000\\ \\mathring{\\text{A}}$तरंगदैर्ध्य के प्रकाश के उपयोग से मापी जाती है। जब इस स्लिट को एक अन्य तरंगदैर्ध्य से प्रकाशित किया जाता है, तो कोणीय चौड़ाई $30\\%$ कम हो जाती है। यह नई तरंगदैर्ध्य क्या है? (कोणीय चौड़ाई को अल्प मानें)",
+            "question_en": "Angular width of central maxima in the Fraunhofer diffraction pattern of a single slit is measured using light of wavelength $6000\\ \\mathring{\\text{A}}$. When the slit is illuminated by another wavelength, the angular width decreases by $30\\%$. What is this new wavelength? (Assume angular width to be very small)",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -6368,32 +6368,47 @@
             "options": [
                 {
                     "label": "1",
-                    "hi": "$4200\\text{ \\AA}$",
-                    "en": "$4200\\text{ \\AA}$"
+                    "hi": "$4200\\mathring{\\text{A}}$",
+                    "en": "$4200\\mathring{\\text{A}}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
-                    "hi": "$3600\\text{ \\AA}$",
-                    "en": "$3600\\text{ \\AA}$"
+                    "hi": "$3600\\mathring{\\text{A}}$",
+                    "en": "$3600\\mathring{\\text{A}}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
-                    "hi": "$1800\\text{ \\AA}$",
-                    "en": "$1800\\text{ \\AA}$"
+                    "hi": "$1800\\mathring{\\text{A}}$",
+                    "en": "$1800\\mathring{\\text{A}}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
-                    "hi": "$5400\\text{ \\AA}$",
-                    "en": "$5400\\text{ \\AA}$"
+                    "hi": "$5400\\mathring{\\text{A}}$",
+                    "en": "$5400\\mathring{\\text{A}}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
-            "explanation_hi": "फ्राउनहोफर विवर्तन में केन्द्रीय उच्चिष्ठ की कोणीय चौड़ाई निम्न होती है:\n$\\theta = \\frac{2\\lambda}{a}$\nइसका मतलब है कि कोणीय चौड़ाई तरंगदैर्ध्य के समानुपाती होती है: $\\theta \\propto \\lambda$\nजब तरंगदैर्ध्य बदली जाती है और कोणीय चौड़ाई $30\\%$ कम हो जाती है, तो नई कोणीय चौड़ाई मूल का $70\\%$ हो जाती है।\nअतः नई तरंगदैर्ध्य भी मूल तरंगदैर्ध्य का $70\\%$ होगी:\n$\\lambda_2 = 6000 \\times (1 - 0.30) = 6000 \\times 0.70 = 4200\\text{ \\AA}$",
-            "explanation_en": "The angular width of the central maxima in single slit Fraunhofer diffraction is given by:\n$\\theta = \\frac{2\\lambda}{a}$\nThis shows that angular width is directly proportional to wavelength: $\\theta \\propto \\lambda$.\nWhen the angular width decreases by $30\\%$, the new angular width becomes $70\\%$ of the original.\nTherefore, the new wavelength will also be $70\\%$ of the original wavelength:\n$\\lambda_2 = 6000 \\times (1 - 0.30) = 6000 \\times 0.70 = 4200\\text{ \\AA}$",
+            "explanation_hi": "फ्राउनहोफर विवर्तन में केन्द्रीय उच्चिष्ठ की कोणीय चौड़ाई निम्न होती है:\n$\\theta = \\frac{2\\lambda}{a}$\nइसका मतलब है कि कोणीय चौड़ाई तरंगदैर्ध्य के समानुपाती होती है: $\\theta \\propto \\lambda$\nजब तरंगदैर्ध्य बदली जाती है और कोणीय चौड़ाई $30\\%$ कम हो जाती है, तो नई कोणीय चौड़ाई मूल का $70\\%$ हो जाती है।\nअतः नई तरंगदैर्ध्य भी मूल तरंगदैर्ध्य का $70\\%$ होगी:\n$\\lambda_2 = 6000 \\times (1 - 0.30) = 6000 \\times 0.70 = 4200\\mathring{\\text{A}}$",
+            "explanation_en": "The angular width of the central maxima in single slit Fraunhofer diffraction is given by:\n$\\theta = \\frac{2\\lambda}{a}$\nThis shows that angular width is directly proportional to wavelength: $\\theta \\propto \\lambda$.\nWhen the angular width decreases by $30\\%$, the new angular width becomes $70\\%$ of the original.\nTherefore, the new wavelength will also be $70\\%$ of the original wavelength:\n$\\lambda_2 = 6000 \\times (1 - 0.30) = 6000 \\times 0.70 = 4200\\mathring{\\text{A}}$",
             "option_rationales": [
                 {
                     "label": "1",
@@ -6477,7 +6492,11 @@
                     "correct_label": "2",
                     "explanation_en": "Since angular width increases by $20\\%$, the new wavelength $\\lambda_2 = 5000 \\times (1 + 0.20) = 6000\\text{ \\AA}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T07:06:46.871Z"
         },
         {
             "source_page": 14,
