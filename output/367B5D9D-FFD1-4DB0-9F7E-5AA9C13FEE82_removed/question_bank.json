@@ -6501,38 +6501,53 @@
         {
             "source_page": 14,
             "number": 108,
-            "question_hi": "निम्नलिखित यौगिकों को उनके अवशोषण की तरंग संख्या के बढ़ते क्रम में व्यवस्थित कीजिए -\n(i) $\\langle\\overline{}>\\text{CH}_2$\n(ii) $\\triangle\\text{CH}_2$\n(iii) $\\langle\\hspace{1.5em}\\rangle\\text{CH}_2$\n(iv) $\\square\\text{CH}_2$",
-            "question_en": "Arrange the following compounds in increasing order of their wavenumber of absorption -\n(i) $\\langle\\overline{}>\\text{CH}_2$\n(ii) $\\triangle\\text{CH}_2$\n(iii) $\\langle\\hspace{1.5em}\\rangle\\text{CH}_2$\n(iv) $\\square\\text{CH}_2$",
+            "question_hi": "निम्नलिखित यौगिकों को उनके अवशोषण की तरंग संख्या के बढ़ते क्रम में व्यवस्थित कीजिए -\n\n",
+            "question_en": "Arrange the following compounds in increasing order of their wavenumber of absorption -\n",
             "has_visuals": true,
             "visual_location": "question",
-            "image_hi": null,
-            "image_en": null,
+            "image_hi": "images/page14_q108_hi.jpg",
+            "image_en": "images/page14_q108_en.jpg",
             "image_full": "images/page14_q108_full.jpg",
             "options": [
                 {
                     "label": "1",
                     "hi": "(i) < (iv) < (iii) < (ii)",
-                    "en": "(i) < (iv) < (iii) < (ii)"
+                    "en": "(i) < (iv) < (iii) < (ii)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(i) < (iii) < (ii) < (iv)",
-                    "en": "(i) < (iii) < (ii) < (iv)"
+                    "en": "(i) < (iii) < (ii) < (iv)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(i) < (ii) < (iii) < (iv)",
-                    "en": "(i) < (ii) < (iii) < (iv)"
+                    "en": "(i) < (ii) < (iii) < (iv)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "(iv) < (iii) < (ii) < (i)",
-                    "en": "(iv) < (iii) < (ii) < (i)"
+                    "en": "(iv) < (iii) < (ii) < (i)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "तरंग संख्या ($\\tilde{\\nu}$) कार्बोनिल समूहों या एक्सोसाइक्लिक डबल बॉन्ड $\\text{C}=\\text{C}$ स्ट्रेचिंग फ्रीक्वेंसी के लिए रिंग के आकार और तनाव पर निर्भर करती है। रिंग का आकार घटने पर बेंडिंग स्ट्रेन बढ़ता है और $\\text{s}$ कैरेक्टर बदलता है, जिससे तरंग संख्या बढ़ती है।",
@@ -6620,7 +6635,42 @@
                     "correct_label": "2",
                     "explanation_en": "Cyclopropene has the smallest ring with the highest strain, resulting in the highest absorption wavenumber."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "content_hi": [
+                {
+                    "type": "text",
+                    "text": "निम्नलिखित यौगिकों को उनके अवशोषण की तरंग संख्या के बढ़ते क्रम में व्यवस्थित कीजिए -\n\n"
+                },
+                {
+                    "type": "image",
+                    "path": "images/page14_q108_inlinehi1.jpg"
+                },
+                {
+                    "type": "image",
+                    "path": "images/page14_q108_inlinehi2.jpg"
+                }
+            ],
+            "full": null,
+            "extra_images": [
+                {
+                    "slot": "extra1",
+                    "path": "images/page14_q108_extra1.jpg"
+                }
+            ],
+            "content_en": [
+                {
+                    "type": "text",
+                    "text": "Arrange the following compounds in increasing order of their wavenumber of absorption -\n"
+                },
+                {
+                    "type": "image",
+                    "path": "images/page14_q108_inlineen1.jpg"
+                }
+            ],
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T07:10:42.440Z"
         },
         {
             "source_page": 14,
