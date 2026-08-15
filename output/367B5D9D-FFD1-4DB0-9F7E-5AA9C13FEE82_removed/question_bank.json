@@ -4559,35 +4559,50 @@
             "question_hi": "कौनसा पुष्प सूत्र एस्टेरेसी कुल से संबंधित है?",
             "question_en": "Which floral formula belongs to family Asteraceae?",
             "has_visuals": true,
-            "visual_location": "question",
+            "visual_location": "options",
             "image_hi": null,
             "image_en": null,
             "image_full": "images/page9_q69_full.jpg",
             "options": [
                 {
                     "label": "1",
-                    "hi": "$\\text{Br } \\oplus \\text{ ♀ } \\text{ K}_{\\text{pappus}} \\text{ C}_{(5)} \\text{ A}_{(5)} \\text{ \\overline{G}}_{(2)}$",
-                    "en": "$\\text{Br } \\oplus \\text{ ♀ } \\text{ K}_{\\text{pappus}} \\text{ C}_{(5)} \\text{ A}_{(5)} \\text{ \\overline{G}}_{(2)}$"
+                    "hi": "",
+                    "en": "",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": "images/page9_q69_opt1.jpg"
                 },
                 {
                     "label": "2",
-                    "hi": "$\\text{Br } \\oplus \\text{ ⚥ } \\text{ K}_{\\text{pappus}} \\text{ C}_5 \\text{ A}_{(5)} \\text{ \\overline{G}}_{(2)}$",
-                    "en": "$\\text{Br } \\oplus \\text{ ⚥ } \\text{ K}_{\\text{pappus}} \\text{ C}_5 \\text{ A}_{(5)} \\text{ \\overline{G}}_{(2)}$"
+                    "hi": "",
+                    "en": "",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": "images/page9_q69_opt2.jpg"
                 },
                 {
                     "label": "3",
-                    "hi": "$\\text{Br } \\oplus \\text{ ♂ } \\text{ K}_{\\text{pappus}} \\text{ C}_{(5)} \\text{ A}_5 \\text{ \\overline{G}}_{(2)}$",
-                    "en": "$\\text{Br } \\oplus \\text{ ♂ } \\text{ K}_{\\text{pappus}} \\text{ C}_{(5)} \\text{ A}_5 \\text{ \\overline{G}}_{(2)}$"
+                    "hi": "",
+                    "en": "",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": "images/page9_q69_opt3.jpg"
                 },
                 {
                     "label": "4",
-                    "hi": "$\\text{Br } \\oplus \\text{ ♀ } \\text{ K}_{\\text{pappus}} \\text{ C}_{(5)} \\text{ A}_{(5)} \\text{ \\overline{G}}_{(2)}$",
-                    "en": "$\\text{Br } \\oplus \\text{ ♀ } \\text{ K}_{\\text{pappus}} \\text{ C}_{(5)} \\text{ A}_{(5)} \\text{ \\overline{G}}_{(2)}$"
+                    "hi": "",
+                    "en": "",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": "images/page9_q69_opt4.jpg"
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "एस्टेरेसी (Composite) कुल के पुष्पीय लक्षण: पुष्प सहपत्रीय ($\\text{Br}$), त्रिज्यासम्मित या एकव्यासम्मित ($\\oplus$ या $\\%%$), एकलिंगी (मादा या तटस्थ) या उभयलिंगी, बाह्यदलपुंज पप्पस ($\\text{K}_{\\text{pappus}}$) में रूपांतरित, दलपुंज संयुक्त दलीय $\\text{C}_{(5)}$, पुंकेसर पाँच और संयुक्त $\\text{A}_{(5)}$ (या अनुपस्थित), तथा अंडाशय युक्तांडपी, द्वैकोष्ठीय, अधोवर्ती ($\\overline{\\text{G}}_{(2)}$) होता है। सही विकल्प (1) या (4) में दर्शाया गया है जिसमें मादा पुष्प $\\text{♀}$ और अधोवर्ती अंडाशय $\\overline{\\text{G}}_{(2)}$ है।",
@@ -4675,7 +4690,12 @@
                     "correct_label": "3",
                     "explanation_en": "In family Asteraceae, the ovary is inferior (epigynous flower), denoted by $\\overline{\\text{G}}_{(2)}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "full": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:45:05.366Z"
         },
         {
             "source_page": 10,
