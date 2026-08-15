@@ -8336,8 +8336,8 @@
         {
             "source_page": 16,
             "number": 130,
-            "question_hi": "यदि $\\text{Ni}^{2+}/\\text{Ni}$ के लिए $E^\\circ = -0.25\\text{ V}; \\text{ Au}^{3+}/\\text{Au}$ के लिए $E^\\circ = 1.5\\text{ V}$ है, तो सेल $\\text{Ni}/\\text{Ni}^{2+} (1.0\\text{M}) \\|\\| \\text{Au}^{3+} (1.0\\text{M})/\\text{Au}$ का $\\text{emf } (E_{\\text{cell}})$ है -",
-            "question_en": "If $E^\\circ = -0.25\\text{ V}$ for $\\text{Ni}^{2+}/\\text{Ni}; E^\\circ = 1.5\\text{ V}$ for $\\text{Au}^{3+}/\\text{Au}$, then the $\\text{emf } (E_{\\text{cell}})$ of the cell $\\text{Ni}/\\text{Ni}^{2+} (1.0\\text{M}) \\|\\| \\text{Au}^{3+} (1.0\\text{M})/\\text{Au}$ is -",
+            "question_hi": "यदि $\\text{Ni}^{2+}/\\text{Ni}$ के लिए $E^\\circ = -0.25\\ \\text{V}$, $\\text{Au}^{3+}/\\text{Au}$ के लिए $E^\\circ = 1.5\\ \\text{V}$ है, तो सेल $\\text{Ni}/\\text{Ni}^{2+}\\ (1.0\\ \\text{M}) \\parallel \\text{Au}^{3+}\\ (1.0\\ \\text{M})/\\text{Au}$ का $\\text{emf}\\ (E_{\\text{cell}})$ है -\n",
+            "question_en": "If $E^\\circ = -0.25\\ \\text{V}$ for $\\text{Ni}^{2+}/\\text{Ni}$, $E^\\circ = 1.5\\ \\text{V}$ for $\\text{Au}^{3+}/\\text{Au}$, then the $\\text{emf}\\ (E_{\\text{cell}})$ of the cell $\\text{Ni}/\\text{Ni}^{2+}\\ (1.0\\ \\text{M}) \\parallel \\text{Au}^{3+}\\ (1.0\\ \\text{M})/\\text{Au}$ is -\n",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -8347,31 +8347,46 @@
                 {
                     "label": "1",
                     "hi": "+1.75 V",
-                    "en": "+1.75 V"
+                    "en": "+1.75 V",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "-1.75 V",
-                    "en": "-1.75 V"
+                    "en": "-1.75 V",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "-1.25 V",
-                    "en": "-1.25 V"
+                    "en": "-1.25 V",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "+1.25 V",
-                    "en": "+1.25 V"
+                    "en": "+1.25 V",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
-            "explanation_hi": "सेल विभव ($E_{\\text{cell}}^\\circ$) की गणना इस प्रकार की जाती है:\\n$E_{\\text{cell}}^\\circ = E_{\\text{cathode}}^\\circ - E_{\\text{anode}}^\\circ$\\nयहाँ कैथोड Au है और एनोड Ni है:\\n$E_{\\text{cell}}^\\circ = 1.5\\text{ V} - (-0.25\\text{ V}) = 1.5 + 0.25 = +1.75\\text{ V}$।",
-            "explanation_en": "The standard cell potential is calculated as:\\n$E_{\\text{cell}}^\\circ = E_{\\text{cathode}}^\\circ - E_{\\text{anode}}^\\circ$\\nHere, Au is the cathode and Ni is the anode:\\n$E_{\\text{cell}}^\\circ = 1.5\\text{ V} - (-0.25\\text{ V}) = 1.5 + 0.25 = +1.75\\text{ V}$.",
+            "explanation_hi": "सेल विभव ($E_{\\text{cell}}^\\circ$) की गणना इस प्रकार की जाती है:\n$$E_{\\text{cell}}^\\circ = E_{\\text{cathode}}^\\circ - E_{\\text{anode}}^\\circ$$\n\nयहाँ कैथोड $\\text{Au}$ है और एनोड $\\text{Ni}$ है:\n$$E_{\\text{cell}}^\\circ = 1.5\\ \\text{V} - (-0.25\\ \\text{V}) = 1.5 + 0.25 = +1.75\\ \\text{V}$$\n",
+            "explanation_en": "The cell potential ($E_{\\text{cell}}^\\circ$) is calculated as follows:\n$$E_{\\text{cell}}^\\circ = E_{\\text{cathode}}^\\circ - E_{\\text{anode}}^\\circ$$\n\nHere, the cathode is $\\text{Au}$ and the anode is $\\text{Ni}$:\n$$E_{\\text{cell}}^\\circ = 1.5\\ \\text{V} - (-0.25\\ \\text{V}) = 1.5 + 0.25 = +1.75\\ \\text{V}$$\n",
             "option_rationales": [
                 {
                     "label": "1",
@@ -8455,7 +8470,11 @@
                     "correct_label": "1",
                     "explanation_en": "$E_{\\text{cell}}^\\circ = 0.34 - (-0.76) = +1.10\\text{ V}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T07:58:14.539Z"
         },
         {
             "source_page": 17,
