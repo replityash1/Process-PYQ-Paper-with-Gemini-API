@@ -1957,9 +1957,9 @@
         {
             "source_page": 4,
             "number": 27,
-            "question_hi": "निम्नलिखित उत्क्रमणीय अभिक्रिया पर विचार कीजिए, जो कि साम्यावस्था में है -\n$2\\text{NO}_2(\\text{g}) \\rightleftharpoons \\text{N}_2\\text{O}_4(\\text{g}) ; \\Delta H = -57.2\\text{ kJ/mol}$\n(भूरी) (रंगहीन)\nउपयुक्त अभिक्रिया के संदर्भ में निम्नलिखित प्रेक्षण/प्रेक्षणों पर विचार कीजिए -\n(a) ताप घटाने पर भूरे रंग की तीव्रता घटती है।\n(b) दाब बढ़ाने पर ज्यादा $\\text{N}_2\\text{O}_4(\\text{g})$ बनेगी।\n(c) ताप बढ़ने के साथ साम्यावस्था स्थिरांक का मान घटता है।\nसही विकल्प का चयन कीजिए -",
-            "question_en": "Consider the following reversible reaction which is at equilibrium -\n$2\\text{NO}_2(\\text{g}) \\rightleftharpoons \\text{N}_2\\text{O}_4(\\text{g}) ; \\Delta H = -57.2\\text{ kJ/mol}$\n(Brown) (Colourless)\nConsider the following observation/s regarding above reaction -\n(a) On decreasing temperature, intensity of brown colour decreases.\n(b) On increasing pressure, more $\\text{N}_2\\text{O}_4(\\text{g})$ will be formed.\n(c) The value of equilibrium constant decreases as the temperature increases.\nChoose the correct option -",
-            "has_visuals": false,
+            "question_hi": "निम्नलिखित उत्क्रमणीय अभिक्रिया पर विचार कीजिए, जो कि साम्यावस्था में है -\n\n$2\\text{NO}_2(\\text{g}) \\rightleftharpoons \\text{N}_2\\text{O}_4(\\text{g}) ; \\Delta H = -57.2\\text{ kJ/mol}$\n(भूरी)                (रंगहीन)\n\nउपयुक्त अभिक्रिया के संदर्भ में निम्नलिखित प्रेक्षण/प्रेक्षणों पर विचार कीजिए -\n(a) ताप घटाने पर भूरे रंग की तीव्रता घटती है।\n(b) दाब बढ़ाने पर ज्यादा $\\text{N}_2\\text{O}_4(\\text{g})$ बनेगी।\n(c) ताप बढ़ने के साथ साम्यावस्था स्थिरांक का मान घटता है।\n\nसही विकल्प का चयन कीजिए -",
+            "question_en": "Consider the following reversible reaction which is at equilibrium -\n\n$2\\text{NO}_2(\\text{g}) \\rightleftharpoons \\text{N}_2\\text{O}_4(\\text{g}) ; \\Delta H = -57.2\\text{ kJ/mol}$\n(Brown)       (Colourless)\n\nConsider the following observation/s regarding above reaction -\n(a) On decreasing temperature, intensity of brown colour decreases.\n(b) On increasing pressure, more $\\text{N}_2\\text{O}_4(\\text{g})$ will be formed.\n(c) The value of equilibrium constant decreases as the temperature increases.\n\nChoose the correct option -",
+            "has_visuals": true,
             "visual_location": "none",
             "image_hi": null,
             "image_en": null,
@@ -1968,27 +1968,42 @@
                 {
                     "label": "1",
                     "hi": "केवल (b) सही है।",
-                    "en": "Only (b) is correct."
+                    "en": "Only (b) is correct.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(a), (b) और (c) सभी सही हैं।",
-                    "en": "All (a), (b) and (c) are correct."
+                    "en": "All (a), (b) and (c) are correct.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "केवल (b) और (c) सही हैं।",
-                    "en": "Only (b) and (c) are correct."
+                    "en": "Only (b) and (c) are correct.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "केवल (a) और (c) सही हैं।",
-                    "en": "Only (a) and (c) are correct."
+                    "en": "Only (a) and (c) are correct.",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "अभिक्रिया दी गई है: $2\\text{NO}_2(\\text{g}) \\rightleftharpoons \\text{N}_2\\text{O}_4(\\text{g}) ; \\Delta H = -57.2\\text{ kJ/mol}$ (ऊष्माक्षेपी अभिक्रिया)\n\n(a) चूँकि अभिक्रिया ऊष्माक्षेपी है, ताप घटाने पर साम्यावस्था अग्र दिशा में विस्थापित होगी जिससे $\\text{NO}_2$ (भूरी गैस) की मात्रा कम होगी और भूरे रंग की तीव्रता घटेगी। अतः (a) सही है।\n(b) दाब बढ़ाने पर साम्यावस्था उस दिशा में जाएगी जहाँ मोलों की संख्या कम हो (अग्र दिशा में 2 मोल से 1 मोल बन रहा है)। अतः अधिक $\\text{N}_2\\text{O}_4$ बनेगा। अतः (b) सही है।\n(c) वान 'ट हॉफ समीकरण के अनुसार, ऊष्माक्षेपी अभिक्रिया के लिए ताप बढ़ाने पर साम्यावस्था स्थिरांक ($K$) का मान घटता है। अतः (c) सही है।\n\nइसलिए सभी कथन (a), (b) और (c) सही हैं।",
@@ -2077,13 +2092,17 @@
                     "correct_label": "2",
                     "explanation_en": "According to the Van 't Hoff equation, for an exothermic reaction ($\\Delta H <\\text{ 0}$), as temperature increases, the equilibrium constant $K$ decreases."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:02:26.413Z"
         },
         {
             "source_page": 5,
             "number": 28,
-            "question_hi": "निम्नलिखित कार्बधनायनों को उनके स्थायित्व के बढ़ते क्रम में व्यवस्थित कीजिए -\n$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$, $(\\text{CH}_3)_3\\text{C}^\\oplus$, $\\text{CH}_3-\\text{CH}_2^\\oplus$, $\\text{CH}_3^\\oplus$\n(1) $(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < \\text{CH}_3^\\oplus$\n(2) $\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$\n(3) $(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$\n(4) $\\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Arrange the following carbocations in increasing order of their stability -\n$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$, $(\\text{CH}_3)_3\\text{C}^\\oplus$, $\\text{CH}_3-\\text{CH}_2^\\oplus$, $\\text{CH}_3^\\oplus$\n(1) $(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < \\text{CH}_3^\\oplus$\n(2) $\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$\n(3) $(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$\n(4) $\\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$\n(5) Question not attempted",
+            "question_hi": "निम्नलिखित कार्बधनायनों को उनके स्थायित्व के बढ़ते क्रम में व्यवस्थित कीजिए -\n\n$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$, $(\\text{CH}_3)_3\\text{C}^\\oplus$, $\\text{CH}_3-\\text{CH}_2^\\oplus$, $\\text{CH}_3^\\oplus$\n",
+            "question_en": "Arrange the following carbocations in increasing order of their stability -\n\n$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$, $(\\text{CH}_3)_3\\text{C}^\\oplus$, $\\text{CH}_3-\\text{CH}_2^\\oplus$, $\\text{CH}_3^\\oplus$\n",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -2093,27 +2112,42 @@
                 {
                     "label": "1",
                     "hi": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < \\text{CH}_3^\\oplus$",
-                    "en": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < \\text{CH}_3^\\oplus$"
+                    "en": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < \\text{CH}_3^\\oplus$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "$\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$",
-                    "en": "$\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$"
+                    "en": "$\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$",
-                    "en": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$"
+                    "en": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "$\\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$",
-                    "en": "$\\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$"
+                    "en": "$\\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "कार्बधनायनों का स्थायित्व मुख्य रूप से अनुनाद (resonance), अतिसंयुग्मन (hyperconjugation) और प्रेरणिक प्रभाव (inductive effect) पर निर्भर करता है। ट्राइफेनिल मेथिल कार्बधनायन सबसे अधिक स्थायी है क्योंकि इसमें तीन फेनिल समूहों के साथ व्यापक अनुनाद होता है। इसके बाद तृतीयक, द्वितीयक, प्राथमिक और अंत में मेथिल कार्बधनायन आता है जिसका स्थायित्व सबसे कम होता है। बढ़ता क्रम: $\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$ है।",
@@ -2201,13 +2235,17 @@
                     "correct_label": "1",
                     "explanation_en": "Tertiary carbocation is more stable than secondary, which is more stable than primary/methyl due to hyperconjugation and inductive effect."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:02:26.413Z"
         },
         {
             "source_page": 5,
             "number": 29,
-            "question_hi": "आधुनिक आवर्त सारणी के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए -\n(i) s तथा p-ब्लॉक के तत्त्वों को सम्मिलित रूप से निरूपक तत्त्व कहते हैं।\n(ii) $\\text{Mg}, \\text{Mg}^{2+}(\\text{g}), \\text{Al}^{3+}(\\text{g})$ एवं $\\text{Al}$ में से अधिकतम आकार वाली स्पीशीज $\\text{Mg}$ है।\n(iii) एक आवर्त में बाईं से दाईं तरफ जाने पर विद्युत्ऋणता साधारणतया घटती है।\nसही कथन/कथनों का चयन कीजिए -\n(1) केवल (iii)\n(2) केवल (ii), (iii)\n(3) केवल (i), (ii)\n(4) केवल (i), (iii)\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Consider the following statements regarding the Modern Periodic Table -\n(i) s and p-block elements together are called Representative Elements.\n(ii) Among $\\text{Mg}, \\text{Mg}^{2+}(\\text{g}), \\text{Al}^{3+}(\\text{g})$ and $\\text{Al}$, the largest species is $\\text{Mg}$.\n(iii) The electronegativity generally decreases in a period from left to right.\nChoose the correct statement/s -\n(1) Only (iii)\n(2) Only (ii), (iii)\n(3) Only (i), (ii)\n(4) Only (i), (iii)\n(5) Question not attempted",
+            "question_hi": "आधुनिक आवर्त सारणी के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए -\n\n(i) s तथा p-ब्लॉक के तत्त्वों को सम्मिलित रूप से निरूपक तत्त्व कहते हैं।\n(ii) $\\text{Mg}, \\text{Mg}^{2+}(\\text{g}), \\text{Al}^{3+}(\\text{g})$ एवं $\\text{Al}$ में से अधिकतम आकार वाली स्पीशीज $\\text{Mg}$ है।\n(iii) एक आवर्त में बाईं से दाईं तरफ जाने पर विद्युत्ऋणता साधारणतया घटती है।\n\nसही कथन/कथनों का चयन कीजिए -",
+            "question_en": "Consider the following statements regarding the Modern Periodic Table -\n\n(i) s and p-block elements together are called Representative Elements.\n(ii) Among $\\text{Mg}, \\text{Mg}^{2+}(\\text{g}), \\text{Al}^{3+}(\\text{g})$ and $\\text{Al}$, the largest species is $\\text{Mg}$.\n(iii) The electronegativity generally decreases in a period from left to right.\n\nChoose the correct statement/s -",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -2217,27 +2255,42 @@
                 {
                     "label": "1",
                     "hi": "केवल (iii)",
-                    "en": "Only (iii)"
+                    "en": "Only (iii)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "केवल (ii), (iii)",
-                    "en": "Only (ii), (iii)"
+                    "en": "Only (ii), (iii)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "केवल (i), (ii)",
-                    "en": "Only (i), (ii)"
+                    "en": "Only (i), (ii)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "केवल (i), (iii)",
-                    "en": "Only (i), (iii)"
+                    "en": "Only (i), (iii)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "कथन (i) सही है क्योंकि s और p-ब्लॉक के तत्वों को मुख्य वर्ग या निरूपक (representative) तत्व कहा जाता है। कथन (ii) सही है क्योंकि उदासीन परमाणु $\\text{Mg}$ का आकार इसके धनायनों ($\\text{Mg}^{2+}$) और $\\text{Al}$ तथा इसके आयनों से बड़ा होता है। कथन (iii) गलत है क्योंकि एक आवर्त में बाएं से दाएं जाने पर विद्युत्ऋणता बढ़ती है, घटती नहीं है। अतः केवल (i) और (ii) सही हैं।",
@@ -2325,13 +2378,17 @@
                     "correct_label": "2",
                     "explanation_en": "s and p-block elements are collectively known as representative elements or main group elements."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:02:26.413Z"
         },
         {
             "source_page": 5,
             "number": 30,
-            "question_hi": "निम्नलिखित में से कौन सी अभिक्रिया असमानुपातन अभिक्रिया का उदाहरण है?\n(1) $\\text{Cl}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow \\text{ClO}^-(\\text{aq}) + \\text{Cl}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l})$\n(2) $\\text{Cl}_2(\\text{g}) + 2\\text{KI}(\\text{aq}) \\rightarrow 2\\text{KCl}(\\text{aq}) + \\text{I}_2(\\text{s})$\n(3) $2\\text{H}_2\\text{O}(\\text{l}) + 2\\text{F}_2(\\text{g}) \\rightarrow 4\\text{HF}(\\text{aq}) + \\text{O}_2(\\text{g})$\n(4) $2\\text{F}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow 2\\text{F}^-(\\text{aq}) + \\text{OF}_2(\\text{g}) + \\text{H}_2\\text{O}(\\text{l})$\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Which one of the following reaction is an example of disproportionation reaction?\n(1) $\\text{Cl}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow \\text{ClO}^-(\\text{aq}) + \\text{Cl}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l})$\n(2) $\\text{Cl}_2(\\text{g}) + 2\\text{KI}(\\text{aq}) \\rightarrow 2\\text{KCl}(\\text{aq}) + \\text{I}_2(\\text{s})$\n(3) $2\\text{H}_2\\text{O}(\\text{l}) + 2\\text{F}_2(\\text{g}) \\rightarrow 4\\text{HF}(\\text{aq}) + \\text{O}_2(\\text{g})$\n(4) $2\\text{F}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow 2\\text{F}^-(\\text{aq}) + \\text{OF}_2(\\text{g}) + \\text{H}_2\\text{O}(\\text{l})$\n(5) Question not attempted",
+            "question_hi": "निम्नलिखित में से कौन सी अभिक्रिया असमानुपातन अभिक्रिया का उदाहरण है?",
+            "question_en": "Which one of the following reaction is an example of disproportionation reaction?",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -2341,27 +2398,42 @@
                 {
                     "label": "1",
                     "hi": "$\\text{Cl}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow \\text{ClO}^-(\\text{aq}) + \\text{Cl}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l})$",
-                    "en": "$\\text{Cl}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow \\text{ClO}^-(\\text{aq}) + \\text{Cl}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l})$"
+                    "en": "$\\text{Cl}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow \\text{ClO}^-(\\text{aq}) + \\text{Cl}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l})$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "$\\text{Cl}_2(\\text{g}) + 2\\text{KI}(\\text{aq}) \\rightarrow 2\\text{KCl}(\\text{aq}) + \\text{I}_2(\\text{s})$",
-                    "en": "$\\text{Cl}_2(\\text{g}) + 2\\text{KI}(\\text{aq}) \\rightarrow 2\\text{KCl}(\\text{aq}) + \\text{I}_2(\\text{s})$"
+                    "en": "$\\text{Cl}_2(\\text{g}) + 2\\text{KI}(\\text{aq}) \\rightarrow 2\\text{KCl}(\\text{aq}) + \\text{I}_2(\\text{s})$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "$2\\text{H}_2\\text{O}(\\text{l}) + 2\\text{F}_2(\\text{g}) \\rightarrow 4\\text{HF}(\\text{aq}) + \\text{O}_2(\\text{g})$",
-                    "en": "$2\\text{H}_2\\text{O}(\\text{l}) + 2\\text{F}_2(\\text{g}) \\rightarrow 4\\text{HF}(\\text{aq}) + \\text{O}_2(\\text{g})$"
+                    "en": "$2\\text{H}_2\\text{O}(\\text{l}) + 2\\text{F}_2(\\text{g}) \\rightarrow 4\\text{HF}(\\text{aq}) + \\text{O}_2(\\text{g})$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "$2\\text{F}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow 2\\text{F}^-(\\text{aq}) + \\text{OF}_2(\\text{g}) + \\text{H}_2\\text{O}(\\text{l})$",
-                    "en": "$2\\text{F}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow 2\\text{F}^-(\\text{aq}) + \\text{OF}_2(\\text{g}) + \\text{H}_2\\text{O}(\\text{l})$"
+                    "en": "$2\\text{F}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow 2\\text{F}^-(\\text{aq}) + \\text{OF}_2(\\text{g}) + \\text{H}_2\\text{O}(\\text{l})$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "असमानुपातन (Disproportionation) अभिक्रिया वह रेडॉक्स अभिक्रिया है जिसमें एक ही तत्व का एक ही ऑक्सीकरण अवस्था से एक साथ ऑक्सीकरण और अपचयन होता है। विकल्प (1) में क्लोरीन ($\\text{Cl}_2$) की ऑक्सीकरण संख्या 0 से बदलकर $\\text{ClO}^-$ में +1 तथा $\\text{Cl}^-$ में -1 हो जाती है, जो कि असमानुपातन का एक उत्कृष्ट उदाहरण है।",
@@ -2448,7 +2520,11 @@
                     "correct_label": "3",
                     "explanation_en": "Reaction 3 is a simple displacement reaction where Zinc is oxidized and Hydrogen is reduced, not a disproportionation reaction."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:02:26.413Z"
         },
         {
             "source_page": 5,
@@ -2599,8 +2675,8 @@
         {
             "source_page": 5,
             "number": 32,
-            "question_hi": "दहन के पश्चात् $44\\text{ g } \\text{CO}_2(\\text{g})$ उत्पन्न करने के लिए मेथेन के आवश्यक मोलों की संख्या है -\n(1) $2.0\\text{ mol}$\n(2) $0.5\\text{ mol}$\n(3) $1.0\\text{ mol}$\n(4) $1.5\\text{ mol}$\n(5) अनुत्तरित प्रश्न",
-            "question_en": "The number of moles of methane required to produce $44\\text{ g}$ of $\\text{CO}_2(\\text{g})$ after combustion is -\n(1) $2.0\\text{ mol}$\n(2) $0.5\\text{ mol}$\n(3) $1.0\\text{ mol}$\n(4) $1.5\\text{ mol}$\n(5) Question not attempted",
+            "question_hi": "दहन के पश्चात् $44\\text{ g } \\text{CO}_2(\\text{g})$ उत्पन्न करने के लिए मेथेन के आवश्यक मोलों की संख्या है -\n",
+            "question_en": "The number of moles of methane required to produce $44\\text{ g}$ of $\\text{CO}_2(\\text{g})$ after combustion is -\n",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -2610,27 +2686,42 @@
                 {
                     "label": "1",
                     "hi": "$2.0\\text{ mol}$",
-                    "en": "$2.0\\text{ mol}$"
+                    "en": "$2.0\\text{ mol}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "$0.5\\text{ mol}$",
-                    "en": "$0.5\\text{ mol}$"
+                    "en": "$0.5\\text{ mol}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "$1.0\\text{ mol}$",
-                    "en": "$1.0\\text{ mol}$"
+                    "en": "$1.0\\text{ mol}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "$1.5\\text{ mol}$",
-                    "en": "$1.5\\text{ mol}$"
+                    "en": "$1.5\\text{ mol}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "मेथेन का दहन समीकरण है:\n$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$\nउत्पन्न $\\text{CO}_2$ का द्रव्यमान = $44\\text{ g}$\n$\\text{CO}_2$ के मोल = $\\frac{44\\text{ g}}{44\\text{ g/mol}} = 1\\text{ mol}$\nसमीकरण के अनुसार, 1 मोल $\\text{CO}_2$ प्राप्त करने के लिए 1 मोल $\\text{CH}_4$ की आवश्यकता होती है।",
@@ -2718,7 +2809,11 @@
                     "correct_label": "1",
                     "explanation_en": "22 g of $\\text{CO}_2$ is 0.5 moles. Since the stoichiometric ratio of $\\text{CH}_4$ to $\\text{CO}_2$ is 1:1, 0.5 moles of $\\text{CH}_4$ is required."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:02:26.413Z"
         },
         {
             "source_page": 6,
@@ -5218,7 +5313,7 @@
         {
             "source_page": 11,
             "number": 85,
-            "question_hi": "अंतरिक्ष के एक क्षेत्र में $m$ द्रव्यमान के एक कण के लिए तरंग-फलन है -\n$\\psi(x) = \\begin{cases} Nxe^{-\\alpha x} & \\text{के लिए } x > 0 \\\\ 0 & \\text{के लिए } x < 0 \\end{cases}$\nकण की स्थितिज ऊर्जा क्या है यदि कण की कुल ऊर्जा शून्य है?\n(यहाँ $\\alpha$ एक धनात्मक नियतांक है)",
+            "question_hi": "अंतरिक्ष के एक क्षेत्र में $m$ द्रव्यमान के एक कण के लिए तरंग-फलन है -\n$\\psi(x) = \\begin{cases} Nxe^{-\\alpha x} & \\text{के लिए } x > 0 \\\\ 0 & \\text{के लिए} x < 0 \\end{cases}$\nकण की स्थितिज ऊर्जा क्या है यदि कण की कुल ऊर्जा शून्य है?\n(यहाँ $\\alpha$ एक धनात्मक नियतांक है)",
             "question_en": "In a region of space, a particle of mass $m$ has a wave-function -\n$\\psi(x) = \\begin{cases} Nxe^{-\\alpha x} & \\text{for } x > 0 \\\\ 0 & \\text{for } x < 0 \\end{cases}$\nWhat is the potential energy of particle if the total energy of particle is zero?\n(Here $\\alpha$ is a positive constant)",
             "has_visuals": false,
             "visual_location": "none",
@@ -5229,27 +5324,42 @@
                 {
                     "label": "1",
                     "hi": "$\\frac{-\\hbar^2}{2m} \\left(\\alpha^2 - \\frac{2\\alpha}{x}\\right)$",
-                    "en": "$\\frac{-\\hbar^2}{2m} \\left(\\alpha^2 - \\frac{2\\alpha}{x}\\right)$"
+                    "en": "$\\frac{-\\hbar^2}{2m} \\left(\\alpha^2 - \\frac{2\\alpha}{x}\\right)$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "$\\frac{\\hbar^2}{2m} \\left(\\alpha^2 - \\frac{2\\alpha}{x}\\right)$",
-                    "en": "$\\frac{\\hbar^2}{2m} \\left(\\alpha^2 - \\frac{2\\alpha}{x}\\right)$"
+                    "en": "$\\frac{\\hbar^2}{2m} \\left(\\alpha^2 - \\frac{2\\alpha}{x}\\right)$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "$\\frac{\\hbar^2}{2m} \\left(\\alpha^2 + \\frac{2\\alpha}{x}\\right)$",
-                    "en": "$\\frac{\\hbar^2}{2m} \\left(\\alpha^2 + \\frac{2\\alpha}{x}\\right)$"
+                    "en": "$\\frac{\\hbar^2}{2m} \\left(\\alpha^2 + \\frac{2\\alpha}{x}\\right)$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "इस प्रश्न का उत्तर देने के लिए N के मान की आवश्यकता है",
-                    "en": "Value of N is needed to answer this question"
+                    "en": "Value of N is needed to answer this question",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "एकविमीय श्रोडिंगर समीकरण से, समय-स्वतन्त्र समीकरण है:\n$-\\frac{\\hbar^2}{2m} \\frac{d^2\\psi}{dx^2} + V(x)\\psi = E\\psi$\nदिया गया है कि कुल ऊर्जा $E = 0$, अतः:\n$V(x) = \\frac{\\hbar^2}{2m} \\frac{1}{\\psi} \\frac{d^2\\psi}{dx^2}$\nतरंग फलन $x > 0$ के लिए $\\psi(x) = N x e^{-\\alpha x}$ है। इसका प्रथम अवकलज:\n$\\frac{d\\psi}{dx} = N e^{-\\alpha x} - N \\alpha x e^{-\\alpha x} = N e^{-\\alpha x} (1 - \\alpha x)$\nद्वितीय अवकलज:\n$\\frac{d^2\\psi}{dx^2} = N(-\\alpha) e^{-\\alpha x} (1 - \\alpha x) + N e^{-\\alpha x}(-\\alpha) = N \\alpha e^{-\\alpha x} (\\alpha x - 2)$\nअब $\\frac{1}{\\psi} \\frac{d^2\\psi}{dx^2}$ ज्ञात करते हैं:\n$\\frac{1}{N x e^{-\\alpha x}} [N \\alpha e^{-\\alpha x} (\\alpha x - 2)] = \\frac{\\alpha (\\alpha x - 2)}{x} = \\alpha^2 - \\frac{2\\alpha}{x}$\nअतः स्थितिज ऊर्जा $V(x) = \\frac{\\hbar^2}{2m} \\left(\\alpha^2 - \\frac{2\\alpha}{x}\\right)$ होगी। ध्यान दें कि $N$ अनुपात में कट जाता है, अतः इसके मान की आवश्यकता नहीं होती।",
@@ -5337,7 +5447,11 @@
                     "correct_label": "1",
                     "explanation_en": "For $\\psi(x) = N e^{-\\beta x}$, $\\frac{d^2\\psi}{dx^2} = \\beta^2 \\psi$. Substituting in $V = \\frac{\\hbar^2}{2m \\psi} \\frac{d^2\\psi}{dx^2} = \\frac{\\hbar^2 \\beta^2}{2m}$."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:02:26.413Z"
         },
         {
             "source_page": 11,
@@ -8479,8 +8593,8 @@
         {
             "source_page": 17,
             "number": 147,
-            "question_hi": "सूची-I को सूची-II से सुमेलित कीजिये तथा सूची के नीचे दिये गये कूट का प्रयोग करके सही उत्तर का चयन कीजिये -\nसूची-I\n(A) साहित्यिक गतिविधियाँ\n(B) सौन्दर्यत्मक गतिविधियाँ\n(C) सामाजिक कल्याण गतिविधियाँ\n(D) अवकाश समय गतिविधियाँ\nसूची-II\n(i) टिकिट एवं सिक्का संग्रह\n(ii) वाद-विवाद एवं परिचर्चा\n(iii) संगीत, नृत्य एवं चित्रकला\n(iv) सामाजिक सेवाएँ\nकूट -\n(1) (A)-(ii), (B)-(i), (C)-(iii), (D)-(iv)\n(2) (A)-(i), (B)-(iv), (C)-(iii), (D)-(ii)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)\n(4) (A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)\n(5) अनुत्तरित प्रश्न",
-            "question_en": "Match List-I with List-II and select the correct answer by using the code given below the lists -\nList-I\n(A) Literary Activities\n(B) Aesthetic Activities\n(C) Social Welfare Activities\n(D) Leisure Time Activities\nList-II\n(i) Stamp and Coin Collection\n(ii) Debate and Discussion\n(iii) Music, Dancing and Drawing\n(iv) Social Services\nCode -\n(1) (A)-(ii), (B)-(i), (C)-(iii), (D)-(iv)\n(2) (A)-(i), (B)-(iv), (C)-(iii), (D)-(ii)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)\n(4) (A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)\n(5) Question not attempted",
+            "question_hi": "सूची-I को सूची-II से सुमेलित कीजिये तथा सूची के नीचे दिये गये कूट का प्रयोग करके सही उत्तर का चयन कीजिये -\n\n[table]",
+            "question_en": "Match List-I with List-II and select the correct answer by using the code given below the lists -\n\n[table]",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -8490,31 +8604,46 @@
                 {
                     "label": "1",
                     "hi": "(A)-(ii), (B)-(i), (C)-(iii), (D)-(iv)",
-                    "en": "(A)-(ii), (B)-(i), (C)-(iii), (D)-(iv)"
+                    "en": "(A)-(ii), (B)-(i), (C)-(iii), (D)-(iv)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "(A)-(i), (B)-(iv), (C)-(iii), (D)-(ii)",
-                    "en": "(A)-(i), (B)-(iv), (C)-(iii), (D)-(ii)"
+                    "en": "(A)-(i), (B)-(iv), (C)-(iii), (D)-(ii)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)",
-                    "en": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)"
+                    "en": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)",
-                    "en": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)"
+                    "en": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
-            "explanation_hi": "साहित्यिक गतिविधियाँ (Literary Activities) के अन्तर्गत वाद-विवाद एवं परिचर्चा (Debate and Discussion) आती हैं अत: (A)-(ii); सौन्दर्यत्मक गतिविधियाँ (Aesthetic Activities) के अन्तर्गत संगीत, नृत्य एवं चित्रकला (Music, Dancing and Drawing) आती हैं अत: (B)-(iii); सामाजिक कल्याण गतिविधियाँ (Social Welfare Activities) के अन्तर्गत सामाजिक सेवाएँ (Social Services) आती हैं अत: (C)-(iv); तथा अवकाश समय गतिविधियाँ (Leisure Time Activities) के अन्तर्गत टिकिट एवं सिक्का संग्रह (Stamp and Coin Collection) आते हैं अत: (D)-(i) सही सुमेलन है। सही कूट (4) है।",
-            "explanation_en": "Literary Activities include Debate and Discussion so (A)-(ii); Aesthetic Activities include Music, Dancing and Drawing so (B)-(iii); Social Welfare Activities include Social Services so (C)-(iv); Leisure Time Activities include Stamp and Coin Collection so (D)-(i). Thus, the correct matching is (A)-(ii), (B)-(iii), (C)-(iv), (D)-(i), which matches option (4).",
+            "explanation_hi": "* **साहित्यिक गतिविधियाँ (Literary Activities):** इसके अन्तर्गत वाद-विवाद एवं परिचर्चा आती हैं $\\rightarrow$ (A)-(ii)\n* **सौन्दर्यत्मक गतिविधियाँ (Aesthetic Activities):** इसके अन्तर्गत संगीत, नृत्य एवं चित्रकला आती हैं $\\rightarrow$ (B)-(iii)\n* **सामाजिक कल्याण गतिविधियाँ (Social Welfare Activities):** इसके अन्तर्गत सामाजिक सेवाएँ आती हैं $\\rightarrow$ (C)-(iv)\n* **अवकाश समय गतिविधियाँ (Leisure Time Activities):** इसके अन्तर्गत टिकट एवं सिक्का संग्रह आते हैं $\\rightarrow$ (D)-(i)\n\nअतः सही सुमेलन (A)-(ii), (B)-(iii), (C)-(iv), (D)-(i) है, जो विकल्प (4) में दिया गया है।\n",
+            "explanation_en": "* **Literary Activities:** These include Debate and Discussion $\\rightarrow$ (A)-(ii)\n* **Aesthetic Activities:** These include Music, Dancing, and Drawing $\\rightarrow$ (B)-(iii)\n* **Social Welfare Activities:** These include Social Services $\\rightarrow$ (C)-(iv)\n* **Leisure Time Activities:** These include Stamp and Coin Collection $\\rightarrow$ (D)-(i)\n\nThus, the correct matching is (A)-(ii), (B)-(iii), (C)-(iv), (D)-(i), which matches option (4).\n",
             "option_rationales": [
                 {
                     "label": "1",
@@ -8598,7 +8727,75 @@
                     "correct_label": "1",
                     "explanation_en": "Literary activities include debate (A)-(i) and aesthetic activities include painting (B)-(ii)."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "content_hi": [
+                {
+                    "type": "text",
+                    "text": "सूची-I को सूची-II से सुमेलित कीजिये तथा सूची के नीचे दिये गये कूट का प्रयोग करके सही उत्तर का चयन कीजिये -"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "सूची-I",
+                            "सूची-II"
+                        ],
+                        [
+                            "(A) साहित्यिक गतिविधियाँ",
+                            "(i) टिकिट एवं सिक्का संग्रह"
+                        ],
+                        [
+                            "(B) सौन्दर्यत्मक गतिविधियाँ",
+                            "(ii) वाद-विवाद एवं परिचर्चा"
+                        ],
+                        [
+                            "(C) सामाजिक कल्याण गतिविधियाँ",
+                            "(iii) संगीत, नृत्य एवं चित्रकला"
+                        ],
+                        [
+                            "(D) अवकाश समय गतिविधियाँ",
+                            "(iv) सामाजिक सेवाएँ"
+                        ]
+                    ]
+                }
+            ],
+            "content_en": [
+                {
+                    "type": "text",
+                    "text": "Match List-I with List-II and select the correct answer by using the code given below the lists -"
+                },
+                {
+                    "type": "table",
+                    "header": true,
+                    "rows": [
+                        [
+                            "List-I",
+                            "List-II"
+                        ],
+                        [
+                            "(A) Literary Activities",
+                            "(i) Stamp and Coin Collection"
+                        ],
+                        [
+                            "(B) Aesthetic Activities",
+                            "(ii) Debate and Discussion"
+                        ],
+                        [
+                            "(C) Social Welfare Activities",
+                            "(iii) Music, Dancing and Drawing"
+                        ],
+                        [
+                            "(D) Leisure Time Activities",
+                            "(iv) Social Services"
+                        ]
+                    ]
+                }
+            ],
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T08:02:26.413Z"
         },
         {
             "source_page": 17,
