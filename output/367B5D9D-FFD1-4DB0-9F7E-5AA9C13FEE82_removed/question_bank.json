@@ -3635,34 +3635,49 @@
             "question_en": "Consider the situation shown in figure. The force $F$ is equal to $\\frac{m_2 g}{2}$. If the area of cross section of the wire is $A$ and its Young's modulus is $Y$, then the strain developed in the wire is -\n(wire is light and there is no friction anywhere)",
             "has_visuals": true,
             "visual_location": "question",
-            "image_hi": null,
-            "image_en": null,
+            "image_hi": "images/page8_q48_hi.jpg",
+            "image_en": "images/page8_q48_en.jpg",
             "image_full": "images/page8_q48_full.jpg",
             "options": [
                 {
                     "label": "1",
                     "hi": "$\\frac{m_2 g (2 m_1 + m_2)}{2 A Y (m_1 + m_2)}$",
-                    "en": "$\\frac{m_2 g (2 m_1 + m_2)}{2 A Y (m_1 + m_2)}$"
+                    "en": "$\\frac{m_2 g (2 m_1 + m_2)}{2 A Y (m_1 + m_2)}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "2",
                     "hi": "$\\frac{m_2 g (2 m_1 + m_2)}{A Y (m_1 + m_2)}$",
-                    "en": "$\\frac{m_2 g (2 m_1 + m_2)}{A Y (m_1 + m_2)}$"
+                    "en": "$\\frac{m_2 g (2 m_1 + m_2)}{A Y (m_1 + m_2)}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "3",
                     "hi": "$\\frac{m_2 g (m_1 + 2 m_2)}{2 A Y (m_1 + m_2)}$",
-                    "en": "$\\frac{m_2 g (m_1 + 2 m_2)}{2 A Y (m_1 + m_2)}$"
+                    "en": "$\\frac{m_2 g (m_1 + 2 m_2)}{2 A Y (m_1 + m_2)}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "4",
                     "hi": "$\\frac{m_2 g (m_1 + 2 m_2)}{A Y (m_1 + m_2)}$",
-                    "en": "$\\frac{m_2 g (m_1 + 2 m_2)}{A Y (m_1 + m_2)}$"
+                    "en": "$\\frac{m_2 g (m_1 + 2 m_2)}{A Y (m_1 + m_2)}$",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 },
                 {
                     "label": "5",
                     "hi": "अनुत्तरित प्रश्न",
-                    "en": "Question not attempted"
+                    "en": "Question not attempted",
+                    "svg": null,
+                    "image_gen_prompt": null,
+                    "image": null
                 }
             ],
             "explanation_hi": "यहाँ पुली पर लटके द्रव्यमान $m_2$ तथा क्षैतिज सतह पर रखे द्रव्यमान $m_1$ के संयोजन की गति में, डोरी में तनाव $T$ निकाला जाता है।\nत्वरण $a = \\frac{m_2 g - F}{m_1 + m_2}$ या $F = \\frac{m_2 g}{2}$ रखने पर, $a = \\frac{m_2 g}{2(m_1 + m_2)}$ प्राप्त होता है।\nडोरी में तनाव $T$ की गणना $m_1$ के लिए गति के समीकरण से की जाती है: $T - F = m_1 a \\implies T = F + m_1 a = \\frac{m_2 g}{2} + m_1 \\left(\\frac{m_2 g}{2(m_1 + m_2)}\\right)$।\nयंग गुणांक के सूत्र से विकृति $\\text{Strain} = \\frac{T}{AY}$ होती है। मान रखने पर सही विकल्प प्राप्त होता है।",
@@ -3750,7 +3765,12 @@
                     "correct_label": "3",
                     "explanation_en": "When $F = m_2 g$, the acceleration is zero and tension becomes zero, hence strain is zero."
                 }
-            }
+            },
+            "is_duplicate": false,
+            "duplicate_of_number": null,
+            "full": null,
+            "human_reviewed": true,
+            "human_reviewed_at": "2026-08-15T06:38:24.920Z"
         },
         {
             "source_page": 8,
