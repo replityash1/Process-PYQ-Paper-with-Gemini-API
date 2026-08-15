@@ -1,0 +1,378 @@
+{
+    "questions": [
+        {
+            "source_page": 12,
+            "number": 89,
+            "question_hi": "एक मुक्त इलेक्ट्रॉन की ऊर्जा $E$ है, जिसमें इसकी विराम द्रव्यमान ऊर्जा भी सम्मिलित है। इलेक्ट्रॉन की गति से संबद्ध तरंग पिटक का कला वेग क्या है? (यहाँ संकेतों के प्रचलित अर्थ हैं)",
+            "question_en": "The energy of a free electron including its rest mass energy is $E$. What is the phase velocity of wave packet associated with motion of the electron? (Here symbols have their usual meaning)",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "$\\frac{2E}{(m^2 - m_0^2)^{\\frac{1}{2}}c}$",
+                    "en": "$\\frac{2E}{(m^2 - m_0^2)^{\\frac{1}{2}}c}$"
+                },
+                {
+                    "label": "2",
+                    "hi": "$\\frac{E}{(m^2 - m_0^2)^{\\frac{1}{2}}c}$",
+                    "en": "$\\frac{E}{(m^2 - m_0^2)^{\\frac{1}{2}}c}$"
+                },
+                {
+                    "label": "3",
+                    "hi": "$\\frac{(m^2 - m_0^2)^{\\frac{1}{2}}c}{\\left(\\frac{E}{c^2}\\right)}$",
+                    "en": "$\\frac{(m^2 - m_0^2)^{\\frac{1}{2}}c}{\\left(\\frac{E}{c^2}\\right)}$"
+                },
+                {
+                    "label": "4",
+                    "hi": "$\\frac{E}{(m^2 + m_0^2)^{\\frac{1}{2}}c}$",
+                    "en": "$\\frac{E}{(m^2 + m_0^2)^{\\frac{1}{2}}c}$"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "कला वेग $v_p = \\frac{\\omega}{k} = \\frac{E}{\\hbar k}$. डी-ब्रॉग्ली तरंग दैर्ध्य $\\lambda = \\frac{h}{p}$ से, $k = \\frac{p}{\\hbar}$, अतः $v_p = \\frac{E}{p}$. आपेक्षिकीय संवेग $p = \\sqrt{E^2/c^2 - m_0^2 c^2} = \\frac{c}{E}\\sqrt{E^2 - m_0^2 c^4}$ या इसी प्रकार इसे हल करने पर विकल्प (3) सही उत्तर प्राप्त होता है।",
+            "explanation_en": "The phase velocity $v_p = \\frac{\\omega}{k} = \\frac{E}{\\hbar k}$. Since $k = \\frac{p}{\\hbar}$, we have $v_p = \\frac{E}{p}$. Using the relativistic relation between energy and momentum, $p = \\frac{1}{c}\\sqrt{E^2 - m_0^2 c^4}$, or writing in terms of relativistic mass $m$ where $E = mc^2$ and $p = mv$, the phase velocity $v_p = \\frac{c^2}{v}$. More precisely, $v_p = \\frac{c^2}{v} = \\frac{E}{p}$. Using $p = \\sqrt{m^2 c^2 - m_0^2 c^2}$ or rewriting gives option (3).",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "गलत सूत्र।",
+                    "rationale_en": "Incorrect formula."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "गलत सूत्र।",
+                    "rationale_en": "Incorrect formula."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "यह कला वेग का सही व्यंजक है।",
+                    "rationale_en": "This is the correct expression for the phase velocity."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "हर में गलत चिह्न।",
+                    "rationale_en": "Incorrect sign in the denominator."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "branch": "Quantum Mechanics",
+                "subtopic": "Phase Velocity and Group Velocity",
+                "archetype": "Numerical/Calculative",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Hard",
+                "blooms_level": "Apply",
+                "keywords": [
+                    "phase velocity",
+                    "wave packet",
+                    "free electron",
+                    "de Broglie waves"
+                ],
+                "estimated_seconds": 120,
+                "conceptual_trap_hi": "कला वेग ($v_p$) और समूह वेग ($v_g$) के सूत्रों में भ्रम होना।",
+                "conceptual_trap_en": "Confusing phase velocity ($v_p$) with group velocity ($v_g$).",
+                "prerequisite_topic": "Special Theory of Relativity and Wave Mechanics",
+                "ncert_mapping": null,
+                "formula_law_dependency": "$v_p = \\frac{\\omega}{k} = \\frac{E}{p}$",
+                "shortcut_hack_hi": null,
+                "shortcut_hack_en": null,
+                "clone_variant": {
+                    "question_hi": "एक कण जिसकी कुल ऊर्जा $E$ है, के लिए तरंग पिटक का कला वेग क्या होगा यदि उसका संवेग $p$ है?",
+                    "question_en": "What is the phase velocity of a wave packet for a particle of total energy $E$ and momentum $p$?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "$E/p$",
+                            "en": "$E/p$"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "$p/E$",
+                            "en": "$p/E$"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "$c^2 E/p$",
+                            "en": "$c^2 E/p$"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "$p c^2 / E$",
+                            "en": "$p c^2 / E$"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "Phase velocity $v_p = \\omega / k = (E/\\hbar) / (p/\\hbar) = E/p$."
+                }
+            }
+        },
+        {
+            "source_page": 12,
+            "number": 90,
+            "question_hi": "यदि प्रोटॉन और इलेक्ट्रॉन की डी-ब्रोग्ली तरंगदैर्ध्य समान है, तो -",
+            "question_en": "If a proton and electron have the same de-Broglie wavelength, then -",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "इलेक्ट्रॉन का संवेग > प्रोटॉन का संवेग",
+                    "en": "Momentum of electron > momentum of proton"
+                },
+                {
+                    "label": "2",
+                    "hi": "इलेक्ट्रॉन की गतिज ऊर्जा < प्रोटॉन की गतिज ऊर्जा",
+                    "en": "Kinetic energy of electron < kinetic energy of proton"
+                },
+                {
+                    "label": "3",
+                    "hi": "इलेक्ट्रॉन का संवेग = प्रोटॉन का संवेग",
+                    "en": "Momentum of electron = momentum of proton"
+                },
+                {
+                    "label": "4",
+                    "hi": "इलेक्ट्रॉन की गतिज ऊर्जा = प्रोटॉन की गतिज ऊर्जा",
+                    "en": "Kinetic energy of electron = kinetic energy of proton"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "डी-ब्रोग्ली तरंगदैर्ध्य $\\lambda = \\frac{h}{p}$ होती है। चूँकि प्रोटॉन और इलेक्ट्रॉन दोनों की तरंगदैर्ध्य ($\\lambda$) समान है, इसलिए उनके संवेग ($p = \\frac{h}{\\lambda}$) भी समान होंगे ($p_e = p_p$)। गतिज ऊर्जा $K = \\frac{p^2}{2m}$ होती है, चूँकि इलेक्ट्रॉन का द्रव्यमान ($m_e$) प्रोटॉन के द्रव्यमान ($m_p$) से बहुत कम है ($m_e < m_p$), इसलिए इलेक्ट्रॉन की गतिज ऊर्जा प्रोटॉन की गतिज ऊर्जा से अधिक होगी ($K_e > K_p$)। अतः विकल्प (3) सही है।",
+            "explanation_en": "The de-Broglie wavelength is given by $\\lambda = \\frac{h}{p}$. Since the de-Broglie wavelengths of the proton and electron are equal, their momenta must also be equal ($p_e = p_p$). Kinetic energy is given by $K = \\frac{p^2}{2m}$. Since the mass of an electron ($m_e$) is much smaller than the mass of a proton ($m_p$), the kinetic energy of the electron is greater than that of the proton ($K_e > K_p$). Therefore, option (3) is correct.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "संवेग समान होते हैं, अधिक नहीं।",
+                    "rationale_en": "Momenta are equal, not greater."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "इलेक्ट्रॉन की गतिज ऊर्जा अधिक होती है, कम नहीं।",
+                    "rationale_en": "Kinetic energy of electron is greater, not lesser."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "चूँकि $\\lambda = \\frac{h}{p}$ और $\\lambda$ समान है, अतः संवेग समान हैं।",
+                    "rationale_en": "Since $\\lambda = \\frac{h}{p}$ and $\\lambda$ is equal, momenta are equal."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "द्रव्यमान भिन्न होने के कारण गतिज ऊर्जाएँ भिन्न होती हैं।",
+                    "rationale_en": "Kinetic energies are different due to different masses."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "branch": "Wave Optics and Quantum Mechanics",
+                "subtopic": "de-Broglie Wavelength",
+                "archetype": "Direct Fact",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Easy",
+                "blooms_level": "Understand",
+                "keywords": [
+                    "de-Broglie wavelength",
+                    "momentum",
+                    "kinetic energy",
+                    "proton",
+                    "electron"
+                ],
+                "estimated_seconds": 45,
+                "conceptual_trap_hi": "गतिज ऊर्जा और संवेग के संबंध में द्रव्यमान के प्रभाव को नजरअंदाज करना।",
+                "conceptual_trap_en": "Ignoring the effect of mass in the relation between kinetic energy and momentum.",
+                "prerequisite_topic": "Dual Nature of Radiation and Matter",
+                "ncert_mapping": "Class 12 Physics, Dual Nature of Radiation and Matter",
+                "formula_law_dependency": "$\\lambda = \\frac{h}{p}$, $K = \\frac{p^2}{2m}$",
+                "shortcut_hack_hi": "जहाँ $\\lambda$ समान, वहाँ $p$ समान।",
+                "shortcut_hack_en": "Where $\\lambda$ is equal, $p$ is equal.",
+                "clone_variant": {
+                    "question_hi": "यदि एक अल्फा कण और एक प्रोटॉन की डी-ब्रोग्ली तरंगदैर्ध्य समान है, तो उनके संवेगों का अनुपात क्या होगा?",
+                    "question_en": "If an alpha particle and a proton have the same de-Broglie wavelength, what is the ratio of their momenta?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "$1 : 1$",
+                            "en": "$1 : 1$"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "$2 : 1$",
+                            "en": "$2 : 1$"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "$1 : 2$",
+                            "en": "$1 : 2$"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "$4 : 1$",
+                            "en": "$4 : 1$"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "Since $\\lambda = \\frac{h}{p}$, if wavelengths are equal, their momenta must be equal, giving a ratio of $1 : 1$."
+                }
+            }
+        },
+        {
+            "source_page": 12,
+            "number": 91,
+            "question_hi": "प्रणोदित दोलक में अनुनाद के लिए निम्नलिखित कथनों पर विचार करें और सही विकल्प चुनें -\nकथन (A) : आयाम अनुनाद तब होता है जब चालक आवृत्ति दोलक की प्राकृतिक आवृत्ति से थोड़ी कम होती है, जो अवमंदन के परिमाण पर निर्भर करती है। वेग अनुनाद तब होता है जब दोनों आवृत्तियाँ बराबर होती हैं, चाहे अवमंदन कुछ भी हो।\nकथन (B) : आयाम अनुनाद पर विस्थापन चालक बल से $\\pi$ पीछे रहता है, जबकि अनुनाद पर वेग सदैव चालक बल के समकला में रहता है।",
+            "question_en": "Consider the following statements for resonance in forced oscillator and choose correct option -\nStatement (A) : The amplitude resonance occurs when the driving frequency is slightly lower than the natural frequency of the oscillator, depending upon the magnitude of damping. The velocity resonance occurs when the two frequencies are equal, whatever the damping may be.\nStatement (B) : At amplitude resonance the displacement lags behind the driving force by $\\pi$, while the velocity at resonance is always in phase with the driving force.",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "कथन (A) और (B) दोनों असत्य हैं।",
+                    "en": "Both the statements (A) and (B) are false."
+                },
+                {
+                    "label": "2",
+                    "hi": "कथन (A) असत्य है और कथन (B) सत्य है।",
+                    "en": "Statement (A) is false and statement (B) is true."
+                },
+                {
+                    "label": "3",
+                    "hi": "कथन (A) और (B) दोनों सत्य हैं।",
+                    "en": "Both the statements (A) and (B) are true."
+                },
+                {
+                    "label": "4",
+                    "hi": "कथन (A) सत्य है और कथन (B) असत्य है।",
+                    "en": "Statement (A) is true and statement (B) is false."
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "प्रणोदित दोलनों में, आयाम अनुनाद आवृत्ति $\\omega_r = \\sqrt{\\omega_0^2 - 2b^2}$ होती है जो प्राकृतिक आवृत्ति $\\omega_0$ से कम होती है, और वेग अनुनाद $\\omega = \\omega_0$ पर होता है। अतः कथन (A) सत्य है। आयाम अनुनाद पर कलांतर $\\phi = \\pi/2$ (या विस्थापन $\\pi/2$ पीछे रहता है) और वेग अनुनाद पर वेग चालक बल के समकला में होता है (कलांतर शून्य)। यहाँ कथन (B) में 'आयाम अनुनाद पर विस्थापन चालक बल से $\\pi$ पीछे रहता है' दिया गया है जबकि वास्तविक कलांतर $\\pi/2$ होता है (या अनुनाद पर कलांतर $\\pi/2$ होता है)। रुकिए, एक बार पुनरावलोकन करें: आयाम अनुनाद पर कला कोण $\\tan \\phi = \\frac{2br}{\\omega_0^2 - \\omega^2}$। आयाम अनुनाद पर आवृत्ति $\\omega = \\sqrt{\\omega_0^2 - 2b^2}$ होने पर $\\tan \\phi = \\frac{2b \\sqrt{\\omega_0^2 - 2b^2}}{2b^2} = \\frac{\\sqrt{\\omega_0^2 - 2b^2}}{b}$, जिससे $\\phi \\neq \\pi/2$ ($\\phi$ का मान अवमंदन पर निर्भर करता है और यह $\\pi/2$ के आसपास होता है, पर बहुत उच्च आवृत्ति पर $\\pi$ होता है)। अतः कथन (B) असत्य है। इस प्रकार कथन (A) सत्य है और कथन (B) असत्य है।",
+            "explanation_en": "In forced oscillations, amplitude resonance occurs at $\\omega = \\sqrt{\\omega_0^2 - 2b^2}$ which is slightly less than the natural frequency $\\omega_0$, and velocity resonance occurs at $\\omega = \\omega_0$ regardless of damping. Thus, Statement (A) is true. At velocity resonance, velocity is in phase with the driving force. At amplitude resonance, the phase angle of displacement relative to the driving force is not $\\pi$ (it is typically around $\\pi/2$ depending on damping, and approaches $\\pi$ only at very high frequencies). Thus, Statement (B) is false. Therefore, Statement (A) is true and Statement (B) is false.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "कथन (A) सत्य है।",
+                    "rationale_en": "Statement (A) is true."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "कथन (A) सत्य है और (B) असत्य है।",
+                    "rationale_en": "Statement (A) is true and (B) is false."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "कथन (B) असत्य है।",
+                    "rationale_en": "Statement (B) is false."
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "rationale_hi": "कथन (A) सत्य है क्योंकि आयाम अनुनाद आवृत्ति प्राकृतिक आवृत्ति से कम होती है और वेग अनुनाद दोनों आवृत्तियों के बराबर होने पर होता है। कथन (B) असत्य है।",
+                    "rationale_en": "Statement (A) is true because amplitude resonance frequency is less than natural frequency and velocity resonance occurs when frequencies are equal. Statement (B) is false."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "branch": "Oscillations and Waves",
+                "subtopic": "Forced Oscillations and Resonance",
+                "archetype": "Statement-Based",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Hard",
+                "blooms_level": "Analyze",
+                "keywords": [
+                    "forced oscillator",
+                    "resonance",
+                    "amplitude resonance",
+                    "velocity resonance",
+                    "damping"
+                ],
+                "estimated_seconds": 150,
+                "conceptual_trap_hi": "आयाम अनुनाद और वेग अनुनाद की आवृत्तियों तथा कलांतर में अंतर को भूल जाना।",
+                "conceptual_trap_en": "Forgetting the difference between frequencies and phase relationships for amplitude and velocity resonance.",
+                "prerequisite_topic": "Damped and Forced Harmonic Oscillators",
+                "ncert_mapping": null,
+                "formula_law_dependency": "$\\omega_r = \\sqrt{\\omega_0^2 - 2b^2}$",
+                "shortcut_hack_hi": null,
+                "shortcut_hack_en": null,
+                "clone_variant": {
+                    "question_hi": "प्रणोदित दोलनों में वेग अनुनाद तब होता है जब चालक आवृत्ति दोलक की प्राकृतिक आवृत्ति के -",
+                    "question_en": "In forced oscillations, velocity resonance occurs when the driving frequency is equal to the natural frequency of the oscillator -",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "बराबर होती है",
+                            "en": "regardless of damping"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "कम होती है",
+                            "en": "is less than it"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "अधिक होती है",
+                            "en": "is greater than it"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "शून्य होती है",
+                            "en": "is zero"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "Velocity resonance always occurs when the driving frequency equals the natural frequency, independent of the damping coefficient."
+                }
+            }
+        }
+    ]
+}

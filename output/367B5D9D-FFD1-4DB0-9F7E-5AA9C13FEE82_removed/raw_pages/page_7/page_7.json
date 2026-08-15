@@ -1,0 +1,373 @@
+{
+    "questions": [
+        {
+            "source_page": 7,
+            "number": 45,
+            "question_hi": "द्रव्यमान $m$ का एक कण रखा गया है -\n(I) द्रव्यमान $M$ के एकसमान गोलाकार कोश के अंदर, लेकिन केंद्र पर नहीं।\n(II) द्रव्यमान $M$ के एकसमान गोलाकार कोश के अंदर, केंद्र पर।\n(III) द्रव्यमान $M$ के एकसमान गोलाकार कोश के बाहर, केंद्र से $r$ दूरी पर।\n(IV) द्रव्यमान $M$ के एकसमान ठोस गोले के बाहर, केंद्र से $2r$ दूरी पर।\nइन स्थितियों को कण पर गुरुत्वाकर्षण बल के परिणाम के अनुसार सबसे कम से सबसे अधिक तक क्रमित करें -",
+            "question_en": "A particle of mass $m$ is placed -\n(I) inside a uniform spherical shell of mass M, but not at the center.\n(II) inside a uniform spherical shell of mass M, at the center.\n(III) outside a uniform spherical shell of mass M, at a distance r from the center.\n(IV) outside a uniform solid sphere of mass M, at a distance 2r from the center.\nRank these situations according to the magnitude of the gravitational force on the particle, least to greatest.",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "(I), (II), (III), (IV)",
+                    "en": "(I), (II), (III), (IV)"
+                },
+                {
+                    "label": "2",
+                    "hi": "(I) और (II) पर समान, फिर (IV), फिर (III)",
+                    "en": "Equal on (I) and (II), then (IV), then (III)"
+                },
+                {
+                    "label": "3",
+                    "hi": "(I) और (II) पर समान, फिर (III) और (IV) पर समान",
+                    "en": "Equal on (I) and (II), then equal on (III) and (IV)"
+                },
+                {
+                    "label": "4",
+                    "hi": "सभी पर समान",
+                    "en": "Equal on all"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "गुरुत्वाकर्षण बल के मान:\n(I) कोश के अंदर (केंद्र पर नहीं): बल शून्य होता है ($F_I = 0$)।\n(II) कोश के अंदर (केंद्र पर): बल शून्य होता है ($F_{II} = 0$)।\n(III) कोश के बाहर केंद्र से $r$ दूरी पर: $F_{III} = \\frac{GMm}{r^2}$\n(IV) ठोस गोले के बाहर केंद्र से $2r$ दूरी पर: $F_{IV} = \\frac{GMm}{(2r)^2} = \\frac{GMm}{4r^2}$\nअतः बल का क्रम (सबसे कम से सबसे अधिक): $F_I = F_II < F_{IV} < F_{III}$ अर्थात (I) और (II) पर समान ($0$), फिर (IV), फिर (III)।",
+            "explanation_en": "Gravitational force magnitudes:\n(I) Inside the shell (not at center): force is zero ($F_I = 0$).\n(II) Inside the shell (at center): force is zero ($F_{II} = 0$).\n(III) Outside the spherical shell at distance $r$: $F_{III} = \\frac{GMm}{r^2}$\n(IV) Outside the solid sphere at distance $2r$: $F_{IV} = \\frac{GMm}{(2r)^2} = \\frac{GMm}{4r^2}$\nComparing magnitudes: $F_I = F_{II} = 0$, $F_{IV} = \\frac{GMm}{4r^2}$, $F_{III} = \\frac{GMm}{r^2}$.\nThus, least to greatest: Equal on (I) and (II) (which is zero), then (IV), then (III).",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "यह गलत क्रम है क्योंकि (I) और (II) में बल शून्य है, जो सबसे कम है।",
+                    "rationale_en": "Incorrect order since forces in (I) and (II) are zero (lowest)."
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "rationale_hi": "(I) और (II) पर बल शून्य ($0$) है (अतः दोनों पर समान और सबसे कम)। (IV) में बल $\\frac{GMm}{4r^2}$ है और (III) में बल $\\frac{GMm}{r^2}$ है। इसलिए सही क्रम: (I) और (II), फिर (IV), फिर (III)।",
+                    "rationale_en": "Forces on (I) and (II) are zero (equal and least). Force on (IV) is $\\frac{GMm}{4r^2}$ and on (III) is $\\frac{GMm}{r^2}$. Thus the order from least to greatest is equal on (I) and (II), then (IV), then (III)."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "(III) और (IV) पर बल समान नहीं हैं क्योंकि दूरियाँ अलग हैं।",
+                    "rationale_en": "Forces on (III) and (IV) are not equal because distances are different."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "सभी स्थितियों में बल समान नहीं है।",
+                    "rationale_en": "Forces are not equal in all situations."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न का विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "branch": "Mechanics",
+                "subtopic": "Gravitation",
+                "archetype": "Numerical/Calculative",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Apply",
+                "keywords": [
+                    "gravitational force",
+                    "spherical shell",
+                    "solid sphere"
+                ],
+                "estimated_seconds": 90,
+                "conceptual_trap_hi": "छात्र यह सोच सकते हैं कि गोले के अंदर केंद्र पर और केंद्र के बाहर बल समान होता है, जबकि कोश के अंदर सभी बिंदुओं पर गुरुत्वाकर्षण बल शून्य होता है।",
+                "conceptual_trap_en": "Students might think the force inside a shell at the center and off-center are different or non-zero, forgetting shell theorem.",
+                "prerequisite_topic": "Newton's Law of Gravitation & Shell Theorem",
+                "ncert_mapping": "Class 11 Physics, Gravitation",
+                "formula_law_dependency": "$F = \\frac{GMm}{r^2}$",
+                "shortcut_hack_hi": "कोश के अंदर गुरुत्वाकर्षण क्षेत्र हमेशा शून्य होता है।",
+                "shortcut_hack_en": "Gravitational field inside a spherical shell is always zero.",
+                "clone_variant": {
+                    "question_hi": "द्रव्यमान $m$ का एक कण रखा गया है: (I) त्रिज्या $R$ के एकसमान गोलाकार कोश के केंद्र पर, (II) कोश के बाहर केंद्र से $2R$ दूरी पर। कण पर गुरुत्वाकर्षण बल का अनुपात $F_I / F_{II}$ क्या है?",
+                    "question_en": "A particle of mass $m$ is placed: (I) at the center of a uniform spherical shell of radius $R$, (II) outside the shell at a distance $2R$ from the center. What is the ratio of the gravitational forces $F_I / F_{II}$?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "0",
+                            "en": "0"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "1",
+                            "en": "1"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "1/4",
+                            "en": "1/4"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "4",
+                            "en": "4"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "Inside a spherical shell at the center, the gravitational force is zero ($F_I = 0$). Outside the shell, the force is non-zero. Therefore, the ratio $F_I / F_{II} = 0 / (\text{non-zero}) = 0$."
+                }
+            }
+        },
+        {
+            "source_page": 7,
+            "number": 46,
+            "question_hi": "चित्र में प्रदर्शित सर्वसम प्रतिरोधकों (प्रत्येक R) के जाल के लिए, सिरों A व B के मध्य तुल्य प्रतिरोध है -",
+            "question_en": "For the network of identical resistance (each R) shown in figure, the equivalent resistance between terminals A and B is -",
+            "has_visuals": true,
+            "visual_location": "question",
+            "image_hi": "page7_q46_hi.jpg",
+            "image_en": "page7_q46_en.jpg",
+            "image_full": "page7_q46_full.jpg",
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "$\\frac{5}{3} R$",
+                    "en": "$\\frac{5}{3} R$"
+                },
+                {
+                    "label": "2",
+                    "hi": "$\\frac{8}{3} R$",
+                    "en": "$\\frac{8}{3} R$"
+                },
+                {
+                    "label": "3",
+                    "hi": "$\\frac{2}{3} R$",
+                    "en": "$\\frac{2}{3} R$"
+                },
+                {
+                    "label": "4",
+                    "hi": "$\\frac{4}{3} R$",
+                    "en": "$\\frac{4}{3} R$"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "परिपथ में समरूपता (Symmetry) का उपयोग करते हुए, मध्य भाग एक सेतु या ब्रिज जैसा प्रतीत होता है। \nध्यान दें कि ब्रिज के केंद्रीय भाग को और प्रतिरोधकों के संयोजन को सरल करने पर:\nमध्य भाग संतुलित व्हीटस्टोन ब्रिज की तरह काम करता है जिससे बीच वाले प्रतिरोधक हट सकते हैं, या नोडल विश्लेषण से कुल प्रतिरोध निकाला जा सकता है।\nदी गई आकृति के अनुसार, टर्मिनल A और B के बीच श्रृंखला और समांतर संयोजनों को हल करने पर तुल्य प्रतिरोध $\\frac{8}{3} R$ प्राप्त होता है।",
+            "explanation_en": "Using symmetry and bridge network analysis for the given identical resistors (each $R$):\nSimplifying the resistor network between terminals A and B, the total equivalent resistance comes out to be $\\frac{8}{3} R$.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "यह गलत मान है।",
+                    "rationale_en": "This is an incorrect value."
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "rationale_hi": "जाल का तुल्य प्रतिरोध सही गणना के अनुसार $\\frac{8}{3} R$ है।",
+                    "rationale_en": "The equivalent resistance of the network evaluates correctly to $\\frac{8}{3} R$."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "यह गलत मान है।",
+                    "rationale_en": "This is an incorrect value."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "यह गलत मान है।",
+                    "rationale_en": "This is an incorrect value."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न का विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "branch": "Current Electricity",
+                "subtopic": "Equivalent Resistance",
+                "archetype": "Numerical/Calculative",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Analyze",
+                "keywords": [
+                    "equivalent resistance",
+                    "resistor network",
+                    "symmetry"
+                ],
+                "estimated_seconds": 120,
+                "conceptual_trap_hi": "प्रतिरोधकों के इस जटिल जाल में श्रेणी और समांतर क्रम को सीधे पहचानना कठिन हो सकता है।",
+                "conceptual_trap_en": "Identifying series and parallel combinations directly in complex bridge structures can lead to miscalculations.",
+                "prerequisite_topic": "Series and Parallel Resistors, Symmetry in Circuits",
+                "ncert_mapping": "Class 12 Physics, Current Electricity",
+                "formula_law_dependency": "$R_{\\text{eq}} = \\sum R_i$",
+                "shortcut_hack_hi": "सममिति (Symmetry) का उपयोग करके नोड पोटेंशियल विधि या डेल्टा-स्टार रूपांतरण का उपयोग करें।",
+                "shortcut_hack_en": "Use symmetry or nodal analysis to simplify symmetric nodes.",
+                "clone_variant": {
+                    "question_hi": "यदि परिपथ में सभी प्रतिरोधक $2\\ \\Omega$ के हों, तो A और B के बीच तुल्य प्रतिरोध क्या होगा?",
+                    "question_en": "If all resistors in the circuit are $2\\ \\Omega$ each, what is the equivalent resistance between A and B?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "$\\frac{16}{3}\\ \\Omega$",
+                            "en": "$\\frac{16}{3}\\ \\Omega$"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "$\\frac{10}{3}\\ \\Omega$",
+                            "en": "$\\frac{10}{3}\\ \\Omega$"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "$\\frac{8}{3}\\ \\Omega$",
+                            "en": "$\\frac{8}{3}\\ \\Omega$"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "$4\\ \\Omega$",
+                            "en": "$4\\ \\Omega$"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "Since $R_{\\text{eq}} = \\frac{8}{3}R$, substituting $R = 2\\ \\Omega$ gives $\\frac{8}{3} \\times 2 = \\frac{16}{3}\\ \\Omega$."
+                }
+            }
+        },
+        {
+            "source_page": 7,
+            "number": 47,
+            "question_hi": "एक बल $\\mathbf{F} = -K(y\\hat{\\mathbf{i}} + x\\hat{\\mathbf{j}})$ (जहाँ $K$ एक धनात्मक स्थिरांक है), $xy$ तल में गतिमान एक कण पर कार्य करता है। मूल बिंदु से शुरू करते हुए, कण को धनात्मक $x$ अक्ष के अनुदिश बिंदु $(a, 0)$ तक ले जाया जाता है और फिर $y$ अक्ष के समानांतर बिंदु $(a, a)$ तक ले जाया जाता है। कण पर बल $\\mathbf{F}$ द्वारा किया गया कुल कार्य है -",
+            "question_en": "A force $\\mathbf{F} = -K(y\\hat{\\mathbf{i}} + x\\hat{\\mathbf{j}})$ (where $k$ is a positive constant) acts on a particle moving in the xy plane. Starting from the origin, the particle is taken along the positive x axis to the point $(a, 0)$ and then parallel to the y axis to the point $(a, a)$. The total work done by the force F on the particle is -",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "$-Ka^2$",
+                    "en": "$-Ka^2$"
+                },
+                {
+                    "label": "2",
+                    "hi": "$-2Ka^2$",
+                    "en": "$-2Ka^2$"
+                },
+                {
+                    "label": "3",
+                    "hi": "$+2Ka^2$",
+                    "en": "$+2Ka^2$"
+                },
+                {
+                    "label": "4",
+                    "hi": "$+Ka^2$",
+                    "en": "+Ka^2"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "किया गया कार्य $W = \\int \\mathbf{F} \\cdot d\\mathbf{r} = \\int -K(y dx + x dy)$ है।\nपथ के दो भाग हैं:\n1. मूल बिंदु $(0,0)$ से $(a,0)$ तक: यहाँ $y = 0$, अतः $dy = 0$ और $y dx = 0$। इसलिए इस पथ पर कार्य $W_1 = 0$ है।\n2. $(a,0)$ से $(a,a)$ तक: यहाँ $x = a$ नियत है, अतः $dx = 0$ और $x = a$ है।\nइसलिए $W_2 = \\int_{0}^{a} -K(a) dy = -Ka \\int_{0}^{a} dy = -Ka^2$ है।\nकुल कार्य $W = W_1 + W_2 = 0 - Ka^2 = -Ka^2$ है।",
+            "explanation_en": "Work done is given by $W = \\int \\mathbf{F} \\cdot d\\mathbf{r} = \\int -K(y\\,dx + x\\,dy)$.\nPath is divided into two segments:\n1. From $(0,0)$ to $(a,0)$ along the x-axis: $y = 0 \\implies dy = 0$, so $W_1 = \\int_0^a -K(0)dx = 0$.\n2. From $(a,0)$ to $(a,a)$ parallel to the y-axis: $x = a \\implies dx = 0$, so $W_2 = \\int_0^a -K(a)dy = -Ka(a) = -Ka^2$.\nTotal work done $W = W_1 + W_2 = 0 - Ka^2 = -Ka^2$.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "rationale_hi": "गणना के अनुसार कुल कार्य $-Ka^2$ आता है।",
+                    "rationale_en": "The total work calculated along the two segments sums to $-Ka^2$."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "यह मान गलत है क्योंकि पहले पथ पर कार्य शून्य होता है।",
+                    "rationale_en": "Incorrect value; work along the first path is zero."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "चिन्ह विपरीत है।",
+                    "rationale_en": "Sign is reversed."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "यह गलत है।",
+                    "rationale_en": "This is incorrect."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न का विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "branch": "Mechanics",
+                "subtopic": "Work, Energy and Power",
+                "archetype": "Numerical/Calculative",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Apply",
+                "keywords": [
+                    "work done",
+                    "conservative force",
+                    "line integral"
+                ],
+                "estimated_seconds": 90,
+                "conceptual_trap_hi": "छात्र दोनों भागों में सीधे $xy$ का मान रखकर गलत सीमाएं ले सकते हैं।",
+                "conceptual_trap_en": "Students might mistakenly integrate over both variables simultaneously without breaking the path into segments.",
+                "prerequisite_topic": "Line Integrals and Work",
+                "ncert_mapping": "Class 11 Physics, Work, Energy and Power",
+                "formula_law_dependency": "$W = \\int \\mathbf{F} \\cdot d\\mathbf{r}$",
+                "shortcut_hack_hi": "$d(xy) = y dx + x dy$ का उपयोग करें, जिससे $W = -K \\int d(xy) = -K[xy]_{(0,0)}^{(a,a)} = -Ka^2$ सीधे प्राप्त होता है।",
+                "shortcut_hack_en": "Notice that $y\\,dx + x\\,dy = d(xy)$. Thus $W = -K \\int d(xy) = -Ka^2$ directly, independent of path.",
+                "clone_variant": {
+                    "question_hi": "एक बल $\\mathbf{F} = -C(y\\hat{\\mathbf{i}} + x\\hat{\\mathbf{j}})$ मूल बिंदु से बिंदु $(b, b)$ तक सीधे रेखा के अनुदिश ले जाने में कितना कार्य करेगा?",
+                    "question_en": "How much work is done by a force $\\mathbf{F} = -C(y\\hat{\\mathbf{i}} + x\\hat{\\mathbf{j}})$ in moving a particle from origin to the point $(b, b)$?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "$-Cb^2$",
+                            "en": "$-Cb^2$"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "$-2Cb^2$",
+                            "en": "$-2Cb^2$"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "$+Cb^2$",
+                            "en": "+Cb^2"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "0",
+                            "en": "0"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "$W = -C \\int d(xy) = -C[xy]_{(0,0)}^{(b,b)} = -Cb^2$."
+                }
+            }
+        }
+    ]
+}

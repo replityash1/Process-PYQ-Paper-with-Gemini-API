@@ -1,0 +1,382 @@
+{
+    "questions": [
+        {
+            "source_page": 1,
+            "number": 5,
+            "question_hi": "पादप फैमিলি (कॉलम-I) का विशिष्ट पुष्पक्रम (कॉलम-II) के साथ मिलान कीजिए एवं नीचे दिए गए कूट की सहायता से सही उत्तर चुनिए -\nकॉलम-I\n(पादप फैमিলি)\n(A) एस्टेरेसी\n(B) लैमिएसी\n(C) एपिएसी\n(D) फेबेसी\n(E) मोरेसी\nकूट -\n(1) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)\n(2) (A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)\n(4) (A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)\n(5) अनुत्तरित प्रश्न",
+            "question_en": "Match the Plant Families given in Column-I with characteristic Inflorescence given in Column-II and select the correct answer using the code given below -\nColumn-I\n(Plant family)\n(A) Asteraceae\n(B) Lamiaceae\n(C) Apiaceae\n(D) Fabaceae\n(E) Moraceae\nCode -\n(1) (A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)\n(2) (A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)\n(3) (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)\n(4) (A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)\n(5) Question not attempted",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)",
+                    "en": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)"
+                },
+                {
+                    "label": "2",
+                    "hi": "(A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)",
+                    "en": "(A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)"
+                },
+                {
+                    "label": "3",
+                    "hi": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)",
+                    "en": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)"
+                },
+                {
+                    "label": "4",
+                    "hi": "(A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)",
+                    "en": "(A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "एस्ट्रेसी (Asteraceae) कुल का विशिष्ट पुष्पक्रम कैपिटुलम (Capitulum) या मुण्डक होता है। लैमिएसी (Lamiaceae) कुल का विशिष्ट पुष्पक्रम वर्टिसिलास्टर (Verticillaster) होता है। एपिएसी (Apiaceae) कुल में कम्पाउण्ड अम्बेल (Compound Umbel) या छत्रक पाया जाता है। फेबेसी (Fabaceae) कुल में रेसिम (Raceme) या असीमाक्ष पुष्पक्रम होता है। मोरेसी (Moraceae) कुल का विशिष्ट पुष्पक्रम हाइपैन्थोडियम (Hypanthodium) होता है। अतः सही मिलान (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v) है।",
+            "explanation_en": "Asteraceae family is characterized by Capitulum inflorescence. Lamiaceae has Verticillaster inflorescence. Apiaceae possesses Compound Umbel. Fabaceae has Raceme inflorescence. Moraceae is characterized by Hypanthodium inflorescence. Thus, the correct matching is (A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v).",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "यह विकल्प गलत सुमेलन दर्शाता है।",
+                    "rationale_en": "This option shows incorrect matching."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "यह विकल्प गलत सुमेलन दर्शाता है।",
+                    "rationale_en": "This option shows incorrect matching."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "यह सही मिलान है: A-i, B-ii, C-iii, D-iv, E-v.",
+                    "rationale_en": "This is the correct matching: A-i, B-ii, C-iii, D-iv, E-v."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "यह विकल्प गलत सुमेलन दर्शाता है।",
+                    "rationale_en": "This option shows incorrect matching."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Botany",
+                "branch": "Taxonomy and Morphology",
+                "subtopic": "Inflorescence in Plant Families",
+                "archetype": "Matrix Matching",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Remember",
+                "keywords": [
+                    "Asteraceae",
+                    "Lamiaceae",
+                    "Apiaceae",
+                    "Fabaceae",
+                    "Moraceae",
+                    "Inflorescence",
+                    "Capitulum",
+                    "Verticillaster"
+                ],
+                "estimated_seconds": 60,
+                "conceptual_trap_hi": null,
+                "conceptual_trap_en": null,
+                "prerequisite_topic": "Plant Families and Inflorescence Types",
+                "ncert_mapping": "Class 11 Biology, Morphology of Flowering Plants",
+                "formula_law_dependency": null,
+                "shortcut_hack_hi": null,
+                "shortcut_hack_en": null,
+                "clone_variant": {
+                    "question_hi": "निम्नलिखित पादप फैमिलाई और उनके मुख्य पुष्पक्रम का सही मिलान चुनें:",
+                    "question_en": "Choose the correct match for the plant family and its main inflorescence:",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "एस्टेरेसी - कैपिटुलम",
+                            "en": "Asteraceae - Capitulum"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "एस्टेरेसी - रेसिम",
+                            "en": "Asteraceae - Raceme"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "लैमिएसी - अम्बेल",
+                            "en": "Lamiaceae - Umbel"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "फेबेसी - हाइपैन्थोडियम",
+                            "en": "Fabaceae - Hypanthodium"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "Asteraceae characteristically features a Capitulum (head) inflorescence."
+                }
+            }
+        },
+        {
+            "source_page": 1,
+            "number": 6,
+            "question_hi": "दिए गए कथनों पर विचार कर नीचे दिए गए कूट के उपयोग से सही उत्तर का चयन कीजिए -\nकथन I: अपशिष्ट जल का उपचार सीवेज में प्राकृतिक रूप से उपस्थित स्वपोषी सूक्ष्मजीवों द्वारा किया जाता है।\nकथन II: अपशिष्ट जल की BOD जितनी अधिक होगी, उसकी प्रदूषण क्षमता उतनी ही कम होगी।",
+            "question_en": "Consider the given statements and select the correct answer using the code given below -\nStatement I : Treatment of waste water is done by autotrophic microbes naturally present in sewage.\nStatement II : The greater the BOD of waste water, lesser is its polluting potential.",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "कथन I सत्य है व II असत्य है।",
+                    "en": "Statement I is correct and II is incorrect."
+                },
+                {
+                    "label": "2",
+                    "hi": "दोनों कथन सत्य हैं।",
+                    "en": "Both statements are correct."
+                },
+                {
+                    "label": "3",
+                    "hi": "दोनों कथन असत्य हैं।",
+                    "en": "Both statements are incorrect."
+                },
+                {
+                    "label": "4",
+                    "hi": "कथन I असत्य है व II सत्य है।",
+                    "en": "Statement I is incorrect and II is correct."
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "कथन I असत्य है क्योंकि अपशिष्ट जल (सीवेज) के जैविक उपचार में मुख्य रूप से विषमपोषी (heterotrophic) सूक्ष्मजीवों (जैसे जीवाणु और कवक) का उपयोग किया जाता है, न कि स्वपोषी सूक्ष्मजीवों का। कथन II भी असत्य है क्योंकि BOD (जैविक ऑक्सीजन मांग) जितनी अधिक होती है, पानी में कार्बनिक प्रदूषण उतना ही अधिक होता है, अर्थात उसकी प्रदूषण क्षमता अधिक होती है, कम नहीं। अतः दोनों कथन असत्य हैं।",
+            "explanation_en": "Statement I is incorrect because biological treatment of wastewater/sewage is primarily carried out by naturally present heterotrophic microbes (like bacteria and fungi), not autotrophic microbes. Statement II is incorrect because higher BOD indicates higher organic pollution load, meaning greater polluting potential, not lesser. Thus, both statements are incorrect.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "कथन I गलत है क्योंकि सूक्ष्मजीव विषमपोषी होते हैं।",
+                    "rationale_en": "Statement I is wrong because microbes are heterotrophic."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "दोनों कथन गलत हैं।",
+                    "rationale_en": "Both statements are incorrect."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "दोनों कथन असत्य हैं क्योंकि सूक्ष्मजीव विषमपोषी होते हैं और अधिक BOD अधिक प्रदूषण क्षमता को दर्शाता है।",
+                    "rationale_en": "Both statements are incorrect since microbes are heterotrophic and higher BOD means greater polluting potential."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "कथन II भी गलत है क्योंकि अधिक BOD अधिक प्रदूषण दर्शाता है।",
+                    "rationale_en": "Statement II is also wrong because higher BOD indicates more pollution."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "branch": "Microbiology & Ecology",
+                "subtopic": "Sewage Treatment and BOD",
+                "archetype": "Statement-Based",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Understand",
+                "keywords": [
+                    "Sewage",
+                    "Waste water",
+                    "BOD",
+                    "Heterotrophic microbes",
+                    "Pollution potential"
+                ],
+                "estimated_seconds": 60,
+                "conceptual_trap_hi": "छात्र BOD और प्रदूषण क्षमता के संबंध को उल्टा समझ सकते हैं।",
+                "conceptual_trap_en": "Students may mistakenly think high BOD means less pollution.",
+                "prerequisite_topic": "Microbes in Human Welfare",
+                "ncert_mapping": "Class 12 Biology, Microbes in Human Welfare",
+                "formula_law_dependency": null,
+                "shortcut_hack_hi": null,
+                "shortcut_hack_en": null,
+                "clone_variant": {
+                    "question_hi": "अपशिष्ट जल (सीवेज) के उपचार के संबंध में कौन सा कथन सही है?",
+                    "question_en": "Which statement regarding waste water (sewage) treatment is correct?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "BOD का उच्च मान कम प्रदूषण को दर्शाता है",
+                            "en": "High value of BOD indicates low pollution"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "अपशिष्ट जल उपचार में विषमपोषी सूक्ष्मजीव शामिल होते हैं",
+                            "en": "Heterotrophic microbes are involved in waste water treatment"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "स्वपोषी सूक्ष्मजीव प्राथमिक रूप से सीवेज का अपघटन करते हैं",
+                            "en": "Autotrophic microbes primarily decompose sewage"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "BOD का अर्थ बायो-ऑक्सीजन डिग्रेडेशन है",
+                            "en": "BOD stands for Bio-Oxygen Degradation"
+                        }
+                    ],
+                    "correct_label": "2",
+                    "explanation_en": "Heterotrophic microbes naturally present in sewage are responsible for biological treatment (aeration tanks/activated sludge process)."
+                }
+            }
+        },
+        {
+            "source_page": 1,
+            "number": 7,
+            "question_hi": "दिए गए कथनों पर विचार कर नीचे दिए गए कूट के उपयोग से सही उत्तर का चयन कीजिए -\nकथन I: उच्च सक्रिय ऊर्जा एंजाइमों की उपस्थिति में तीव्र अभिक्रियाओं को प्रेरित करती है।\nकथन II: एंजाइम, अभिक्रिया की एंथैल्पी परिवर्तन ($\\Delta H$) को कम करके कार्य करते हैं।\nकूट -\n(1) कथन I असत्य है, कथन II सत्य है।\n(2) कथन I सत्य है, कथन II असत्य है।\n(3) दोनों कथन सत्य हैं।\n(4) दोनों कथन असत्य हैं।\n(5) अनुत्तरित प्रश्न",
+            "question_en": "Consider the given statements and select the correct answer using the code given below -\nStatement I : High activation energy favors faster reactions in the absence of enzymes.\nStatement II : Enzymes act by decreasing the enthalpy change ($\\Delta H$) of the reaction.\nCode -\n(1) Statement I is false, Statement II is true.\n(2) Statement I is true, Statement II is false.\n(3) Both statements are true.\n(4) Both statements are false.\n(5) Question not attempted",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "(1) कथन I असत्य है, कथन II सत्य है।",
+                    "en": "(1) Statement I is false, Statement II is true."
+                },
+                {
+                    "label": "2",
+                    "hi": "(2) कथन I सत्य है, कथन II असत्य है।",
+                    "en": "(2) Statement I is true, Statement II is false."
+                },
+                {
+                    "label": "3",
+                    "hi": "(3) दोनों कथन सत्य हैं।",
+                    "en": "(3) Both statements are true."
+                },
+                {
+                    "label": "4",
+                    "hi": "(4) दोनों कथन असत्य हैं।",
+                    "en": "(4) Both statements are false."
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "कथन I असत्य है क्योंकि उच्च सक्रिय ऊर्जा (Activation energy) के कारण अभिक्रिया धीमी होती है, न कि तीव्र। कथन II भी असत्य है क्योंकि एंजाइम अभिक्रिया की सक्रिय ऊर्जा को कम करते हैं, न कि एंथैल्पी परिवर्तन ($\\Delta H$) को। एंथैल्पी परिवर्तन प्रारंभिक और अंतिम अवस्थाओं पर निर्भर करता है और उत्प्रेरक द्वारा अपरिवर्तित रहता है। अतः दोनों कथन असत्य हैं।",
+            "explanation_en": "Statement I is false because high activation energy results in slower reactions, not faster ones. Statement II is false because enzymes lower the activation energy of a reaction, not the enthalpy change ($\\Delta H$). Enthalpy change depends only on the initial and final states and remains unchanged by catalysts. Thus, both statements are false.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "कथन II असत्य है क्योंकि एंजाइम $\\Delta H$ को नहीं बदलते।",
+                    "rationale_en": "Statement II is false because enzymes do not alter $\\Delta H$."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "कथन I असत्य है क्योंकि उच्च सक्रिय ऊर्जा धीमी अभिक्रिया का कारण बनती है।",
+                    "rationale_en": "Statement I is false because high activation energy causes slower reactions."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "दोनों कथन सत्य नहीं हैं।",
+                    "rationale_en": "Both statements are not true."
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "rationale_hi": "दोनों कथन असत्य हैं क्योंकि उच्च सक्रिय ऊर्जा धीमी अभिक्रिया का कारण होती है और एंजाइम सक्रिय ऊर्जा को कम करते हैं, $\\Delta H$ को नहीं।",
+                    "rationale_en": "Both statements are false since high activation energy slows down reactions and enzymes lower activation energy, not $\\Delta H$."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry / Biochemistry",
+                "branch": "Enzymology / Physical Chemistry",
+                "subtopic": "Enzyme Catalysis and Activation Energy",
+                "archetype": "Statement-Based",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Analyze",
+                "keywords": [
+                    "Activation energy",
+                    "Enzymes",
+                    "Enthalpy change",
+                    "$\\Delta H$",
+                    "Reaction rate"
+                ],
+                "estimated_seconds": 60,
+                "conceptual_trap_hi": "छात्र मान सकते हैं कि उत्प्रेरक ऊष्मागतिकीय गुणों जैसे एंथैल्पी परिवर्तन को भी बदलते हैं।",
+                "conceptual_trap_en": "Students may think catalysts alter thermodynamic properties like enthalpy change.",
+                "prerequisite_topic": "Chemical Kinetics and Biomolecules",
+                "ncert_mapping": "Class 12 Chemistry, Chemical Kinetics / Class 11 Biology, Biomolecules",
+                "formula_law_dependency": "Arrhenius Equation / Thermodynamic stability",
+                "shortcut_hack_hi": null,
+                "shortcut_hack_en": null,
+                "clone_variant": {
+                    "question_hi": "एंजाइमों की कार्यप्रणाली के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+                    "question_en": "Which of the following statements regarding the mode of action of enzymes is correct?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "एंजाइम अभिक्रिया की सक्रिय ऊर्जा को कम करते हैं",
+                            "en": "Enzymes decrease the activation energy of the reaction"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "एंजाइम अभिक्रिया के कुल एंथैल्पी परिवर्तन को बदलते हैं",
+                            "en": "Enzymes alter the overall enthalpy change of the reaction"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "उच्च सक्रिय ऊर्जा तेज अभिक्रियाओं को बढ़ावा देती है",
+                            "en": "High activation energy favors faster reactions"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "एंजाइम साम्य स्थिरांक के मान को बदल देते हैं",
+                            "en": "Enzymes change the value of the equilibrium constant"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "Enzymes act as catalysts by lowering the activation energy barrier, thereby increasing the reaction rate without changing $\\Delta H$ or equilibrium constants."
+                }
+            }
+        }
+    ]
+}

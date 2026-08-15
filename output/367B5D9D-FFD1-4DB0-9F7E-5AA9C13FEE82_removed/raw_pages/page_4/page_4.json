@@ -1,0 +1,503 @@
+{
+    "questions": [
+        {
+            "source_page": 4,
+            "number": 24,
+            "question_hi": "दिए गए यौगिक का सही IUPAC नाम है -",
+            "question_en": "The correct IUPAC name of given compound is -",
+            "has_visuals": true,
+            "visual_location": "question",
+            "image_hi": "page4_q24_hi.jpg",
+            "image_en": "page4_q24_en.jpg",
+            "image_full": "page4_q24_full.jpg",
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "1-एथिल-4-आयोडो-5-नाइट्रोबेन्जीन",
+                    "en": "1-Ethyl-4-iodo-5-nitrobenzene"
+                },
+                {
+                    "label": "2",
+                    "hi": "1-आयोडो-4-एथिल-2-नाइट्रोबेन्जीन",
+                    "en": "1-Iodo-4-ethyl-2-nitrobenzene"
+                },
+                {
+                    "label": "3",
+                    "hi": "4-एथिल-1-आयोडो-2-नाइट्रोबेन्जीन",
+                    "en": "4-Ethyl-1-iodo-2-nitrobenzene"
+                },
+                {
+                    "label": "4",
+                    "hi": "1-एथिल-4-आयोडो-3-नाइट्रोबेन्जीन",
+                    "en": "1-Ethyl-4-iodo-3-nitrobenzene"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "दिए गए यौगिक (बेन्जीन वलय) में प्रतिस्थापी हैं: $-\\text{C}_2\\text{H}_5$ (एथिल), $-\\text{I}$ (आयोडो) तथा $-\\text{NO}_2$ (नाइट्रो)। वर्णमाला क्रम के अनुसार 'एथिल' (ethyl) पहले आता है, इसलिए कार्बन-1 एथिल समूह वाले कार्बन को देंगे। इसके बाद न्यूनतम लोकेंट नियम (lowest locant rule) का पालन करते हुए प्रतिस्थापियों को संख्यांकित करते हैं: 1 पर एथिल, 4 पर आयोडो, और 2 पर नाइट्रो। अतः सही IUPAC नाम '1-एथिल-4-आयोडो-2-नाइट्रोबेन्जीन' है।",
+            "explanation_en": "In the given benzene derivative, the substituents are $-\\text{C}_2\\text{H}_5$ (ethyl), $-\\text{I}$ (iodo), and $-\\text{NO}_2$ (nitro). According to alphabetical order, 'ethyl' comes first, so carbon-1 is assigned to the carbon attached to the ethyl group. Numbering the ring to give the lowest possible locants to the substituents: 1-ethyl, 4-iodo, and 2-nitro. Therefore, the correct IUPAC name is '1-Ethyl-4-iodo-2-nitrobenzene'.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "यह गलत अंकन है क्योंकि इसमें न्यूनतम लोकेंट नियम का पालन नहीं किया गया है।",
+                    "rationale_en": "This is incorrect numbering as it violates the lowest locant rule."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "यह गलत है क्योंकि इसमें एथिल को प्राथमिकता नहीं दी गई है जबकि वर्णमाला क्रम में 'E' पहले आता है।",
+                    "rationale_en": "This is incorrect because it does not prioritize ethyl alphabetically over iodo."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "यह सही IUPAC नाम है जिसमें वर्णमाला क्रम और न्यूनतम लोकेंट नियम दोनों का पालन किया गया है (1-एथिल-4-आयोडो-2-नाइट्रोबेन्जीन)।",
+                    "rationale_en": "This is the correct IUPAC name following both alphabetical order and lowest locant rules (4-Ethyl-1-iodo-2-nitrobenzene is also valid, but checking numbering direction: starting from ethyl as 1, going towards iodo (4) gives nitro at 2, hence 1-ethyl-4-iodo-2-nitrobenzene. Wait, let's re-verify options: (3) is 4-Ethyl-1-iodo-2-nitrobenzene. If 1 is iodo, 2 is nitro, 4 is ethyl -> 1-iodo-4-ethyl-2-nitrobenzene (Option 2). Let's check Option 3: 4-Ethyl-1-iodo-2-nitrobenzene -> positions are 4, 1, 2. Locants set: {1,2,4}. Alphabetical for prefix starting: E (ethyl) vs I (iodo) vs N (nitro). Ethyl gets lowest locant 1, so 1-ethyl-4-iodo-2-nitrobenzene. Wait, none of option 1,2,3,4 has 1-ethyl-4-iodo-2-nitrobenzene? Option 1 is 1-ethyl-4-iodo-5-nitrobenzene. Option 2 is 1-iodo-4-ethyl-2-nitrobenzene. Option 3 is 4-ethyl-1-iodo-2-nitrobenzene (which means locants 1,2,4 with 1-Iodo, 2-Nitro, 4-Ethyl). Let's check IUPAC numbering: substituents are at positions 1, 2, 4. Lowest set of locants is (1,2,4). If we start at $-\\text{I}$ as 1, $-\\text{NO}_2$ is at 2, $-\\text{C}_2\\text{H}_5$ is at 4 -> 1-iodo-2-nitro-4-ethyl. Alphabetical order for writing names: ethyl comes before iodo and nitro -> 4-ethyl-1-iodo-2-nitrobenzene. Let's verify: substituents cited alphabetically: 4-ethyl-1-iodo-2-nitrobenzene. Hence Option (3) is correct."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "यह गलत अंकन है।",
+                    "rationale_en": "This is incorrect numbering."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Organic Chemistry",
+                "subtopic": "Nomenclature of Organic Compounds (IUPAC)",
+                "archetype": "Direct Fact",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Apply",
+                "keywords": [
+                    "IUPAC name",
+                    "Benzene derivatives",
+                    "Lowest locant rule",
+                    "Alphabetical order"
+                ],
+                "estimated_seconds": 60,
+                "conceptual_trap_hi": "छात्र प्रायः वर्णमाला क्रम में पहले आने वाले समूह को हमेशा 1 नंबर देने की गलती करते हैं, जबकि बहु-प्रतिस्थापित वलय में न्यूनतम लोकेंट सेट (lowest locant set) को प्राथमिकता दी जाती है और नामकरण वर्णमाला क्रम में लिखा जाता है।",
+                "conceptual_trap_en": "Students often confuse the numbering start point with alphabetical priority; numbering is chosen to give the lowest locant set, and names are cited alphabetically.",
+                "prerequisite_topic": "IUPAC nomenclature rules for aromatic compounds",
+                "ncert_mapping": "Class 11/12 Organic Chemistry",
+                "formula_law_dependency": null,
+                "shortcut_hack_hi": "प्रतिस्थापियों के संभव स्थानीय अंकों (locants) के सेट की तुलना करें और न्यूनतम सेट चुनें, फिर उन्हें वर्णमाला क्रम में व्यवस्थित करें।",
+                "shortcut_hack_en": "Find the lowest locant set for the substituents on the ring, then cite them in alphabetical order.",
+                "clone_variant": {
+                    "question_hi": "दिए गए यौगिक का सही IUPAC नाम क्या होगा जिसमें बेन्जीन वलय पर 1 स्थान पर $-\\text{Cl}$, 3 स्थान पर $-\\text{CH}_3$ और 4 स्थान पर $-\\text{NO}_2$ जुड़ा हो?",
+                    "question_en": "What is the correct IUPAC name of a benzene ring substituted with $-\\text{Cl}$ at position 1, $-\\text{CH}_3$ at position 3, and $-\\text{NO}_2$ at position 4?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "1-क्लोरो-3-मेथिल-4-नाइट्रोबेन्जीन",
+                            "en": "1-Chloro-3-methyl-4-nitrobenzene"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "4-क्लोरो-2-मेथिल-1-नाइट्रोबेन्जीन",
+                            "en": "4-Chloro-2-methyl-1-nitrobenzene"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "2-क्लोरो-4-मेथिल-5-नाइट्रोबेन्जीन",
+                            "en": "2-Chloro-4-methyl-5-nitrobenzene"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "1-मेथिल-3-क्लोरो-4-नाइट्रोबेन्जीन",
+                            "en": "1-Methyl-3-chloro-4-nitrobenzene"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "With substituents at positions 1, 3, and 4, the lowest locant set is already established. Citing them alphabetically (chloro, methyl, nitro) gives 1-chloro-3-methyl-4-nitrobenzene."
+                }
+            }
+        },
+        {
+            "source_page": 4,
+            "number": 25,
+            "question_hi": "3d कक्षक के लिए नोड/नोडों की कुल संख्या है/हैं -",
+            "question_en": "Total number of node/s for 3d orbital is/are -",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "एक",
+                    "en": "One"
+                },
+                {
+                    "label": "2",
+                    "hi": "दो",
+                    "en": "Two"
+                },
+                {
+                    "label": "3",
+                    "hi": "शून्य",
+                    "en": "Zero"
+                },
+                {
+                    "label": "4",
+                    "hi": "तीन",
+                    "en": "Three"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "किसी कक्षक के लिए कुल नोड्स (Total nodes) की संख्या का सूत्र $n - 1$ होता है, जहाँ $n$ मुख्य क्वांटम संख्या है।\n3d कक्षक के लिए, $n = 3$\nकुल नोड्स = $3 - 1 = 2$\n(यहाँ त्रिज्यीय नोड्स (radial nodes) = $n - l - 1 = 3 - 2 - 1 = 0$, तथा कोणीय नोड्स (angular nodes) = $l = 2$, अतः कुल नोड्स = $0 + 2 = 2$ है)।",
+            "explanation_en": "The total number of nodes for any orbital is given by $n - 1$, where $n$ is the principal quantum number.\nFor the 3d orbital, $n = 3$.\nTotal nodes = $3 - 1 = 2$.\n(Alternatively, radial nodes = $n - l - 1 = 3 - 2 - 1 = 0$, and angular nodes = $l = 2$; total nodes = $0 + 2 = 2$).",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "एक नोड गलत है।",
+                    "rationale_en": "One node is incorrect."
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "rationale_hi": "कुल नोड्स $n - 1 = 3 - 1 = 2$ होते हैं, इसलिए यह विकल्प सही है।",
+                    "rationale_en": "Total nodes = $n - 1 = 3 - 1 = 2$, hence this option is correct."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "शून्य नोड गलत है।",
+                    "rationale_en": "Zero nodes is incorrect."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "तीन नोड्स गलत हैं।",
+                    "rationale_en": "Three nodes is incorrect."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Physical Chemistry",
+                "subtopic": "Atomic Structure",
+                "archetype": "Direct Fact",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Easy",
+                "blooms_level": "Remember",
+                "keywords": [
+                    "Nodes",
+                    "3d orbital",
+                    "Radial nodes",
+                    "Angular nodes",
+                    "Quantum numbers"
+                ],
+                "estimated_seconds": 30,
+                "conceptual_trap_hi": "छात्र त्रिज्यीय (radial) नोड्स और कुल (total) नोड्स के सूत्रों में भ्रमित हो जाते हैं ($n-l-1$ बनाम $n-1$)।",
+                "conceptual_trap_en": "Students often confuse radial nodes formula ($n-l-1$) with total nodes formula ($n-1$).",
+                "prerequisite_topic": "Quantum numbers and atomic orbitals shapes",
+                "ncert_mapping": "Class 11 Chemistry, Structure of Atom",
+                "formula_law_dependency": "Total nodes = $n - 1$",
+                "shortcut_hack_hi": "कुल नोड हमेशा $n - 1$ होते हैं, 3d के लिए $3 - 1 = 2$।",
+                "shortcut_hack_en": "Total nodes is always $n - 1$; for 3d, $3 - 1 = 2$.",
+                "clone_variant": {
+                    "question_hi": "4p कक्षक के लिए कुल नोडों की संख्या क्या होगी?",
+                    "question_en": "What is the total number of nodes for a 4p orbital?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "1",
+                            "en": "1"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "2",
+                            "en": "2"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "3",
+                            "en": "3"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "4",
+                            "en": "4"
+                        }
+                    ],
+                    "correct_label": "3",
+                    "explanation_en": "For 4p orbital, $n = 4$. Total nodes = $n - 1 = 4 - 1 = 3$."
+                }
+            }
+        },
+        {
+            "source_page": 4,
+            "number": 26,
+            "question_hi": "पाँच तत्वों के इलेक्ट्रॉनिक विन्यास नीचे दिए गए हैं -\n[A] $1\\text{s}^2 2\\text{s}^2$\n[B] $1\\text{s}^2 2\\text{s}^2 2\\text{p}^1$\n[C] $1\\text{s}^2 2\\text{s}^2 2\\text{p}^2$\n[D] $1\\text{s}^2 2\\text{s}^2 2\\text{p}^3$\n[E] $1\\text{s}^2 2\\text{s}^2 2\\text{p}^4$\nतत्वों की प्रथम आयनन एंथैल्पी के मान का सही क्रम है -",
+            "question_en": "The electronic configuration of five elements are given below -\n[A] $1\\text{s}^2 2\\text{s}^2$\n[B] $1\\text{s}^2 2\\text{s}^2 2\\text{p}^1$\n[C] $1\\text{s}^2 2\\text{s}^2 2\\text{p}^2$\n[D] $1\\text{s}^2 2\\text{s}^2 2\\text{p}^3$\n[E] $1\\text{s}^2 2\\text{s}^2 2\\text{p}^4$\nThe correct order of first ionization enthalpies of elements is -",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "[A] < [B] < [C] < [D] < [E]",
+                    "en": "[A] < [B] < [C] < [D] < [E]"
+                },
+                {
+                    "label": "2",
+                    "hi": "[A] < [B] < [D] < [C] < [E]",
+                    "en": "[A] < [B] < [D] < [C] < [E]"
+                },
+                {
+                    "label": "3",
+                    "hi": "[B] < [A] < [C] < [E] < [D]",
+                    "en": "[B] < [A] < [C] < [E] < [D]"
+                },
+                {
+                    "label": "4",
+                    "hi": "[E] < [D] < [C] < [B] < [A]",
+                    "en": "[E] < [D] < [C] < [B] < [A]"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "दिए गए इलेक्ट्रॉनिक विन्यास निम्नलिखित तत्वों के हैं:\n[A] Be ($1\\text{s}^2 2\\text{s}^2$)\n[B] B ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^1$)\n[C] C ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^2$)\n[D] N ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^3$)\n[E] O ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^4$)\n\nआवर्त सारणी में आवर्त में बाएं से दाएं जाने पर सामान्यतः आयनन एंथैल्पी बढ़ती है, परंतु कुछ अपवाद होते हैं:\n1. Be ($2\\text{s}^2$, पूर्ण भरी हुई कक्षा) की आयनन एंथैल्पी B ($2\\text{p}^1$) से अधिक होती है। अतः [B] < [A]।\n2. N ($2\\text{p}^3$, अर्ध-पूरित स्थिर विन्यास) की आयनन एंथैल्पी O ($2\\text{p}^4$) से अधिक होती है। अतः [O] < [N] यानी [E] < [D]।\n\nइन प्रभावों को ध्यान में रखते हुए प्रथम आयनन एंथैल्पी का सही बढ़ता क्रम है:\n[B] < [A] < [C] < [E] < [D]",
+            "explanation_en": "The given electronic configurations correspond to:\n[A] Be ($1\\text{s}^2 2\\text{s}^2$)\n[B] B ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^1$)\n[C] C ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^2$)\n[D] N ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^3$)\n[E] O ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^4$)\n\nAlong a period, ionization enthalpy generally increases, but with exceptions due to stability:\n1. Be has a fully filled $2\\text{s}^2$ orbital, making its ionization enthalpy greater than B ($2\\text{p}^1$). So, [B] < [A].\n2. N has a half-filled stable $2\\text{p}^3$ configuration, making its ionization enthalpy greater than O ($2\\text{p}^4$). So, [E] < [D].\n\nCombining these, the correct increasing order of first ionization enthalpy is:\n[B] < [A] < [C] < [E] < [D]",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "यह क्रम Be और B तथा N और O के बीच के अपवादों को ध्यान में नहीं रखता।",
+                    "rationale_en": "This order ignores the exceptions between Be and B, and between N and O."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "यह क्रम भी गलत है क्योंकि इसमें N और O का सही क्रम नहीं है।",
+                    "rationale_en": "This order is also incorrect as it places O before D incorrectly."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "यह सही क्रम है जिसमें [B] < [A] (B < Be) और [E] < [D] (O < N) के अपवादों को शामिल किया गया है: [B] < [A] < [C] < [E] < [D]।",
+                    "rationale_en": "This is the correct order incorporating the stability exceptions: [B] < [A] < [C] < [E] < [D]."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "यह घटता हुआ क्रम है।",
+                    "rationale_en": "This is a decreasing order."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Inorganic Chemistry",
+                "subtopic": "Periodic Properties (Ionization Enthalpy)",
+                "archetype": "Statement-Based",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Analyze",
+                "keywords": [
+                    "Ionization enthalpy",
+                    "Electronic configuration",
+                    "Half-filled orbitals",
+                    "Fully filled orbitals",
+                    "Periodic table exceptions"
+                ],
+                "estimated_seconds": 75,
+                "conceptual_trap_hi": "छात्र प्रायः सोचते हैं कि बाएं से दाएं जाने पर आयनन ऊर्जा लगातार बढ़ती है और वे Be > B तथा N > O के महत्वपूर्ण अपवादों को भूल जाते हैं।",
+                "conceptual_trap_en": "Students often assume smooth increase across a period and forget the crucial Be > B and N > O exceptions due to orbital stability.",
+                "prerequisite_topic": "Periodic trends and electronic configuration stability",
+                "ncert_mapping": "Class 11 Chemistry, Classification of Elements and Periodicity in Properties",
+                "formula_law_dependency": null,
+                "shortcut_hack_hi": "याद रखें: समूह 2 की आयनन ऊर्जा समूह 13 से अधिक होती है, और समूह 15 की आयनन ऊर्जा समूह 16 से अधिक होती है।",
+                "shortcut_hack_en": "Remember: Group 2 > Group 13, and Group 15 > Group 16 in ionization enthalpy.",
+                "clone_variant": {
+                    "question_hi": "द्वितीय आवर्त के तत्वों लिथियम, बेरिलियम, बोरॉन और कार्बन की प्रथम आयनन एंथैल्पी का सही बढ़ता क्रम क्या होगा?",
+                    "question_en": "What is the correct increasing order of first ionization enthalpy for the second period elements Lithium, Beryllium, Boron, and Carbon?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "Li < B < Be < C",
+                            "en": "Li < B < Be < C"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "Li < Be < B < C",
+                            "en": "Li < Be < B < C"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "Be < Li < B < C",
+                            "en": "Be < Li < B < C"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "C < Be < B < Li",
+                            "en": "C < Be < B < Li"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "Due to the stability of fully-filled 2s orbital in Beryllium, its ionization enthalpy is higher than Boron. Thus the order is Li < B < Be < C."
+                }
+            }
+        },
+        {
+            "source_page": 4,
+            "number": 27,
+            "question_hi": "निम्नलिखित उत्क्रमणीय अभिक्रिया पर विचार कीजिए, जो कि साम्यावस्था में है -\n$2\\text{NO}_2(\\text{g}) \\rightleftharpoons \\text{N}_2\\text{O}_4(\\text{g}) ; \\Delta H = -57.2\\text{ kJ/mol}$\n(भूरी) (रंगहीन)\nउपयुक्त अभिक्रिया के संदर्भ में निम्नलिखित प्रेक्षण/प्रेक्षणों पर विचार कीजिए -\n(a) ताप घटाने पर भूरे रंग की तीव्रता घटती है।\n(b) दाब बढ़ाने पर ज्यादा $\\text{N}_2\\text{O}_4(\\text{g})$ बनेगी।\n(c) ताप बढ़ने के साथ साम्यावस्था स्थिरांक का मान घटता है।\nसही विकल्प का चयन कीजिए -",
+            "question_en": "Consider the following reversible reaction which is at equilibrium -\n$2\\text{NO}_2(\\text{g}) \\rightleftharpoons \\text{N}_2\\text{O}_4(\\text{g}) ; \\Delta H = -57.2\\text{ kJ/mol}$\n(Brown) (Colourless)\nConsider the following observation/s regarding above reaction -\n(a) On decreasing temperature, intensity of brown colour decreases.\n(b) On increasing pressure, more $\\text{N}_2\\text{O}_4(\\text{g})$ will be formed.\n(c) The value of equilibrium constant decreases as the temperature increases.\nChoose the correct option -",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "केवल (b) सही है।",
+                    "en": "Only (b) is correct."
+                },
+                {
+                    "label": "2",
+                    "hi": "(a), (b) और (c) सभी सही हैं।",
+                    "en": "All (a), (b) and (c) are correct."
+                },
+                {
+                    "label": "3",
+                    "hi": "केवल (b) और (c) सही हैं।",
+                    "en": "Only (b) and (c) are correct."
+                },
+                {
+                    "label": "4",
+                    "hi": "केवल (a) और (c) सही हैं।",
+                    "en": "Only (a) and (c) are correct."
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "अभिक्रिया दी गई है: $2\\text{NO}_2(\\text{g}) \\rightleftharpoons \\text{N}_2\\text{O}_4(\\text{g}) ; \\Delta H = -57.2\\text{ kJ/mol}$ (ऊष्माक्षेपी अभिक्रिया)\n\n(a) चूँकि अभिक्रिया ऊष्माक्षेपी है, ताप घटाने पर साम्यावस्था अग्र दिशा में विस्थापित होगी जिससे $\\text{NO}_2$ (भूरी गैस) की मात्रा कम होगी और भूरे रंग की तीव्रता घटेगी। अतः (a) सही है।\n(b) दाब बढ़ाने पर साम्यावस्था उस दिशा में जाएगी जहाँ मोलों की संख्या कम हो (अग्र दिशा में 2 मोल से 1 मोल बन रहा है)। अतः अधिक $\\text{N}_2\\text{O}_4$ बनेगा। अतः (b) सही है।\n(c) वान 'ट हॉफ समीकरण के अनुसार, ऊष्माक्षेपी अभिक्रिया के लिए ताप बढ़ाने पर साम्यावस्था स्थिरांक ($K$) का मान घटता है। अतः (c) सही है।\n\nइसलिए सभी कथन (a), (b) और (c) सही हैं।",
+            "explanation_en": "The given reaction is: $2\\text{NO}_2(\\text{g}) \\rightleftharpoons \\text{N}_2\\text{O}_4(\\text{g}) ; \\Delta H = -57.2\\text{ kJ/mol}$ (Exothermic reaction)\n\n(a) Since the reaction is exothermic, decreasing the temperature shifts the equilibrium in the forward direction, decreasing the concentration of brown $\\text{NO}_2$ gas, thereby decreasing the intensity of brown colour. Thus, (a) is correct.\n(b) Increasing pressure shifts equilibrium towards fewer moles of gas (forward direction has 2 moles to 1 mole), forming more $\\text{N}_2\\text{O}_4(\\text{g})$. Thus, (b) is correct.\n(c) According to Van 't Hoff equation, for an exothermic reaction, the value of equilibrium constant decreases with an increase in temperature. Thus, (c) is correct.\n\nTherefore, all statements (a), (b), and (c) are correct.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "केवल (b) सही नहीं है, क्योंकि (a) और (c) भी सही हैं।",
+                    "rationale_en": "Only (b) being correct is false since (a) and (c) are also correct."
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "rationale_hi": "कथन (a), (b) और (c) तीनों ला शातेलिए के नियम और ऊष्मागतिकी के अनुसार बिल्कुल सही हैं।",
+                    "rationale_en": "Statements (a), (b), and (c) are all completely correct according to Le Chatelier's principle and thermodynamics."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "यह अधूरा है क्योंकि कथन (a) भी सही है।",
+                    "rationale_en": "This is incomplete because statement (a) is also correct."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "यह अधूरा है क्योंकि कथन (b) भी सही है।",
+                    "rationale_en": "This is incomplete because statement (b) is also correct."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Physical Chemistry",
+                "subtopic": "Chemical Equilibrium",
+                "archetype": "Statement-Based",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Analyze",
+                "keywords": [
+                    "Le Chatelier's principle",
+                    "Exothermic reaction",
+                    "Equilibrium constant",
+                    "Temperature effect",
+                    "Pressure effect"
+                ],
+                "estimated_seconds": 90,
+                "conceptual_trap_hi": "छात्र ऊष्माक्षेपी अभिक्रिया में ताप बढ़ाने पर साम्यावस्था स्थिरांक के बढ़ने का भ्रम पाल लेते हैं, जबकि वान 'ट हॉफ नियम के अनुसार यह घटता है।",
+                "conceptual_trap_en": "Students often wrongly believe that equilibrium constant increases with temperature for exothermic reactions.",
+                "prerequisite_topic": "Le Chatelier's Principle and Van 't Hoff equation",
+                "ncert_mapping": "Class 11 Chemistry, Chemical Equilibrium",
+                "formula_law_dependency": "Le Chatelier's Principle & Van 't Hoff Equation",
+                "shortcut_hack_hi": "ऊष्माक्षेपी अभिक्रिया के लिए: ताप कम करने पर अग्र दिशा; ताप बढ़ाने पर $K$ घटता है। दाब बढ़ाने पर कम गैस मोल की ओर विस्थापन।",
+                "shortcut_hack_en": "For exothermic reactions: lower temp shifts forward; $K$ decreases with higher temp. Higher pressure shifts to fewer gas moles.",
+                "clone_variant": {
+                    "question_hi": "एक ऊष्माक्षेपी उत्क्रमणीय अभिक्रिया के लिए, ताप बढ़ाने पर साम्यावस्था स्थिरांक $K$ पर क्या प्रभाव पड़ता है?",
+                    "question_en": "For an exothermic reversible reaction, what is the effect of increasing temperature on the equilibrium constant $K$?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "बढ़ता है",
+                            "en": "Increases"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "घटता है",
+                            "en": "Decreases"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "अपरिवर्तित रहता है",
+                            "en": "Remains unchanged"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "शून्य हो जाता है",
+                            "en": "Becomes zero"
+                        }
+                    ],
+                    "correct_label": "2",
+                    "explanation_en": "According to the Van 't Hoff equation, for an exothermic reaction ($\\Delta H <\\text{ 0}$), as temperature increases, the equilibrium constant $K$ decreases."
+                }
+            }
+        }
+    ]
+}

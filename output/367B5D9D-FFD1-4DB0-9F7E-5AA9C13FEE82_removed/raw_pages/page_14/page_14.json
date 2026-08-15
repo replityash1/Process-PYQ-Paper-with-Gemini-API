@@ -1,0 +1,502 @@
+{
+    "questions": [
+        {
+            "source_page": 14,
+            "number": 108,
+            "question_hi": "निम्नलिखित यौगिकों को उनके अवशोषण की तरंग संख्या के बढ़ते क्रम में व्यवस्थित कीजिए -\n(i) $\\langle\\overline{}>\\text{CH}_2$\n(ii) $\\triangle\\text{CH}_2$\n(iii) $\\langle\\hspace{1.5em}\\rangle\\text{CH}_2$\n(iv) $\\square\\text{CH}_2$",
+            "question_en": "Arrange the following compounds in increasing order of their wavenumber of absorption -\n(i) $\\langle\\overline{}>\\text{CH}_2$\n(ii) $\\triangle\\text{CH}_2$\n(iii) $\\langle\\hspace{1.5em}\\rangle\\text{CH}_2$\n(iv) $\\square\\text{CH}_2$",
+            "has_visuals": true,
+            "visual_location": "question",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": "page14_q108_full.jpg",
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "(i) < (iv) < (iii) < (ii)",
+                    "en": "(i) < (iv) < (iii) < (ii)"
+                },
+                {
+                    "label": "2",
+                    "hi": "(i) < (iii) < (ii) < (iv)",
+                    "en": "(i) < (iii) < (ii) < (iv)"
+                },
+                {
+                    "label": "3",
+                    "hi": "(i) < (ii) < (iii) < (iv)",
+                    "en": "(i) < (ii) < (iii) < (iv)"
+                },
+                {
+                    "label": "4",
+                    "hi": "(iv) < (iii) < (ii) < (i)",
+                    "en": "(iv) < (iii) < (ii) < (i)"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "तरंग संख्या ($\\tilde{\\nu}$) कार्बोनिल समूहों या एक्सोसाइक्लिक डबल बॉन्ड $\\text{C}=\\text{C}$ स्ट्रेचिंग फ्रीक्वेंसी के लिए रिंग के आकार और तनाव पर निर्भर करती है। रिंग का आकार घटने पर बेंडिंग स्ट्रेन बढ़ता है और $\\text{s}$ कैरेक्टर बदलता है, जिससे तरंग संख्या बढ़ती है।",
+            "explanation_en": "Wavenumber of absorption is directly proportional to the force constant ($k$) which increases with ring strain. Exocyclic double bonds in smaller rings exhibit higher stretching frequency (wavenumber) due to greater angle strain and increased s-character.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "rationale_hi": "सही क्रम (i) < (iv) < (iii) < (ii) है क्योंकि रिंग का तनाव बढ़ने पर स्ट्रेचिंग आवृति बढ़ती है।",
+                    "rationale_en": "The correct increasing order of wavenumber is (i) < (iv) < (iii) < (ii) based on ring strain effects on exocyclic double bonds."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "गलत क्रम।",
+                    "rationale_en": "Incorrect order."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "गलत क्रम।",
+                    "rationale_en": "Incorrect order."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "यह घटता क्रम है।",
+                    "rationale_en": "This represents the decreasing order."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "अभ्यर्थी द्वारा प्रश्न अनुत्तरित छोड़ा गया।",
+                    "rationale_en": "Question not attempted by the candidate."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Organic Chemistry",
+                "subtopic": "IR Spectroscopy",
+                "archetype": "Direct Fact",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Hard",
+                "blooms_level": "Analyze",
+                "keywords": [
+                    "wavenumber",
+                    "IR spectroscopy",
+                    "ring strain",
+                    "exocyclic double bond"
+                ],
+                "estimated_seconds": 90,
+                "conceptual_trap_hi": "छात्र अक्सर रिंग के आकार और बल स्थिरांक के संबंध में भ्रमित हो जाते हैं।",
+                "conceptual_trap_en": "Students often confuse the effect of ring strain on force constant.",
+                "prerequisite_topic": "IR Spectroscopy basics",
+                "ncert_mapping": null,
+                "formula_law_dependency": "Hooke's Law for stretching vibrations",
+                "shortcut_hack_hi": "कम रिंग आकार $\\implies$ अधिक तनाव $\\implies$ उच्च तरंग संख्या।",
+                "shortcut_hack_en": "Smaller ring size $\\implies$ higher ring strain $\\implies$ higher wavenumber.",
+                "clone_variant": {
+                    "question_hi": "निम्नलिखित में से किसकी IR अवशोषण तरंग संख्या उच्चतम होगी?",
+                    "question_en": "Which of the following will have the highest IR absorption wavenumber?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "साइक्लोहेक्सीन एक्सोसाइक्लिक डबल बॉन्ड",
+                            "en": "Cyclohexene exocyclic double bond"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "साइक्लोप्रोपीन एक्सोसाइक्लिक डबल बॉन्ड",
+                            "en": "Cyclopropene exocyclic double bond"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "साइक्लोब्यूटेन एक्सोसाइक्लिक डबल बॉन्ड",
+                            "en": "Cyclobutene exocyclic double bond"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "साइक्लोपेन्टीन एक्सोसाइक्लिक डबल बॉन्ड",
+                            "en": "Cyclopentene exocyclic double bond"
+                        }
+                    ],
+                    "correct_label": "2",
+                    "explanation_en": "Cyclopropene has the smallest ring with the highest strain, resulting in the highest absorption wavenumber."
+                }
+            }
+        },
+        {
+            "source_page": 14,
+            "number": 109,
+            "question_hi": "निम्नलिखित कथनों पर विचार कीजिए -\n(i) आरेनियस समीकरण के लिए, $\\ln k$ तथा $\\frac{1}{T}$ के मध्य ग्राफ का ढाल $\\frac{-\\text{E}_{\\text{a}}}{\\text{R}}$ होता है, जहाँ $\\text{E}_{\\text{a}} =$ सक्रियण ऊर्जा, $\\text{R} =$ सार्वत्रिक गैस स्थिरांक है।\n(ii) जब कोई पदार्थ अभिक्रिया की दर को कम करता है, तो उसे निरोधक कहते हैं।\n(iii) उत्प्रेरक, अभिक्रिया की गिब्स मुक्त ऊर्जा में परिवर्तन लाकर, अभिक्रिया की दर को परिवर्तित करता है।\nसही कथन है/हैं -",
+            "question_en": "Consider the following statements -\n(i) For Arrhenius equation, the slope of the graph between $\\ln k$ v/s $\\frac{1}{\\text{T}}$ gives $\\frac{-\\text{E}_{\\text{a}}}{\\text{R}}$, where $\\text{E}_{\\text{a}} =$ Activation energy, $\\text{R} =$ Universal gas constant.\n(ii) When a substance reduces the rate of reaction, it is called inhibitor.\n(iii) A catalyst changes the rate of reaction by changing the Gibbs free energy of reaction.\nThe correct statement/s is/are -",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "सभी (i), (ii) और (iii)",
+                    "en": "All (i), (ii) and (iii)"
+                },
+                {
+                    "label": "2",
+                    "hi": "केवल (i)",
+                    "en": "Only (i)"
+                },
+                {
+                    "label": "3",
+                    "hi": "केवल (i), (ii)",
+                    "en": "Only (i), (ii)"
+                },
+                {
+                    "label": "4",
+                    "hi": "केवल (i), (iii)",
+                    "en": "Only (i), (iii)"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "आरेनियस समीकरण के अनुसार, $\\ln k = \\ln A - \\frac{E_a}{RT}$, जिससे ढाल $-\\frac{E_a}{R}$ होता है। अतः कथन (i) सही है। अभिक्रिया की दर घटाने वाले पदार्थ को निरोधक (inhibitor) कहते हैं, अत: कथन (ii) सही है। उत्प्रेरक गिब्स मुक्त ऊर्जा ($\\Delta G$) को परिवर्तित नहीं करता, बल्कि सक्रियण ऊर्जा को कम करके मार्ग बदलता है, अत: कथन (iii) असत्य है।",
+            "explanation_en": "According to Arrhenius equation $\\ln k = \\ln A - \\frac{E_a}{RT}$, slope of $\\ln k$ vs $1/T$ is $-E_a/R$, making statement (i) correct. Inhibitors decrease reaction rate, making (ii) correct. Catalysts alter activation energy, not Gibbs free energy ($\\Delta G$), making (iii) incorrect.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "कथन (iii) असत्य है क्योंकि उत्प्रेरक गिब्स मुक्त ऊर्जा में परिवर्तन नहीं करता।",
+                    "rationale_en": "Statement (iii) is incorrect as catalysts do not change Gibbs free energy."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "कथन (ii) भी सत्य है, इसलिए केवल (i) सही नहीं है।",
+                    "rationale_en": "Statement (ii) is also correct."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "कथन (i) और (ii) दोनों सही हैं।",
+                    "rationale_en": "Both statements (i) and (ii) are correct."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "कथन (iii) असत्य है।",
+                    "rationale_en": "Statement (iii) is incorrect."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "अभ्यर्थी द्वारा प्रश्न अनुत्तरित छोड़ा गया।",
+                    "rationale_en": "Question not attempted by the candidate."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Physical Chemistry",
+                "subtopic": "Chemical Kinetics",
+                "archetype": "Statement-Based",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Understand",
+                "keywords": [
+                    "Arrhenius equation",
+                    "activation energy",
+                    "inhibitor",
+                    "catalyst",
+                    "Gibbs free energy"
+                ],
+                "estimated_seconds": 60,
+                "conceptual_trap_hi": "छात्र सोचते हैं कि उत्प्रेरक थर्मोडायनामिक्स गुणों जैसे $\\Delta G$ को बदलता है।",
+                "conceptual_trap_en": "Students often think a catalyst changes thermodynamic properties like $\\Delta G$.",
+                "prerequisite_topic": "Chemical Kinetics",
+                "ncert_mapping": "Class 12 Chemistry, Chemical Kinetics",
+                "formula_law_dependency": "Arrhenius Equation: $k = A e^{-E_a/RT}$",
+                "shortcut_hack_hi": "याद रखें: उत्प्रेरक केवल काइनेटिक्स को प्रभावित करता है, थर्मोडायनामिक्स ($\\Delta G$) को नहीं।",
+                "shortcut_hack_en": "Remember: Catalyst affects kinetics, not thermodynamics ($\\Delta G$).",
+                "clone_variant": {
+                    "question_hi": "निम्नलिखित में से कौन सा कथन उत्प्रेरक के लिए सही है?",
+                    "question_en": "Which of the following statements is correct for a catalyst?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "यह साम्य स्थिरांक को बदल देता है",
+                            "en": "It changes the equilibrium constant"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "यह अभिक्रिया की सक्रियण ऊर्जा को बदल देता है",
+                            "en": "It alters the activation energy of the reaction"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "यह गिब्स मुक्त ऊर्जा परिवर्तन को बदल देता है",
+                            "en": "It changes the Gibbs free energy change"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "यह स्वतःस्फूर्त अभिक्रिया को असहज बनाता है",
+                            "en": "It makes a non-spontaneous reaction spontaneous"
+                        }
+                    ],
+                    "correct_label": "2",
+                    "explanation_en": "A catalyst provides an alternate pathway with lower activation energy."
+                }
+            }
+        },
+        {
+            "source_page": 14,
+            "number": 110,
+            "question_hi": "इनमें से कौनसी संयोजकता कोश इलेक्ट्रॉन युग्म प्रतिकर्षणा (वी.एस.ई.पी.आर.) सिद्धांत की अवधारणा नहीं है?",
+            "question_en": "Which is not a postulate of Valence Shell Electron Pair Repulsion (VSEPR) Theory?",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "अणु की आकृति, केन्द्रीय परमाणु के आसपास उपस्थित संयोजकता कोश इलेक्ट्रॉन युग्मों (बंधित अथवा अबंधित) की संख्या पर निर्भर करती है।",
+                    "en": "The shape of molecule depends upon the number of valence shell electron pairs (bonded or non-bonded) around the central atom."
+                },
+                {
+                    "label": "2",
+                    "hi": "इलेक्ट्रॉन युग्मों के मध्य प्रतिकर्षण अन्योन्य क्रियाएँ निम्नलिखित क्रम में बढ़ती हैं : आवंधी युग्म-आवंधी युग्म < एकाकी युग्म-आवंधी युग्म < एकाकी युग्म-एकाकी युग्म",
+                    "en": "The repulsive interaction of electron pairs increases in the order : Bond pair-Bond pair < Lone pair-Bond pair < Lone pair-Lone pair"
+                },
+                {
+                    "label": "3",
+                    "hi": "केन्द्रीय परमाणु के संयोजकता कोश में उपस्थित इलेक्ट्रॉन युग्म एक-दूसरे को प्रतिकर्षित करते हैं।",
+                    "en": "Pairs of electrons in the valence shell of central atom repel one another."
+                },
+                {
+                    "label": "4",
+                    "hi": "इलेक्ट्रॉन युग्म स्पेस में उन स्थितियों में अवस्थित होने का प्रयास करते हैं, जिसके फलस्वरूप उनके मध्य प्रतिकर्षण अधिकतम हो।",
+                    "en": "The pair of electrons tend to occupy such positions in space that maximize repulsion between them."
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "वी.एस.ई.पी.आर. (VSEPR) सिद्धांत के अनुसार, इलेक्ट्रॉन युग्म स्पेस में इस प्रकार व्यवस्थित होते हैं कि उनके बीच का प्रतिकर्षण न्यूनतम हो (न कि अधिकतम)। अतः विकल्प (4) गलत अभिधारणा है और यही सही उत्तर है।",
+            "explanation_en": "According to VSEPR theory, electron pairs tend to occupy positions in space that *minimize* (not maximize) repulsion between them. Therefore, option (4) is incorrect as a postulate and is the correct answer.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "यह VSEPR सिद्धांत का एक वैध अभिगृहीत है।",
+                    "rationale_en": "This is a valid postulate of VSEPR theory."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "यह प्रतिकर्षण का सही क्रम है जो सिद्धांत का हिस्सा है।",
+                    "rationale_en": "This is the correct order of repulsion which is part of the theory."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "यह VSEPR सिद्धांत का मूल आधार है।",
+                    "rationale_en": "This is a fundamental premise of VSEPR theory."
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "rationale_hi": "यह गलत है क्योंकि इलेक्ट्रॉन युग्म प्रतिकर्षण को न्यूनतम करने का प्रयास करते हैं, अधिकतम करने का नहीं।",
+                    "rationale_en": "This is incorrect because electron pairs try to minimize repulsion, not maximize it."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "अभ्यर्थी द्वारा प्रश्न अनुत्तरित छोड़ा गया।",
+                    "rationale_en": "Question not attempted by the candidate."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Inorganic Chemistry",
+                "subtopic": "Chemical Bonding and Molecular Structure",
+                "archetype": "Direct Fact",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Easy",
+                "blooms_level": "Remember",
+                "keywords": [
+                    "VSEPR theory",
+                    "postulates",
+                    "electron pair repulsion",
+                    "molecular geometry"
+                ],
+                "estimated_seconds": 45,
+                "conceptual_trap_hi": "छात्र 'minimize' और 'maximize' शब्दों के भ्रम में आ जाते हैं।",
+                "conceptual_trap_en": "Students often get confused between minimize and maximize.",
+                "prerequisite_topic": "Chemical Bonding",
+                "ncert_mapping": "Class 11 Chemistry, Chemical Bonding and Molecular Structure",
+                "formula_law_dependency": "VSEPR Postulates",
+                "shortcut_hack_hi": "कम ऊर्जा और न्यूनतम प्रतिकर्षण स्थिरता की ओर ले जाते हैं।",
+                "shortcut_hack_en": "Lower energy and minimized repulsion lead to stability.",
+                "clone_variant": {
+                    "question_hi": "VSEPR सिद्धांत के अनुसार, इलेक्ट्रॉन युग्मों के बीच प्रतिकर्षण का सही बढ़ता क्रम क्या है?",
+                    "question_en": "According to VSEPR theory, what is the correct increasing order of repulsion between electron pairs?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "lp-lp < lp-bp < bp-bp",
+                            "en": "lp-lp < lp-bp < bp-bp"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "bp-bp < lp-bp < lp-lp",
+                            "en": "bp-bp < lp-bp < lp-lp"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "bp-bp < lp-lp < lp-bp",
+                            "en": "bp-bp < lp-lp < lp-bp"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "lp-bp < lp-lp < bp-bp",
+                            "en": "lp-bp < lp-lp < bp-bp"
+                        }
+                    ],
+                    "correct_label": "2",
+                    "explanation_en": "The repulsive interaction decreases in the order: lp-lp > lp-bp > bp-bp, so increasing order is bp-bp < lp-bp < lp-lp."
+                }
+            }
+        },
+        {
+            "source_page": 14,
+            "number": 111,
+            "question_hi": "संकुल आयन $[\\text{Co}(\\text{en})_2\\text{Cl}_2]^+$ के त्रिविम समावयवों (स्टीरियोआइसोसोमर्स) की संख्या है -",
+            "question_en": "The number of stereoisomers of the complex ion $[\\text{Co}(\\text{en})_2\\text{Cl}_2]^+$ is -",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "दो",
+                    "en": "Two"
+                },
+                {
+                    "label": "2",
+                    "hi": "पाँच",
+                    "en": "Five"
+                },
+                {
+                    "label": "3",
+                    "hi": "तीन",
+                    "en": "Three"
+                },
+                {
+                    "label": "4",
+                    "hi": "एक",
+                    "en": "One"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "संकुल $[\\text{Co}(\\text{en})_2\\text{Cl}_2]^+$ प्रकार $[\\text{M}(\\text{AA})_2\\text{a}_2]$ का है। इसके दो ज्यामितीय समावयवी होते हैं: सिस (cis) और ट्रांस (trans)। ट्रांस रूप सममितीय (achiral) होता है और इसका कोई ऑप्टिकल आइसोमर नहीं होता। सिस रूप असमितीय (chiral) होता है और यह दो ऑप्टिकल आइसोमर्स (d और l) के रूप में मौजूद होता है। इस प्रकार, कुल त्रिविम समावयवों की संख्या 3 (एक ट्रांस और दो सिस-ऑप्टिकल रूप) होती है।",
+            "explanation_en": "The complex $[\\text{Co}(\\text{en})_2\\text{Cl}_2]^+$ is of the type $[\\text{M}(\\text{AA})_2\\text{a}_2]$. It exhibits cis and trans isomers. The trans-isomer is optically inactive (achiral). The cis-isomer is optically active and exists as a pair of enantiomers (d and l). Therefore, the total number of stereoisomers is 3 (1 trans + 2 cis enantiomers).",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "दो समावयवी अपर्याप्त हैं क्योंकि सिस रूप ध्रुवण घूर्णक होता है।",
+                    "rationale_en": "Two is incorrect because the cis form is optically active."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "पाँच गलत संख्या है।",
+                    "rationale_en": "Five is incorrect."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "कुल तीन त्रिविम समावयवी होते हैं (1 ट्रांस + 2 सिस रूप)।",
+                    "rationale_en": "Total three stereoisomers exist (1 trans + 2 cis enantiomers)."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "एक गलत है क्योंकि इसमें ज्यामितीय और ध्रुवण दोनों समावयवता पाई जाती है।",
+                    "rationale_en": "One is incorrect."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "अभ्यर्थी द्वारा प्रश्न अनुत्तरित छोड़ा गया।",
+                    "rationale_en": "Question not attempted by the candidate."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Inorganic Chemistry",
+                "subtopic": "Coordination Compounds",
+                "archetype": "Direct Fact",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Apply",
+                "keywords": [
+                    "stereoisomers",
+                    "coordination compounds",
+                    "cis-trans",
+                    "optical isomers",
+                    " $[\\text{Co}(\\text{en})_2\\text{Cl}_2]^+$"
+                ],
+                "estimated_seconds": 60,
+                "conceptual_trap_hi": "छात्र अक्सर केवल ज्यामितीय समावयवी (cis और trans) गिनकर 2 उत्तर दे देते हैं, ऑप्टिकल समावयवता को भूल जाते हैं।",
+                "conceptual_trap_en": "Students often count only geometrical isomers (cis and trans) and answer 2, forgetting optical isomers.",
+                "prerequisite_topic": "Stereochemistry of Coordination Complexes",
+                "ncert_mapping": "Class 12 Chemistry, Coordination Compounds",
+                "formula_law_dependency": "Type $[\\text{M}(\\text{AA})_2\\text{a}_2]$ isomerism",
+                "shortcut_hack_hi": "$[\\text{M}(\\text{AA})_2\\text{a}_2]$ प्रकार के संकुलों में हमेशा 3 स्टीरियोआइसोमर होते हैं।",
+                "shortcut_hack_en": "Complexes of type $[\\text{M}(\\text{AA})_2\\text{a}_2]$ always have 3 stereoisomers.",
+                "clone_variant": {
+                    "question_hi": "संकुल आयन $[\\text{Cr}(\\text{en})_2\\text{Cl}_2]^+$ के कुल कितने त्रिविम समावयवी संभव हैं?",
+                    "question_en": "What is the total number of stereoisomers possible for the complex ion $[\\text{Cr}(\\text{en})_2\\text{Cl}_2]^+$?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "2",
+                            "en": "2"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "3",
+                            "en": "3"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "4",
+                            "en": "4"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "6",
+                            "en": "6"
+                        }
+                    ],
+                    "correct_label": "2",
+                    "explanation_en": "Like cobalt complex, chromium complex with $[\\text{M}(\\text{AA})_2\\text{X}_2]$ formula also exhibits 3 stereoisomers (trans and two optically active cis forms)."
+                }
+            }
+        }
+    ]
+}

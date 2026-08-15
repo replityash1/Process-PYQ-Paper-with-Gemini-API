@@ -1,0 +1,623 @@
+{
+    "questions": [
+        {
+            "source_page": 5,
+            "number": 28,
+            "question_hi": "निम्नलिखित कार्बधनायनों को उनके स्थायित्व के बढ़ते क्रम में व्यवस्थित कीजिए -\n$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$, $(\\text{CH}_3)_3\\text{C}^\\oplus$, $\\text{CH}_3-\\text{CH}_2^\\oplus$, $\\text{CH}_3^\\oplus$\n(1) $(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < \\text{CH}_3^\\oplus$\n(2) $\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$\n(3) $(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$\n(4) $\\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$\n(5) अनुत्तरित प्रश्न",
+            "question_en": "Arrange the following carbocations in increasing order of their stability -\n$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$, $(\\text{CH}_3)_3\\text{C}^\\oplus$, $\\text{CH}_3-\\text{CH}_2^\\oplus$, $\\text{CH}_3^\\oplus$\n(1) $(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < \\text{CH}_3^\\oplus$\n(2) $\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$\n(3) $(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$\n(4) $\\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$\n(5) Question not attempted",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < \\text{CH}_3^\\oplus$",
+                    "en": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < \\text{CH}_3^\\oplus$"
+                },
+                {
+                    "label": "2",
+                    "hi": "$\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$",
+                    "en": "$\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$"
+                },
+                {
+                    "label": "3",
+                    "hi": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$",
+                    "en": "$(\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$"
+                },
+                {
+                    "label": "4",
+                    "hi": "$\\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$",
+                    "en": "$\\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus < \\text{CH}_3^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus$"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "कार्बधनायनों का स्थायित्व मुख्य रूप से अनुनाद (resonance), अतिसंयुग्मन (hyperconjugation) और प्रेरणिक प्रभाव (inductive effect) पर निर्भर करता है। ट्राइफेनिल मेथिल कार्बधनायन सबसे अधिक स्थायी है क्योंकि इसमें तीन फेनिल समूहों के साथ व्यापक अनुनाद होता है। इसके बाद तृतीयक, द्वितीयक, प्राथमिक और अंत में मेथिल कार्बधनायन आता है जिसका स्थायित्व सबसे कम होता है। बढ़ता क्रम: $\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$ है।",
+            "explanation_en": "The stability of carbocations depends on resonance, hyperconjugation, and inductive effects. Triphenylmethyl carbocation is the most stable due to extensive resonance from three phenyl groups, followed by tertiary, secondary, primary, and methyl carbocation with the least stability. The increasing order of stability is: $\\text{CH}_3^\\oplus < \\text{CH}_3-\\text{CH}_2^\\oplus < (\\text{CH}_3)_3\\text{C}^\\oplus < (\\text{C}_6\\text{H}_5)_3\\text{C}^\\oplus$.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "यह घटते क्रम का विपरीत है और इसमें सबसे अधिक स्थायी को सबसे कम बताया गया है।",
+                    "rationale_en": "This is incorrect as it reverses the stability order completely."
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "rationale_hi": "यह कार्बधनायनों के स्थायित्व का सही बढ़ता क्रम है: मेथिल < प्राथमिक < तृतीयक < ट्राइफेनिल मेथिल।",
+                    "rationale_en": "This correctly represents the increasing order of stability: methyl < primary < tertiary < triphenylmethyl."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "ट्राइफेनिल मेथिल कार्बधनायन को सबसे कम स्थायी दिखाया गया है जो गलत है।",
+                    "rationale_en": "Incorrectly places triphenylmethyl carbocation as the least stable."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "क्रम सही नहीं है।",
+                    "rationale_en": "The sequence is jumbled and incorrect."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न का विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Organic Chemistry",
+                "subtopic": "Stability of Carbocations",
+                "archetype": "Direct Fact",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Easy",
+                "blooms_level": "Understand",
+                "keywords": [
+                    "Carbocation",
+                    "Stability",
+                    "Resonance",
+                    "Hyperconjugation"
+                ],
+                "estimated_seconds": 45,
+                "conceptual_trap_hi": "छात्र अनुनाद प्रभाव की उपेक्षा करके केवल प्रेरणिक प्रभाव से उत्तर दे सकते हैं।",
+                "conceptual_trap_en": "Students might ignore resonance and incorrectly judge purely based on inductive effect.",
+                "prerequisite_topic": "Electronic Displacements in Covalent Bonds",
+                "ncert_mapping": "Class 11 Chemistry, Organic Chemistry - Some Basic Principles and Techniques",
+                "formula_law_dependency": null,
+                "shortcut_hack_hi": "अनुनाद (Resonance) हमेशा प्रेरणिक और अतिसंयुग्मन प्रभाव से प्रबल होता है।",
+                "shortcut_hack_en": "Resonance stabilization always dominates over hyperconjugation and inductive effects.",
+                "clone_variant": {
+                    "question_hi": "निम्नलिखित कार्बधनायनों के स्थायित्व का सही क्रम कौन सा है?",
+                    "question_en": "Which of the following is the correct order of stability of carbocations?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "$(\\text{CH}_3)_3\\text{C}^\\oplus > \\text{CH}_3-\\text{CH}_2^\\oplus > \\text{CH}_3^\\oplus$",
+                            "en": "$(\\text{CH}_3)_3\\text{C}^\\oplus > \\text{CH}_3-\\text{CH}_2^\\oplus > \\text{CH}_3^\\oplus$"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "$\\text{CH}_3^\\oplus > \\text{CH}_3-\\text{CH}_2^\\oplus > (\\text{CH}_3)_3\\text{C}^\\oplus$",
+                            "en": "$\\text{CH}_3^\\oplus > \\text{CH}_3-\\text{CH}_2^\\oplus > (\\text{CH}_3)_3\\text{C}^\\oplus$"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "$\\text{CH}_3-\\text{CH}_2^\\oplus > (\\text{CH}_3)_3\\text{C}^\\oplus > \\text{CH}_3^\\oplus$",
+                            "en": "$\\text{CH}_3-\\text{CH}_2^\\oplus > (\\text{CH}_3)_3\\text{C}^\\oplus > \\text{CH}_3^\\oplus$"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "$\\text{CH}_3^\\oplus > (\\text{CH}_3)_3\\text{C}^\\oplus > \\text{CH}_3-\\text{CH}_2^\\oplus$",
+                            "en": "$\\text{CH}_3^\\oplus > (\\text{CH}_3)_3\\text{C}^\\oplus > \\text{CH}_3-\\text{CH}_2^\\oplus$"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "Tertiary carbocation is more stable than secondary, which is more stable than primary/methyl due to hyperconjugation and inductive effect."
+                }
+            }
+        },
+        {
+            "source_page": 5,
+            "number": 29,
+            "question_hi": "आधुनिक आवर्त सारणी के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए -\n(i) s तथा p-ब्लॉक के तत्त्वों को सम्मिलित रूप से निरूपक तत्त्व कहते हैं।\n(ii) $\\text{Mg}, \\text{Mg}^{2+}(\\text{g}), \\text{Al}^{3+}(\\text{g})$ एवं $\\text{Al}$ में से अधिकतम आकार वाली स्पीशीज $\\text{Mg}$ है।\n(iii) एक आवर्त में बाईं से दाईं तरफ जाने पर विद्युत्ऋणता साधारणतया घटती है।\nसही कथन/कथनों का चयन कीजिए -\n(1) केवल (iii)\n(2) केवल (ii), (iii)\n(3) केवल (i), (ii)\n(4) केवल (i), (iii)\n(5) अनुत्तरित प्रश्न",
+            "question_en": "Consider the following statements regarding the Modern Periodic Table -\n(i) s and p-block elements together are called Representative Elements.\n(ii) Among $\\text{Mg}, \\text{Mg}^{2+}(\\text{g}), \\text{Al}^{3+}(\\text{g})$ and $\\text{Al}$, the largest species is $\\text{Mg}$.\n(iii) The electronegativity generally decreases in a period from left to right.\nChoose the correct statement/s -\n(1) Only (iii)\n(2) Only (ii), (iii)\n(3) Only (i), (ii)\n(4) Only (i), (iii)\n(5) Question not attempted",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "केवल (iii)",
+                    "en": "Only (iii)"
+                },
+                {
+                    "label": "2",
+                    "hi": "केवल (ii), (iii)",
+                    "en": "Only (ii), (iii)"
+                },
+                {
+                    "label": "3",
+                    "hi": "केवल (i), (ii)",
+                    "en": "Only (i), (ii)"
+                },
+                {
+                    "label": "4",
+                    "hi": "केवल (i), (iii)",
+                    "en": "Only (i), (iii)"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "कथन (i) सही है क्योंकि s और p-ब्लॉक के तत्वों को मुख्य वर्ग या निरूपक (representative) तत्व कहा जाता है। कथन (ii) सही है क्योंकि उदासीन परमाणु $\\text{Mg}$ का आकार इसके धनायनों ($\\text{Mg}^{2+}$) और $\\text{Al}$ तथा इसके आयनों से बड़ा होता है। कथन (iii) गलत है क्योंकि एक आवर्त में बाएं से दाएं जाने पर विद्युत्ऋणता बढ़ती है, घटती नहीं है। अतः केवल (i) और (ii) सही हैं।",
+            "explanation_en": "Statement (i) is correct because s and p-block elements are together termed representative elements. Statement (ii) is correct because the neutral magnesium atom ($\\text{Mg}$) has a larger size than its ions and aluminium species. Statement (iii) is incorrect because electronegativity generally increases across a period from left to right. Therefore, only (i) and (ii) are correct.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "कथन (iii) गलत है क्योंकि आवर्त में विद्युत्ऋणता बढ़ती है।",
+                    "rationale_en": "Statement (iii) is false as electronegativity increases across a period."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "कथन (iii) गलत है।",
+                    "rationale_en": "Statement (iii) is incorrect."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "कथन (i) और (ii) दोनों तथ्यात्मक रूप से सही हैं।",
+                    "rationale_en": "Both statements (i) and (ii) are factually correct."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "कथन (iii) गलत है।",
+                    "rationale_en": "Statement (iii) is incorrect."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न का विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Inorganic Chemistry",
+                "subtopic": "Periodic Table and Periodicity",
+                "archetype": "Statement-Based",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Understand",
+                "keywords": [
+                    "Periodic Table",
+                    "Representative Elements",
+                    "Atomic Radius",
+                    "Electronegativity"
+                ],
+                "estimated_seconds": 60,
+                "conceptual_trap_hi": "छात्रों को लग सकता है कि विद्युत्ऋणता घटती है जबकि आवर्त में यह बढ़ती है।",
+                "conceptual_trap_en": "Students might confuse the periodic trend of electronegativity which increases across a period.",
+                "prerequisite_topic": "Classification of Elements and Periodicity in Properties",
+                "ncert_mapping": "Class 11 Chemistry, Chapter 3",
+                "formula_law_dependency": null,
+                "shortcut_hack_hi": "आवर्त में बाएं से दाएं जाने पर प्रभावी नाभिकीय आवेश बढ़ता है, जिससे आकार घटता है और विद्युत्ऋणता बढ़ती है।",
+                "shortcut_hack_en": "Effective nuclear charge increases from left to right in a period, decreasing size and increasing electronegativity.",
+                "clone_variant": {
+                    "question_hi": "आधुनिक आवर्त सारणी के संबंध में कौन सा कथन सही है?",
+                    "question_en": "Which statement regarding the Modern Periodic Table is correct?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "एक आवर्त में बाएं से दाएं जाने पर परमाणु त्रिज्या बढ़ती है।",
+                            "en": "Atomic radius increases from left to right in a period."
+                        },
+                        {
+                            "label": "2",
+                            "hi": "s और p-ब्लॉक तत्वों को निरूपक तत्व कहते हैं।",
+                            "en": "s and p-block elements are called representative elements."
+                        },
+                        {
+                            "label": "3",
+                            "hi": "उदासीन परमाणु का आकार उसके धनायन से छोटा होता है।",
+                            "en": "Neutral atom is smaller than its cation."
+                        },
+                        {
+                            "label": "4",
+                            "hi": "समूह में नीचे जाने पर विद्युत्ऋणता बढ़ती है।",
+                            "en": "Electronegativity increases down the group."
+                        }
+                    ],
+                    "correct_label": "2",
+                    "explanation_en": "s and p-block elements are collectively known as representative elements or main group elements."
+                }
+            }
+        },
+        {
+            "source_page": 5,
+            "number": 30,
+            "question_hi": "निम्नलिखित में से कौन सी अभिक्रिया असमानुपातन अभिक्रिया का उदाहरण है?\n(1) $\\text{Cl}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow \\text{ClO}^-(\\text{aq}) + \\text{Cl}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l})$\n(2) $\\text{Cl}_2(\\text{g}) + 2\\text{KI}(\\text{aq}) \\rightarrow 2\\text{KCl}(\\text{aq}) + \\text{I}_2(\\text{s})$\n(3) $2\\text{H}_2\\text{O}(\\text{l}) + 2\\text{F}_2(\\text{g}) \\rightarrow 4\\text{HF}(\\text{aq}) + \\text{O}_2(\\text{g})$\n(4) $2\\text{F}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow 2\\text{F}^-(\\text{aq}) + \\text{OF}_2(\\text{g}) + \\text{H}_2\\text{O}(\\text{l})$\n(5) अनुत्तरित प्रश्न",
+            "question_en": "Which one of the following reaction is an example of disproportionation reaction?\n(1) $\\text{Cl}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow \\text{ClO}^-(\\text{aq}) + \\text{Cl}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l})$\n(2) $\\text{Cl}_2(\\text{g}) + 2\\text{KI}(\\text{aq}) \\rightarrow 2\\text{KCl}(\\text{aq}) + \\text{I}_2(\\text{s})$\n(3) $2\\text{H}_2\\text{O}(\\text{l}) + 2\\text{F}_2(\\text{g}) \\rightarrow 4\\text{HF}(\\text{aq}) + \\text{O}_2(\\text{g})$\n(4) $2\\text{F}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow 2\\text{F}^-(\\text{aq}) + \\text{OF}_2(\\text{g}) + \\text{H}_2\\text{O}(\\text{l})$\n(5) Question not attempted",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "$\\text{Cl}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow \\text{ClO}^-(\\text{aq}) + \\text{Cl}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l})$",
+                    "en": "$\\text{Cl}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow \\text{ClO}^-(\\text{aq}) + \\text{Cl}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l})$"
+                },
+                {
+                    "label": "2",
+                    "hi": "$\\text{Cl}_2(\\text{g}) + 2\\text{KI}(\\text{aq}) \\rightarrow 2\\text{KCl}(\\text{aq}) + \\text{I}_2(\\text{s})$",
+                    "en": "$\\text{Cl}_2(\\text{g}) + 2\\text{KI}(\\text{aq}) \\rightarrow 2\\text{KCl}(\\text{aq}) + \\text{I}_2(\\text{s})$"
+                },
+                {
+                    "label": "3",
+                    "hi": "$2\\text{H}_2\\text{O}(\\text{l}) + 2\\text{F}_2(\\text{g}) \\rightarrow 4\\text{HF}(\\text{aq}) + \\text{O}_2(\\text{g})$",
+                    "en": "$2\\text{H}_2\\text{O}(\\text{l}) + 2\\text{F}_2(\\text{g}) \\rightarrow 4\\text{HF}(\\text{aq}) + \\text{O}_2(\\text{g})$"
+                },
+                {
+                    "label": "4",
+                    "hi": "$2\\text{F}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow 2\\text{F}^-(\\text{aq}) + \\text{OF}_2(\\text{g}) + \\text{H}_2\\text{O}(\\text{l})$",
+                    "en": "$2\\text{F}_2(\\text{g}) + 2\\text{OH}^-(\\text{aq}) \\rightarrow 2\\text{F}^-(\\text{aq}) + \\text{OF}_2(\\text{g}) + \\text{H}_2\\text{O}(\\text{l})$"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "असमानुपातन (Disproportionation) अभिक्रिया वह रेडॉक्स अभिक्रिया है जिसमें एक ही तत्व का एक ही ऑक्सीकरण अवस्था से एक साथ ऑक्सीकरण और अपचयन होता है। विकल्प (1) में क्लोरीन ($\\text{Cl}_2$) की ऑक्सीकरण संख्या 0 से बदलकर $\\text{ClO}^-$ में +1 तथा $\\text{Cl}^-$ में -1 हो जाती है, जो कि असमानुपातन का एक उत्कृष्ट उदाहरण है।",
+            "explanation_en": "A disproportionation reaction is a redox reaction in which an element in a single oxidation state is simultaneously oxidized and reduced. In option (1), chlorine ($\\text{Cl}_2$) with an oxidation state of 0 is simultaneously oxidized to +1 in $\\text{ClO}^-$ and reduced to -1 in $\\text{Cl}^-$.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "rationale_hi": "यहाँ $\\text{Cl}_2$ (0) का ऑक्सीकरण (+1) और अपचयन (-1) दोनों एक साथ होता है।",
+                    "rationale_en": "Here $\\text{Cl}_2$ (0) undergoes both oxidation (+1) and reduction (-1) simultaneously."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "यह विस्थापन अभिक्रिया है।",
+                    "rationale_en": "This is a displacement reaction."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "यह सामान्य रेडॉक्स अभिक्रिया है जिसमें फ्लोरीन अपचयित और ऑक्सीजन ऑक्सीकृत होती है।",
+                    "rationale_en": "This is a standard redox reaction where fluorine is reduced and oxygen is oxidized."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "यह रेडॉक्स अभिक्रिया है, असमानुपातन नहीं।",
+                    "rationale_en": "This is a redox reaction, not disproportionation."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न का विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Physical Chemistry",
+                "subtopic": "Redox Reactions",
+                "archetype": "Direct Fact",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Medium",
+                "blooms_level": "Apply",
+                "keywords": [
+                    "Disproportionation",
+                    "Redox Reaction",
+                    "Oxidation State"
+                ],
+                "estimated_seconds": 60,
+                "conceptual_trap_hi": "छात्र सभी रेडॉक्स अभिक्रियाओं को असमानुपातन समझने की भूल कर सकते हैं।",
+                "conceptual_trap_en": "Students might confuse general redox reactions with disproportionation where the same element must change state.",
+                "prerequisite_topic": "Calculating Oxidation Numbers",
+                "ncert_mapping": "Class 11 Chemistry, Redox Reactions",
+                "formula_law_dependency": null,
+                "shortcut_hack_hi": "देखें कि किस अभिक्रिया में एक ही अभिकारक अणु का परमाणु अलग-अलग उत्पादों में उच्चतर और निम्नतर ऑक्सीकरण अवस्था में जा रहा है।",
+                "shortcut_hack_en": "Look for a reaction where a single reactant atom splits into higher and lower oxidation states in the products.",
+                "clone_variant": {
+                    "question_hi": "निम्नलिखित में से कौन सी असमानुपातन अभिक्रिया नहीं है?",
+                    "question_en": "Which of the following is not a disproportionation reaction?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "$2\\text{H}_2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O} + \\text{O}_2$",
+                            "en": "$2\\text{H}_2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O} + \\text{O}_2$"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "$4\\text{H}_3\\text{PO}_3 \\rightarrow 3\\text{H}_3\\text{PO}_4 + \\text{PH}_3$",
+                            "en": "$4\\text{H}_3\\text{PO}_3 \\rightarrow 3\\text{H}_3\\text{PO}_4 + \\text{PH}_3$"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "$\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$",
+                            "en": "$\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "$3\\text{ClO}^- \\rightarrow 2\\text{Cl}^- + \\text{ClO}_3^-$",
+                            "en": "$3\\text{ClO}^- \\rightarrow 2\\text{Cl}^- + \\text{ClO}_3^-$"
+                        }
+                    ],
+                    "correct_label": "3",
+                    "explanation_en": "Reaction 3 is a simple displacement reaction where Zinc is oxidized and Hydrogen is reduced, not a disproportionation reaction."
+                }
+            }
+        },
+        {
+            "source_page": 5,
+            "number": 31,
+            "question_hi": "निम्नलिखित में से कौन सा यौगिक ऐरोमैटिक नहीं है?\n(1) Benzene cation structure with positive charge\n(2) Bicyclic naphthalene-like structure\n(3) Bicyclic fused ring structure\n(4) Five-membered ring with negative charge\n(5) अनुत्तरित प्रश्न",
+            "question_en": "Which one of the following compound is not aromatic?\n(1) Benzene cation structure with positive charge\n(2) Bicyclic naphthalene-like structure\n(3) Bicyclic fused ring structure\n(4) Five-membered ring with negative charge\n(5) Question not attempted",
+            "has_visuals": true,
+            "visual_location": "options",
+            "image_hi": "page5_q31_hi.jpg",
+            "image_en": "page5_q31_en.jpg",
+            "image_full": "page5_q31_full.jpg",
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "",
+                    "en": ""
+                },
+                {
+                    "label": "2",
+                    "hi": "",
+                    "en": ""
+                },
+                {
+                    "label": "3",
+                    "hi": "",
+                    "en": ""
+                },
+                {
+                    "label": "4",
+                    "hi": "",
+                    "en": ""
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "ऐरोमैटिकता के लिए हकल के नियम ($4n+2$ $\\pi$ इलेक्ट्रॉन) का पालन होना आवश्यक है। विकल्प (1) में दिए गए चक्र में 4 $\\pi$ इलेक्ट्रॉन हैं ($n=0$ के लिए $4n$, जो कि प्रति-ऐरोमैटिक है)। अतः विकल्प (1) ऐरोमैटिक नहीं है। अन्य सभी यौगिक हकल नियम का पालन करते हैं।",
+            "explanation_en": "For aromaticity, compounds must follow Hückel's rule ($4n+2$ $\\pi$ electrons) and be planar and cyclic. Option (1) shows a cyclic cation with 4 $\\pi$ electrons, which follows the $4n$ rule ($n=1$) and is anti-aromatic, hence not aromatic.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "rationale_hi": "यह 4 $\\pi$ इलेक्ट्रॉन प्रणाली वाला प्रति-ऐरोमैटिक (anti-aromatic) यौगिक है, इसलिए यह ऐरोमैटिक नहीं है।",
+                    "rationale_en": "This is an anti-aromatic compound with 4 $\\pi$ electrons, hence it is not aromatic."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "यह नेफ़थलीन जैसा यौगिक है जिसमें 10 $\\pi$ इलेक्ट्रॉन हैं, अतः यह ऐरोमैटिक है।",
+                    "rationale_en": "This has 10 $\\pi$ electrons (naphthalene derivative) and is aromatic."
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "rationale_hi": "यह भी एक संगमित ऐरोमैटिक प्रणाली है।",
+                    "rationale_en": "This is also a fused aromatic system."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "यह साइक्लोपेन्टाडिएनिल ऋणायन है जिसमें 6 $\\pi$ इलेक्ट्रॉन होते हैं और यह ऐरोमैटिक है।",
+                    "rationale_en": "This is cyclopentadienyl anion having 6 $\\pi$ electrons, making it aromatic."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न का विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Organic Chemistry",
+                "subtopic": "Aromaticity",
+                "archetype": "Diagram/Visual",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Hard",
+                "blooms_level": "Analyze",
+                "keywords": [
+                    "Aromaticity",
+                    "Huckel Rule",
+                    "Anti-aromatic",
+                    "Pi electrons"
+                ],
+                "estimated_seconds": 75,
+                "conceptual_trap_hi": "छात्र केवल चक्र देखकर उसे ऐरोमैटिक मान लेते हैं, बिना $\\pi$ इलेक्ट्रॉनों की गिनती ($4n+2$ बनाम $4n$) किए।",
+                "conceptual_trap_en": "Students often assume any cyclic conjugated system is aromatic without checking Hückel's 4n+2 rule.",
+                "prerequisite_topic": "Resonance and Conjugation",
+                "ncert_mapping": "Class 11 Chemistry, Hydrocarbons",
+                "formula_law_dependency": "Hückel's Rule ($4n+2$ $\\pi$ electrons)",
+                "shortcut_hack_hi": "4n $\\pi$ इलेक्ट्रॉन वाले चक्रीय समतलीय यौगिक प्रति-ऐरोमैटिक होते हैं।",
+                "shortcut_hack_en": "Cyclic planar conjugated systems with 4n $\\pi$ electrons are anti-aromatic.",
+                "clone_variant": {
+                    "question_hi": "निम्नलिखित में से कौन सा यौगिक प्रति-ऐरोमैटिक है?",
+                    "question_en": "Which of the following compounds is anti-aromatic?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "बेन्जीन",
+                            "en": "Benzene"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "साइक्लोब्यूटाडाईन",
+                            "en": "Cyclobutadiene"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "पिरिडीन",
+                            "en": "Pyridine"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "फ्यूरान",
+                            "en": "Furan"
+                        }
+                    ],
+                    "correct_label": "2",
+                    "explanation_en": "Cyclobutadiene has 4 pi electrons and is a classic example of an anti-aromatic compound."
+                }
+            }
+        },
+        {
+            "source_page": 5,
+            "number": 32,
+            "question_hi": "दहन के पश्चात् $44\\text{ g } \\text{CO}_2(\\text{g})$ उत्पन्न करने के लिए मेथेन के आवश्यक मोलों की संख्या है -\n(1) $2.0\\text{ mol}$\n(2) $0.5\\text{ mol}$\n(3) $1.0\\text{ mol}$\n(4) $1.5\\text{ mol}$\n(5) अनुत्तरित प्रश्न",
+            "question_en": "The number of moles of methane required to produce $44\\text{ g}$ of $\\text{CO}_2(\\text{g})$ after combustion is -\n(1) $2.0\\text{ mol}$\n(2) $0.5\\text{ mol}$\n(3) $1.0\\text{ mol}$\n(4) $1.5\\text{ mol}$\n(5) Question not attempted",
+            "has_visuals": false,
+            "visual_location": "none",
+            "image_hi": null,
+            "image_en": null,
+            "image_full": null,
+            "options": [
+                {
+                    "label": "1",
+                    "hi": "$2.0\\text{ mol}$",
+                    "en": "$2.0\\text{ mol}$"
+                },
+                {
+                    "label": "2",
+                    "hi": "$0.5\\text{ mol}$",
+                    "en": "$0.5\\text{ mol}$"
+                },
+                {
+                    "label": "3",
+                    "hi": "$1.0\\text{ mol}$",
+                    "en": "$1.0\\text{ mol}$"
+                },
+                {
+                    "label": "4",
+                    "hi": "$1.5\\text{ mol}$",
+                    "en": "$1.5\\text{ mol}$"
+                },
+                {
+                    "label": "5",
+                    "hi": "अनुत्तरित प्रश्न",
+                    "en": "Question not attempted"
+                }
+            ],
+            "explanation_hi": "मेथेन का दहन समीकरण है:\n$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$\nउत्पन्न $\\text{CO}_2$ का द्रव्यमान = $44\\text{ g}$\n$\\text{CO}_2$ के मोल = $\\frac{44\\text{ g}}{44\\text{ g/mol}} = 1\\text{ mol}$\nसमीकरण के अनुसार, 1 मोल $\\text{CO}_2$ प्राप्त करने के लिए 1 मोल $\\text{CH}_4$ की आवश्यकता होती है।",
+            "explanation_en": "The combustion reaction of methane is:\n$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$\nMass of $\\text{CO}_2$ produced = $44\\text{ g}$\nMoles of $\\text{CO}_2$ = $\\frac{44\\text{ g}}{44\\text{ g/mol}} = 1\\text{ mol}$\nAccording to the balanced equation, 1 mole of $\\text{CO}_2$ is produced by 1 mole of $\\text{CH}_4$.",
+            "option_rationales": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "rationale_hi": "गलत गणना।",
+                    "rationale_en": "Incorrect calculation."
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "rationale_hi": "गलत गणना।",
+                    "rationale_en": "Incorrect calculation."
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "rationale_hi": "$44\\text{ g } \\text{CO}_2$ का मतलब 1 मोल है, जिसे प्राप्त करने के लिए 1 मोल मेथेन आवश्यक है।",
+                    "rationale_en": "$44\\text{ g}$ of $\\text{CO}_2$ equals 1 mole, which requires 1 mole of methane for combustion."
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "rationale_hi": "गलत गणना।",
+                    "rationale_en": "Incorrect calculation."
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "rationale_hi": "यह अनुत्तरित प्रश्न का विकल्प है।",
+                    "rationale_en": "This is the question not attempted option."
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "branch": "Physical Chemistry",
+                "subtopic": "Mole Concept and Stoichiometry",
+                "archetype": "Numerical/Calculative",
+                "has_translation_discrepancy": false,
+                "discrepancy_note": null,
+                "difficulty": "Easy",
+                "blooms_level": "Apply",
+                "keywords": [
+                    "Mole Concept",
+                    "Combustion",
+                    "Stoichiometry",
+                    "Methane"
+                ],
+                "estimated_seconds": 45,
+                "conceptual_trap_hi": "छात्र मोल की जगह ग्राम का सीधा अनुपात निकालने की गलती कर सकते हैं।",
+                "conceptual_trap_en": "Students might confuse mass ratio with molar stoichiometry directly.",
+                "prerequisite_topic": "Balancing Chemical Equations",
+                "ncert_mapping": "Class 11 Chemistry, Some Basic Concepts of Chemistry",
+                "formula_law_dependency": "Moles = Mass / Molar Mass",
+                "shortcut_hack_hi": "$\\text{CH}_4 \\rightarrow \\text{CO}_2$ में 1:1 का मोलर अनुपात होता है।",
+                "shortcut_hack_en": "There is a direct 1:1 stoichiometric mole ratio between $\\text{CH}_4$ and $\\text{CO}_2$.",
+                "clone_variant": {
+                    "question_hi": "22 g $\\text{CO}_2$ उत्पन्न करने के लिए कितने मोल मेथेन की आवश्यकता होगी?",
+                    "question_en": "How many moles of methane are required to produce 22 g of $\\text{CO}_2$?",
+                    "options": [
+                        {
+                            "label": "1",
+                            "hi": "0.5 mol",
+                            "en": "0.5 mol"
+                        },
+                        {
+                            "label": "2",
+                            "hi": "1.0 mol",
+                            "en": "1.0 mol"
+                        },
+                        {
+                            "label": "3",
+                            "hi": "2.0 mol",
+                            "en": "2.0 mol"
+                        },
+                        {
+                            "label": "4",
+                            "hi": "0.25 mol",
+                            "en": "0.25 mol"
+                        }
+                    ],
+                    "correct_label": "1",
+                    "explanation_en": "22 g of $\\text{CO}_2$ is 0.5 moles. Since the stoichiometric ratio of $\\text{CH}_4$ to $\\text{CO}_2$ is 1:1, 0.5 moles of $\\text{CH}_4$ is required."
+                }
+            }
+        }
+    ]
+}
