@@ -1744,8 +1744,8 @@
                     "en": "Question not attempted"
                 }
             ],
-            "explanation_hi": "किसी कक्षक के लिए कुल नोड्स (Total nodes) की संख्या का सूत्र $n - 1$ होता है, जहाँ $n$ मुख्य क्वांटम संख्या है।\n3d कक्षक के लिए, $n = 3$\nकुल नोड्स = $3 - 1 = 2$\n(यहाँ त्रिज्यीय नोड्स (radial nodes) = $n - l - 1 = 3 - 2 - 1 = 0$, तथा कोणीय नोड्स (angular nodes) = $l = 2$, अतः कुल नोड्स = $0 + 2 = 2$ है)।",
-            "explanation_en": "The total number of nodes for any orbital is given by $n - 1$, where $n$ is the principal quantum number.\nFor the 3d orbital, $n = 3$.\nTotal nodes = $3 - 1 = 2$.\n(Alternatively, radial nodes = $n - l - 1 = 3 - 2 - 1 = 0$, and angular nodes = $l = 2$; total nodes = $0 + 2 = 2$).",
+            "explanation_hi": "किसी कक्षक के लिए कुल नोड्स (Total nodes) की संख्या का सूत्र $n - 1$ होता है, जहाँ $n$ मुख्य क्वांटम संख्या है। 3d कक्षक के लिए, $n = 3$ कुल नोड्स = $3 - 1 = 2$ है।",
+            "explanation_en": "The total number of nodes for any orbital is given by $n - 1$, where $n$ is the principal quantum number. For the 3d orbital, $n = 3$. Total nodes = $3 - 1 = 2$.",
             "option_rationales": [
                 {
                     "label": "1",
@@ -1872,8 +1872,8 @@
                     "en": "Question not attempted"
                 }
             ],
-            "explanation_hi": "दिए गए इलेक्ट्रॉनिक विन्यास निम्नलिखित तत्वों के हैं:\n[A] Be ($1\\text{s}^2 2\\text{s}^2$)\n[B] B ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^1$)\n[C] C ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^2$)\n[D] N ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^3$)\n[E] O ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^4$)\n\nआवर्त सारणी में आवर्त में बाएं से दाएं जाने पर सामान्यतः आयनन एंथैल्पी बढ़ती है, परंतु कुछ अपवाद होते हैं:\n1. Be ($2\\text{s}^2$, पूर्ण भरी हुई कक्षा) की आयनन एंथैल्पी B ($2\\text{p}^1$) से अधिक होती है। अतः [B] < [A]।\n2. N ($2\\text{p}^3$, अर्ध-पूरित स्थिर विन्यास) की आयनन एंथैल्पी O ($2\\text{p}^4$) से अधिक होती है। अतः [O] < [N] यानी [E] < [D]।\n\nइन प्रभावों को ध्यान में रखते हुए प्रथम आयनन एंथैल्पी का सही बढ़ता क्रम है:\n[B] < [A] < [C] < [E] < [D]",
-            "explanation_en": "The given electronic configurations correspond to:\n[A] Be ($1\\text{s}^2 2\\text{s}^2$)\n[B] B ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^1$)\n[C] C ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^2$)\n[D] N ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^3$)\n[E] O ($1\\text{s}^2 2\\text{s}^2 2\\text{p}^4$)\n\nAlong a period, ionization enthalpy generally increases, but with exceptions due to stability:\n1. Be has a fully filled $2\\text{s}^2$ orbital, making its ionization enthalpy greater than B ($2\\text{p}^1$). So, [B] < [A].\n2. N has a half-filled stable $2\\text{p}^3$ configuration, making its ionization enthalpy greater than O ($2\\text{p}^4$). So, [E] < [D].\n\nCombining these, the correct increasing order of first ionization enthalpy is:\n[B] < [A] < [C] < [E] < [D]",
+            "explanation_hi": "दिए गए इलेक्ट्रॉनिक विन्यास निम्नलिखित तत्वों के हैं: [A] Be, [B] B, [C] C, [D] N, [E] O। अपवादों (Be > B और N > O) को ध्यान में रखते हुए प्रथम आयनन एंथैल्पी का सही बढ़ता क्रम [B] < [A] < [C] < [E] < [D] है।",
+            "explanation_en": "The given electronic configurations correspond to Be, B, C, N, O. Considering stability exceptions (Be > B and N > O), the correct increasing order of first ionization enthalpy is [B] < [A] < [C] < [E] < [D].",
             "option_rationales": [
                 {
                     "label": "1",
@@ -3624,7 +3624,7 @@
         {
             "source_page": 7,
             "number": 47,
-            "question_hi": "एक बल $\\mathbf{F} = -K(y\\hat{\\mathbf{i}} + x\\hat{\\mathbf{j}})$ (जहाँ $K$ एक धनात्मक स्थिरांक है), $xy$ तल में गतिमान एक कण पर कार्य करता है। मूल बिंदु से शुरू करते हुए, कण को धनात्मक $x$ अक्ष के अनुदिश बिंदु $(a, 0)$ तक ले जाया जाता है और फिर $y$ अक्ष के समानांतर बिंदु $(a, a)$ तक ले जाया जाता है। कण पर बल $\\mathbf{F}$ द्वारा किया गया कुल कार्य है -",
+            "question_hi": "एक बल $\\mathbf{F} = -K(y\\hat{\\mathbf{i}} + x\\hat{\\mathbf{j}})$ (जहाँ $k$ एक धनात्मक स्थिरांक है), $xy$ तल में गतिमान एक कण पर कार्य करता है। मूल बिंदु से शुरू करते हुए, कण को धनात्मक $x$ अक्ष के अनुदिश बिंदु $(a, 0)$ तक ले जाया जाता है और फिर $y$ अक्ष के समानांतर बिंदु $(a, a)$ तक ले जाया जाता है। कण पर बल $\\mathbf{F}$ द्वारा किया गया कुल कार्य है -",
             "question_en": "A force $\\mathbf{F} = -K(y\\hat{\\mathbf{i}} + x\\hat{\\mathbf{j}})$ (where $k$ is a positive constant) acts on a particle moving in the xy plane. Starting from the origin, the particle is taken along the positive x axis to the point $(a, 0)$ and then parallel to the y axis to the point $(a, a)$. The total work done by the force F on the particle is -",
             "has_visuals": false,
             "visual_location": "none",
@@ -5138,7 +5138,7 @@
                     "en": "Question not attempted"
                 }
             ],
-            "explanation_hi": "गर्म भंडार का ताप $T_1 = 99^\\circ\\text{C} = 99 + 273 = 372\\text{ K}$ है। प्रथम स्थिति में दक्षता $\\eta_1 = 1 - \\frac{T_2}{T_1} = \\frac{1}{3}$, अतः $\\frac{T_2}{372} = 1 - \\frac{1}{3} = \\frac{2}{3}$, जिससे $T_2 = \\frac{2}{3} \\times 372 = 248\\text{ K}$। दूसरी स्थिति में ठंडे भंडार का ताप $T_2' = T_2 + \\theta$ हो जाता है और दक्षता $\\eta_2 = \\frac{1}{6}$ हो जाती है। अतः $\\frac{T_2 + \\theta}{372} = 1 - \\frac{1}{6} = \\frac{5}{6}$, जिससे $T_2 + \\theta = \\frac{5}{6} \\times 372 = 310\\text{ K}$। अतः $\\theta = 310 - T_2 = 310 - 248 = 62\\text{ K}$।",
+            "explanation_hi": "गर्म भंडार का ताप $T_1 = 99^\\circ\\text{C} = 99 + 273 = 372\\text{ K}$ है। प्रथम स्थिति में दक्षता $\\eta_1 = 1 - \\frac{T_2}{T_1} = \\frac{1}{3}$, अतः $\\frac{T_2}{372} = 1 - \\frac{1}{3} = \\frac{2}{3}$, जिससेन $T_2 = \\frac{2}{3} \\times 372 = 248\\text{ K}$। दूसरी स्थिति में ठंडे भंडार का ताप $T_2' = T_2 + \\theta$ हो जाता है और दक्षता $\\eta_2 = \\frac{1}{6}$ हो जाती है। अतः $\\frac{T_2 + \\theta}{372} = 1 - \\frac{1}{6} = \\frac{5}{6}$, जिससे $T_2 + \\theta = \\frac{5}{6} \\times 372 = 310\\text{ K}$। अतः $\\theta = 310 - T_2 = 310 - 248 = 62\\text{ K}$।",
             "explanation_en": "Temperature of hot reservoir $T_1 = 99^\\circ\\text{C} = 99 + 273 = 372\\text{ K}$. Initial efficiency $\\eta_1 = 1 - \\frac{T_2}{T_1} = \\frac{1}{3} \\implies \\frac{T_2}{372} = \\frac{2}{3} \\implies T_2 = 248\\text{ K}$. When temperature of cold reservoir is increased by $\\theta$, new temperature is $T_2 + \\theta$ and new efficiency $\\eta_2 = 1 - \\frac{T_2 + \\theta}{T_1} = \\frac{1}{6} \\implies \\frac{T_2 + \\theta}{372} = \\frac{5}{6} \\implies T_2 + \\theta = 310\\text{ K}$. Therefore, $\\theta = 310 - 248 = 62\\text{ K}$.",
             "option_rationales": [
                 {
@@ -5629,7 +5629,7 @@
             "source_page": 11,
             "number": 87,
             "question_hi": "एक हार्मोनिक दोलित्र की अवस्थाओं के लिए $<x^2>$, $\\frac{A\\hbar}{2m\\omega}$ द्वारा दिया गया है। यहाँ $A$ का मान है -",
-            "question_en": "For the states of a harmonic oscillator $<x^2>$ is given by $\\frac{A\\hbar}{2m\\omega}$. Here value of A is -",
+            "question_en": "For the states of a harmonic oscillator $\\langle x^2 \\rangle$ is given by $\\frac{A\\hbar}{2m\\omega}$. Here value of A is -",
             "has_visuals": false,
             "visual_location": "none",
             "image_hi": null,
@@ -5662,7 +5662,7 @@
                     "en": "Question not attempted"
                 }
             ],
-            "explanation_hi": "क्वांटम हार्मोनिक दोलित्र के लिए स्थिति संकारक की प्रत्याशा का वर्ग माध्य $<x^2>$ निम्न प्रकार दिया जाता है:\n$<x^2> = \\frac{\\hbar}{2m\\omega} (2n + 1)$\nअतः यहाँ $A = 2n + 1$ है।",
+            "explanation_hi": "क्वांटम हार्मोनिक दोलित्र के लिए स्थिति संकारक की प्रत्याशा का वर्ग माध्य <x^2> निम्न प्रकार दिया जाता है:\n$<x^2> = \\frac{\\hbar}{2m\\omega} (2n + 1)$\nअतः यहाँ $A = 2n + 1$ है।",
             "explanation_en": "For a quantum harmonic oscillator, the expectation value of position squared $<x^2>$ in the $n$-th energy state is given by:\n$<x^2> = \\frac{\\hbar}{2m\\omega} (2n + 1)$\nComparing with $\\frac{A\\hbar}{2m\\omega}$, we get $A = 2n + 1$.",
             "option_rationales": [
                 {
@@ -5751,7 +5751,7 @@
             "is_duplicate": false,
             "audited": true,
             "audit_model": "gemini-3.5-flash-lite",
-            "audit_notes": "Corrected minor transcription artifact in question_en stem."
+            "audit_notes": "Corrected minor transcription artifact in question stem to include angle brackets around x^2."
         },
         {
             "source_page": 11,
@@ -6172,7 +6172,7 @@
                     "en": "Question not attempted"
                 }
             ],
-            "explanation_hi": "प्रणोदित दोलनों में, आयाम अनुनाद आवृत्ति $\\omega_r = \\sqrt{\\omega_0^2 - 2b^2}$ होती है जो प्राकृतिक आवृत्ति $\\omega_0$ से कम होती है, और वेग अनुनाद $\\omega = \\omega_0$ पर होता है। अतः कथन (A) सत्य है। आयाम अनुनाद पर कलांतर $\\phi = \\pi/2$ (या विस्थापन $\\pi/2$ पीछे रहता है) और वेग अनुनाद पर वेग चालक बल के समकला में होता है (कलांतर शून्य)। यहाँ कथन (B) में 'आयाम अनुनाद पर विस्थापन चालक बल से $\\pi$ पीछे रहता है' दिया गया है जबकि वास्तविक कलांतर $\\pi/2$ होता है (या अनुनाद पर कलांतर $\\pi/2$ होता है)। अतः कथन (A) सत्य है और कथन (B) असत्य है।",
+            "explanation_hi": "प्रणोदित दोलनों में, आयाम अनुनाद आवृत्ति $\\omega_r = \\sqrt{\\omega_0^2 - 2b^2}$ होती है जो प्राकृतिक आवृत्ति $\\omega_0$ से कम होती है, और वेग अनुनाद $\\omega = \\omega_0$ पर होता है। अतः कथन (A) सत्य है। आयाम अनुनाद पर कलांतर $\\phi = \\pi/2$ (या विस्थापन $\\pi/2$ पीछे रहता है) और वेग अनुनाद पर वेग चालक बल के समकला में होता है (कलांतर शून्य)। यहाँ कथन (B) में 'आयाम अनुनाद पर विस्थापन चालक बल से $\\pi$ पीछे रहता है' दिया गया है जबकि वास्तविक कलांतर $\\pi/2$ होता है (या अनुनाद पर कलांतर $\\pi/2$ होता है)। रुकिए, एक बार पुनरावलोकन करें: आयाम अनुनाद पर कला कोण $\\tan \\phi = \\frac{2br}{\\omega_0^2 - \\omega^2}$। आयाम अनुनाद पर आवृत्ति $\\omega = \\sqrt{\\omega_0^2 - 2b^2}$ होने पर $\\tan \\phi = \\frac{2b \\sqrt{\\omega_0^2 - 2b^2}}{2b^2} = \\frac{\\sqrt{\\omega_0^2 - 2b^2}}{b}$, जिससे $\\phi \\neq \\pi/2$ ($\\phi$ का मान अवमंदन पर निर्भर करता है और यह $\\pi/2$ के आसपास होता है, पर बहुत उच्च आवृत्ति पर $\\pi$ होता है)। अतः कथन (B) असत्य है। इस प्रकार कथन (A) सत्य है और कथन (B) असत्य है।",
             "explanation_en": "In forced oscillations, amplitude resonance occurs at $\\omega = \\sqrt{\\omega_0^2 - 2b^2}$ which is slightly less than the natural frequency $\\omega_0$, and velocity resonance occurs at $\\omega = \\omega_0$ regardless of damping. Thus, Statement (A) is true. At velocity resonance, velocity is in phase with the driving force. At amplitude resonance, the phase angle of displacement relative to the driving force is not $\\pi$ (it is typically around $\\pi/2$ depending on damping, and approaches $\\pi$ only at very high frequencies). Thus, Statement (B) is false. Therefore, Statement (A) is true and Statement (B) is false.",
             "option_rationales": [
                 {
