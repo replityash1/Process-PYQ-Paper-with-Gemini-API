@@ -1,0 +1,816 @@
+{
+    "page_number": 16,
+    "questions": [
+        {
+            "id": "q126",
+            "question_number": 126,
+            "question_type": "numerical",
+            "question_type_display": "Numerical / Formula-based",
+            "question_text": {
+                "english": "The minimum pressure required to compress $400\\text{ dm}^3$ volume of air at $1\\text{ bar}$ pressure to $200\\text{ dm}^3$ at $30^{\\circ}\\text{C}$ temperature will be -",
+                "hindi": "$30^{\\circ}\\text{C}$ ताप तथा $1\\text{ bar}$ दाब पर वायु के $400\\text{ dm}^3$ आयतन को $200\\text{ dm}^3$ तक सम्पीडित करने के लिए आवश्यक न्यूनतम दाब होगा -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "$0.5\\text{ bar}$",
+                    "hindi": "$0.5\\text{ bar}$",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "$2.0\\text{ bar}$",
+                    "hindi": "$2.0\\text{ bar}$",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "$2.5\\text{ bar}$",
+                    "hindi": "$2.5\\text{ bar}$",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "$1.0\\text{ bar}$",
+                    "hindi": "$1.0\\text{ bar}$",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "2.0 bar",
+                    "hindi": "2.0 bar"
+                },
+                "mapping": [],
+                "value": "2.0",
+                "unit": "bar",
+                "method": "Boyle's Law: P1V1 = P2V2 => 1 * 400 = P2 * 200 => P2 = 2.0 bar",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "According to Boyle's law at constant temperature, P1V1 = P2V2. Given P1 = 1 bar, V1 = 400 dm^3, V2 = 200 dm^3. Therefore, P2 = (P1 * V1) / V2 = (1 * 400) / 200 = 2.0 bar.",
+                "hindi": "नियत ताप पर बॉयल के नियम के अनुसार, P1V1 = P2V2। दिया गया है P1 = 1 bar, V1 = 400 dm^3, V2 = 200 dm^3। अतः P2 = (1 * 400) / 200 = 2.0 bar।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect calculation.",
+                        "hindi": "गलत गणना।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Matches P2 = 2.0 bar.",
+                        "hindi": "P2 = 2.0 bar से मेल खाता है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect.",
+                        "hindi": "गलत।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Initial pressure, incorrect.",
+                        "hindi": "प्रारंभिक दाब, गलत।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted option.",
+                        "hindi": "अनुत्तरित विकल्प।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Physical Chemistry",
+                "topic": "States of Matter",
+                "subtopic": "Boyle's Law",
+                "difficulty": "easy",
+                "cognitive_level": "application",
+                "question_category": "numerical",
+                "concepts": [
+                    "Boyle's law",
+                    "Gas laws"
+                ],
+                "keywords": [
+                    "pressure",
+                    "volume",
+                    "compress",
+                    "temperature"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Physical Chemistry",
+                "chapter": "States of Matter: Gases and Liquids",
+                "topic": "Gas Laws"
+            },
+            "source_reference": {
+                "page": 16,
+                "question_location": "top left",
+                "source_question_number": "126"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q127",
+            "question_number": 127,
+            "question_type": "diagram_based",
+            "question_type_display": "Diagram-based",
+            "question_text": {
+                "english": "The value of \\(\\lambda_{\\text{max}}\\) for the compound is -",
+                "hindi": "यौगिक के लिए \\(\\lambda_{\\text{max}}\\) का मान है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [
+                {
+                    "type": "svg",
+                    "purpose": "question_diagram",
+                    "placement": "question_body",
+                    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 70' width='150' height='70'><path d='M10,40 L25,30 L40,40 L40,55 L25,65 L10,55 Z M40,40 L55,30 L70,40 L70,55 L55,65 L40,55 Z M70,40 L85,30 L100,40 L100,55 L85,65 L70,55 Z M85,30 L85,15 L100,15 L100,40 Z' fill='none' stroke='black' stroke-width='2'/><text x='115' y='20' font-family='sans-serif' font-size='14'>R</text></svg>",
+                    "description": "Chemical structure consisting of three fused rings and a methyl/R group attached at position C17, characteristic of a steroid skeleton like 3-ketosteroid.",
+                    "source_fidelity": "reconstructed"
+                }
+            ],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "$373\\text{ m}\\mu$",
+                    "hindi": "$373\\text{ m}\\mu$",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "$343\\text{ m}\\mu$",
+                    "hindi": "$343\\text{ m}\\mu$",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "$363\\text{ m}\\mu$",
+                    "hindi": "$363\\text{ m}\\mu$",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "$313\\text{ m}\\mu$",
+                    "hindi": "$313\\text{ m}\\mu$",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "uncertain",
+                "correct_option": null,
+                "answer_text": null,
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "low"
+            },
+            "explanation": {
+                "english": "Woodward-Fieser rules for calculating absorption maxima (\\(\\lambda_{\\text{max}}\\)) in \\(\\alpha,\\beta\\)-unsaturated ketones or similar diene systems.",
+                "hindi": "\\(\\alpha,\\beta\\)-असंतृप्त कीटोन्स में \\(\\lambda_{\\text{max}}\\) की गणना के लिए वुडवर्ड-फाइसर नियम।",
+                "steps": []
+            },
+            "option_analysis": [],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Organic Chemistry",
+                "topic": "Spectroscopy",
+                "subtopic": "UV-Vis Spectroscopy",
+                "difficulty": "hard",
+                "cognitive_level": "application",
+                "question_category": "formula_based",
+                "concepts": [
+                    "Woodward-Fieser rules",
+                    "UV absorption",
+                    "lambda max"
+                ],
+                "keywords": [
+                    "lambda max",
+                    "compound",
+                    "spectroscopy"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Organic Chemistry",
+                "chapter": "Spectroscopy",
+                "topic": "UV-Vis"
+            },
+            "source_reference": {
+                "page": 16,
+                "question_location": "middle left",
+                "source_question_number": "127"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": "reconstructed",
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.95,
+                "structure_confidence": 0.8,
+                "answer_confidence": 0.4,
+                "needs_manual_review": true
+            },
+            "notes": [
+                "Chemical structure requires precise Woodward-Fieser calculation based on specific conjugated system details."
+            ]
+        },
+        {
+            "id": "q128",
+            "question_number": 128,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "The epimer of glucose is -",
+                "hindi": "ग्लूकोज़ का एपिमर है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Ribose",
+                    "hindi": "राइबोज़",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Mannose",
+                    "hindi": "मैनोज़",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Xylose",
+                    "hindi": "ज़ाइलोज़",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Fructose",
+                    "hindi": "फ्रुक्टोज़",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "Mannose",
+                    "hindi": "मैनोज़"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Mannose is a C-2 epimer of glucose.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Epimers are diastereomers that differ in configuration at only one chiral carbon center. D-mannose is the C-2 epimer of D-glucose.",
+                "hindi": "एपिमर ऐसे डाइस्टीरियोमर हैं जो केवल एक कायरल कार्बन केंद्र पर विन्यास में भिन्न होते हैं। D-मैनोज़, D-ग्लूकोज़ का C-2 एपिमर है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Ribose is an aldopentose.",
+                        "hindi": "राइबोज़ एक एल्डोपेंटोज़ है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Mannose is a C-2 epimer of glucose.",
+                        "hindi": "मैनोज़ ग्लूकोज़ का C-2 एपिमर है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Xylose is an aldopentose.",
+                        "hindi": "ज़ाइलोज़ एक एल्डोपेंटोज़ है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Fructose is a ketohexose.",
+                        "hindi": "फ्रुक्टोज़ एक कीटोहेक्सोज़ है।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted.",
+                        "hindi": "अनुत्तरित।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Organic Chemistry",
+                "topic": "Biomolecules",
+                "subtopic": "Carbohydrates",
+                "difficulty": "easy",
+                "cognitive_level": "recall",
+                "question_category": "conceptual",
+                "concepts": [
+                    "Epimers",
+                    "Glucose",
+                    "Mannose",
+                    "Carbohydrates"
+                ],
+                "keywords": [
+                    "epimer",
+                    "glucose",
+                    "mannose"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Biomolecules",
+                "chapter": "Carbohydrates",
+                "topic": "Monosaccharides"
+            },
+            "source_reference": {
+                "page": 16,
+                "question_location": "lower left",
+                "source_question_number": "128"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q129",
+            "question_number": 129,
+            "question_type": "column_matching",
+            "question_type_display": "Column Matching",
+            "question_text": {
+                "english": "Match the Column-I (Chemical) with Column-II (Biological function) -",
+                "hindi": "कॉलम-I (रसायन) को कॉलम-II (जैविक कार्य) से सुमेलित कीजिए -"
+            },
+            "instructions": {
+                "english": "Correct code is -",
+                "hindi": "सही कूट है -"
+            },
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": {
+                "left_column": [
+                    {
+                        "id": "i",
+                        "english": "Tetracycline",
+                        "hindi": "टेट्रासाइक्लीन"
+                    },
+                    {
+                        "id": "ii",
+                        "english": "Furacine",
+                        "hindi": "फ्यूरासिन"
+                    },
+                    {
+                        "id": "iii",
+                        "english": "Saccharin",
+                        "hindi": "सैकरीन"
+                    },
+                    {
+                        "id": "iv",
+                        "english": "Penicillin",
+                        "hindi": "पेनिसिलिन"
+                    }
+                ],
+                "right_column": [
+                    {
+                        "id": "a",
+                        "english": "Bactericidal",
+                        "hindi": "जीवाणुनाशी"
+                    },
+                    {
+                        "id": "b",
+                        "english": "Bacteriostatic",
+                        "hindi": "जीवाणुनिrodhi (जीवाणुप्रतिरोधी)"
+                    },
+                    {
+                        "id": "c",
+                        "english": "Artificial sweetener",
+                        "hindi": "कृत्रिम मधुरक"
+                    },
+                    {
+                        "id": "d",
+                        "english": "Antiseptic",
+                        "hindi": "प्रतिरोधी"
+                    }
+                ],
+                "option_mappings": []
+            },
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "(i)-(b), (ii)-(d), (iii)-(c), (iv)-(a)",
+                    "hindi": "(i)-(b), (ii)-(d), (iii)-(c), (iv)-(a)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "(i)-(d), (ii)-(b), (iii)-(c), (iv)-(a)",
+                    "hindi": "(i)-(d), (ii)-(b), (iii)-(c), (iv)-(a)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "(i)-(b), (ii)-(c), (iii)-(a), (iv)-(d)",
+                    "hindi": "(i)-(b), (ii)-(c), (iii)-(a), (iv)-(d)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)",
+                    "hindi": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "(i)-(b), (ii)-(d), (iii)-(c), (iv)-(a)",
+                    "hindi": "(i)-(b), (ii)-(d), (iii)-(c), (iv)-(a)"
+                },
+                "mapping": [
+                    {
+                        "key": "i",
+                        "value": "b"
+                    },
+                    {
+                        "key": "ii",
+                        "value": "d"
+                    },
+                    {
+                        "key": "iii",
+                        "value": "c"
+                    },
+                    {
+                        "key": "iv",
+                        "value": "a"
+                    }
+                ],
+                "value": null,
+                "unit": null,
+                "method": "Matching chemicals to biological functions/uses in everyday life.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Tetracycline is a bacteriostatic antibiotic (i)-(b). Furacine is an antiseptic (ii)-(d). Saccharin is an artificial sweetener (iii)-(c). Penicillin is a bactericidal antibiotic (iv)-(a). Thus, option (1) is correct.",
+                "hindi": "टेट्रासाइक्लीन एक जीवाणुनिrodhi एंटीबायोटिक है (i)-(b)। फ्यूरासिन एक प्रतिरोधी (Antiseptic) है (ii)-(d)। सैकरीन एक कृत्रिम मधुरक है (iii)-(c)। पेनिसिलिन एक जीवाणुनाशी (Bactericidal) एंटीबायोटिक है (iv)-(a)। अतः विकल्प (1) सही है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Matches all correct pairs.",
+                        "hindi": "सभी सही युग्मों से मेल खाता है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted.",
+                        "hindi": "अनुत्तरित।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Applied Chemistry",
+                "topic": "Chemistry in Everyday Life",
+                "subtopic": "Medicines and Sweeteners",
+                "difficulty": "moderate",
+                "cognitive_level": "recall",
+                "question_category": "matching",
+                "concepts": [
+                    "Tetracycline",
+                    "Furacine",
+                    "Saccharin",
+                    "Penicillin"
+                ],
+                "keywords": [
+                    "Column-I",
+                    "Column-II",
+                    "Chemical",
+                    "Biological function"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Chemistry in Everyday Life",
+                "chapter": "Drugs and Chemicals",
+                "topic": "Antibiotics and Antiseptics"
+            },
+            "source_reference": {
+                "page": 16,
+                "question_location": "bottom left",
+                "source_question_number": "129"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q130",
+            "question_number": 130,
+            "question_type": "numerical",
+            "question_type_display": "Numerical / Formula-based",
+            "question_text": {
+                "english": "If \\(E^{\\circ} = -0.25\\text{ V}\\) for \\(\\text{Ni}^{2+}/\\text{Ni}\\); \\(E^{\\circ} = 1.5\\text{ V}\\) for \\(\\text{Au}^{3+}/\\text{Au}\\), then the emf (\\(E_{\\text{cell}}\\)) of the cell \\(\\text{Ni}/\\text{Ni}^{2+} (1.0\\text{M}) \\parallel \\text{Au}^{3+} (1.0\\text{M})/\\text{Au}\\) is -",
+                "hindi": "यदि \\(\\text{Ni}^{2+}/\\text{Ni}\\) के लिए \\(E^{\\circ} = -0.25\\text{ V}\\); \\(\\text{Au}^{3+}/\\text{Au}\\) के लिए \\(E^{\\circ} = 1.5\\text{ V}\\) है, तो सेल \\(\\text{Ni}/\\text{Ni}^{2+} (1.0\\text{M}) \\parallel \\text{Au}^{3+} (1.0\\text{M})/\\text{Au}\\) का emf (\\(E_{\\text{cell}}\\)) है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "\\(+1.75\\text{ V}\\)",
+                    "hindi": "\\(+1.75\\text{ V}\\)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "\\(-1.75\\text{ V}\\)",
+                    "hindi": "\\(-1.75\\text{ V}\\)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "\\(-1.25\\text{ V}\\)",
+                    "hindi": "\\(-1.25\\text{ V}\\)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "\\(+1.25\\text{ V}\\)",
+                    "hindi": "\\(+1.25\\text{ V}\\)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "+1.75 V",
+                    "hindi": "+1.75 V"
+                },
+                "mapping": [],
+                "value": "+1.75",
+                "unit": "V",
+                "method": "E_cell = E_cathode - E_anode = 1.5 - (-0.25) = +1.75 V",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "E_cell = E°(cathode) - E°(anode) = E°(Au^3+/Au) - E°(Ni^2+/Ni) = 1.5 V - (-0.25 V) = 1.5 + 0.25 = +1.75 V.",
+                "hindi": "E_cell = E°(कैथोड) - E°(ऐनोड) = 1.5 V - (-0.25 V) = 1.5 + 0.25 = +1.75 V।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Correct calculation giving +1.75 V.",
+                        "hindi": "सही गणना जिससे +1.75 V प्राप्त होता है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect sign.",
+                        "hindi": "गलत चिह्न।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect calculation.",
+                        "hindi": "गलत गणना।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect calculation.",
+                        "hindi": "गलत गणना।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted.",
+                        "hindi": "अनुत्तरित।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Physical Chemistry",
+                "topic": "Electrochemistry",
+                "subtopic": "Cell EMF",
+                "difficulty": "easy",
+                "cognitive_level": "application",
+                "question_category": "numerical",
+                "concepts": [
+                    "EMF of cell",
+                    "Standard reduction potential"
+                ],
+                "keywords": [
+                    "emf",
+                    "cell",
+                    "Ni",
+                    "Au"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Electrochemistry",
+                "chapter": "Electrochemical Cells",
+                "topic": "Nernst Equation and Cell Potential"
+            },
+            "source_reference": {
+                "page": 16,
+                "question_location": "bottom left",
+                "source_question_number": "130"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

@@ -1,0 +1,455 @@
+{
+    "page_number": 11,
+    "questions": [
+        {
+            "id": "q85",
+            "question_number": 85,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "In a region of space, a particle of mass m has a wave-function -\nψ(x) = { Nχe^{-αx} for x > 0, 0 for x < 0 }\nWhat is the potential energy of particle if the total energy of particle is zero?\n(Here α is a positive constant)",
+                "hindi": "अंतरिक्ष के एक क्षेत्र में m द्रव्यमान के एक कण के लिए तरंग-फलन है -\nψ(x) = { Nχe^{-αx} के लिए x > 0, 0 के लिए x < 0 }\nकण की स्थितिज ऊर्जा क्या है यदि कण की कुल ऊर्जा शून्य है?\n(यहाँ α एक धनात्मक नियतांक है)"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "-\\frac{\\hbar^{2}}{2m}(\\alpha^{2}-\\frac{2\\alpha}{x})",
+                    "hindi": "-\\frac{\\hbar^{2}}{2m}(\\alpha^{2}-\\frac{2\\alpha}{x})",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "\\frac{\\hbar^{2}}{2m}(\\alpha^{2}-\\frac{2\\alpha}{x})",
+                    "hindi": "\\frac{\\hbar^{2}}{2m}(\\alpha^{2}-\\frac{2\\alpha}{x})",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "\\frac{\\hbar^{2}}{2m}(\\alpha^{2}+\\frac{2\\alpha}{x})",
+                    "hindi": "\\frac{\\hbar^{2}}{2m}(\\alpha^{2}+\\frac{2\\alpha}{x})",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Value of N is needed to answer this question",
+                    "hindi": "इस प्रश्न का उत्तर देने के लिए N के मान की आवश्यकता है",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "uncertain",
+                "correct_option": null,
+                "answer_text": null,
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "low"
+            },
+            "explanation": {
+                "english": "Using Schrödinger equation, potential energy V(x) = E - (-\\frac{\\hbar^2}{2m}) \\frac{1}{\\psi} \\frac{d^2\\psi}{dx^2}.",
+                "hindi": "श्रोडिंगर समीकरण का उपयोग करके, स्थितिज ऊर्जा V(x) = E - (-\\frac{\\hbar^2}{2m}) \\frac{1}{\\psi} \\frac{d^2\\psi}{dx^2}।",
+                "steps": []
+            },
+            "option_analysis": [],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Quantum Mechanics",
+                "topic": "Wave Function and Schrödinger Equation",
+                "subtopic": "Potential Energy Calculation",
+                "difficulty": "hard",
+                "cognitive_level": "application",
+                "question_category": "conceptual",
+                "concepts": [
+                    "Schrödinger wave equation",
+                    "Wave function",
+                    "Potential energy"
+                ],
+                "keywords": [
+                    "wave-function",
+                    "potential energy",
+                    "total energy"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": "Quantum Mechanics",
+                "chapter": "Wave Mechanics",
+                "topic": "Schrödinger Equation"
+            },
+            "source_reference": {
+                "page": 11,
+                "question_location": "top-left",
+                "source_question_number": "85"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.9,
+                "structure_confidence": 0.95,
+                "answer_confidence": 0.5,
+                "needs_manual_review": true
+            },
+            "notes": [
+                "Check exact option derivation."
+            ]
+        },
+        {
+            "id": "q86",
+            "question_number": 86,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "The period of vibration of a galvanometer coil is 4s. The amplitude of its vibration decreases to \\frac{1}{10}^{\\text{th}} of its original value in 46s. The natural angular frequency of vibration is given by -",
+                "hindi": "एक धारामापी कुंडली का कंपन काल 4s है। इसके कंपन का आयाम 46s में मूल मान के \\frac{1}{10} तक घट जाता है। कंपन की स्वाभाविक कोणीय आवृत्ति इस प्रकार दी जाती है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "[(0.05)^{2}+\\frac{\\pi^{2}}{2}]^{\\frac{1}{2}}",
+                    "hindi": "[(0.05)^{2}+\\frac{\\pi^{2}}{2}]^{\\frac{1}{2}}",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "[(0.05)^{2}+\\frac{\\pi^{2}}{4}]^{\\frac{1}{2}}",
+                    "hindi": "[(0.05)^{2}+\\frac{\\pi^{2}}{4}]^{\\frac{1}{2}}",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "[(0.05)^{2}+\\frac{\\pi^{2}}{4}]^{\\frac{1}{2}}",
+                    "hindi": "[(0.05)^{2}+\\frac{\\pi^{2}}{4}]^{\\frac{1}{2}}",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "[(0.05)^{2}+\\frac{\\pi^{2}}{2}]^{\\frac{1}{2}}",
+                    "hindi": "[(0.05)^{2}+\\frac{\\pi^{2}}{2}]^{\\frac{1}{2}}",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "uncertain",
+                "correct_option": null,
+                "answer_text": null,
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "low"
+            },
+            "explanation": {
+                "english": "Damped oscillation formula used for logarithmic decrement and natural frequency.",
+                "hindi": "लघुगणकीय ह्रास और स्वाभाविक आवृत्ति के लिए अवमंदित दोलन सूत्र का उपयोग किया जाता है।",
+                "steps": []
+            },
+            "option_analysis": [],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Oscillations and Waves",
+                "topic": "Damped Oscillations",
+                "subtopic": "Galvanometer coil vibrations",
+                "difficulty": "hard",
+                "cognitive_level": "application",
+                "question_category": "numerical",
+                "concepts": [
+                    "Damped oscillation",
+                    "Logarithmic decrement",
+                    "Natural frequency"
+                ],
+                "keywords": [
+                    "galvanometer coil",
+                    "amplitude",
+                    "angular frequency"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": "Oscillations",
+                "chapter": "Damped Harmonic Motion",
+                "topic": "Vibrations"
+            },
+            "source_reference": {
+                "page": 11,
+                "question_location": "middle-left",
+                "source_question_number": "86"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.95,
+                "structure_confidence": 0.95,
+                "answer_confidence": 0.4,
+                "needs_manual_review": true
+            },
+            "notes": []
+        },
+        {
+            "id": "q87",
+            "question_number": 87,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "<x^{2}> for the states of a harmonic oscillator is given by \\frac{A\\hbar}{2m\\omega}. Here value of A is -",
+                "hindi": "एक हार्मोनिक दोलित्र की अवस्थाओं के लिए <x^{2}>, \\frac{A\\hbar}{2m\\omega} द्वारा दिया गया है। यहाँ A का मान है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "n",
+                    "hindi": "n",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "2n + 1",
+                    "hindi": "2n + 1",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "n^{2}",
+                    "hindi": "n^{2}",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "2n",
+                    "hindi": "2n",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "2n + 1",
+                    "hindi": "2n + 1"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Quantum harmonic oscillator expectation value derivation",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "For a quantum harmonic oscillator, the expectation value of position squared is <x^2> = \\frac{\\hbar}{2m\\omega}(2n + 1). Thus, A = 2n + 1.",
+                "hindi": "क्वांटम हार्मोनिक दोलित्र के लिए, स्थिति के वर्ग का प्रत्याशा मान <x^2> = \\frac{\\hbar}{2m\\omega}(2n + 1) है। अतः A = 2n + 1।",
+                "steps": []
+            },
+            "option_analysis": [],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Quantum Mechanics",
+                "topic": "Quantum Harmonic Oscillator",
+                "subtopic": "Expectation values",
+                "difficulty": "moderate",
+                "cognitive_level": "recall",
+                "question_category": "formula_based",
+                "concepts": [
+                    "Harmonic oscillator",
+                    "Expectation value"
+                ],
+                "keywords": [
+                    "harmonic oscillator",
+                    "expectation value"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": "Quantum Mechanics",
+                "chapter": "Harmonic Oscillator",
+                "topic": "Expectation Values"
+            },
+            "source_reference": {
+                "page": 11,
+                "question_location": "lower-left",
+                "source_question_number": "87"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "source",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.98,
+                "answer_confidence": 0.95,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q88",
+            "question_number": 88,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "Unpolarised light of intensity I passes through an ideal polarizer A, another identical polarizer B is placed behind A. The intensity of light beyond B is found to be I/2. Now another identical polarizer C is placed between A and B. The intensity beyond B is now found to be I/8. The angle between polarizer A and C is -",
+                "hindi": "तीव्रता I का अध्रुवित प्रकाश एक आदर्श ध्रुवक A से होकर गुजरता है। A के पीछे एक और समान ध्रुवक B रखा जाता है। B से परे प्रकाश की तीव्रता I/2 पाई जाती है। अब A और B के बीच एक और समान ध्रुवक C रखा जाता है। B से परे प्रकाश की तीव्रता अब I/8 पाई जाती है। ध्रुवक A और C के बीच का कोण है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "30^{\\circ}",
+                    "hindi": "30^{\\circ}",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "60^{\\circ}",
+                    "hindi": "60^{\\circ}",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "0^{\\circ}",
+                    "hindi": "0^{\\circ}",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "45^{\\circ}",
+                    "hindi": "45^{\\circ}",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "60^{\\circ}",
+                    "hindi": "60^{\\circ}"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Malus law application",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Initially I_B = I/2, meaning A and B are parallel. When C is placed at angle \\theta to A and (90^{\\circ} - \\theta) to B, intensity I' = \\frac{I}{2} \\cos^2(\\theta) \\sin^2(\\theta) = \\frac{I}{8} \\sin^2(2\\theta). Solving gives \\theta = 60^{\\circ}.",
+                "hindi": "प्रारंभ में I_B = I/2, जिसका अर्थ है A और B समांतर हैं। जब C को A से \\theta कोण पर और B से (90^{\\circ} - \\theta) कोण पर रखा जाता है, तीव्रता I' = \\frac{I}{2} \\cos^2(\\theta) \\sin^2(\\theta) = \\frac{I}{8} \\sin^2(2\\theta)। हल करने पर \\theta = 60^{\\circ} प्राप्त होता है।",
+                "steps": []
+            },
+            "option_analysis": [],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Optics",
+                "topic": "Polarization",
+                "subtopic": "Malus's Law",
+                "difficulty": "moderate",
+                "cognitive_level": "application",
+                "question_category": "formula_based",
+                "concepts": [
+                    "Polarization",
+                    "Malus's law",
+                    "Unpolarised light"
+                ],
+                "keywords": [
+                    "polarizer",
+                    "intensity",
+                    "angle"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": "Optics",
+                "chapter": "Wave Optics",
+                "topic": "Polarization"
+            },
+            "source_reference": {
+                "page": 11,
+                "question_location": "bottom-left",
+                "source_question_number": "88"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "source",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.98,
+                "answer_confidence": 0.95,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

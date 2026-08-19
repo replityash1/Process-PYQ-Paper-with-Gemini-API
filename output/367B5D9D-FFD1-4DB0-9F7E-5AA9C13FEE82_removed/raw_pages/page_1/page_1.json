@@ -1,0 +1,574 @@
+{
+    "page_number": 1,
+    "questions": [
+        {
+            "id": "q5",
+            "question_number": 5,
+            "question_type": "matching",
+            "question_type_display": "Matching",
+            "question_text": {
+                "english": "Match the Plant Families given in Column-I with characteristic Inflorescence given in Column-II and select the correct answer using the code given below -",
+                "hindi": "पादप फैमली (कॉलम-I) का विशिष्ट पुष्पक्रम (कॉलम-II) के साथ मिलान कीजिए एवं नीचे दिए गए कूट की सहायता से सही उत्तर चुनिए -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": {
+                "left_column": [
+                    {
+                        "id": "A",
+                        "english": "(A) Asteraceae",
+                        "hindi": "(A) एस्टेरेसी"
+                    },
+                    {
+                        "id": "B",
+                        "english": "(B) Lamiaceae",
+                        "hindi": "(B) लैमिएसी"
+                    },
+                    {
+                        "id": "C",
+                        "english": "(C) Apiaceae",
+                        "hindi": "(C) एपिएसी"
+                    },
+                    {
+                        "id": "D",
+                        "english": "(D) Fabaceae",
+                        "hindi": "(D) फेबेसी"
+                    },
+                    {
+                        "id": "E",
+                        "english": "(E) Moraceae",
+                        "hindi": "(E) मोरेसी"
+                    }
+                ],
+                "right_column": [
+                    {
+                        "id": "i",
+                        "english": "(i) Capitulum",
+                        "hindi": "(i) कैपिटुलम"
+                    },
+                    {
+                        "id": "ii",
+                        "english": "(ii) Verticillaster",
+                        "hindi": "(ii) वर्टिसिलास्टर"
+                    },
+                    {
+                        "id": "iii",
+                        "english": "(iii) Compound Umbel",
+                        "hindi": "(iii) कम्पाउण्ड अम्बेल"
+                    },
+                    {
+                        "id": "iv",
+                        "english": "(iv) Raceme",
+                        "hindi": "(iv) रेसमी"
+                    },
+                    {
+                        "id": "v",
+                        "english": "(v) Hypanthodium",
+                        "hindi": "(v) हाइपैन्थोडियम"
+                    }
+                ],
+                "option_mappings": []
+            },
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)",
+                    "hindi": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii), (E)-(v)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "(A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)",
+                    "hindi": "(A)-(v), (B)-(iii), (C)-(ii), (D)-(iv), (E)-(i)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)",
+                    "hindi": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "(A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)",
+                    "hindi": "(A)-(iii), (B)-(v), (C)-(iv), (D)-(ii), (E)-(i)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)",
+                    "hindi": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv), (E)-(v)"
+                },
+                "mapping": [
+                    {
+                        "key": "A",
+                        "value": "i"
+                    },
+                    {
+                        "key": "B",
+                        "value": "ii"
+                    },
+                    {
+                        "key": "C",
+                        "value": "iii"
+                    },
+                    {
+                        "key": "D",
+                        "value": "iv"
+                    },
+                    {
+                        "key": "E",
+                        "value": "v"
+                    }
+                ],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Asteraceae family has Capitulum inflorescence (A-i). Lamiaceae has Verticillaster inflorescence (B-ii). Apiaceae has Compound Umbel (C-iii). Fabaceae has Raceme (D-iv). Moraceae has Hypanthodium (E-v). Thus option 3 is correct.",
+                "hindi": "एस्टेरेसी फैमली में कैपिटुलम पुष्पक्रम होता है (A-i)। लैमिएसी में वर्टिसिलास्टर (B-ii)। एपिएसी में कम्पाउण्ड अम्बेल (C-iii)। फेबेसी में रेसमी (D-iv)। मोरेसी में हाइपैन्थोडियम (E-v)। अतः विकल्प (3) सही है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching mappings.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching mappings.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "All family to inflorescence pairs match correctly.",
+                        "hindi": "सभी पादप फैमली और पुष्पक्रम के जोड़े सही मिलान हैं।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching mappings.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question attempted.",
+                        "hindi": "प्रश्न का उत्तर दिया गया है।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Botany",
+                "topic": "Plant Families",
+                "subtopic": "Inflorescence",
+                "difficulty": "moderate",
+                "cognitive_level": "recall",
+                "question_category": "Multiple Choice",
+                "concepts": [
+                    "Inflorescence",
+                    "Plant Families"
+                ],
+                "keywords": [
+                    "Asteraceae",
+                    "Lamiaceae",
+                    "Apiaceae",
+                    "Fabaceae",
+                    "Moraceae",
+                    "Capitulum",
+                    "Verticillaster"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Science",
+                "unit": "Biology",
+                "chapter": "Taxonomy of Angiosperms",
+                "topic": "Plant Families and Inflorescence"
+            },
+            "source_reference": {
+                "page": 1,
+                "question_location": "Top",
+                "source_question_number": "5"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q6",
+            "question_number": 6,
+            "question_type": "statement_based",
+            "question_type_display": "Statement Based",
+            "question_text": {
+                "english": "Consider the given statements and select the correct answer using the code given below -",
+                "hindi": "दिए गए कथनों पर विचार कर नीचे दिए गए कूट के उपयोग से सही उत्तर का चयन कीजिए -"
+            },
+            "instructions": null,
+            "statements": [
+                {
+                    "id": "I",
+                    "english": "Statement I : Treatment of waste water is done by autotrophic microbes naturally present in sewage.",
+                    "hindi": "कथन I : अपशिष्ट जल का उपचार सीवेज में प्राकृतिक रूप से उपस्थित स्वपोषी सूक्ष्मजीवों द्वारा किया जाता है।"
+                },
+                {
+                    "id": "II",
+                    "english": "Statement II : The greater the BOD of waste water, lesser is its polluting potential.",
+                    "hindi": "कथन II : अपशिष्ट जल की BOD जितनी अधिक होगी, उसकी प्रदूषण क्षमता उतनी ही कम होगी।"
+                }
+            ],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Statement I is correct and II is incorrect.",
+                    "hindi": "कथन I सत्य है व II असत्य है।",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Both statements are correct.",
+                    "hindi": "दोनों कथन सत्य हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Both statements are incorrect.",
+                    "hindi": "दोनों कथन असत्य हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Statement I is incorrect and II is correct.",
+                    "hindi": "कथन I असत्य है व II सत्य है।",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "Both statements are incorrect.",
+                    "hindi": "दोनों कथन असत्य हैं।"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Statement I is incorrect because waste water treatment uses naturally occurring heterotrophic microbes (aerobic and anaerobic), not autotrophic microbes. Statement II is incorrect because higher BOD means more organic matter, which means higher polluting potential, not lesser.",
+                "hindi": "कथन I असत्य है क्योंकि अपशिष्ट जल उपचार में प्राकृतिक रूप से उपस्थित परपोषी (heterotrophic) सूक्ष्मजीवों का उपयोग होता है, स्वपोषी का नहीं। कथन II असत्य है क्योंकि BOD जितनी अधिक होगी, प्रदूषण क्षमता उतनी ही अधिक होगी, कम नहीं।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Statement I is not correct.",
+                        "hindi": "कथन I सही नहीं है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Both are not correct.",
+                        "hindi": "दोनों कथन सही नहीं हैं।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Both Statement I and Statement II are factually incorrect.",
+                        "hindi": "कथन I और कथन II दोनों तथ्यात्मक रूप से असत्य हैं।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Statement II is not correct.",
+                        "hindi": "कथन II सही नहीं है।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question attempted.",
+                        "hindi": "प्रश्न का उत्तर दिया गया है।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Microbiology",
+                "topic": "Microbes in Human Welfare",
+                "subtopic": "Sewage Treatment",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": "Statement Based",
+                "concepts": [
+                    "Sewage treatment",
+                    "BOD",
+                    "Heterotrophic microbes"
+                ],
+                "keywords": [
+                    "waste water",
+                    "BOD",
+                    "autotrophic",
+                    "polluting potential"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Science",
+                "unit": "Biology",
+                "chapter": "Biology in Human Welfare",
+                "topic": "Microbes in Sewage Treatment"
+            },
+            "source_reference": {
+                "page": 1,
+                "question_location": "Middle",
+                "source_question_number": "6"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q7",
+            "question_number": 7,
+            "question_type": "statement_based",
+            "question_type_display": "Statement Based",
+            "question_text": {
+                "english": "Consider the given statements and select the correct answer using the code given below -",
+                "hindi": "दिए गए कथनों पर विचार कर नीचे दिए गए कूट के उपयोग से सही उत्तर का चयन कीजिए -"
+            },
+            "instructions": null,
+            "statements": [
+                {
+                    "id": "I",
+                    "english": "Statement I : High activation energy favors faster reactions in the absence of enzymes.",
+                    "hindi": "कथन I : उच्च सक्रियण ऊर्जा एंजाइमों की अनुपस्थिति में तीव्र अभिक्रियाओं को प्रेरित करती है।"
+                },
+                {
+                    "id": "II",
+                    "english": "Statement II : Enzymes act by decreasing the enthalpy change (ΔH) of the reaction.",
+                    "hindi": "कथन II : एंजाइम, अभिक्रिया की एंथैल्पी परिवर्तन (ΔH) को कम करके कार्य करते हैं।"
+                }
+            ],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Statement I is false, Statement II is true.",
+                    "hindi": "कथन I असत्य है, कथन II सत्य है।",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Statement I is true, Statement II is false.",
+                    "hindi": "कथन I सत्य है, कथन II असत्य है।",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Both statements are true.",
+                    "hindi": "दोनों कथन सत्य हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Both statements are false.",
+                    "hindi": "दोनों कथन असत्य हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "4",
+                "answer_text": {
+                    "english": "Both statements are false.",
+                    "hindi": "दोनों कथन असत्य हैं।"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Statement I is false because high activation energy actually results in slower reactions, not faster ones. Statement II is false because enzymes lower the activation energy, they do not change the enthalpy change (ΔH) of the reaction. Therefore, both statements are false.",
+                "hindi": "कथन I असत्य है क्योंकि उच्च सक्रियण ऊर्जा से अभिक्रिया धीमी होती है, तीव्र नहीं। कथन II असत्य है क्योंकि एंजाइम सक्रियण ऊर्जा को कम करते हैं, वे अभिक्रिया के एंथैल्पी परिवर्तन (ΔH) को परिवर्तित नहीं करते हैं। अतः दोनों कथन असत्य हैं।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Statement II is not true.",
+                        "hindi": "कथन II सत्य नहीं है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Statement I is not true.",
+                        "hindi": "कथन I सत्य नहीं है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Both statements are not true.",
+                        "hindi": "दोनों कथन सत्य नहीं हैं।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Both Statement I and Statement II are scientifically incorrect.",
+                        "hindi": "कथन I और कथन II दोनों वैज्ञानिक रूप से असत्य हैं।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question attempted.",
+                        "hindi": "प्रश्न का उत्तर दिया गया है।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Biochemistry",
+                "topic": "Enzymes",
+                "subtopic": "Mechanism of Enzyme Action",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": "Statement Based",
+                "concepts": [
+                    "Activation energy",
+                    "Enzyme catalysis",
+                    "Enthalpy change"
+                ],
+                "keywords": [
+                    "activation energy",
+                    "enzymes",
+                    "enthalpy change",
+                    "ΔH"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Science",
+                "unit": "Biology",
+                "chapter": "Biomolecules",
+                "topic": "Enzymes"
+            },
+            "source_reference": {
+                "page": 1,
+                "question_location": "Bottom",
+                "source_question_number": "7"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

@@ -1,0 +1,582 @@
+{
+    "page_number": 4,
+    "questions": [
+        {
+            "id": "q24",
+            "question_number": 24,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "The correct IUPAC name of given compound is -",
+                "hindi": "दिए गए यौगिक का सही IUPAC नाम है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [
+                {
+                    "type": "svg",
+                    "purpose": "question_diagram",
+                    "placement": "question_body",
+                    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\"><polygon points=\"100,30 130,50 130,90 100,110 70,90 70,50\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"70\" r=\"25\" fill=\"none\" stroke=\"black\" stroke-dasharray=\"4,3\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"30\" x2=\"100\" y2=\"10\" stroke=\"black\" stroke-width=\"2\"/><text x=\"95\" y=\"10\" font-size=\"12\" font-family=\"sans-serif\">NO₂</text><line x1=\"70\" y1=\"50\" x2=\"50\" y2=\"50\" stroke=\"black\" stroke-width=\"2\"/><text x=\"40\" y=\"55\" font-size=\"12\" font-family=\"sans-serif\">I</text><line x1=\"130\" y1=\"90\" x2=\"155\" y2=\"110\" stroke=\"black\" stroke-width=\"2\"/><text x=\"160\" y=\"115\" font-size=\"12\" font-family=\"sans-serif\">C₂H₅</text></svg>",
+                    "description": "Benzene ring with NO2 group at position 1 (top), I (iodine) at position 3, and C2H5 (ethyl) at position 4.",
+                    "source_fidelity": "reconstructed"
+                }
+            ],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "1-Ethyl-4-iodo-5-nitrobenzene",
+                    "hindi": "1-एथिल-4-आयोडो-5-नाइट्रोबेन्जीन",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "1-Iodo-4-ethyl-2-nitrobenzene",
+                    "hindi": "1-आयोडो-4-एथिल-2-नाइट्रोबेन्जीन",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "4-Ethyl-1-iodo-2-nitrobenzene",
+                    "hindi": "4-एथिल-1-आयोडो-2-नाइट्रोबेन्जीन",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "1-Ethyl-4-iodo-3-nitrobenzene",
+                    "hindi": "1-एथिल-4-आयोडो-3-नाइट्रोबेन्जीन",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "4-Ethyl-1-iodo-2-nitrobenzene",
+                    "hindi": "4-एथिल-1-आयोडो-2-नाइट्रोबेन्जीन"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Numbering the benzene ring starting from Iodine (-I) as position 1, giving lowest locants to other substituents: -I at 1, -NO2 at 2, and -Ethyl at 4. Alphabetical order for naming substituents gives Ethyl before Iodo, and Nitro gets lower numbers, resulting in 4-Ethyl-1-iodo-2-nitrobenzene.",
+                "hindi": "आयोडिन (-I) को स्थिति 1 मानकर बेन्जीन रिंग का क्रमांकन करने पर, अन्य प्रतिस्थापियों को न्यूनतम स्थिति मिलती है: -I को 1, -NO2 को 2, और -एथिल को 4। नामकरण में वर्णमाला क्रम के अनुसार एथिल, आयोडो से पहले आता है, जिससे 4-एथिल-1-आयोडो-2-नाइट्रोबेन्जीन नाम बनता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Science",
+                "sub_subject": "Chemistry",
+                "topic": "Organic Chemistry",
+                "subtopic": "IUPAC Nomenclature",
+                "difficulty": "moderate",
+                "cognitive_level": "application",
+                "question_category": null,
+                "concepts": [
+                    "IUPAC nomenclature of substituted benzenes"
+                ],
+                "keywords": [
+                    "IUPAC name",
+                    "benzene derivative"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Organic Chemistry",
+                "chapter": "Nomenclature and General Principles",
+                "topic": "IUPAC Nomenclature"
+            },
+            "source_reference": {
+                "page": 4,
+                "question_location": null,
+                "source_question_number": "24"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": "reconstructed",
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.98,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q25",
+            "question_number": 25,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "Total number of node/s for 3d orbital is/are -",
+                "hindi": "3d कक्षक के लिए नोड/नोडों की कुल संख्या है/हैं -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "One",
+                    "hindi": "एक",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Two",
+                    "hindi": "दो",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Zero",
+                    "hindi": "शून्य",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Three",
+                    "hindi": "तीन",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "Two",
+                    "hindi": "दो"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Total number of nodes for an orbital is given by n - 1. For 3d, principal quantum number n = 3, so total nodes = 3 - 1 = 2.",
+                "hindi": "किसी कक्षक के लिए कुल नोड्स की संख्या n - 1 द्वारा दी जाती है। 3d के लिए, मुख्य क्वांटम संख्या n = 3 है, अतः कुल नोड्स = 3 - 1 = 2।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "explanation": null
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Science",
+                "sub_subject": "Chemistry",
+                "topic": "Atomic Structure",
+                "subtopic": "Orbitals and Nodes",
+                "difficulty": "easy",
+                "cognitive_level": "recall",
+                "question_category": null,
+                "concepts": [
+                    "Radial and angular nodes",
+                    "Quantum numbers"
+                ],
+                "keywords": [
+                    "nodes",
+                    "3d orbital"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Structure of Atom",
+                "chapter": "Atomic Structure",
+                "topic": "Quantum Numbers and Orbitals"
+            },
+            "source_reference": {
+                "page": 4,
+                "question_location": null,
+                "source_question_number": "25"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q26",
+            "question_number": 26,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "The electronic configuration of five elements are given below -\n[A] 1s² 2s²\n[B] 1s² 2s² 2p¹\n[C] 1s² 2s² 2p²\n[D] 1s² 2s² 2p³\n[E] 1s² 2s² 2p⁴\nThe correct order of first ionization enthalpies of elements is -",
+                "hindi": "पाँच तत्त्वों के इलेक्ट्रॉनिक विन्यास नीचे दिए गए हैं -\n[A] 1s² 2s²\n[B] 1s² 2s² 2p¹\n[C] 1s² 2s² 2p²\n[D] 1s² 2s² 2p³\n[E] 1s² 2s² 2p⁴\nतत्त्वों की प्रथम आयनन एन्थैल्पी के मान का सही क्रम है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "[A] < [B] < [C] < [D] < [E]",
+                    "hindi": "[A] < [B] < [C] < [D] < [E]",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "[A] < [B] < [D] < [C] < [E]",
+                    "hindi": "[A] < [B] < [D] < [C] < [E]",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "[B] < [A] < [C] < [E] < [D]",
+                    "hindi": "[B] < [A] < [C] < [E] < [D]",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "[E] < [D] < [C] < [B] < [A]",
+                    "hindi": "[E] < [D] < [C] < [B] < [A]",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "[B] < [A] < [C] < [E] < [D]",
+                    "hindi": "[B] < [A] < [C] < [E] < [D]"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Elements are: [A]=Be (fully filled 2s), [B]=B (higher energy 2p electron, lower IE than Be), [C]=C, [D]=N (half-filled 2p³, extra stable, higher IE than O), [E]=O. Due to stability of fully filled and half-filled orbitals, the order of first ionization enthalpy is B < Be < C < O < N, i.e., [B] < [A] < [C] < [E] < [D].",
+                "hindi": "तत्त्व हैं: [A]=Be (पूर्ण भरे 2s), [B]=B (उच्च ऊर्जा का 2p इलेक्ट्रॉन, Be से कम IE), [C]=C, [D]=N (अर्द्ध-पूर्ण 2p³, अत्यधिक स्थायी, O से अधिक IE), [E]=O। पूर्ण और अर्द्ध-पूर्ण कक्षकों के स्थायित्व के कारण, प्रथम आयनन एन्थैल्पी का क्रम B < Be < C < O < N है, अर्थात् [B] < [A] < [C] < [E] < [D]",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Science",
+                "sub_subject": "Chemistry",
+                "topic": "Periodic Table",
+                "subtopic": "Ionization Enthalpy",
+                "difficulty": "hard",
+                "cognitive_level": "analysis",
+                "question_category": null,
+                "concepts": [
+                    "Ionization energy trends",
+                    "Penetration and stability of orbitals"
+                ],
+                "keywords": [
+                    "ionization enthalpy",
+                    "electronic configuration"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Classification of Elements",
+                "chapter": "Periodic Properties",
+                "topic": "Ionization Enthalpy"
+            },
+            "source_reference": {
+                "page": 4,
+                "question_location": null,
+                "source_question_number": "26"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q27",
+            "question_number": 27,
+            "question_type": "multiple_statements",
+            "question_type_display": "Multiple Statements",
+            "question_text": {
+                "english": "Consider the following reversible reaction which is at equilibrium -\n2NO₂(g) ⇌ N₂O₄(g); ΔH = -57.2 kJ/mol\n(Brown) (Colourless)\nConsider the following observation/s regarding above reaction -\n(a) On decreasing temperature, intensity of brown colour decreases.\n(b) On increasing pressure, more N₂O₄(g) will be formed.\n(c) The value of equilibrium constant decreases as the temperature increases.\nChoose the correct option -",
+                "hindi": "निम्नलिखित उत्क्रमणीय अभिक्रिया पर विचार कीजिए, जो कि साम्यावस्था में है -\n2NO₂(g) ⇌ N₂O₄(g); ΔH = -57.2 kJ/mol\n(भूरी) (रंगहीन)\nउपयुक्त अभिक्रिया के संदर्भ में निम्नलिखित प्रेक्षण / प्रेक्षणों पर विचार कीजिए -\n(a) ताप घटाने पर भूरे रंग की तीव्रता घटती है।\n(b) दाब बढ़ाने पर ज्यादा N₂O₄(g) बनेगी।\n(c) ताप बढ़ने के साथ साम्यावस्था स्थिरांक का मान घटता है।\nसही विकल्प का चयन कीजिए -"
+            },
+            "instructions": null,
+            "statements": [
+                {
+                    "id": "a",
+                    "english": "On decreasing temperature, intensity of brown colour decreases.",
+                    "hindi": "ताप घटाने पर भूरे रंग की तीव्रता घटती है।"
+                },
+                {
+                    "id": "b",
+                    "english": "On increasing pressure, more N₂O₄(g) will be formed.",
+                    "hindi": "दाब बढ़ाने पर ज्यादा N₂O₄(g) बनेगी।"
+                },
+                {
+                    "id": "c",
+                    "english": "The value of equilibrium constant decreases as the temperature increases.",
+                    "hindi": "ताप बढ़ने के साथ साम्यावस्था स्थिरांक का मान घटता है।"
+                }
+            ],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Only (b) is correct.",
+                    "hindi": "केवल (b) सही है।",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "All (a), (b) and (c) are correct.",
+                    "hindi": "(a), (b) और (c) सभी सही हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Only (b) and (c) are correct.",
+                    "hindi": "केवल (b) और (c) सही हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Only (a) and (c) are correct.",
+                    "hindi": "केवल (a) और (c) सही हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "All (a), (b) and (c) are correct.",
+                    "hindi": "(a), (b) और (c) सभी सही हैं।"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "(a) Given reaction is exothermic (ΔH = -ve). Decreasing temperature shifts equilibrium forward, consuming NO₂ (brown), decreasing brown intensity. Correct.\n(b) Increasing pressure shifts equilibrium towards fewer moles of gas (reactants: 2 moles, products: 1 mole), i.e., forward direction, forming more N₂O₄. Correct.\n(c) For an exothermic reaction, equilibrium constant decreases with an increase in temperature according to van 't Hoff equation. Correct.",
+                "hindi": "(a) दी गई अभिक्रिया ऊष्माक्षेपी है (ΔH = -ve)। ताप घटाने पर साम्यावस्था अग्र दिशा में विस्थापित होती है, जिससे NO₂ (भूरा) की मात्रा कम होती है और भूरे रंग की तीव्रता घटती है। सही है।\n(b) दाब बढ़ाने पर साम्यावस्था कम मोलों वाली दिशा (अभिकारकों के 2 मोल, उत्पाद का 1 मोल), अर्थात अग्र दिशा में विस्थापित होती है, जिससे अधिक N₂O₄ बनती है। सही है।\n(c) वांट हॉफ समीकरण के अनुसार, ऊष्माक्षेपी अभिक्रिया के लिए ताप बढ़ाने पर साम्यावस्था स्थिरांक का मान घटता है। सही है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "explanation": null
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Science",
+                "sub_subject": "Chemistry",
+                "topic": "Chemical Equilibrium",
+                "subtopic": "Le Chatelier's Principle",
+                "difficulty": "moderate",
+                "cognitive_level": "analysis",
+                "question_category": null,
+                "concepts": [
+                    "Le Chatelier's principle",
+                    "Effect of temperature and pressure on equilibrium"
+                ],
+                "keywords": [
+                    "equilibrium",
+                    "exothermic reaction",
+                    "Le Chatelier"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Chemical Equilibrium",
+                "chapter": "Equilibrium",
+                "topic": "Factors Affecting Equilibrium"
+            },
+            "source_reference": {
+                "page": 4,
+                "question_location": null,
+                "source_question_number": "27"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

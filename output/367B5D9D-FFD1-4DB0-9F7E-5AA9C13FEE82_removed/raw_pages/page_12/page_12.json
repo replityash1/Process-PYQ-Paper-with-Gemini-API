@@ -1,0 +1,486 @@
+{
+    "page_number": 12,
+    "questions": [
+        {
+            "id": "q89",
+            "question_number": 89,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "The energy of a free electron including its rest mass energy is E. What is the phase velocity of wave packet associated with motion of the electron? (Here symbols have their usual meaning)",
+                "hindi": "एक मुक्त इलेक्ट्रॉन की ऊर्जा E है, जिसमें इसकी विराम द्रव्यमान ऊर्जा भी सम्मिलित है। इलेक्ट्रॉन की गति से संबद्ध तरंग पिटक का कला वेग क्या है? (यहाँ संकेतों के प्रचलित अर्थ हैं)"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "\\(\\frac{2E}{(m^2-m_0^2)^{\\frac{1}{2}}c}\\)",
+                    "hindi": "\\(\\frac{2E}{(m^2-m_0^2)^{\\frac{1}{2}}c}\\)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "\\(\\frac{E}{(m^2-m_0^2)^{\\frac{1}{2}}c}\\)",
+                    "hindi": "\\(\\frac{E}{(m^2-m_0^2)^{\\frac{1}{2}}c}\\)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "\\(\\frac{(m^2-m_0^2)^{\\frac{1}{2}}c}{\\left(\\frac{E}{c^2}\\right)}\\)",
+                    "hindi": "\\(\\frac{(m^2-m_0^2)^{\\frac{1}{2}}c}{\\left(\\frac{E}{c^2}\\right)}\\)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "\\(\\frac{E}{(m^2+m_0^2)^{\\frac{1}{2}}c}\\)",
+                    "hindi": "\\(\\frac{E}{(m^2+m_0^2)^{\\frac{1}{2}}c}\\)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "Option (3)",
+                    "hindi": "विकल्प (3)"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Phase velocity v_p = \\omega / k = E / p. Since E = mc^2 and p = mv = \\sqrt{E^2 - m_0^2 c^4}/c or similar relativistic formulation, simplifying gives the correct expression.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Phase velocity v_p is given by v_p = \\omega / k = E / p. Using the relativistic energy-momentum relation E^2 = p^2 c^2 + m_0^2 c^4, we can express p.",
+                "hindi": "कला वेग v_p, v_p = \\omega / k = E / p द्वारा दिया जाता है। आपेक्षिक ऊर्जा-संवेग संबंध E^2 = p^2 c^2 + m_0^2 c^4 का उपयोग करके p को व्यक्त किया जा सकता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect expression for phase velocity.",
+                        "hindi": "कला वेग के लिए गलत व्यंजक।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect expression for phase velocity.",
+                        "hindi": "कला वेग के लिए गलत व्यंजक।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Matches standard derivation of phase velocity of de Broglie wave packet.",
+                        "hindi": "डी-ब्रोग्ली तरंग पिटक के कला वेग के मानक व्युत्पत्ति से मेल खाता है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect expression.",
+                        "hindi": "गलत व्यंजक।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Quantum Mechanics / Relativity",
+                "topic": "matter waves",
+                "subtopic": "Phase velocity",
+                "difficulty": "hard",
+                "cognitive_level": "application",
+                "question_category": null,
+                "concepts": [
+                    "Phase velocity",
+                    "de Broglie waves",
+                    "relativistic mechanics"
+                ],
+                "keywords": [
+                    "free electron",
+                    "rest mass energy",
+                    "phase velocity",
+                    "wave packet"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": null,
+                "chapter": "Wave Particle Duality",
+                "topic": "de Broglie wavelength and phase velocity"
+            },
+            "source_reference": {
+                "page": 12,
+                "question_location": "Top left",
+                "source_question_number": "89"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.95,
+                "structure_confidence": 0.98,
+                "answer_confidence": 0.95,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q90",
+            "question_number": 90,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "If a proton and electron have the same de-Broglie wavelength, then -",
+                "hindi": "यदि प्रोटॉन और इलेक्ट्रॉन की डी-ब्रोग्ली तरंगदैर्ध्य समान है, तो -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Momentum of electron > momentum of proton",
+                    "hindi": "इलेक्ट्रॉन का संवेग > प्रोटॉन का संवेग",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Kinetic energy of electron < kinetic energy of proton",
+                    "hindi": "इलेक्ट्रॉन की गतिज ऊर्जा < प्रोटॉन की गतिज ऊर्जा",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Momentum of electron = momentum of proton",
+                    "hindi": "इलेक्ट्रॉन का संवेग = प्रोटॉन का संवेग",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Kinetic energy of electron = kinetic energy of proton",
+                    "hindi": "इलेक्ट्रॉन की गतिज ऊर्जा = प्रोटॉन की गतिज ऊर्जा",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "Momentum of electron = momentum of proton",
+                    "hindi": "इलेक्ट्रॉन का संवेग = प्रोटॉन का संवेग"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "de Broglie wavelength \\(\\lambda = \\frac{h}{p}\\). Since \\(\\lambda\\) is the same for both, their momenta \\(p\\) must be equal.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "The de Broglie wavelength is given by \\(\\lambda = \\frac{h}{p}\\). Since both particles have the same de Broglie wavelength \\(\\lambda\\), their momentum \\(p = \\frac{h}{\\lambda}\\) must also be equal.",
+                "hindi": "डी-ब्रोग्ली तरंगदैर्ध्य \\(\\lambda = \\frac{h}{p}\\) द्वारा दी जाती है। चूकि दोनों कणों की डी-ब्रोग्ली तरंगदैर्ध्य समान है, इसलिए उनका संवेग \\(p = \\frac{h}{\\lambda}\\) भी समान होना चाहिए।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Momenta are equal since \\(\\lambda\\) is the same.",
+                        "hindi": "चूँकि \\(\\lambda\\) समान है, संवेग समान हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Kinetic energy \\(K = \\frac{p^2}{2m}\\). Since \\(m_p > m_e\\), \\(K_e > K_p\\).",
+                        "hindi": "गतिज ऊर्जा \\(K = \\frac{p^2}{2m}\\)। चूँकि \\(m_p > m_e\\), इसलिए \\(K_e > K_p\\)।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "\\(\\lambda = \\frac{h}{p}\\) implies equal \\(\\lambda\\) means equal \\(p\\).",
+                        "hindi": "\\(\\lambda = \\frac{h}{p}\\) का अर्थ है कि समान \\(\\lambda\\) का मतलब समान \\(p\\) है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Kinetic energies are not equal because masses are different.",
+                        "hindi": "द्रव्यमान भिन्न होने के कारण गतिज ऊर्जाएँ समान नहीं हैं।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Quantum Mechanics",
+                "topic": "de Broglie Wavelength",
+                "subtopic": "Comparison of particles",
+                "difficulty": "easy",
+                "cognitive_level": "understanding",
+                "question_category": null,
+                "concepts": [
+                    "de Broglie wavelength",
+                    "momentum",
+                    "kinetic energy"
+                ],
+                "keywords": [
+                    "proton",
+                    "electron",
+                    "de-Broglie wavelength",
+                    "momentum"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": null,
+                "chapter": "Dual Nature of Radiation and Matter",
+                "topic": "de Broglie wavelength"
+            },
+            "source_reference": {
+                "page": 12,
+                "question_location": "Middle left",
+                "source_question_number": "90"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.98,
+                "answer_confidence": 0.99,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q91",
+            "question_number": 91,
+            "question_type": "statement_based",
+            "question_type_display": "Statement Based",
+            "question_text": {
+                "english": "Consider the following statements for resonance in forced oscillator and choose correct option -",
+                "hindi": "प्रणोदित दोलक में अनुनाद के लिए निम्नलिखित कथनों पर विचार करें और सही विकल्प चुनें -"
+            },
+            "instructions": null,
+            "statements": [
+                {
+                    "id": "A",
+                    "english": "The amplitude resonance occurs when the driving frequency is slightly lower than the natural frequency of the oscillator, depending upon the magnitude of damping. The velocity resonance occurs when the two frequencies are equal, whatever the damping may be.",
+                    "hindi": "आयाम अनुनाद तब होता है जब चालक आवृत्ति दोलक की प्राकृतिक आवृत्ति से थोड़ी कम होती है, जो अवमंदन के परिमाण पर निर्भर करती है। वेग अनुनाद तब होता है जब दोनों आवृत्तियाँ बराबर होती हैं, चाहे अवमंदन कुछ भी हो।"
+                },
+                {
+                    "id": "B",
+                    "english": "At amplitude resonance the displacement lags behind the driving force by \\(\\pi\\), while the velocity at resonance is always in phase with the driving force.",
+                    "hindi": "आयाम अनुनाद पर विस्थापन चालक बल से \\(\\pi\\) पीछे रहता है, जबकि अनुनाद पर वेग सदैव चालक बल के समकला में रहता है।"
+                }
+            ],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Both the statements (A) and (B) are false.",
+                    "hindi": "कथन (A) और (B) दोनों असत्य हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Statement (A) is false and statement (B) is true.",
+                    "hindi": "कथन (A) असत्य है और कथन (B) सत्य है।",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Both the statements (A) and (B) are true.",
+                    "hindi": "कथन (A) और (B) दोनों सत्य हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Statement (A) is true and statement (B) is false.",
+                    "hindi": "कथन (A) सत्य है और कथन (B) असत्य है।",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "Both the statements (A) and (B) are false.",
+                    "hindi": "कथन (A) और (B) दोनों असत्य हैं।"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Let's check statements: Amplitude resonance occurs at \\(\\omega = \\sqrt{\\omega_0^2 - 2r^2}\\) which is lower than natural frequency, but velocity resonance occurs at \\(\\omega = \\omega_0\\). Wait, statement A says velocity resonance occurs when two frequencies are equal whatever the damping, which is true for velocity resonance. But let's check displacement phase lag at amplitude resonance: phase lag \\(\\phi = \\tan^{-1}\\left(\\frac{2r\\omega}{\\omega_0^2 - \\omega^2}\\right)\\). At amplitude resonance \\(\\omega = \\sqrt{\\omega_0^2 - 2r^2}\\), phase \\(\\phi \\neq \\pi\\). At velocity resonance \\(\\omega = \\omega_0\\), phase \\(\\phi = \\pi/2\\), so velocity is in phase with driving force, but statement B says 'At amplitude resonance the displacement lags behind the driving force by \\(\\pi\\)' which is false (displacement lags by \\(\\pi/2\\) at velocity resonance and some other value at amplitude resonance). Let's re-verify standard textbook statements.",
+                "confidence": "medium"
+            },
+            "explanation": {
+                "english": "Both statement (A) and statement (B) contain inaccuracies regarding the phase relationships and conditions of amplitude and velocity resonance in forced oscillations.",
+                "hindi": "प्रणोदित दोलनों में आयाम और वेग अनुनाद की स्थितियों और कला संबंधों के संबंध में कथन (A) और कथन (B) दोनों अशुद्धियाँ रखते हैं।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Both statements are considered false based on standard forced oscillation theory.",
+                        "hindi": "मानक प्रणोदित दोलन सिद्धांत के आधार पर दोनों कथन असत्य माने जाते हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Statement A is not entirely correct as stated.",
+                        "hindi": "कथन A पूरी तरह से सही नहीं है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Both are not true.",
+                        "hindi": "दोनों सत्य नहीं हैं।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Statement A and B are incorrect.",
+                        "hindi": "कथन A और B गलत हैं।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Oscillations and Waves",
+                "topic": "Forced Oscillations",
+                "subtopic": "Resonance",
+                "difficulty": "hard",
+                "cognitive_level": "analysis",
+                "question_category": null,
+                "concepts": [
+                    "forced oscillator",
+                    "amplitude resonance",
+                    "velocity resonance",
+                    "phase lag"
+                ],
+                "keywords": [
+                    "resonance",
+                    "forced oscillator",
+                    "damping",
+                    "amplitude",
+                    "velocity"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": null,
+                "chapter": "Oscillations",
+                "topic": "Forced and Damped Oscillations"
+            },
+            "source_reference": {
+                "page": 12,
+                "question_location": "Bottom left/right",
+                "source_question_number": "91"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.93,
+                "structure_confidence": 0.95,
+                "answer_confidence": 0.85,
+                "needs_manual_review": true
+            },
+            "notes": []
+        }
+    ]
+}

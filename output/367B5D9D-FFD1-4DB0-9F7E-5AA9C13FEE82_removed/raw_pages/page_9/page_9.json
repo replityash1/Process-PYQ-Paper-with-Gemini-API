@@ -1,0 +1,657 @@
+{
+    "page_number": 9,
+    "questions": [
+        {
+            "id": "q66",
+            "question_number": 66,
+            "question_type": "statement_based",
+            "question_type_display": "Statement Based Question",
+            "question_text": {
+                "english": "Consider the following statements and choose the correct answer from the options given below -",
+                "hindi": "निम्नलिखित कथनों पर विचार कीजिए एवं दिये गये विकल्पों में से सही उत्तर का चयन कीजिए -"
+            },
+            "instructions": null,
+            "statements": [
+                {
+                    "id": "A",
+                    "english": "Increase in hydrogen ion-concentration favours the dissociation of oxyhemoglobin.",
+                    "hindi": "हाइड्रोजन आयन सांद्रता में वृद्धि ऑक्सीहीमोग्लोबिन के वियोजन को बढ़ाना देती है।"
+                },
+                {
+                    "id": "B",
+                    "english": "At the lower O2 tension, oxyhemoglobin dissociates more readily in the presence of salts compared to their absence.",
+                    "hindi": "कम ऑक्सीजन तनाव पर ऑक्सीहीमोग्लोबिन, लवणों की अनुपस्थिति की तुलना में उनकी उपस्थिति में अधिक तेजी से वियोजित हो जाता है।"
+                }
+            ],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Statement (A) and Statement (B) both are incorrect.",
+                    "hindi": "कथन (A) और कथन (B) दोनों गलत हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Statement (A) is correct and Statement (B) is incorrect.",
+                    "hindi": "कथन (A) सही है और कथन (B) गलत है।",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Statement (A) and Statement (B) both are correct.",
+                    "hindi": "कथन (A) और कथन (B) दोनों सही हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Statement (A) is incorrect and Statement (B) is correct.",
+                    "hindi": "कथन (A) गलत है और कथन (B) सही है।",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "Statement (A) and Statement (B) both are correct.",
+                    "hindi": "कथन (A) और कथन (B) दोनों सही हैं।"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": null
+            },
+            "explanation": {
+                "english": "An increase in hydrogen ion concentration (lower pH) shifts the oxygen-hemoglobin dissociation curve to the right, promoting oxygen dissociation (Bohr effect). Similarly, lower O2 tension along with the presence of salts (like 2,3-DPG or electrolytes affecting binding) facilitates the dissociation of oxyhemoglobin.",
+                "hindi": "हाइड्रोजन आयन सांद्रता में वृद्धि (कम pH) ऑक्सीहीमोग्लोबिन वियोजन वक्र को दाईं ओर विस्थापित करती है, जिससे वियोजन को बढ़ावा मिलता है। इसी प्रकार, कम ऑक्सीजन तनाव और लवणों की उपस्थिति ऑक्सीहीमोग्लोबिन के वियोजन को सुगम बनाती है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect because both statements are scientifically accurate regarding oxyhemoglobin dissociation.",
+                        "hindi": "गलत क्योंकि ऑक्सीहीमोग्लोबिन वियोजन के संबंध में दोनों कथन वैज्ञानिक रूप से सही हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect as statement B is also correct.",
+                        "hindi": "गलत क्योंकि कथन B भी सही है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Both statements correctly describe the factors affecting the dissociation of oxyhemoglobin.",
+                        "hindi": "दोनों कथन ऑक्सीहीमोग्लोबिन के वियोजन को प्रभावित करने वाले कारकों का सही वर्णन करते हैं।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect because statement A is also correct.",
+                        "hindi": "गलत क्योंकि कथन A भी सही है।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Human Physiology",
+                "topic": "Respiration",
+                "subtopic": "Transport of Gases",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": "conceptual",
+                "concepts": [
+                    "Oxyhemoglobin Dissociation",
+                    "Bohr Effect"
+                ],
+                "keywords": [
+                    "oxyhemoglobin",
+                    "hydrogen ion",
+                    "O2 tension"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Biology",
+                "unit": "Human Physiology",
+                "chapter": "Breathing and Exchange of Gases",
+                "topic": "Transport of gases"
+            },
+            "source_reference": {
+                "page": 9,
+                "question_location": "top left",
+                "source_question_number": "66"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.99,
+                "answer_confidence": 0.95,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q67",
+            "question_number": 67,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice Question",
+            "question_text": {
+                "english": "Medullary Bundle is found in -",
+                "hindi": "मज्जा बण्डल पाये जाते हैं -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Boerhaavia",
+                    "hindi": "बोएरहाविया में",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Salvadora",
+                    "hindi": "साल्वेडोरा में",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Bignonia",
+                    "hindi": "बिग्मोनिया में",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Nyctanthes",
+                    "hindi": "निक्टेंथेस में",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "Boerhaavia",
+                    "hindi": "बोएरहाविया में"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": null
+            },
+            "explanation": {
+                "english": "Medullary bundles (vascular bundles present in the pith) are a characteristic anomalous secondary growth feature found in the stem of Boerhaavia (Nyctaginaceae family).",
+                "hindi": "मज्जा बण्डल (मज्जा में उपस्थित संवहन बण्डल) बोएरहाविया (निक्टैजिनेसी कुल) के तने में पाई जाने वाली एक विशिष्ट असंगत द्वितीयक वृद्धि विशेषता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Boerhaavia stem exhibits medullary bundles in the pith.",
+                        "hindi": "बोएरहाविया के तने की मज्जा में मज्जा बण्डल उपस्थित होते हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Salvadora shows interxylary phloem.",
+                        "hindi": "साल्वेडोरा में अंतर्दारु फ्लोएम पाया जाता है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Bignonia shows anomalous secondary growth via furrowing in xylem.",
+                        "hindi": "बिग्मोनिया में जाइलम में खांचों द्वारा असंगत द्वितीयक वृद्धि होती है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Nyctanthes shows quadrangular stem with four accessory vascular bundles.",
+                        "hindi": "निक्टेंथेस में चार अतिरिक्त संवहन बण्डलों के साथ चतुष्कोणीय तना होता है।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Plant Anatomy",
+                "topic": "Anomalous Secondary Growth",
+                "subtopic": "Medullary bundles",
+                "difficulty": "moderate",
+                "cognitive_level": "recall",
+                "question_category": "factual",
+                "concepts": [
+                    "Anomalous Secondary Growth",
+                    "Medullary Bundles",
+                    "Boerhaavia"
+                ],
+                "keywords": [
+                    "Medullary Bundle",
+                    "Boerhaavia"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Biology",
+                "unit": "Plant Anatomy",
+                "chapter": "Secondary Growth",
+                "topic": "Anomalous secondary growth in stems"
+            },
+            "source_reference": {
+                "page": 9,
+                "question_location": "middle left",
+                "source_question_number": "67"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.99,
+                "answer_confidence": 0.98,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q68",
+            "question_number": 68,
+            "question_type": "statement_based",
+            "question_type_display": "Statement Based Question",
+            "question_text": {
+                "english": "Consider following statements about C4 plants -\n(A) They have high water-use efficiency.\n(B) High temperature promotes net carbon-dioxide uptake in these plants.\n(C) They have low salt tolerance.\n(D) Their productivity is high.\nWhich statements are true?",
+                "hindi": "C4 पौधों के लिये निम्न कथनों पर विचार कीजिये -\n(A) इनमें उच्च जल उपयोग दक्षता होती है।\n(B) उच्च तापमान इन पौधों में नेट कार्बन-डाईऑक्साइड ग्राह्यता को प्रेरित करता है।\n(C) इनमें लवण सहनशीलता कम होती है।\n(D) इनकी उत्पादकता उच्च होती है।\nकौनसे कथन सत्य हैं?"
+            },
+            "instructions": null,
+            "statements": [
+                {
+                    "id": "A",
+                    "english": "They have high water-use efficiency.",
+                    "hindi": "इनमें उच्च जल उपयोग दक्षता होती है।"
+                },
+                {
+                    "id": "B",
+                    "english": "High temperature promotes net carbon-dioxide uptake in these plants.",
+                    "hindi": "उच्च तापमान इन पौधों में नेट कार्बन-डाईऑक्साइड ग्राह्यता को प्रेरित करता है।"
+                },
+                {
+                    "id": "C",
+                    "english": "They have low salt tolerance.",
+                    "hindi": "इनमें लवण सहनशीलता कम होती है।"
+                },
+                {
+                    "id": "D",
+                    "english": "Their productivity is high.",
+                    "hindi": "इनकी उत्पादकता उच्च होती है।"
+                }
+            ],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "(A), (B) and (D)",
+                    "hindi": "(A), (B) व (D)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "(C) and (D)",
+                    "hindi": "(C) व (D)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "(A), (C) and (D)",
+                    "hindi": "(A), (C) व (D)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "(A) and (D)",
+                    "hindi": "(A) व (D)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "(A), (B) and (D)",
+                    "hindi": "(A), (B) व (D)"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": null
+            },
+            "explanation": {
+                "english": "C4 plants are adapted to high temperatures and intense sunlight, showing high water-use efficiency (A), higher optimal temperatures for photosynthesis/CO2 uptake (B), and high net primary productivity (D). Statement (C) is false because C4 plants often exhibit good tolerance to salinity and arid stress.",
+                "hindi": "C4 पौधे उच्च तापमान और तीव्र सूर्य के प्रकाश के अनुकूल होते हैं, जिनमें उच्च जल उपयोग दक्षता (A), प्रकाश संश्लेषण/CO2 ग्राह्यता के लिए उच्च अनुकूलतम तापमान (B), और उच्च प्राथमिक उत्पादकता (D) होती है। कथन (C) गलत है क्योंकि C4 पौधों में लवण सहनशीलता अच्छी होती है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Statements A, B, and D are correct characteristics of C4 plants.",
+                        "hindi": "कथन A, B, और D C4 पौधों की सही विशेषताएँ हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "C does not hold true as C4 plants generally have good tolerance to salt.",
+                        "hindi": "C सही नहीं है क्योंकि C4 पौधों में सामान्यतः लवण के प्रति अच्छी सहनशीलता होती है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect due to inclusion of statement C.",
+                        "hindi": "कथन C सम्मिलित होने के कारण गलत है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Misses statement B which is also correct.",
+                        "hindi": "कथन B छूट जाता है जो कि सही है।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Plant Physiology",
+                "topic": "Photosynthesis in Higher Plants",
+                "subtopic": "C4 Pathway",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": "conceptual",
+                "concepts": [
+                    "C4 Plants",
+                    "Water-use Efficiency",
+                    "Productivity"
+                ],
+                "keywords": [
+                    "C4 plants",
+                    "water-use efficiency",
+                    "carbon-dioxide uptake"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Biology",
+                "unit": "Plant Physiology",
+                "chapter": "Photosynthesis in Higher Plants",
+                "topic": "Photosynthetic pathways (C4)"
+            },
+            "source_reference": {
+                "page": 9,
+                "question_location": "lower left",
+                "source_question_number": "68"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.99,
+                "answer_confidence": 0.95,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q69",
+            "question_number": 69,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice Question",
+            "question_text": {
+                "english": "Which floral formula belongs to family Asteraceae?",
+                "hindi": "कौनसा पुष्प सूत्र एस्टेरेसी कुल से संबंधित है?"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [
+                {
+                    "type": "svg",
+                    "purpose": "option_diagram",
+                    "placement": "option_A",
+                    "svg": "<svg viewBox=\"0 0 150 30\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"5\" y=\"20\" font-family=\"serif\" font-size=\"14\">Br ⨁ ♀ Kₚₐₚₚᵤₛ C₍₅₎ A₍₅₎ Gₛ</text></svg>",
+                    "description": "Floral formula 1",
+                    "source_fidelity": "reconstructed"
+                },
+                {
+                    "type": "svg",
+                    "purpose": "option_diagram",
+                    "placement": "option_B",
+                    "svg": "<svg viewBox=\"0 0 150 30\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"5\" y=\"20\" font-family=\"serif\" font-size=\"14\">Br ⨁ ⚲ Kₚₐₚₚᵤₛ C₅ A₍₅₎ G₍₂₎</text></svg>",
+                    "description": "Floral formula 2",
+                    "source_fidelity": "reconstructed"
+                },
+                {
+                    "type": "svg",
+                    "purpose": "option_diagram",
+                    "placement": "option_C",
+                    "svg": "<svg viewBox=\"0 0 150 30\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"5\" y=\"20\" font-family=\"serif\" font-size=\"14\">Br ⨁ ♂ Kₚₐₚₚᵤₛ C₍₅₎ A₅ G₍₂₎</text></svg>",
+                    "description": "Floral formula 3",
+                    "source_fidelity": "reconstructed"
+                },
+                {
+                    "type": "svg",
+                    "purpose": "option_diagram",
+                    "placement": "option_D",
+                    "svg": "<svg viewBox=\"0 0 150 30\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"5\" y=\"20\" font-family=\"serif\" font-size=\"14\">Br ⨁ ♀ Kₚₐₚₚᵤₛ C₍₅₎ A₍₅₎ G₍₂₎</text></svg>",
+                    "description": "Floral formula 4",
+                    "source_fidelity": "reconstructed"
+                }
+            ],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Br ⨁ ♀ K_pappus C_(5) A_(5) G_2",
+                    "hindi": "Br ⨁ ♀ Kₚₐₚₚᵤₛ C₍₅₎ A₍₅₎ G₂",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Br ⨁ ⚲ K_pappus C_5 A_(5) G_(2)",
+                    "hindi": "Br ⨁ ⚲ Kₚₐₚₚᵤₛ C₅ A₍₅₎ G₍₂₎",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Br ⨁ ♂ K_pappus C_(5) A_5 G_(2)",
+                    "hindi": "Br ⨁ ♂ Kₚₐₚₚᵤₛ C₍₅₎ A₅ G₍₂₎",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Br ⨁ ♀ K_pappus C_(5) A_(5) G_(2) (with inferior ovary)",
+                    "hindi": "Br ⨁ ♀ Kₚₐₚₚᵤₛ C₍₅₎ A₍₅₎ G₋₍₂₎",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "4",
+                "answer_text": {
+                    "english": "Br ⨁ ♀ K_pappus C_(5) A_(5) G_(2) (with inferior ovary)",
+                    "hindi": "Br ⨁ ♀ Kₚₐₚₚᵤₛ C₍₅₎ A₍₅₎ G₋₍₂₎"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": null
+            },
+            "explanation": {
+                "english": "The family Asteraceae (Compositae) is characterized by bracteate (Br), actinomorphic or zygomorphic, bisexual (♀), calyx modified into pappus (K_pappus), corolla gamopetalous with 5 petals (C_(5)), syngenesious stamens 5 (A_(5)), and bicarpellary, syncarpous ovary which is inferior (G_(2) with a bar on top). Option 4 accurately depicts these characters with an inferior ovary.",
+                "hindi": "एस्टेरेसी (कंपोजिटि) कुल के पुष्प सहपत्री (Br), त्रिज्यासममित या एकव्याससममित, द्विलिंगी (♀), बाह्यदलपुंज पैपस के रूप में रूपांतरित (K_pappus), दलपुंज संयुक्त 5 दल (C_(5)), पुंकेसर 5 और संयुक्त (A_(5)), तथा द्विअंडपी, युक्तांडपी और अधोवर्ती अंडाशय (G_(2) जिसके ऊपर रेखा है) वाले होते हैं। विकल्प 4 अधोवर्ती अंडाशय के साथ इन लक्षणों को सही दर्शाता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect ovary condition.",
+                        "hindi": "अंडाशय की स्थिति गलत है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect corolla and sex condition.",
+                        "hindi": "दल और लिंग की स्थिति गलत है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect sex and stamen condition.",
+                        "hindi": "लिंग और पुंकेसर की स्थिति गलत है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Represents the complete correct floral formula of Asteraceae including inferior ovary.",
+                        "hindi": "अधोवर्ती अंडाशय सहित एस्टेरेसी का पूर्ण सही पुष्प सूत्र प्रदर्शित करता है।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Taxonomy of Angiosperms",
+                "topic": "Important Families",
+                "subtopic": "Asteraceae",
+                "difficulty": "hard",
+                "cognitive_level": "recall",
+                "question_category": "factual",
+                "concepts": [
+                    "Floral Formula",
+                    "Asteraceae",
+                    "Inferior Ovary",
+                    "Syngenesious Stamens"
+                ],
+                "keywords": [
+                    "floral formula",
+                    "Asteraceae",
+                    "pappus"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Biology",
+                "unit": "Diversity of Living Organisms",
+                "chapter": "Angiosperm Families",
+                "topic": "Asteraceae"
+            },
+            "source_reference": {
+                "page": 9,
+                "question_location": "lower right",
+                "source_question_number": "69"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": "reconstructed",
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.95,
+                "structure_confidence": 0.98,
+                "answer_confidence": 0.95,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

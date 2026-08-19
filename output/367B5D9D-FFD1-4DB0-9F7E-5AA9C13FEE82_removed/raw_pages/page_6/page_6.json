@@ -1,0 +1,588 @@
+{
+    "page_number": 6,
+    "questions": [
+        {
+            "id": "q33",
+            "question_number": 33,
+            "question_type": "statement_based",
+            "question_type_display": "Statement Based",
+            "question_text": {
+                "english": "Consider the following two statements -",
+                "hindi": "निम्नलिखित दो कथनों पर विचार कीजिये -"
+            },
+            "instructions": {
+                "english": "Choose the most appropriate option -",
+                "hindi": "सर्वाधिक उपयुक्त विकल्प का चयन कीजिये -"
+            },
+            "statements": [
+                {
+                    "id": "I",
+                    "english": "Greater the charge on the cation, greater is the covalent character of the ionic bond.",
+                    "hindi": "धनायन पर आवेश बढ़ने से आयनिक आबंध के सहसंयोजि लक्षण में वृद्धि होती है।"
+                },
+                {
+                    "id": "II",
+                    "english": "Partial covalent character of ionic bonds may be explained with the help of Fajans' rule.",
+                    "hindi": "आयनिक आबंधों के आंशिक सहसंयोजि लक्षण की विवेचना फाजान्स (Fajans) के नियम की सहायता से की जा सकती है।"
+                }
+            ],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Both Statement I and Statement II are true.",
+                    "hindi": "कथन I तथा कथन II दोनों सत्य हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Both Statement I and Statement II are false.",
+                    "hindi": "कथन I तथा कथन II दोनों असत्य हैं।",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Statement I is true and Statement II is false.",
+                    "hindi": "कथन I सत्य है और कथन II असत्य है।",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Statement I is false and Statement II is true.",
+                    "hindi": "कथन I असत्य है और कथन II सत्य है।",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "Both Statement I and Statement II are true.",
+                    "hindi": "कथन I तथा कथन II दोनों सत्य हैं।"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "According to Fajans' rules, greater the charge on the cation, greater is the polarizing power and hence greater is the covalent character in an ionic bond. Thus, both statements are correct.",
+                "hindi": "फाजान्स के नियमों के अनुसार, धनायन पर जितना अधिक आवेश होगा, उसकी ध्रुवण क्षमता उतनी ही अधिक होगी और आयनिक आबंध में सहसंयोजि लक्षण उतना ही अधिक होगा। अतः दोनों कथन सत्य हैं।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Both statements follow directly from Fajans' rules.",
+                        "hindi": "दोनों कथन फाजान्स के नियमों पर आधारित हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Physical/Inorganic Chemistry",
+                "topic": "Chemical Bonding",
+                "subtopic": "Fajans' Rules",
+                "difficulty": "easy",
+                "cognitive_level": "understanding",
+                "question_category": null,
+                "concepts": [
+                    "Fajans' rules",
+                    "Covalent character in ionic bonds",
+                    "Polarization"
+                ],
+                "keywords": [
+                    "cation charge",
+                    "covalent character",
+                    "ionic bond"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Chemical Bonding and Molecular Structure",
+                "chapter": "Chemical Bonding",
+                "topic": "Fajans Rules"
+            },
+            "source_reference": {
+                "page": 6,
+                "question_location": null,
+                "source_question_number": "33"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q34",
+            "question_number": 34,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "Arrange the following acids in order of their increasing acid strength - HF, HCl, HBr, HI",
+                "hindi": "निम्नलिखित अम्लों को उनके बढ़ते हुए अम्ल सामर्थ्य के क्रम में व्यवस्थित कीजिए - HF, HCl, HBr, HI"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "HBr < HI < HCl < HF",
+                    "hindi": "HBr < HI < HCl < HF",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "HF < HCl < HBr < HI",
+                    "hindi": "HF < HCl < HBr < HI",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "HI < HBr < HCl < HF",
+                    "hindi": "HI < HBr < HCl < HF",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "HF < HBr < HCl < HI",
+                    "hindi": "HF < HBr < HCl < HI",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "HF < HCl < HBr < HI",
+                    "hindi": "HF < HCl < HBr < HI"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "As we move down the group from F to I, the size of the halogen atom increases and bond strength (H-X) decreases. Consequently, the release of H+ ion becomes easier, increasing the acidic strength in the order: HF < HCl < HBr < HI.",
+                "hindi": "समूह में नीचे की ओर (F से I तक) जाने पर हैलोजन परमाणु का आकार बढ़ता है और आबंध सामर्थ्य (H-X) घटती है। परिणामस्वरूप, H+ आयन का निष्कासन आसान हो जाता है, जिससे अम्ल सामर्थ्य का क्रम बढ़ता है: HF < HCl < HBr < HI।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Acid strength increases down the halogen group due to decreasing H-X bond dissociation enthalpy.",
+                        "hindi": "H-X आबंध पृथक्करण एन्थैल्पी घटने के कारण हैलोजन समूह में नीचे जाने पर अम्ल सामर्थ्य बढ़ती है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Inorganic Chemistry",
+                "topic": "p-Block Elements",
+                "subtopic": "Group 17 Hydrides",
+                "difficulty": "easy",
+                "cognitive_level": "understanding",
+                "question_category": null,
+                "concepts": [
+                    "Acid strength",
+                    "Hydrides of halogens",
+                    "Bond dissociation enthalpy"
+                ],
+                "keywords": [
+                    "acids",
+                    "HF",
+                    "HCl",
+                    "HBr",
+                    "HI",
+                    "acid strength"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "p-Block Elements",
+                "chapter": "Group 17 Elements",
+                "topic": "Hydrogen halides acidic strength"
+            },
+            "source_reference": {
+                "page": 6,
+                "question_location": null,
+                "source_question_number": "34"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q35",
+            "question_number": 35,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "The method used to purify liquids having very high boiling points and those which decompose at or below their boiling points is -",
+                "hindi": "वह विधि जो ऐसे द्रवों के शोधन के लिए प्रयुक्त की जाती है जिनके क्वथनांक अति उच्च होते हैं तथा जो अपने क्वथनांक या उससे भी कम ताप पर अपघटित हो जाते हैं, है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Distillation under reduced pressure",
+                    "hindi": "निम्न दाब पर आसवन",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Fractional distillation",
+                    "hindi": "प्रभाजी आसवन",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Steam distillation",
+                    "hindi": "भाप आसवन",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Differential extraction",
+                    "hindi": "विभेदी निष्कर्षण",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "Distillation under reduced pressure",
+                    "hindi": "निम्न दाब पर आसवन"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Liquids that have very high boiling points or decompose at/below their boiling points are purified by distillation under reduced pressure (vacuum distillation), because lowering the external pressure lowers the boiling point of the liquid.",
+                "hindi": "वे द्रव जिनके क्वथनांक अति उच्च होते हैं या जो अपने क्वथनांक पर या उससे पहले अपघटित हो जाते हैं, उन्हें निम्न दाब पर आसवन (Vacuum distillation) द्वारा शुद्ध किया जाता है, क्योंकि बाहरी दाब घटाने पर द्रव का क्वथनांक कम हो जाता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Reduced pressure distillation lowers the boiling point so decomposition is avoided.",
+                        "hindi": "कम दाब पर आसवन क्वथनांक को कम करता है जिससे अपघटन से बचा जा सकता है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Organic Chemistry",
+                "topic": "Purification of Organic Compounds",
+                "subtopic": "Distillation under reduced pressure",
+                "difficulty": "easy",
+                "cognitive_level": "recall",
+                "question_category": null,
+                "concepts": [
+                    "Purification techniques",
+                    "Vacuum distillation",
+                    "Boiling point and pressure"
+                ],
+                "keywords": [
+                    "distillation",
+                    "reduced pressure",
+                    "high boiling points",
+                    "decomposition"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Some Basic Principles of Organic Chemistry",
+                "chapter": "Purification and Characterisation of Organic Compounds",
+                "topic": "Distillation"
+            },
+            "source_reference": {
+                "page": 6,
+                "question_location": null,
+                "source_question_number": "35"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q36",
+            "question_number": 36,
+            "question_type": "numerical",
+            "question_type_display": "Numerical / Diagram-Based",
+            "question_text": {
+                "english": "A block of mass m = 2kg moves along a horizontal frictional surface under the action of the forces as shown in figure. The coefficient of kinetic friction between the surface and block is μk = 0.20. What is the normal force N due to the surface? (take g = 10 m/s^2)",
+                "hindi": "m = 2kg द्रव्यमान का एक ब्लॉक एक क्षैतिज घर्षणयुक्त सतह पर चित्रानुसार दिखाये बलों के प्रभाव में गतिशील है। सतह तथा ब्लॉक के मध्य गतिक घर्षण गुणांक μk = 0.20 है। सतह के कारण अभिलम्ब बल N का मान क्या है? (g = 10 m/s^2 लीजिए)"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [
+                {
+                    "type": "svg",
+                    "purpose": "question_diagram",
+                    "placement": "question_body",
+                    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><line x1='50' y1='180' x2='350' y2='180' stroke='black' stroke-width='2'/><line x1='70' y1='180' x2='60' y2='195' stroke='black' stroke-width='1.5'/><line x1='90' y1='180' x2='80' y2='195' stroke='black' stroke-width='1.5'/><line x1='110' y1='180' x2='100' y2='195' stroke='black' stroke-width='1.5'/><line x1='130' y1='180' x2='120' y2='195' stroke='black' stroke-width='1.5'/><line x1='150' y1='180' x2='140' y2='195' stroke='black' stroke-width='1.5'/><line x1='170' y1='180' x2='160' y2='195' stroke='black' stroke-width='1.5'/><line x1='190' y1='180' x2='180' y2='195' stroke='black' stroke-width='1.5'/><line x1='210' y1='180' x2='200' y2='195' stroke='black' stroke-width='1.5'/><line x1='230' y1='180' x2='220' y2='195' stroke='black' stroke-width='1.5'/><line x1='250' y1='180' x2='240' y2='195' stroke='black' stroke-width='1.5'/><line x1='270' y1='180' x2='260' y2='195' stroke='black' stroke-width='1.5'/><line x1='290' y1='180' x2='280' y2='195' stroke='black' stroke-width='1.5'/><line x1='310' y1='180' x2='300' y2='195' stroke='black' stroke-width='1.5'/><rect x='160' y='110' width='80' height='70' fill='none' stroke='black' stroke-width='1.5'/><text x='192' y='150' font-family='sans-serif' font-size='16'>m</text><line x1='240' y1='145' x2='290' y2='145' stroke='black' stroke-width='1.5'/><polygon points='290,140 300,145 290,150' fill='black'/><text x='250' y='135' font-family='sans-serif' font-size='14'>F₁ = 20.0N</text><line x1='160' y1='145' x2='110' y2='145' stroke='black' stroke-width='1.5'/><polygon points='110,140 100,145 110,150' fill='black'/><text x='115' y='135' font-family='sans-serif' font-size='14'>F₂ = 8.0N</text><line x1='200' y1='70' x2='200' y2='110' stroke='black' stroke-width='1.5'/><polygon points='195,70 200,60 205,70' fill='black'/><text x='215' y='85' font-family='sans-serif' font-size='14'>F₃ = 4.0N</text><line x1='185' y1='180' x2='185' y2='220' stroke='black' stroke-width='1.5'/><polygon points='180,220 185,230 190,220' fill='black'/><text x='195' y='215' font-family='sans-serif' font-size='14'>mg</text><line x1='215' y1='180' x2='215' y2='140' stroke='black' stroke-width='1.5'/><polygon points='210,140 215,130 220,140' fill='black'/><text x='225' y='165' font-family='sans-serif' font-size='14'>N</text><line x1='160' y1='170' x2='130' y2='170' stroke='black' stroke-width='1.5'/><polygon points='130,165 120,170 130,175' fill='black'/><text x='132' y='192' font-family='sans-serif' font-size='14'>fₖ</text></svg>",
+                    "description": "Block of mass m on a horizontal surface with applied forces F1 to the right, F2 to the left, downward force F3, downward gravity mg, upward normal force N, and friction fk to the left.",
+                    "source_fidelity": "reconstructed"
+                }
+            ],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "28 N",
+                    "hindi": "28 N",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "20 N",
+                    "hindi": "20 N",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "16 N",
+                    "hindi": "16 N",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "24 N",
+                    "hindi": "24 N",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "4",
+                "answer_text": {
+                    "english": "24 N",
+                    "hindi": "24 N"
+                },
+                "mapping": [],
+                "value": "24",
+                "unit": "N",
+                "method": "Sum of vertical forces: N - mg - F3 = 0 => N = mg + F3 = (2 * 10) + 4 = 24 N.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "To find the normal force N, we balance the forces acting in the vertical direction. \nForces acting downwards: Weight (mg) and the applied downward force (F3 = 4.0 N).\nForce acting upwards: Normal force (N).\nEquilibrium in vertical direction: N = mg + F3\nGiven m = 2 kg, g = 10 m/s^2, F3 = 4.0 N.\nN = (2 kg * 10 m/s^2) + 4.0 N = 20 N + 4.0 N = 24 N.",
+                "hindi": "अभिलंब बल N ज्ञात करने के लिए, ऊर्ध्वाधर दिशा में लगने वाले बलों को संतुलित करते हैं।\nनीचे की ओर लगने वाले बल: भार (mg) और नीचे की ओर आरोपित बल (F3 = 4.0 N)।\nऊपर की ओर लगने वाला बल: अभिलंब बल (N)।\nऊर्ध्वाधर संतुलन से: N = mg + F3\nदिया गया है m = 2 kg, g = 10 m/s^2, F3 = 4.0 N।\nN = (2 kg * 10 m/s^2) + 4.0 N = 20 N + 4.0 N = 24 N।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "20 N only accounts for mg, ignoring F3.",
+                        "hindi": "20 N केवल mg को दर्शाता है, F3 की उपेक्षा करता है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "N = mg + F3 = 20 + 4 = 24 N.",
+                        "hindi": "N = mg + F3 = 20 + 4 = 24 N."
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Mechanics",
+                "topic": "Laws of Motion",
+                "subtopic": "Friction and Normal Force",
+                "difficulty": "easy",
+                "cognitive_level": "application",
+                "question_category": null,
+                "concepts": [
+                    "Normal force",
+                    "Force equilibrium",
+                    "Newton's laws of motion"
+                ],
+                "keywords": [
+                    "normal force",
+                    "block",
+                    "mass",
+                    "friction"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": "Laws of Motion",
+                "chapter": "Laws of Motion",
+                "topic": "Normal Force and Friction"
+            },
+            "source_reference": {
+                "page": 6,
+                "question_location": null,
+                "source_question_number": "36"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": "reconstructed",
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

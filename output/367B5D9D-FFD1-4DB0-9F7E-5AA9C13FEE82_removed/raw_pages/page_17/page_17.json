@@ -1,0 +1,690 @@
+{
+    "page_number": 17,
+    "questions": [
+        {
+            "id": "q147",
+            "question_number": 147,
+            "question_type": "matching",
+            "question_type_display": "Matching",
+            "question_text": {
+                "english": "Match List-I with List-II and select the correct answer by using the code given below the lists -",
+                "hindi": "सूची-I को सूची-II से सुमेलित कीजिये तथा सूची के नीचे दिये गये कूट का प्रयोग करके सही उत्तर का चयन कीजिये -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": {
+                "left_column": [
+                    {
+                        "id": "A",
+                        "english": "(A) Literary Activities",
+                        "hindi": "(A) साहित्यिक गतिविधियाँ"
+                    },
+                    {
+                        "id": "B",
+                        "english": "(B) Aesthetic Activities",
+                        "hindi": "(B) सौन्दर्यात्मक गतिविधियाँ"
+                    },
+                    {
+                        "id": "C",
+                        "english": "(C) Social Welfare Activities",
+                        "hindi": "(C) सामाजिक कल्याण गतिविधियाँ"
+                    },
+                    {
+                        "id": "D",
+                        "english": "(D) Leisure Time Activities",
+                        "hindi": "(D) अवकाश समय गतिविधियाँ"
+                    }
+                ],
+                "right_column": [
+                    {
+                        "id": "i",
+                        "english": "(i) Stamp and Coin Collection",
+                        "hindi": "(i) टिकिट एवं सिक्का संग्रह"
+                    },
+                    {
+                        "id": "ii",
+                        "english": "(ii) Debate and Discussion",
+                        "hindi": "(ii) वाद-विवाद एवं परिचर्चा"
+                    },
+                    {
+                        "id": "iii",
+                        "english": "(iii) Music, Dancing and Drawing",
+                        "hindi": "(iii) संगीत, नृत्य एवं चित्रकला"
+                    },
+                    {
+                        "id": "iv",
+                        "english": "(iv) Social Services",
+                        "hindi": "(iv) सामाजिक सेवाएँ"
+                    }
+                ],
+                "option_mappings": []
+            },
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "(A)-(ii), (B)-(i), (C)-(iii), (D)-(iv)",
+                    "hindi": "(A)-(ii), (B)-(i), (C)-(iii), (D)-(iv)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "(A)-(i), (B)-(iv), (C)-(iii), (D)-(ii)",
+                    "hindi": "(A)-(i), (B)-(iv), (C)-(iii), (D)-(ii)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)",
+                    "hindi": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)",
+                    "hindi": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "4",
+                "answer_text": {
+                    "english": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)",
+                    "hindi": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)"
+                },
+                "mapping": [
+                    {
+                        "key": "A",
+                        "value": "ii"
+                    },
+                    {
+                        "key": "B",
+                        "value": "iii"
+                    },
+                    {
+                        "key": "C",
+                        "value": "iv"
+                    },
+                    {
+                        "key": "D",
+                        "value": "i"
+                    }
+                ],
+                "value": null,
+                "unit": null,
+                "method": "Matching pedagogical activities with their respective categories.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Literary activities include debate and discussion (A-ii). Aesthetic activities include music, dancing, and drawing (B-iii). Social welfare activities include social services (C-iv). Leisure time activities include stamp and coin collection (D-i). Therefore, option (4) is correct.",
+                "hindi": "साहित्यिक गतिविधियों में वाद-विवाद एवं परिचर्चा शामिल हैं (A-ii)। सौन्दर्यात्मक गतिविधियों में संगीत, नृत्य एवं चित्रकला शामिल हैं (B-iii)। सामाजिक कल्याण गतिविधियों में सामाजिक सेवाएँ शामिल हैं (C-iv)। अवकाश समय गतिविधियों में टिकिट एवं सिक्का संग्रह शामिल हैं (D-i)। अतः विकल्प (4) सही है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect mapping of aesthetic and other activities.",
+                        "hindi": "सौन्दर्यात्मक और अन्य गतिविधियों का गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "All list items are correctly matched according to standard pedagogical definitions.",
+                        "hindi": "मानक शैक्षणिक परिभाषाओं के अनुसार सभी सूची मदों का सही मिलान किया गया है।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Education",
+                "sub_subject": "Pedagogy",
+                "topic": "Co-curricular Activities",
+                "subtopic": "Types of Activities",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": "Pedagogy",
+                "concepts": [
+                    "Literary Activities",
+                    "Aesthetic Activities",
+                    "Social Welfare",
+                    "Leisure Time Activities"
+                ],
+                "keywords": [
+                    "List-I",
+                    "List-II",
+                    "Matching"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Education",
+                "unit": "Pedagogy and Teaching Methods",
+                "chapter": "Co-curricular Activities",
+                "topic": "Classification of Activities"
+            },
+            "source_reference": {
+                "page": 17,
+                "question_location": "top",
+                "source_question_number": "147"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.99,
+                "answer_confidence": 0.99,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q148",
+            "question_number": 148,
+            "question_type": "multiple_choice",
+            "question_type_display": "Multiple Choice",
+            "question_text": {
+                "english": "As per NCF-2005, good Science education should be -\n(A) True to the child\n(B) True to life\n(C) True to the teacher\n(D) True to Science\nSelect the correct answer using the code given below -",
+                "hindi": "एन.सी.एफ.-2005 के अनुसार, अच्छी विज्ञान शिक्षा होनी चाहिए -\n(A) बच्चे के प्रति सच्ची\n(B) जीवन के प्रति सच्ची\n(C) अध्यापक के प्रति सच्ची\n(D) विज्ञान के प्रति सच्ची\nनीचे दिए गये कूट का उपयोग करके सही उत्तर का चयन करें -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "(A), (B) and (D)",
+                    "hindi": "(A), (B) एवं (D)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Only (A) and (C)",
+                    "hindi": "केवल (A) एवं (C)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "(A), (C) and (D)",
+                    "hindi": "(A), (C) एवं (D)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "(A), (B) and (C)",
+                    "hindi": "(A), (B) एवं (C)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "(A), (B) and (D)",
+                    "hindi": "(A), (B) एवं (D)"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "NCF-2005 guidelines for Science Education.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "According to NCF-2005, good science education is defined by validity criteria: it must be true to the child (cognitive validity), true to life (environmental validity), and true to science (content validity). It does not include being 'true to the teacher'. Therefore, statements (A), (B), and (D) are correct, making option (1) the right choice.",
+                "hindi": "NCF-2005 के अनुसार, अच्छी विज्ञान शिक्षा के वैधता मानदंड हैं: यह बच्चे के प्रति सच्ची (संज्ञानात्मक वैधता), जीवन के प्रति सच्ची (पर्यावरण वैधता), और विज्ञान के प्रति सच्ची (विषय वस्तु वैधता) होनी चाहिए। इसमें 'अध्यापक के प्रति सच्ची' शामिल नहीं है। अतः कथन (A), (B), और (D) सही हैं, जिससे विकल्प (1) सही उत्तर है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Includes (A), (B), and (D) which represent child validity, environmental validity, and content validity as per NCF-2005.",
+                        "hindi": "इसमें (A), (B), और (D) शामिल हैं जो NCF-2005 के अनुसार बाल वैधता, पर्यावरणीय वैधता और विषय-वस्तु वैधता का प्रतिनिधित्व करते हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Includes (C) which is incorrect.",
+                        "hindi": "इसमें (C) शामिल है जो गलत है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Includes (C) which is incorrect.",
+                        "hindi": "इसमें (C) शामिल है जो गलत है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Includes (C) instead of (D).",
+                        "hindi": "(D) के स्थान पर (C) शामिल है।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Pedagogy",
+                "sub_subject": "Science Pedagogy",
+                "topic": "NCF-2005",
+                "subtopic": "Good Science Education",
+                "difficulty": "easy",
+                "cognitive_level": "recall",
+                "question_category": "Pedagogy",
+                "concepts": [
+                    "NCF-2005",
+                    "Science Education Validity Criteria"
+                ],
+                "keywords": [
+                    "NCF-2005",
+                    "True to the child",
+                    "True to life",
+                    "True to Science"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Pedagogy",
+                "unit": "Science Curriculum",
+                "chapter": "NCF-2005 Recommendations",
+                "topic": "Nature of Science Education"
+            },
+            "source_reference": {
+                "page": 17,
+                "question_location": "middle-top",
+                "source_question_number": "148"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 0.99,
+                "answer_confidence": 0.99,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q149",
+            "question_number": 149,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "According to National Curriculum Framework 2005, at which stage students should be engaged in learning Science as a composite discipline?",
+                "hindi": "राष्ट्रीय पाठ्यचर्या की रूपरेखा 2005 के अनुसार, किस स्तर पर विद्यार्थियों को विज्ञान को एक समग्र विषय के रूप में सीखने में संलग्न होना चाहिए?"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Upper Primary Stage",
+                    "hindi": "उच्च प्राथमिक स्तर",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Secondary Stage",
+                    "hindi": "माध्यमिक स्तर",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Senior Secondary Stage",
+                    "hindi": "उच्च माध्यमिक स्तर",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Primary Stage",
+                    "hindi": "प्राथमिक स्तर",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "Upper Primary Stage",
+                    "hindi": "उच्च प्राथमिक स्तर"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "NCF-2005 guidelines regarding science teaching stages.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "According to NCF-2005, at the upper primary stage, students should be engaged in learning science as a composite discipline (General Science combining physics, chemistry, biology, etc.), rather than separate disciplines which are introduced later at the secondary stage.",
+                "hindi": "एन.सी.एफ.-2005 के अनुसार, उच्च प्राथमिक स्तर पर, विद्यार्थियों को विज्ञान को अलग-अलग विषयों के बजाय एक समग्र विषय (सामान्य विज्ञान जिसमें भौतिकी, रसायन विज्ञान, जीव विज्ञान आदि शामिल हैं) के रूप में सीखने में संलग्न होना चाहिए।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Correct as NCF-2005 recommends science as a composite discipline at the upper primary stage.",
+                        "hindi": "सही है क्योंकि NCF-2005 उच्च प्राथमिक स्तर पर विज्ञान को एक समग्र विषय के रूप में अनुशंसित करता है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "At secondary stage, science is taught as separate disciplines (physics, chemistry, biology).",
+                        "hindi": "माध्यमिक स्तर पर, विज्ञान को अलग-अलग विषयों (भौतिकी, रसायन विज्ञान, जीव विज्ञान) के रूप में पढ़ाया जाता है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Senior secondary is specialized.",
+                        "hindi": "उच्च माध्यमिक विशेषीकृत होता है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "At primary stage, science is integrated with environmental studies (EVS).",
+                        "hindi": "प्राथमिक स्तर पर, विज्ञान को पर्यावरण अध्ययन (EVS) के साथ एकीकृत किया जाता है।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Pedagogy",
+                "sub_subject": "Science Pedagogy",
+                "topic": "NCF-2005",
+                "subtopic": "Composite Discipline",
+                "difficulty": "moderate",
+                "cognitive_level": "recall",
+                "question_category": "Pedagogy",
+                "concepts": [
+                    "NCF-2005",
+                    "Composite Discipline",
+                    "Upper Primary Stage"
+                ],
+                "keywords": [
+                    "NCF 2005",
+                    "Science as a composite discipline",
+                    "Upper Primary Stage"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Pedagogy",
+                "unit": "Science Curriculum",
+                "chapter": "NCF-2005 Recommendations",
+                "topic": "Stages of Science Learning"
+            },
+            "source_reference": {
+                "page": 17,
+                "question_location": "middle-bottom",
+                "source_question_number": "149"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 0.99,
+                "answer_confidence": 0.99,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q150",
+            "question_number": 150,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "The characteristic of test items under which a test measures only what it is designed to measure, is called -",
+                "hindi": "परीक्षण पदों की वह विशेषता, जिसके अन्तर्गत एक परीक्षण वही मापता है जिसका मापन करने के लिए उसका निर्माण हुआ है, कहलाती है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Validity",
+                    "hindi": "वैधता",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Reliability",
+                    "hindi": "विश्वसनीयता",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Relevance",
+                    "hindi": "प्रासंगिकता",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Objectivity",
+                    "hindi": "वस्तुनिष्ठता",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "Validity",
+                    "hindi": "वैधता"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Definition of test validity in educational evaluation.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Validity is the degree to which a test measures what it claims, or is intended, to measure. Reliability refers to consistency of scores, and objectivity refers to freedom from bias in scoring.",
+                "hindi": "वैधता वह सीमा है जिसके अंतर्गत कोई परीक्षण वही मापता है जिसका दावा वह करता है या जिसके लिए उसे डिज़ाइन किया गया है। विश्वसनीयता अंकों की स्थिरता को संदर्भित करती है, और वस्तुनिष्ठता स्कोरिंग में पक्षपात से मुक्ति को संदर्भित करती है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Validity precisely matches the definition of measuring what it is designed to measure.",
+                        "hindi": "वैधता उस परिभाषा से बिल्कुल मेल खाती है जो यह मापती है कि इसे क्या मापने के लिए डिज़ाइन किया गया है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Reliability refers to consistency or stability of test scores.",
+                        "hindi": "विश्वसनीयता परीक्षण अंकों की स्थिरता या एकरूपता को संदर्भित करती है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Relevance is applicability to the context.",
+                        "hindi": "प्रासंगिकता संदर्भ की प्रासंगिकता है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Objectivity refers to independent scoring without personal bias.",
+                        "hindi": "वस्तुनिष्ठता व्यक्तिगत पूर्वाग्रह के बिना स्वतंत्र अंकन को संदर्भित करती है।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Education",
+                "sub_subject": "Measurement and Evaluation",
+                "topic": "Characteristics of a Good Test",
+                "subtopic": "Validity",
+                "difficulty": "easy",
+                "cognitive_level": "recall",
+                "question_category": "Evaluation",
+                "concepts": [
+                    "Validity",
+                    "Reliability",
+                    "Objectivity",
+                    "Evaluation Characteristics"
+                ],
+                "keywords": [
+                    "Validity",
+                    "Test items",
+                    "Measures what it is designed to measure"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Education",
+                "unit": "Measurement and Evaluation",
+                "chapter": "Characteristics of Standard Tests",
+                "topic": "Validity"
+            },
+            "source_reference": {
+                "page": 17,
+                "question_location": "bottom",
+                "source_question_number": "150"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 0.99,
+                "answer_confidence": 0.99,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

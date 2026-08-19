@@ -1,0 +1,607 @@
+{
+    "page_number": 3,
+    "questions": [
+        {
+            "id": "q21",
+            "question_number": 21,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "How many 2p atomic orbitals of boron participate in hybridisation to form the bonding hybrid orbitals in BF3?",
+                "hindi": "BF3 में आबंधन संकर कक्षकों को बनाने के लिए बोरॉन के कितने 2p परमाणु कक्षक संकरण में भाग लेते हैं?"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Three",
+                    "hindi": "तीन",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "One",
+                    "hindi": "एक",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Two",
+                    "hindi": "दो",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Zero",
+                    "hindi": "शून्य",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "Two",
+                    "hindi": "दो"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Boron has atomic number 5 with electronic configuration 1s2 2s2 2px1. In BF3, boron undergoes sp2 hybridisation involving one 2s and two 2p orbitals (2px and 2py). Thus, two 2p atomic orbitals participate.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "In BF3, boron is sp2 hybridised. The ground state electronic configuration of Boron (Z = 5) is 1s2 2s2 2p1 (or 2px1). In the excited state, one electron from 2s is promoted to the 2pz orbital, giving 2s1 2px1 2py1. For sp2 hybridisation, one 2s orbital and two 2p orbitals (e.g., 2px and 2py) mix together. Therefore, two 2p atomic orbitals participate.",
+                "hindi": "BF3 में, बोरॉन sp2 संकृत होता है। बोरॉन (Z = 5) का मूल अवस्था इलेक्ट्रॉनिक विन्यास 1s2 2s2 2p1 है। उत्तेजित अवस्था में 2s का एक इलेक्ट्रॉन 2pz कक्षक में चला जाता है। sp2 संकरण के लिए एक 2s कक्षक और दो 2p कक्षक (जैसे 2px और 2py) भाग लेते हैं। अतः दो 2p परमाणु कक्षक भाग लेते हैं।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Three 2p orbitals is incorrect as only two 2p orbitals mix along with one 2s orbital.",
+                        "hindi": "तीन 2p कक्षक गलत है क्योंकि केवल दो 2p कक्षक एक 2s कक्षक के साथ मिश्रित होते हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "One 2p orbital is incorrect because sp2 hybridisation requires two p orbitals.",
+                        "hindi": "एक 2p कक्षक गलत है क्योंकि sp2 संकरण के लिए दो p कक्षकों की आवश्यकता होती है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Two 2p orbitals participate in sp2 hybridisation along with one 2s orbital.",
+                        "hindi": "sp2 संकरण में एक 2s कक्षक के साथ दो 2p कक्षक भाग लेते हैं।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Zero is incorrect since p orbitals are definitely involved in sp2 hybridisation.",
+                        "hindi": "शून्य गलत है क्योंकि sp2 संकरण में p कक्षक निश्चित रूप से शामिल होते हैं।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted option.",
+                        "hindi": "अनुत्तरित प्रश्न विकल्प।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Physical/Inorganic Chemistry",
+                "topic": "Chemical Bonding",
+                "subtopic": "Hybridisation",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": "Conceptual",
+                "concepts": [
+                    "Hybridisation",
+                    "Atomic Orbitals",
+                    "Boron Trifluoride"
+                ],
+                "keywords": [
+                    "2p atomic orbitals",
+                    "hybridisation",
+                    "BF3",
+                    "boron"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Chemical Bonding and Molecular Structure",
+                "chapter": "Chemical Bonding",
+                "topic": "Hybridisation involving s, p and d orbitals"
+            },
+            "source_reference": {
+                "page": 3,
+                "question_location": "Top left",
+                "source_question_number": "21"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q22",
+            "question_number": 22,
+            "question_type": "matching",
+            "question_type_display": "Column Matching",
+            "question_text": {
+                "english": "Match the Column-I (Reactions of Hydrocarbons) with Column-II (Type of Reaction) -",
+                "hindi": "ॉलम-I (हाइड्रोकार्बनों की अभिक्रियाएँ) को कॉलम-II (अभिक्रिया के प्रकार) से सुमेलित कीजिए -"
+            },
+            "instructions": {
+                "english": "Choose the correct code -",
+                "hindi": "सही कूट का चयन करें -"
+            },
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": {
+                "left_column": [
+                    {
+                        "id": "i",
+                        "english": "n-C6H14 -> (Cr2O3 / 773K, 10-20 atm) -> C6H6",
+                        "hindi": "n-C6H14 -> (Cr2O3 / 773K, 10-20 atm) -> C6H6"
+                    },
+                    {
+                        "id": "ii",
+                        "english": "CH3-C≡C-H + H2 -> (Pd/C) -> CH3-CH=CH2",
+                        "hindi": "CH3-C≡C-H + H2 -> (Pd/C) -> CH3-CH=CH2"
+                    },
+                    {
+                        "id": "iii",
+                        "english": "3CH≡CH -> (Fe / 873K) -> C6H6",
+                        "hindi": "3CH≡CH -> (Fe / 873K) -> C6H6"
+                    },
+                    {
+                        "id": "iv",
+                        "english": "CH4 + O2 -> C(s) + 2H2O",
+                        "hindi": "CH4 + O2 -> C(s) + 2H2O"
+                    }
+                ],
+                "right_column": [
+                    {
+                        "id": "a",
+                        "english": "Partial Reduction",
+                        "hindi": "आंशिक अपचयन"
+                    },
+                    {
+                        "id": "b",
+                        "english": "Cyclic Polymerisation",
+                        "hindi": "चक्रीय बहुलीकरण"
+                    },
+                    {
+                        "id": "c",
+                        "english": "Incomplete Combustion",
+                        "hindi": "अपूर्ण दहन"
+                    },
+                    {
+                        "id": "d",
+                        "english": "Reforming",
+                        "hindi": "पुनर्र्संभावन"
+                    }
+                ],
+                "option_mappings": []
+            },
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "(i)-(d), (ii)-(b), (iii)-(a), (iv)-(c)",
+                    "hindi": "(i)-(d), (ii)-(b), (iii)-(a), (iv)-(c)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "(i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)",
+                    "hindi": "(i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "(i)-(b), (ii)-(d), (iii)-(a), (iv)-(c)",
+                    "hindi": "(i)-(b), (ii)-(d), (iii)-(a), (iv)-(c)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)",
+                    "hindi": "(i)-(a), (ii)-(b), (iii)-(c), (iv)-(d)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "(i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)",
+                    "hindi": "(i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)"
+                },
+                "mapping": [
+                    {
+                        "key": "i",
+                        "value": "d"
+                    },
+                    {
+                        "key": "ii",
+                        "value": "a"
+                    },
+                    {
+                        "key": "iii",
+                        "value": "b"
+                    },
+                    {
+                        "key": "iv",
+                        "value": "c"
+                    }
+                ],
+                "value": null,
+                "unit": null,
+                "method": "Match reactions: (i) n-hexane aromatization is Reforming (d); (ii) Alkyne hydrogenation with Pd/C is Partial Reduction (a); (iii) Ethyne cyclic polymerisation gives benzene (b); (iv) Methane reacting with oxygen to give carbon soot is Incomplete Combustion (c).",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Reaction (i) conversion of n-hexane to benzene over Cr2O3/Al2O3 at 773K is aromatization or Reforming (d). Reaction (ii) catalytic hydrogenation of propyne to propene using Pd/C is Partial Reduction (a). Reaction (iii) polymerization of acetylene over red hot iron tube at 873K yields benzene, known as Cyclic Polymerisation (b). Reaction (iv) limited oxygen combustion of methane yields carbon black, which is Incomplete Combustion (c). Thus, matching is (i)-(d), (ii)-(a), (iii)-(b), (iv)-(c).",
+                "hindi": "अभिक्रिया (i) Cr2O3/Al2O3 उत्प्रेरक की उपस्थिति में n-हेक्सेन का बेंजीन में परिवर्तन पुनर्र्संभावन (Reforming) (d) है। अभिक्रिया (ii) Pd/C द्वारा आंशिक अपचयन (a) है। अभिक्रिया (iii) एसिटिलीन का लाल तप्त लोहे की नली पर चक्रीय बहुलीकरण (b) है। अभिक्रिया (iv) मीथेन का अपूर्ण दहन (c) है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching combination.",
+                        "hindi": "गलत सुमेलित संयोजन।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Correct matching: (i)-(d), (ii)-(a), (iii)-(b), (iv)-(c).",
+                        "hindi": "सही मिलान: (i)-(d), (ii)-(a), (iii)-(b), (iv)-(c)."
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching combination.",
+                        "hindi": "गलत सुमेलित संयोजन।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching combination.",
+                        "hindi": "गलत सुमेलित संयोजन।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted option.",
+                        "hindi": "अनुत्तरित प्रश्न विकल्प।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Organic Chemistry",
+                "topic": "Hydrocarbons",
+                "subtopic": "Reactions of Alkanes, Alkenes and Alkynes",
+                "difficulty": "moderate",
+                "cognitive_level": "recall",
+                "question_category": "Matching",
+                "concepts": [
+                    "Reforming",
+                    "Partial Reduction",
+                    "Cyclic Polymerisation",
+                    "Incomplete Combustion"
+                ],
+                "keywords": [
+                    "Hydrocarbons",
+                    "Reactions",
+                    "Column matching",
+                    "Cr2O3",
+                    "Pd/C"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Hydrocarbons",
+                "chapter": "Alkanes, Alkenes and Alkynes",
+                "topic": "Chemical properties and reactions"
+            },
+            "source_reference": {
+                "page": 3,
+                "question_location": "Middle left",
+                "source_question_number": "22"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.97,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q23",
+            "question_number": 23,
+            "question_type": "matching",
+            "question_type_display": "Column Matching",
+            "question_text": {
+                "english": "Match the Quantum Numbers in Column-I with the corresponding Orbitals in Column-II -",
+                "hindi": "कॉलम-I में दी गई क्वांटम संख्याओं को कॉलम-II में दिए गए उनके संगत कक्षकों के साथ सुमेलित कीजिये -"
+            },
+            "instructions": {
+                "english": "Select the correct option -",
+                "hindi": "सही विकल्प का चयन कीजिये -"
+            },
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": {
+                "left_column": [
+                    {
+                        "id": "A",
+                        "english": "n = 2, l = 1",
+                        "hindi": "n = 2, l = 1"
+                    },
+                    {
+                        "id": "B",
+                        "english": "n = 4, l = 0",
+                        "hindi": "n = 4, l = 0"
+                    },
+                    {
+                        "id": "C",
+                        "english": "n = 5, l = 3",
+                        "hindi": "n = 5, l = 3"
+                    },
+                    {
+                        "id": "D",
+                        "english": "n = 3, l = 2",
+                        "hindi": "n = 3, l = 2"
+                    }
+                ],
+                "right_column": [
+                    {
+                        "id": "i",
+                        "english": "4s",
+                        "hindi": "4s"
+                    },
+                    {
+                        "id": "ii",
+                        "english": "2p",
+                        "hindi": "2p"
+                    },
+                    {
+                        "id": "iii",
+                        "english": "3d",
+                        "hindi": "3d"
+                    },
+                    {
+                        "id": "iv",
+                        "english": "5f",
+                        "hindi": "5f"
+                    }
+                ],
+                "option_mappings": []
+            },
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "(A)-(ii), (B)-(i), (C)-(iv), (D)-(iii)",
+                    "hindi": "(A)-(ii), (B)-(i), (C)-(iv), (D)-(iii)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "(A)-(iv), (B)-(ii), (C)-(i), (D)-(iii)",
+                    "hindi": "(A)-(iv), (B)-(ii), (C)-(i), (D)-(iii)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)",
+                    "hindi": "(A)-(ii), (B)-(iii), (C)-(iv), (D)-(i)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)",
+                    "hindi": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "(A)-(ii), (B)-(i), (C)-(iv), (D)-(iii)",
+                    "hindi": "(A)-(ii), (B)-(i), (C)-(iv), (D)-(iii)"
+                },
+                "mapping": [
+                    {
+                        "key": "A",
+                        "value": "ii"
+                    },
+                    {
+                        "key": "B",
+                        "value": "i"
+                    },
+                    {
+                        "key": "C",
+                        "value": "iv"
+                    },
+                    {
+                        "key": "D",
+                        "value": "iii"
+                    }
+                ],
+                "value": null,
+                "unit": null,
+                "method": "Azimuthal quantum number l values: 0 = s, 1 = p, 2 = d, 3 = f. (A) n=2, l=1 -> 2p (ii); (B) n=4, l=0 -> 4s (i); (C) n=5, l=3 -> 5f (iv); (D) n=3, l=2 -> 3d (iii).",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "The orbital designation depends on principal quantum number (n) and azimuthal quantum number (l). Values of l are: l=0 (s), l=1 (p), l=2 (d), l=3 (f). \n(A) n = 2, l = 1 corresponds to 2p (ii).\n(B) n = 4, l = 0 corresponds to 4s (i).\n(C) n = 5, l = 3 corresponds to 5f (iv).\n(D) n = 3, l = 2 corresponds to 3d (iii).\nTherefore, the correct matching is (A)-(ii), (B)-(i), (C)-(iv), (D)-(iii).",
+                "hindi": "कक्षकों का निर्धारण मुख्य क्वांटम संख्या (n) और दिगंशीय क्वांटम संख्या (l) से होता है। l के मान: l=0 (s), l=1 (p), l=2 (d), l=3 (f)।\n(A) n = 2, l = 1 -> 2p (ii)\n(B) n = 4, l = 0 -> 4s (i)\n(C) n = 5, l = 3 -> 5f (iv)\n(D) n = 3, l = 2 -> 3d (iii)\nअतः सही मिलान (A)-(ii), (B)-(i), (C)-(iv), (D)-(iii) है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Correct matching combination based on n and l values.",
+                        "hindi": "n और l मानों के आधार पर सही सुमेलित संयोजन।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching combination.",
+                        "hindi": "गलत सुमेलित संयोजन।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching combination.",
+                        "hindi": "गलत सुमेलित संयोजन।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching combination.",
+                        "hindi": "गलत सुमेलित संयोजन।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted option.",
+                        "hindi": "अनुत्तरित प्रश्न विकल्प।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Physical/Inorganic Chemistry",
+                "topic": "Structure of Atom",
+                "subtopic": "Quantum Numbers",
+                "difficulty": "easy",
+                "cognitive_level": "recall",
+                "question_category": "Matching",
+                "concepts": [
+                    "Principal Quantum Number",
+                    "Azimuthal Quantum Number",
+                    "Atomic Orbitals"
+                ],
+                "keywords": [
+                    "Quantum Numbers",
+                    "Orbitals",
+                    "n and l",
+                    "Column matching"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Structure of Atom",
+                "chapter": "Atomic Structure",
+                "topic": "Quantum numbers and shapes of orbitals"
+            },
+            "source_reference": {
+                "page": 3,
+                "question_location": "Bottom left",
+                "source_question_number": "23"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

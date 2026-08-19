@@ -1,0 +1,790 @@
+{
+    "page_number": 15,
+    "questions": [
+        {
+            "id": "q121",
+            "question_number": 121,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "Which element is required as cofactor for all enzymes that utilize ATP in phosphate transfer?",
+                "hindi": "समस्त एन्जाइम जो फॉस्फेट स्थानान्तरण में ATP का उपयोग करते हैं, उनमें कौनसे तत्त्व की सहकारक के रूप में आवश्यकता होती है?"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Mg",
+                    "hindi": "Mg",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Ca",
+                    "hindi": "Ca",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Fe",
+                    "hindi": "Fe",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Zn",
+                    "hindi": "Zn",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "Mg",
+                    "hindi": "Mg"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Magnesium (Mg) is required as a cofactor for almost all enzymes that participate in ATP utilization and phosphate transfer (e.g., kinases).",
+                "hindi": "मैग्नीशियम (Mg) उन लगभग सभी एन्जाइम्स के लिए सहकारक के रूप में आवश्यक है जो ATP उपयोग और फॉस्फेट स्थानान्तरण में भाग लेते हैं (जैसे काइनेज)।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Mg2+ forms a complex with ATP which is the actual substrate for many kinases.",
+                        "hindi": "Mg2+ ATP के साथ कॉम्प्लेक्स बनाता है जो कई काइनेज के लिए वास्तविक सब्सट्रेट है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Calcium is not the primary cofactor for ATP phosphate transfer enzymes.",
+                        "hindi": "कैल्शियम ATP फॉस्फेट स्थानान्तरण एन्जाइमों के लिए प्राथमिक सहकारक नहीं है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Iron is typically involved in redox reactions.",
+                        "hindi": "आयरन आमतौर पर रेडॉक्स प्रतिक्रियाओं में शामिल होता है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Zinc is a cofactor for carbonic anhydrase, carboxypeptidase, etc., not universally for ATP transfer.",
+                        "hindi": "जिंक कार्बनिक एनहाइड्रैज़, कार्बोक्सिपेप्टिडेज़ आदि का सहकारक है, न कि सार्वभौमिक रूप से ATP स्थानान्तरण का।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted option.",
+                        "hindi": "अनुत्तरित प्रश्न विकल्प।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Biochemistry",
+                "topic": "Enzymes",
+                "subtopic": "Cofactors",
+                "difficulty": "moderate",
+                "cognitive_level": "recall",
+                "question_category": null,
+                "concepts": [
+                    "Enzyme cofactors",
+                    "ATP utilization",
+                    "Magnesium"
+                ],
+                "keywords": [
+                    "cofactor",
+                    "ATP",
+                    "phosphate transfer",
+                    "Mg"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Biochemistry",
+                "chapter": "Enzymes and Co-enzymes",
+                "topic": "Cofactors"
+            },
+            "source_reference": {
+                "page": 15,
+                "question_location": null,
+                "source_question_number": "121"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q122",
+            "question_number": 122,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "The principal emulsifying agent for water/oil (w/o) emulsions among the following is -",
+                "hindi": "निम्नलिखित में से जल/तेल (w/o) इमल्शन के लिए प्रमुख पायसीकर्मक है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Proteins",
+                    "hindi": "प्रोटीन",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Natural and synthetic soaps",
+                    "hindi": "प्राकृतिक तथा संश्लेषित साबुन",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Gum",
+                    "hindi": "गोंद",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Lampblack",
+                    "hindi": "काजल",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "4",
+                "answer_text": {
+                    "english": "Lampblack",
+                    "hindi": "काजल"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Lampblack, heavy metal salts of fatty acids, and long-chain alcohols act as emulsifying agents for water-in-oil (w/o) emulsions. Soaps of alkali metals (Na, K) and proteins generally form oil-in-water (o/w) emulsions.",
+                "hindi": "काजल (lampblack), वसीय अम्लों के भारी धातु लवण और लंबी श्रृंखला वाले अल्कोहल जल-में-तेल (w/o) इमल्शन के लिए पायसीकारी एजेंट के रूप में कार्य करते हैं। क्षार धातुओं (Na, K) के साबुन और प्रोटीन आमतौर पर तेल-में-जल (o/w) इमल्शन बनाते हैं।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Proteins typically favor oil-in-water (o/w) emulsions.",
+                        "hindi": "प्रोटीन आमतौर पर तेल-में-जल (o/w) इमल्शन के पक्षधर हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Alkali soaps favor oil-in-water (o/w) emulsions.",
+                        "hindi": "क्षार साबुन तेल-में-जल (o/w) इमल्शन बनाते हैं।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Gums are typically stabilizers for o/w emulsions.",
+                        "hindi": "गोंद आमतौर पर o/w इमल्शन के लिए स्टेबलाइजर हैं।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Lampblack is a classic example of an emulsifying agent for water-in-oil emulsions.",
+                        "hindi": "काजल जल-में-तेल इमल्शन के लिए पायसीकारी एजेंट का एक उत्कृष्ट उदाहरण है।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted option.",
+                        "hindi": "अनुत्तरित प्रश्न विकल्प।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Physical Chemistry",
+                "topic": "Colloids",
+                "subtopic": "Emulsions",
+                "difficulty": "moderate",
+                "cognitive_level": "recall",
+                "question_category": null,
+                "concepts": [
+                    "Emulsions",
+                    "Emulsifying agents",
+                    "Water in oil"
+                ],
+                "keywords": [
+                    "emulsifying agent",
+                    "water/oil emulsion",
+                    "lampblack"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Surface Chemistry",
+                "chapter": "Emulsions",
+                "topic": "Types of emulsions and emulsifiers"
+            },
+            "source_reference": {
+                "page": 15,
+                "question_location": null,
+                "source_question_number": "122"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q123",
+            "question_number": 123,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "Pair of paramagnetic molecules is -",
+                "hindi": "अनुचुंबकीय अणुओं का युग्म है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "O2 and Li2",
+                    "hindi": "O2 एवं Li2",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "O2 and C2",
+                    "hindi": "O2 एवं C2",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "B2 and C2",
+                    "hindi": "B2 एवं C2",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "O2 and B2",
+                    "hindi": "O2 एवं B2",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "4",
+                "answer_text": {
+                    "english": "O2 and B2",
+                    "hindi": "O2 एवं B2"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Paramagnetic species contain unpaired electrons. O2 has 16 electrons (MOT configuration gives 2 unpaired electrons in pi*2p orbitals). B2 has 10 electrons (MOT configuration gives 2 unpaired electrons in pi 2p orbitals). Both are paramagnetic.",
+                "hindi": "अनुचुंबकीय प्रजातियों में अयुग्मित इलेक्ट्रॉन होते हैं। O2 में 16 इलेक्ट्रॉन होते हैं (MOT विन्यास pi*2p कक्षकों में 2 अयुग्मित इलेक्ट्रॉन देता है)। B2 में 10 इलेक्ट्रॉन होते हैं (MOT विन्यास pi 2p कक्षकों में 2 अयुग्मित इलेक्ट्रॉन देता है)। दोनों अनुचुंबकीय हैं।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "O2 is paramagnetic, but Li2 is diamagnetic.",
+                        "hindi": "O2 अनुचुंबकीय है, लेकिन Li2 प्रतिचुंबकीय है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "O2 is paramagnetic, but C2 is diamagnetic.",
+                        "hindi": "O2 अनुचुंबकीय है, लेकिन C2 प्रतिचुंबकीय है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "B2 is paramagnetic, but C2 is diamagnetic.",
+                        "hindi": "B2 अनुचुंबकीय है, लेकिन C2 प्रतिचुंबकीय है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Both O2 and B2 have unpaired electrons in their molecular orbitals, making both paramagnetic.",
+                        "hindi": "O2 और B2 दोनों के आणविक कक्षकों में अयुग्मित इलेक्ट्रॉन होते हैं, जिससे दोनों अनुचुंबकीय होते हैं।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted option.",
+                        "hindi": "अनुत्तरित प्रश्न विकल्प।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Inorganic Chemistry",
+                "topic": "Chemical Bonding",
+                "subtopic": "Molecular Orbital Theory",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": null,
+                "concepts": [
+                    "Paramagnetism",
+                    "Molecular Orbital Theory",
+                    "Unpaired electrons"
+                ],
+                "keywords": [
+                    "paramagnetic",
+                    "O2",
+                    "B2",
+                    "MOT"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Chemical Bonding and Molecular Structure",
+                "chapter": "Molecular Orbital Theory",
+                "topic": "Magnetic properties"
+            },
+            "source_reference": {
+                "page": 15,
+                "question_location": null,
+                "source_question_number": "123"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q124",
+            "question_number": 124,
+            "question_type": "assertion_reason",
+            "question_type_display": "Assertion Reason",
+            "question_text": {
+                "english": "Consider the following Assertion (A) and Reason (R) and choose the correct option -",
+                "hindi": "निम्नलिखित अभिकथन (A) तथा कारण (R) पर विचार कीजिए एवं सही विकल्प चुनिए -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": {
+                "english": "In actinoid series the actinoid contraction continuously increases from element to element.",
+                "hindi": "ऐक्टिनॉइड श्रेणी में ऐक्टिनॉइड आकुंचन एक तत्त्व से दूसरे तत्त्व की ओर उत्तरोत्तर बढ़ता है।"
+            },
+            "reason": {
+                "english": "It is due to poor shielding by 5f electrons.",
+                "hindi": "यह 5f इलेक्ट्रॉनों द्वारा दुर्बल परिरक्षण के कारण होता है।"
+            },
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Both (A) and (R) are true and (R) is not correct explanation of (A)",
+                    "hindi": "दोनों (A) और (R) सत्य हैं और (R), (A) का सही स्पष्टीकरण नहीं है",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "(A) is false and (R) is true",
+                    "hindi": "(A) असत्य है और (R) सत्य है",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Both (A) and (R) are false",
+                    "hindi": "दोनों (A) और (R) असत्य हैं",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Both (A) and (R) are true and (R) is correct explanation of (A)",
+                    "hindi": "दोनों (A) और (R) सत्य हैं और (R), (A) का सही स्पष्टीकरण है",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "4",
+                "answer_text": {
+                    "english": "Both (A) and (R) are true and (R) is correct explanation of (A)",
+                    "hindi": "दोनों (A) और (R) सत्य हैं और (R), (A) का सही स्पष्टीकरण है"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Actinoid contraction is observed across the actinoid series due to the poor shielding effect of 5f electrons, leading to a greater effective nuclear charge pulling the outermost electrons closer, hence both (A) and (R) are true and (R) correctly explains (A).",
+                "hindi": "5f इलेक्ट्रॉनों के दुर्बल परिरक्षण प्रभाव के कारण ऐक्टिनॉइड श्रेणी में ऐक्टिनॉइड आकुंचन लगातार बढ़ता है, जिससे प्रभावी नाभिकीय आवेश बढ़ता है। अतः (A) और (R) दोनों सत्य हैं और (R), (A) का सही स्पष्टीकरण है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "(R) is indeed the correct explanation.",
+                        "hindi": "(R) वास्तव में सही स्पष्टीकरण है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "(A) is true.",
+                        "hindi": "(A) सत्य है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Both statements are factually correct.",
+                        "hindi": "दोनों कथन तथ्यात्मक रूप से सही हैं।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Both (A) and (R) are true and (R) correctly explains (A).",
+                        "hindi": "दोनों (A) और (R) सत्य हैं और (R), (A) का सही स्पष्टीकरण है।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted option.",
+                        "hindi": "अनुत्तरित प्रश्न विकल्प।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Inorganic Chemistry",
+                "topic": "f-Block Elements",
+                "subtopic": "Actinoid Contraction",
+                "difficulty": "moderate",
+                "cognitive_level": "analysis",
+                "question_category": null,
+                "concepts": [
+                    "Actinoid contraction",
+                    "Shielding effect",
+                    "5f orbitals"
+                ],
+                "keywords": [
+                    "actinoid contraction",
+                    "5f electrons",
+                    "shielding"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "d and f Block Elements",
+                "chapter": "The Actinoids",
+                "topic": "Actinoid Contraction"
+            },
+            "source_reference": {
+                "page": 15,
+                "question_location": null,
+                "source_question_number": "124"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q125",
+            "question_number": 125,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "CH3-CH=CH2 + HCl --(C6H5CO)2O2--> Major product (X)\nIdentify the Intermediate and Major product (X) in the above reaction sequence -",
+                "hindi": "CH3-CH=CH2 + HCl --(C6H5CO)2O2--> मुख्य उत्पाद (X)\nउपरोक्त अभिक्रिया अनुक्रम में मध्यवर्ती तथा मुख्य उत्पाद (X) को पहचानिए -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Intermediate: CH3-CH2-CH2(+)\nMajor product (X): CH3-CH2-CH2-Cl",
+                    "hindi": "मध्यवर्ती: CH3-CH2-CH2(+)\nमुख्य उत्पाद (X): CH3-CH2-CH2-Cl",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Intermediate: CH3-CH(•)-CH2Cl\nMajor product (X): CH3-CH2-CH2-Cl",
+                    "hindi": "मध्यवर्ती: CH3-CH(•)-CH2Cl\nमुख्य उत्पाद (X): CH3-CH2-CH2-Cl",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Intermediate: CH3-CH(+)-CH3\nMajor product (X): CH3-CH(Cl)-CH3",
+                    "hindi": "मध्यवर्ती: CH3-CH(+)-CH3\nमुख्य उत्पाद (X): CH3-CH(Cl)-CH3",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Intermediate: CH3-CH-CH2Cl (with radical)\nMajor product (X): CH3-CH2-CH2-Cl",
+                    "hindi": "मध्यवर्ती: CH3-CH-CH2Cl (radical with Cl)\nमुख्य उत्पाद (X): CH3-CH2-CH2-Cl",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "Intermediate: CH3-CH(+)-CH3, Major product: CH3-CH(Cl)-CH3",
+                    "hindi": "मध्यवर्ती: CH3-CH(+)-CH3, मुख्य उत्पाद: CH3-CH(Cl)-CH3"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Peroxide effect (Kharash effect) is applicable ONLY to HBr in the presence of peroxides. HCl and HI do not undergo anti-Markovnikov addition with peroxides because the H-Cl bond is too strong to be cleaved homolytically by free radicals. Thus, addition of HCl to propene follows normal Markovnikov's rule, proceeding via a carbocation intermediate (CH3-CH(+)-CH3) to yield 2-chloropropane (CH3-CH(Cl)-CH3) as the major product.",
+                "hindi": "परॉक्साइड प्रभाव (खाराश प्रभाव) केवल परॉक्साइड की उपस्थिति में HBr पर लागू होता है। HCl और HI परॉक्साइड के साथ एंटी-मार्कोनीकॉफ योग नहीं दर्शाते हैं क्योंकि H-Cl बंध बहुत मजबूत होता है। अतः प्रोपीन में HCl का योग सामान्य मार्कोनीकॉफ नियम का पालन करता है, जो कार्बोकेशन मध्यवर्ती (CH3-CH(+)-CH3) के माध्यम से आगे बढ़ता है और मुख्य उत्पाद के रूप में 2-क्लोरोप्रोपेन (CH3-CH(Cl)-CH3) देता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Primary carbocation is less stable; forms 1-chloropropane which is not the Markovnikov product.",
+                        "hindi": "प्राथमिक कार्बोकेशन कम स्थिर है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect intermediate.",
+                        "hindi": "गलत मध्यवर्ती।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Since HCl does not show peroxide effect, reaction proceeds via Markovnikov addition through secondary carbocation to give 2-chloropropane.",
+                        "hindi": "चूँकि HCl परॉक्साइड प्रभाव नहीं दिखाता है, अभिक्रिया द्वितीयक कार्बोकेशन के माध्यम से मार्कोनीकॉफ योग द्वारा 2-क्लोरोप्रोपेन देती है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect structures and mechanism for HCl addition.",
+                        "hindi": "HCl योग के लिए गलत संरचनाएँ और तंत्र।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted option.",
+                        "hindi": "अनुत्तरित प्रश्न विकल्प।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Organic Chemistry",
+                "topic": "Hydrocarbons",
+                "subtopic": "Alkenes Addition Reactions",
+                "difficulty": "hard",
+                "cognitive_level": "analysis",
+                "question_category": null,
+                "concepts": [
+                    "Markovnikov's rule",
+                    "Peroxide effect exception for HCl",
+                    "Carbocation intermediate"
+                ],
+                "keywords": [
+                    "HCl",
+                    "propene",
+                    "peroxide",
+                    "Markovnikov",
+                    "intermediate"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Organic Chemistry - Hydrocarbons",
+                "chapter": "Alkenes",
+                "topic": "Addition of Hydrogen Halides"
+            },
+            "source_reference": {
+                "page": 15,
+                "question_location": null,
+                "source_question_number": "125"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

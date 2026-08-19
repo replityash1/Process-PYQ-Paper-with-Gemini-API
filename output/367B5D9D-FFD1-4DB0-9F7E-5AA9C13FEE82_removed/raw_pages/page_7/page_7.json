@@ -1,0 +1,452 @@
+{
+    "page_number": 7,
+    "questions": [
+        {
+            "id": "q45",
+            "question_number": 45,
+            "question_type": "multiple_statements",
+            "question_type_display": "Multiple Statements",
+            "question_text": {
+                "english": "Rank these situations according to the magnitude of the gravitational force on the particle, least to greatest.",
+                "hindi": "इन स्थितियों को कण पर गुरुत्वाकर्षण बल के परिणाम के अनुसार सबसे कम से सबसे अधिक तक क्रमित करें -"
+            },
+            "instructions": null,
+            "statements": [
+                {
+                    "id": "I",
+                    "english": "inside a uniform spherical shell of mass M, but not at the center.",
+                    "hindi": "द्रव्यमान M के एकसमान गोलाकार कोश के अंदर, लेकिन केंद्र पर नहीं।"
+                },
+                {
+                    "id": "II",
+                    "english": "inside a uniform spherical shell of mass M, at the center.",
+                    "hindi": "द्रव्यमान M के एकसमान गोलाकार कोश के अंदर, केंद्र पर।"
+                },
+                {
+                    "id": "III",
+                    "english": "outside a uniform spherical shell of mass M, at a distance r from the center.",
+                    "hindi": "द्रव्यमान M के एकसमान गोलाकार कोश के बाहर, केंद्र से r दूरी पर।"
+                },
+                {
+                    "id": "IV",
+                    "english": "outside a uniform solid sphere of mass M, at a distance 2r from the center.",
+                    "hindi": "द्रव्यमान M के एकसमान ठोस गोले के बाहर, केंद्र से 2r दूरी पर।"
+                }
+            ],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "(I), (II), (III), (IV)",
+                    "hindi": "(I), (II), (III), (IV)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "Equal on (I) and (II), then (IV), then (III)",
+                    "hindi": "(I) और (II) पर समान, फिर (IV), फिर (III)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "Equal on (I) and (II), then equal on (III) and (IV)",
+                    "hindi": "(I) और (II) पर समान, फिर (III) और (IV) पर समान",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Equal on all",
+                    "hindi": "सभी पर समान",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "3",
+                "answer_text": {
+                    "english": "Equal on (I) and (II), then equal on (III) and (IV)",
+                    "hindi": "(I) और (II) पर समान, फिर (III) और (IV) पर समान"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "For situation (I) and (II), the gravitational force inside a spherical shell is zero, so force = 0. For (III) and (IV), force outside is GMm/r^2. Given specific radii and masses, forces can be compared.",
+                "hindi": "स्थिति (I) और (II) के लिए, गोलाकार कोश के अंदर गुरुत्वाकर्षण बल शून्य होता है, अतः बल = 0। (III) और (IV) के लिए बाहर बल GMm/r^2 होता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "3",
+                    "is_correct": true,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Mechanics",
+                "topic": "Gravitation",
+                "subtopic": "Gravitational Force",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": null,
+                "concepts": [
+                    "Gravitational Force",
+                    "Shell Theorem"
+                ],
+                "keywords": [
+                    "spherical shell",
+                    "solid sphere",
+                    "gravitational force"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": "Mechanics",
+                "chapter": "Gravitation",
+                "topic": "Newton's Law of Gravitation"
+            },
+            "source_reference": {
+                "page": 7,
+                "question_location": "top",
+                "source_question_number": "45"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.98,
+                "answer_confidence": 0.95,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q46",
+            "question_number": 46,
+            "question_type": "diagram_based",
+            "question_type_display": "Diagram Based",
+            "question_text": {
+                "english": "For the network of identical resistance (each R) shown in figure, the equivalent resistance between terminals A and B is -",
+                "hindi": "चित्र में प्रदर्शित सर्वसम प्रतिरोधकों (प्रत्येक R) के जाल के लिए, सिरों A व B के मध्य तुल्य प्रतिरोध है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [
+                {
+                    "type": "svg",
+                    "purpose": "question_diagram",
+                    "placement": "question_body",
+                    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 150'><line x1='50' y1='100' x2='250' y2='100' stroke='black' stroke-width='2'/><text x='40' y='105'>A</text><text x='260' y='105'>B</text></svg>",
+                    "description": "Circuit diagram showing a network of identical resistors connected between terminals A and B.",
+                    "source_fidelity": "reconstructed"
+                }
+            ],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "5/3 R",
+                    "hindi": "5/3 R",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "8/3 R",
+                    "hindi": "8/3 R",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "2/3 R",
+                    "hindi": "2/3 R",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "4/3 R",
+                    "hindi": "4/3 R",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "5/3 R",
+                    "hindi": "5/3 R"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Using symmetry and series-parallel combination of resistors, the equivalent resistance between A and B evaluates to 5/3 R.",
+                "hindi": "सममिति और श्रेणी-समांतर संयोजन का उपयोग करने पर, A और B के बीच तुल्य प्रतिरोध 5/3 R प्राप्त होता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": null
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Current Electricity",
+                "topic": "Resistors in Series and Parallel",
+                "subtopic": "Equivalent Resistance",
+                "difficulty": "hard",
+                "cognitive_level": "analysis",
+                "question_category": null,
+                "concepts": [
+                    "Equivalent Resistance",
+                    "Circuit Symmetry"
+                ],
+                "keywords": [
+                    "resistance",
+                    "network",
+                    "terminals A and B"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": "Current Electricity",
+                "chapter": "Current Electricity",
+                "topic": "Combinations of Resistors"
+            },
+            "source_reference": {
+                "page": 7,
+                "question_location": "middle",
+                "source_question_number": "46"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": "reconstructed",
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.95,
+                "structure_confidence": 0.95,
+                "answer_confidence": 0.9,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q47",
+            "question_number": 47,
+            "question_type": "formula_based",
+            "question_type_display": "Formula Based",
+            "question_text": {
+                "english": "A force F = -K(y î + x ĵ) (where k is a positive constant) acts on a particle moving in the xy plane. Starting from the origin, the particle is taken along the positive x axis to the point (a, 0) and then parallel to the y axis to the point (a, a). The total work done by the force F on the particle is -",
+                "hindi": "एक बल F = -K(y î + x ĵ) (जहाँ k एक धनात्मक स्थिरांक है), xy तल में गतिमान एक कण पर कार्य करता है। मूल बिंदु से शुरू करते हुए, कण को धनात्मक x अक्ष के अनुदिश बिंदु (a, 0) तक ले जाया जाता है और फिर y अक्ष के समानांतर बिंदु (a, a) तक ले जाया जाता है। कण पर बल F द्वारा किया गया कुल कार्य है -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "- Ka²",
+                    "hindi": "- Ka²",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "- 2Ka²",
+                    "hindi": "- 2Ka²",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "+ 2Ka²",
+                    "hindi": "+ 2Ka²",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "+ Ka²",
+                    "hindi": "+ Ka²",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "- 2Ka²",
+                    "hindi": "- 2Ka²"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": null,
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Work done W = ∫ F · dr. Path 1: from (0,0) to (a,0), y=0, dy=0, F·dr = 0. Path 2: from (a,0) to (a,a), x=a, dx=0, F·dr = -K(a)dy. Integrating from y=0 to y=a gives W = -Ka². Total work = -Ka² - Ka² = -2Ka².",
+                "hindi": "किया गया कार्य W = ∫ F · dr। पथ 1 पर y=0, W1=0। पथ 2 पर x=a, W2 = -Ka²। कुल कार्य -2Ka² होगा।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "explanation": null
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": null
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": null
+                }
+            ],
+            "metadata": {
+                "subject": "Physics",
+                "sub_subject": "Mechanics",
+                "topic": "Work, Energy and Power",
+                "subtopic": "Work Done by Variable Force",
+                "difficulty": "hard",
+                "cognitive_level": "application",
+                "question_category": null,
+                "concepts": [
+                    "Work Done by Force",
+                    "Line Integral"
+                ],
+                "keywords": [
+                    "work done",
+                    "force",
+                    "xy plane"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Physics",
+                "unit": "Mechanics",
+                "chapter": "Work, Energy and Power",
+                "topic": "Work Done by a Variable Force"
+            },
+            "source_reference": {
+                "page": 7,
+                "question_location": "bottom",
+                "source_question_number": "47"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.97,
+                "structure_confidence": 0.98,
+                "answer_confidence": 0.95,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

@@ -1,0 +1,836 @@
+{
+    "page_number": 5,
+    "questions": [
+        {
+            "id": "q28",
+            "question_number": 28,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "Arrange the following carbocations in increasing order of their stability -\n(C6H5)3C⁺, (CH3)3C⁺, CH3–CH2⁺, CH3⁺",
+                "hindi": "निम्नलिखित carbocations (कार्बधनायनों) को उनके स्थायित्व के बढ़ते क्रम में व्यवस्थित कीजिए -\n(C6H5)3C⁺, (CH3)3C⁺, CH3–CH2⁺, CH3⁺"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "(1)",
+                    "english": "(C6H5)3C⁺ < (CH3)3C⁺ < CH3–CH2⁺ < CH3⁺",
+                    "hindi": "(C6H5)3C⁺ < (CH3)3C⁺ < CH3–CH2⁺ < CH3⁺",
+                    "visuals": []
+                },
+                {
+                    "label": "(2)",
+                    "english": "CH3⁺ < CH3–CH2⁺ < (CH3)3C⁺ < (C6H5)3C⁺",
+                    "hindi": "CH3⁺ < CH3–CH2⁺ < (CH3)3C⁺ < (C6H5)3C⁺",
+                    "visuals": []
+                },
+                {
+                    "label": "(3)",
+                    "english": "(C6H5)3C⁺ < CH3⁺ < CH3–CH2⁺ < (CH3)3C⁺",
+                    "hindi": "(C6H5)3C⁺ < CH3⁺ < CH3–CH2⁺ < (CH3)3C⁺",
+                    "visuals": []
+                },
+                {
+                    "label": "(4)",
+                    "english": "CH3–CH2⁺ < (C6H5)3C⁺ < (CH3)3C⁺ < CH3⁺",
+                    "hindi": "CH3–CH2⁺ < (C6H5)3C⁺ < (CH3)3C⁺ < CH3⁺",
+                    "visuals": []
+                },
+                {
+                    "label": "(5)",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "(2)",
+                "answer_text": {
+                    "english": "CH3⁺ < CH3–CH2⁺ < (CH3)3C⁺ < (C6H5)3C⁺",
+                    "hindi": "CH3⁺ < CH3–CH2⁺ < (CH3)3C⁺ < (C6H5)3C⁺"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Stability of carbocations increases with increase in +I effect, hyperconjugation, and resonance stabilization. Triphenylmethyl carbocation is most stable due to extensive resonance.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "The stability of carbocations follows the order: Methyl < 1st degree < 3rd degree < Triphenylmethyl. Triphenylmethyl carbocation is stabilized by three phenyl rings through resonance. Tertiary butyl carbocation is stabilized by hyperconjugation (+I effect). Therefore, the correct increasing order is CH3⁺ < CH3–CH2⁺ < (CH3)3C⁺ < (C6H5)3C⁺.",
+                "hindi": "कार्बधनायनों (carbocations) का स्थायित्व (+I प्रभाव, अतिसंयुग्मन और अनुनाद) बढ़ने के साथ बढ़ता है। मेथिल सबसे कम स्थायी होता है और ट्राइफेनिलमेथिल सबसे अधिक स्थायी होता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "(1)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect order, shows most stable as least stable.",
+                        "hindi": "गलत क्रम।"
+                    }
+                },
+                {
+                    "label": "(2)",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Correct increasing order of stability: CH3⁺ < CH3–CH2⁺ < (CH3)3C⁺ < (C6H5)3C⁺.",
+                        "hindi": "स्थायित्व का सही बढ़ता क्रम।"
+                    }
+                },
+                {
+                    "label": "(3)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect placement of triphenylmethyl carbocation.",
+                        "hindi": "गलत क्रम।"
+                    }
+                },
+                {
+                    "label": "(4)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect order.",
+                        "hindi": "गलत क्रम।"
+                    }
+                },
+                {
+                    "label": "(5)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Organic Chemistry",
+                "topic": "Reaction Intermediates",
+                "subtopic": "Stability of Carbocations",
+                "difficulty": "easy",
+                "cognitive_level": "understanding",
+                "question_category": null,
+                "concepts": [
+                    "Carbocation Stability",
+                    "Resonance",
+                    "Hyperconjugation",
+                    "Inductive Effect"
+                ],
+                "keywords": [
+                    "carbocation",
+                    "stability",
+                    "triphenylmethyl",
+                    "tert-butyl"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Organic Chemistry - Some Basic Principles and Techniques",
+                "chapter": "General Organic Chemistry",
+                "topic": "Stability of carbocations"
+            },
+            "source_reference": {
+                "page": 5,
+                "question_location": "top left",
+                "source_question_number": "28"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q29",
+            "question_number": 29,
+            "question_type": "statement_based",
+            "question_type_display": "Statement Based",
+            "question_text": {
+                "english": "Consider the following statements regarding the Modern Periodic Table -\nChoose the correct statement/s -",
+                "hindi": "आधुनिक आवर्त सारणी के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए -\nसही कथन/कथनों का चयन कीजिए -"
+            },
+            "instructions": null,
+            "statements": [
+                {
+                    "id": "i",
+                    "english": "s and p-block elements together are called Representative Elements.",
+                    "hindi": "s तथा p-ब्लॉक के तत्त्वों को सम्मिलित रूप से निरूपक तत्त्व कहते हैं।"
+                },
+                {
+                    "id": "ii",
+                    "english": "Among Mg, Mg²⁺(g), Al³⁺(g) and Al, the largest species is Mg.",
+                    "hindi": "Mg, Mg²⁺(g), Al³⁺(g), Al में से अधिकतम आकार वाली स्पीशीज Mg है।"
+                },
+                {
+                    "id": "iii",
+                    "english": "The electronegativity generally decreases in a period from left to right.",
+                    "hindi": "एक आवर्त में बाईं से दाईं तरफ जाने पर विद्युत्ऋणात्मकता साधारणतया घटती है।"
+                }
+            ],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "(1)",
+                    "english": "Only (iii)",
+                    "hindi": "केवल (iii)",
+                    "visuals": []
+                },
+                {
+                    "label": "(2)",
+                    "english": "Only (ii), (iii)",
+                    "hindi": "केवल (ii), (iii)",
+                    "visuals": []
+                },
+                {
+                    "label": "(3)",
+                    "english": "Only (i), (ii)",
+                    "hindi": "केवल (i), (ii)",
+                    "visuals": []
+                },
+                {
+                    "label": "(4)",
+                    "english": "Only (i), (iii)",
+                    "hindi": "केवल (i), (iii)",
+                    "visuals": []
+                },
+                {
+                    "label": "(5)",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "(3)",
+                "answer_text": {
+                    "english": "Only (i), (ii)",
+                    "hindi": "केवल (i), (ii)"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Statement (i) is correct as s and p block elements constitute representative elements. Statement (ii) is correct since neutral Mg has more shells/larger size than its cation and Al species. Statement (iii) is incorrect because electronegativity increases across a period from left to right.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Statement (i) is correct: s and p block elements are representative elements (main group elements). Statement (ii) is correct: Mg is a neutral atom with a larger radius compared to its cation Mg²⁺ and smaller Al/Al³⁺ species. Statement (iii) is incorrect: Electronegativity increases across a period from left to right, it does not decrease.",
+                "hindi": "कथन (i) सही है: s और p ब्लॉक तत्वों को प्रतिनिधि तत्व कहा जाता है। कथन (ii) सही है: Mg उदासीन परमाणु है जिसका आकार उसके धनायन तथा Al स्पीशीज से बड़ा होता है। कथन (iii) गलत है: आवर्त में बाएं से दाएं जाने पर विद्युतऋणात्मकता बढ़ती है, घटती नहीं है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "(1)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Statement (iii) is false.",
+                        "hindi": "कथन (iii) असत्य है।"
+                    }
+                },
+                {
+                    "label": "(2)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Statement (iii) is false.",
+                        "hindi": "कथन (iii) असत्य है।"
+                    }
+                },
+                {
+                    "label": "(3)",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Statements (i) and (ii) are correct.",
+                        "hindi": "कथन (i) तथा (ii) दोनों सत्य हैं।"
+                    }
+                },
+                {
+                    "label": "(4)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Statement (iii) is false.",
+                        "hindi": "कथन (iii) असत्य है।"
+                    }
+                },
+                {
+                    "label": "(5)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Inorganic Chemistry",
+                "topic": "Periodic Table and Periodicity",
+                "subtopic": "Periodic Properties",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": null,
+                "concepts": [
+                    "Representative Elements",
+                    "Atomic Radii",
+                    "Electronegativity"
+                ],
+                "keywords": [
+                    "periodic table",
+                    "representative elements",
+                    "electronegativity",
+                    "atomic size"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Classification of Elements and Periodicity in Properties",
+                "chapter": "Periodic Table",
+                "topic": "Trends in Periodic Properties"
+            },
+            "source_reference": {
+                "page": 5,
+                "question_location": "middle left",
+                "source_question_number": "29"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q30",
+            "question_number": 30,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "Which one of the following reaction is an example of disproportionation reaction?",
+                "hindi": "निम्नलिखित में से कौनसी अभिक्रिया असमानुपातन अभिक्रिया का उदाहरण है?"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "(1)",
+                    "english": "Cl2(g) + 2OH⁻(aq) → ClO⁻(aq) + Cl⁻(aq) + H2O(l)",
+                    "hindi": "Cl2(g) + 2OH⁻(aq) → ClO⁻(aq) + Cl⁻(aq) + H2O(l)",
+                    "visuals": []
+                },
+                {
+                    "label": "(2)",
+                    "english": "Cl2(g) + 2KI(aq) → 2KCl(aq) + I2(s)",
+                    "hindi": "Cl2(g) + 2KI(aq) → 2KCl(aq) + I2(s)",
+                    "visuals": []
+                },
+                {
+                    "label": "(3)",
+                    "english": "2H2O(l) + 2F2(g) → 4HF(aq) + O2(g)",
+                    "hindi": "2H2O(l) + 2F2(g) → 4HF(aq) + O2(g)",
+                    "visuals": []
+                },
+                {
+                    "label": "(4)",
+                    "english": "2F2(g) + 2OH⁻(aq) → 2F⁻(aq) + OF2(g) + H2O(l)",
+                    "hindi": "2F2(g) + 2OH⁻(aq) → 2F⁻(aq) + OF2(g) + H2O(l)",
+                    "visuals": []
+                },
+                {
+                    "label": "(5)",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "(1)",
+                "answer_text": {
+                    "english": "Cl2(g) + 2OH⁻(aq) → ClO⁻(aq) + Cl⁻(aq) + H2O(l)",
+                    "hindi": "Cl2(g) + 2OH⁻(aq) → ClO⁻(aq) + Cl⁻(aq) + H2O(l)"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "In option (1), chlorine (oxidation state 0) is simultaneously oxidized to ClO⁻ (+1) and reduced to Cl⁻ (-1), which is a classic disproportionation reaction.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "A disproportionation reaction is a redox reaction in which a single substance is simultaneously oxidized and reduced. In option (1), Cl2 (oxidation state 0) forms ClO⁻ (where Cl is +1, oxidation) and Cl⁻ (where Cl is -1, reduction).",
+                "hindi": "असमानुपातन अभिक्रिया वह रेडॉक्स अभिक्रिया है जिसमें एक ही तत्व का ऑक्सीकरण और अपचयन दोनों होता है। विकल्प (1) में क्लोरीन (0) का ऑक्सीकरण (+1) और अपचयन (-1) दोनों हो रहा है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "(1)",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Chlorine undergoes both oxidation and reduction.",
+                        "hindi": "क्लोरीन का ऑक्सीकरण और अपचयन दोनों होता है।"
+                    }
+                },
+                {
+                    "label": "(2)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "It is a displacement reaction.",
+                        "hindi": "यह विस्थापन अभिक्रिया है।"
+                    }
+                },
+                {
+                    "label": "(3)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "It is a redox reaction, not disproportionation.",
+                        "hindi": "यह रेडॉक्स अभिक्रिया है, असमानुपातन नहीं।"
+                    }
+                },
+                {
+                    "label": "(4)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "It is a redox reaction.",
+                        "hindi": "यह रेडॉक्स अभिक्रिया है।"
+                    }
+                },
+                {
+                    "label": "(5)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Physical Chemistry",
+                "topic": "Redox Reactions",
+                "subtopic": "Disproportionation Reactions",
+                "difficulty": "easy",
+                "cognitive_level": "understanding",
+                "question_category": null,
+                "concepts": [
+                    "Redox Reactions",
+                    "Disproportionation",
+                    "Oxidation State"
+                ],
+                "keywords": [
+                    "disproportionation",
+                    "chlorine",
+                    "redox",
+                    "oxidation number"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Redox Reactions",
+                "chapter": "Redox Reactions",
+                "topic": "Types of Redox Reactions"
+            },
+            "source_reference": {
+                "page": 5,
+                "question_location": "lower middle left",
+                "source_question_number": "30"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q31",
+            "question_number": 31,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "Which one of the following compound is not aromatic?",
+                "hindi": "निम्नलिखित में से कौनसा यौगिक ऐरोमैटिक नहीं है?"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "(1)",
+                    "english": null,
+                    "hindi": null,
+                    "visuals": [
+                        {
+                            "type": "svg",
+                            "purpose": "option_diagram",
+                            "placement": "option_1",
+                            "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"50,15 85,35 85,75 50,95 15,75 15,35\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"55\" r=\"25\" fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"/><text x=\"75\" y=\"35\" font-size=\"18\" font-family=\"sans-serif\">+</text></svg>",
+                            "description": "Tropylium cation (cycloheptatrienyl cation)",
+                            "source_fidelity": "reconstructed"
+                        }
+                    ]
+                },
+                {
+                    "label": "(2)",
+                    "english": null,
+                    "hindi": null,
+                    "visuals": [
+                        {
+                            "type": "svg",
+                            "purpose": "option_diagram",
+                            "placement": "option_2",
+                            "svg": "<svg viewBox=\"0 0 120 80\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"20,20 50,20 65,45 50,70 20,70 5,45\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><polygon points=\"65,45 95,20 110,45 95,70\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><line x1=\"65\" y1=\"45\" x2=\"65\" y2=\"45\" stroke=\"black\" stroke-width=\"2\"/></svg>",
+                            "description": "Naphthalene structure",
+                            "source_fidelity": "reconstructed"
+                        }
+                    ]
+                },
+                {
+                    "label": "(3)",
+                    "english": null,
+                    "hindi": null,
+                    "visuals": [
+                        {
+                            "type": "svg",
+                            "purpose": "option_diagram",
+                            "placement": "option_3",
+                            "svg": "<svg viewBox=\"0 0 120 80\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"20,25 50,15 65,45 50,75 20,65\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><polygon points=\"65,45 95,15 105,45 95,75\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/></svg>",
+                            "description": "Phenanthrene or anthracene-like fused ring structure",
+                            "source_fidelity": "reconstructed"
+                        }
+                    ]
+                },
+                {
+                    "label": "(4)",
+                    "english": null,
+                    "hindi": null,
+                    "visuals": [
+                        {
+                            "type": "svg",
+                            "purpose": "option_diagram",
+                            "placement": "option_4",
+                            "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"50,15 85,40 70,85 30,85 15,40\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><text x=\"75\" y=\"80\" font-size=\"20\" font-family=\"sans-serif\">−</text></svg>",
+                            "description": "Cyclopentadienyl anion",
+                            "source_fidelity": "reconstructed"
+                        }
+                    ]
+                },
+                {
+                    "label": "(5)",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "uncertain",
+                "correct_option": null,
+                "answer_text": null,
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Need precise verification of the condensed structures given in options (2) and (3) to determine aromaticity compliance with Hückel's rule (4n+2). Option (1) is tropylium ion (aromatic, 6 pi electrons). Option (4) is cyclopentadienyl anion (aromatic, 6 pi electrons). Options (2) and (3) are polycyclic benzenoid hydrocarbons which are aromatic. Wait, let's look closer at option structures. Let's mark uncertainty to be safe or check standard question.",
+                "confidence": "low"
+            },
+            "explanation": {
+                "english": "Aromatic compounds follow Hückel's rule (4n+2 pi electrons), are cyclic, planar, and fully conjugated. Option (1) is tropylium cation (6 π electrons, aromatic). Option (4) is cyclopentadienyl anion (6 π electrons, aromatic). Polycyclic systems (2) and (3) are also aromatic. Needs manual review for exact diagram representation.",
+                "hindi": "ऐरोमैटिक यौगिक हकल के नियम (4n+2 pi इलेक्ट्रॉन) का पालन करते हैं। सटीक संरचना के अवलोकन हेतु मैन्युअल समीक्षा की आवश्यकता है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "(1)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Tropylium cation is aromatic (6 π electrons).",
+                        "hindi": "ट्रोपिलियम धनायन ऐरोमैटिक है।"
+                    }
+                },
+                {
+                    "label": "(2)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Naphthalene derivative is aromatic.",
+                        "hindi": "नेफ़थलीन व्युत्पन्न ऐरोमैटिक है।"
+                    }
+                },
+                {
+                    "label": "(3)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Fused ring system is aromatic.",
+                        "hindi": "संयुग्मित वलय तंत्र ऐरोमैटिक है।"
+                    }
+                },
+                {
+                    "label": "(4)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Cyclopentadienyl anion is aromatic (6 π electrons).",
+                        "hindi": "साइक्लोपेन्टैडिएनिल ऋणायन ऐरोमैटिक है।"
+                    }
+                },
+                {
+                    "label": "(5)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Organic Chemistry",
+                "topic": "Aromatic Hydrocarbons",
+                "subtopic": "Huckel's Rule",
+                "difficulty": "hard",
+                "cognitive_level": "analysis",
+                "question_category": null,
+                "concepts": [
+                    "Aromaticity",
+                    "Huckel's Rule",
+                    "Cyclopentadienyl anion",
+                    "Tropylium cation"
+                ],
+                "keywords": [
+                    "aromatic",
+                    "compounds",
+                    "Huckel rule",
+                    "pi electrons"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Hydrocarbons",
+                "chapter": "Aromatic Hydrocarbons",
+                "topic": "Aromaticity and Huckel's rule"
+            },
+            "source_reference": {
+                "page": 5,
+                "question_location": "lower left",
+                "source_question_number": "31"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "reconstructed",
+                "diagram": "reconstructed",
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.95,
+                "structure_confidence": 0.8,
+                "answer_confidence": 0.5,
+                "needs_manual_review": true
+            },
+            "notes": []
+        },
+        {
+            "id": "q32",
+            "question_number": 32,
+            "question_type": "numerical",
+            "question_type_display": "Numerical",
+            "question_text": {
+                "english": "The number of moles of methane required to produce 44 g of CO2 (g) after combustion is -\nदहन के पश्चात् 44 g CO2 (g) उत्पन्न करने के लिए मेथेन के आवश्यक मोलों की संख्या है -",
+                "hindi": null
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "(1)",
+                    "english": "2.0 mol",
+                    "hindi": "2.0 मोल",
+                    "visuals": []
+                },
+                {
+                    "label": "(2)",
+                    "english": "0.5 mol",
+                    "hindi": "0.5 मोल",
+                    "visuals": []
+                },
+                {
+                    "label": "(3)",
+                    "english": "1.0 mol",
+                    "hindi": "1.0 मोल",
+                    "visuals": []
+                },
+                {
+                    "label": "(4)",
+                    "english": "1.5 mol",
+                    "hindi": "1.5 मोल",
+                    "visuals": []
+                },
+                {
+                    "label": "(5)",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "(3)",
+                "answer_text": {
+                    "english": "1.0 mol",
+                    "hindi": "1.0 मोल"
+                },
+                "mapping": [],
+                "value": "1.0",
+                "unit": "mol",
+                "method": "Combustion equation: CH4 + 2O2 → CO2 + 2H2O. Molar mass of CO2 = 44 g/mol. Moles of CO2 = 44 g / 44 g/mol = 1 mol. From the stoichiometry, 1 mole of CH4 produces 1 mole of CO2.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Steps:\n1. Write the balanced combustion reaction for methane: CH4 + 2O2 → CO2 + 2H2O.\n2. Calculate moles of CO2: Moles = Given mass / Molar mass = 44 g / 44 g/mol = 1 mol.\n3. According to the balanced equation, 1 mole of CO2 is produced by 1 mole of CH4.",
+                "hindi": "चरण:\n1. मेथेन के दहन की संतुलित समीकरण लिखिए: CH4 + 2O2 → CO2 + 2H2O।\n2. CO2 के मोल = 44 g / 44 g/mol = 1 mol।\n3. समीकरण के अनुसार, 1 मोल CO2 प्राप्त करने के लिए 1 मोल CH4 की आवश्यकता होती है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "(1)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect stoichiometry.",
+                        "hindi": "गलत।"
+                    }
+                },
+                {
+                    "label": "(2)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect stoichiometry.",
+                        "hindi": "गलत।"
+                    }
+                },
+                {
+                    "label": "(3)",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "1.0 mol of methane produces 44 g (1 mol) of CO2.",
+                        "hindi": "1.0 मोल मेथेन से 44 g CO2 उत्पन्न होती है।"
+                    }
+                },
+                {
+                    "label": "(4)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect stoichiometry.",
+                        "hindi": "गलत।"
+                    }
+                },
+                {
+                    "label": "(5)",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Question not attempted.",
+                        "hindi": "अनुत्तरित प्रश्न।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Chemistry",
+                "sub_subject": "Physical Chemistry",
+                "topic": "Some Basic Concepts of Chemistry",
+                "subtopic": "Stoichiometry",
+                "difficulty": "easy",
+                "cognitive_level": "application",
+                "question_category": null,
+                "concepts": [
+                    "Mole Concept",
+                    "Stoichiometry",
+                    "Combustion Reaction"
+                ],
+                "keywords": [
+                    "moles",
+                    "methane",
+                    "combustion",
+                    "carbon dioxide"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Chemistry",
+                "unit": "Some Basic Concepts of Chemistry",
+                "chapter": "Mole Concept and Stoichiometry",
+                "topic": "Stoichiometric calculations"
+            },
+            "source_reference": {
+                "page": 5,
+                "question_location": "lower left",
+                "source_question_number": "32"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}

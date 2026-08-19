@@ -1,0 +1,630 @@
+{
+    "page_number": 2,
+    "questions": [
+        {
+            "id": "q18",
+            "question_number": 18,
+            "question_type": "matching",
+            "question_type_display": "Matching",
+            "question_text": {
+                "english": "Match the Plant Groups given in Column-I with their Characteristic Features in Column-II and select the correct answer using the code given below -",
+                "hindi": "कॉलम-I में दिए गए पादप समूहों को कॉलम-II में दी गई उनकी विशिष्ट विशेषताओं से सुमेलित कर नीचे दिए गए कूट से सही उत्तर का चयन करें -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": {
+                "left_column": [
+                    {
+                        "id": "A",
+                        "english": "Hepaticopsida",
+                        "hindi": "हेपेटिकोप्सिडा"
+                    },
+                    {
+                        "id": "B",
+                        "english": "Anthocerotopsida",
+                        "hindi": "एंथोसेरोटोप्सिडा"
+                    },
+                    {
+                        "id": "C",
+                        "english": "Bryopsida",
+                        "hindi": "ब्रायोप्सिडा"
+                    },
+                    {
+                        "id": "D",
+                        "english": "Pteropsida",
+                        "hindi": "टेरोप्सिडा"
+                    }
+                ],
+                "right_column": [
+                    {
+                        "id": "i",
+                        "english": "Presence of stomata in sporophyte",
+                        "hindi": "बीजाणु-उद्भिद में रंध्रों की उपस्थिति"
+                    },
+                    {
+                        "id": "ii",
+                        "english": "Sporophyte has a basal meristematic region",
+                        "hindi": "बीजाणु-उद्भिद में आधारीय विभज्योतकिय क्षेत्र होता है"
+                    },
+                    {
+                        "id": "iii",
+                        "english": "Gametophytes thalloid or leafy with rhizoids",
+                        "hindi": "राइज़ॉइड्स युक्त थैलाॅयड या पत्तीदार युग्मकोद्भिद्"
+                    },
+                    {
+                        "id": "iv",
+                        "english": "True roots, stems and leaves present in sporophyte",
+                        "hindi": "बीजाणु-उद्भिद में उपस्थित वास्तविक जड़ें, तना और पत्तियाँ"
+                    }
+                ],
+                "option_mappings": [
+                    {
+                        "label": "1",
+                        "mapping": [
+                            {
+                                "key": "A",
+                                "value": "iii"
+                            },
+                            {
+                                "key": "B",
+                                "value": "ii"
+                            },
+                            {
+                                "key": "C",
+                                "value": "i"
+                            },
+                            {
+                                "key": "D",
+                                "value": "iv"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "2",
+                        "mapping": [
+                            {
+                                "key": "A",
+                                "value": "i"
+                            },
+                            {
+                                "key": "B",
+                                "value": "ii"
+                            },
+                            {
+                                "key": "C",
+                                "value": "iii"
+                            },
+                            {
+                                "key": "D",
+                                "value": "iv"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "3",
+                        "mapping": [
+                            {
+                                "key": "A",
+                                "value": "i"
+                            },
+                            {
+                                "key": "B",
+                                "value": "iv"
+                            },
+                            {
+                                "key": "C",
+                                "value": "ii"
+                            },
+                            {
+                                "key": "D",
+                                "value": "iii"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "4",
+                        "mapping": [
+                            {
+                                "key": "A",
+                                "value": "iv"
+                            },
+                            {
+                                "key": "B",
+                                "value": "iii"
+                            },
+                            {
+                                "key": "C",
+                                "value": "ii"
+                            },
+                            {
+                                "key": "D",
+                                "value": "i"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)",
+                    "hindi": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)",
+                    "hindi": "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii)",
+                    "hindi": "(A)-(i), (B)-(iv), (C)-(ii), (D)-(iii)",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "(A)-(iv), (B)-(iii), (C)-(ii), (D)-(i)",
+                    "hindi": "(A)-(iv), (B)-(iii), (C)-(ii), (D)-(i)",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)",
+                    "hindi": "(A)-(iii), (B)-(ii), (C)-(i), (D)-(iv)"
+                },
+                "mapping": [
+                    {
+                        "key": "A",
+                        "value": "iii"
+                    },
+                    {
+                        "key": "B",
+                        "value": "ii"
+                    },
+                    {
+                        "key": "C",
+                        "value": "i"
+                    },
+                    {
+                        "key": "D",
+                        "value": "iv"
+                    }
+                ],
+                "value": null,
+                "unit": null,
+                "method": "Direct match based on botanical characteristics of plant groups.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Hepaticopsida (Liverworts) typically have thalloid or leafy gametophytes with rhizoids. Anthocerotopsida (Hornworts) have a sporophyte with a basal meristematic region. Bryopsida (Mosses) have stomata in their capsule (sporophyte). Pteropsida (Ferns) have true roots, stems, and leaves in the sporophyte generation.",
+                "hindi": "हेपेटिकोप्सिडा (लिवरवर्ट्स) में राइज़ॉइड्स युक्त थैलाॅयड या पत्तीदार युग्मकोद्भिद् होते हैं। एंथोसेरोटोप्सिडा (हॉर्नवर्ट्स) के बीजाणु-उद्भिद में आधारीय विभज्योतकीय क्षेत्र होता है। ब्रायोप्सिडा (मॉस) के बीजाणु-उद्भिद में रंध्र होते हैं। टेरोप्सिडा में बीजाणु-उद्भिद में वास्तविक जड़ें, तना और पत्तियाँ होती हैं।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "All matches are correct according to plant anatomy.",
+                        "hindi": "पादप आकारिकी के अनुसार सभी मिलान सही हैं।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching for A and C.",
+                        "hindi": "A और C का मिलान गलत है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Incorrect matching.",
+                        "hindi": "गलत मिलान।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted.",
+                        "hindi": "अनुत्तरित।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Botany",
+                "topic": "Plant Kingdom",
+                "subtopic": "Bryophytes and Pteridophytes",
+                "difficulty": "moderate",
+                "cognitive_level": "recall",
+                "question_category": "Matching",
+                "concepts": [
+                    "Hepaticopsida",
+                    "Anthocerotopsida",
+                    "Bryopsida",
+                    "Pteropsida"
+                ],
+                "keywords": [
+                    "Plant Groups",
+                    "Column-I",
+                    "Column-II",
+                    "Characteristic Feature"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Biology",
+                "unit": "Diversity of Living Organisms",
+                "chapter": "Plant Kingdom",
+                "topic": "Bryophytes, Pteridophytes"
+            },
+            "source_reference": {
+                "page": 2,
+                "question_location": "Top",
+                "source_question_number": "18"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 0.99,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q19",
+            "question_number": 19,
+            "question_type": "single_choice",
+            "question_type_display": "Single Choice",
+            "question_text": {
+                "english": "A human female with Turner syndrome -",
+                "hindi": "टर्नर सिंड्रोम से ग्रसित मानव मादा -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": null,
+            "reason": null,
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "has 45 chromosomes with XO condition.",
+                    "hindi": "में 45 गुणसूत्रमय XO स्थिति होती है।",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "has one additional X chromosome.",
+                    "hindi": "में एक अतिरिक्त X गुणसूत्र होता है।",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "has one additional Y chromosome.",
+                    "hindi": "में एक अतिरिक्त Y गुणसूत्र होता है।",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "is able to produce children with normal husband.",
+                    "hindi": "सामान्य पति से बच्चे उत्पन्न कर सकती है।",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "1",
+                "answer_text": {
+                    "english": "has 45 chromosomes with XO condition.",
+                    "hindi": "में 45 गुणसूत्रमय XO स्थिति होती है।"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Direct genetic knowledge of Turner syndrome (44 + XO = 45 chromosomes).",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Turner's syndrome is caused by the absence of one of the X chromosomes resulting in 45 chromosomes (44 + XO). Affected females are sterile with rudimentary ovaries.",
+                "hindi": "टर्नर सिंड्रोम एक X गुणसूत्र की अनुपस्थिति के कारण होता है जिसके परिणामस्वरूप 45 गुणसूत्र (44 + XO) होते हैं। प्रभावित मादाएं बंजर होती हैं।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Turner's syndrome is characterized by 45 chromosomes with XO condition.",
+                        "hindi": "टर्नर सिंड्रोम में 45 गुणसूत्र तथा XO स्थिति होती है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Additional X chromosome leads to Klinefelter syndrome in males (XXY) or Triple X in females.",
+                        "hindi": "अतिरिक्त X गुणसूत्र क्लाइनफेल्टर सिंड्रोम (XXY) का कारण बनता है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Additional Y chromosome leads to Jacob's syndrome (XYY).",
+                        "hindi": "अतिरिक्त Y गुणसूत्र जैकब सिंड्रोम (XYY) का कारण बनता है।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Females with Turner syndrome are sterile.",
+                        "hindi": "टर्नर सिंड्रोम से ग्रसित मादाएं बांझ होती हैं।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted.",
+                        "hindi": "अनुत्तरित।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Genetics",
+                "topic": "Chromosomal Disorders",
+                "subtopic": "Turner Syndrome",
+                "difficulty": "easy",
+                "cognitive_level": "recall",
+                "question_category": "Single Choice",
+                "concepts": [
+                    "Turner Syndrome",
+                    "Chromosomal Abnormality",
+                    "Monosomy"
+                ],
+                "keywords": [
+                    "human female",
+                    "Turner syndrome",
+                    "45 chromosomes",
+                    "XO condition"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Biology",
+                "unit": "Genetics and Evolution",
+                "chapter": "Principles of Inheritance and Variation",
+                "topic": "Chromosomal Disorders"
+            },
+            "source_reference": {
+                "page": 2,
+                "question_location": "Middle",
+                "source_question_number": "19"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.99,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        },
+        {
+            "id": "q20",
+            "question_number": 20,
+            "question_type": "assertion_reason",
+            "question_type_display": "Assertion Reason",
+            "question_text": {
+                "english": "Consider the Assertion (A) and Reason (R) and choose the correct option from the code given below -",
+                "hindi": "अभिकथन (A) और कारण (R) पर विचार करें और नीचे दिए गए कूट में से सही विकल्प चुनें -"
+            },
+            "instructions": null,
+            "statements": [],
+            "assertion": {
+                "english": "Taq polymerase is thermostable and lacks proof-reading activity.",
+                "hindi": "टैक पॉलिमरेज़ तापस्थिर है और इसमें प्रूफ-रीडिंग क्रिया का अभाव है।"
+            },
+            "reason": {
+                "english": "Taq polymerase possesses 3' to 5' exonuclease activity.",
+                "hindi": "टैक पॉलिमरेज़ में 3' से 5' एक्सोonuclease क्रिया होती है।"
+            },
+            "matching_data": null,
+            "matrix": null,
+            "table": null,
+            "visuals": [],
+            "options": [
+                {
+                    "label": "1",
+                    "english": "Both (A) and (R) are correct but (R) is not the correct explanation of (A).",
+                    "hindi": "(A) और (R) दोनों सही हैं लेकिन (R), (A) की सही व्याख्या नहीं है।",
+                    "visuals": []
+                },
+                {
+                    "label": "2",
+                    "english": "(A) is correct but (R) is incorrect.",
+                    "hindi": "(A) सही है लेकिन (R) गलत है।",
+                    "visuals": []
+                },
+                {
+                    "label": "3",
+                    "english": "(A) is incorrect but (R) is correct.",
+                    "hindi": "(A) गलत है लेकिन (R) सही है।",
+                    "visuals": []
+                },
+                {
+                    "label": "4",
+                    "english": "Both (A) and (R) are correct and (R) is the correct explanation of (A).",
+                    "hindi": "(A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है।",
+                    "visuals": []
+                },
+                {
+                    "label": "5",
+                    "english": "Question not attempted",
+                    "hindi": "अनुत्तरित प्रश्न",
+                    "visuals": []
+                }
+            ],
+            "answer": {
+                "status": "determined",
+                "correct_option": "2",
+                "answer_text": {
+                    "english": "(A) is correct but (R) is incorrect.",
+                    "hindi": "(A) सही है लेकिन (R) गलत है।"
+                },
+                "mapping": [],
+                "value": null,
+                "unit": null,
+                "method": "Taq polymerase is thermostable and lacks 3' to 5' exonuclease (proof-reading) activity.",
+                "confidence": "high"
+            },
+            "explanation": {
+                "english": "Taq polymerase is isolated from Thermus aquaticus, making it thermostable. It lacks 3' to 5' exonuclease activity, which is why it lacks proof-reading activity. Thus, Assertion (A) is correct, but Reason (R) is incorrect because it states that Taq polymerase possesses 3' to 5' exonuclease activity.",
+                "hindi": "टैक पॉलिमरेज़ (Taq polymerase) थर्मस एक्वैटिकस से प्राप्त होता है, जिससे यह तापस्थिर (thermostable) होता है। इसमें 3' से 5' एक्सोन्यूक्लियस गतिविधि नहीं होती है, इसलिए इसमें प्रूफ-रीडिंग गतिविधि का अभाव होता है। अतः अभिकथन (A) सही है, लेकिन कारण (R) गलत है।",
+                "steps": []
+            },
+            "option_analysis": [
+                {
+                    "label": "1",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Reason (R) is factually incorrect.",
+                        "hindi": "कारण (R) तथ्यात्मक रूप से गलत है।"
+                    }
+                },
+                {
+                    "label": "2",
+                    "is_correct": true,
+                    "explanation": {
+                        "english": "Assertion (A) is correct and Reason (R) is incorrect.",
+                        "hindi": "अभिकथन (A) सही है और कारण (R) गलत है।"
+                    }
+                },
+                {
+                    "label": "3",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Assertion is correct, not incorrect.",
+                        "hindi": "अभिकथन सही है, गलत नहीं।"
+                    }
+                },
+                {
+                    "label": "4",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Reason (R) is false.",
+                        "hindi": "कारण (R) असत्य है।"
+                    }
+                },
+                {
+                    "label": "5",
+                    "is_correct": false,
+                    "explanation": {
+                        "english": "Not attempted.",
+                        "hindi": "अनुत्तरित।"
+                    }
+                }
+            ],
+            "metadata": {
+                "subject": "Biology",
+                "sub_subject": "Biotechnology",
+                "topic": "PCR and Enzymes",
+                "subtopic": "Taq Polymerase",
+                "difficulty": "moderate",
+                "cognitive_level": "understanding",
+                "question_category": "Assertion Reason",
+                "concepts": [
+                    "Taq Polymerase",
+                    "Thermostable",
+                    "Proof-reading activity",
+                    "Exonuclease activity"
+                ],
+                "keywords": [
+                    "Assertion",
+                    "Reason",
+                    "Taq polymerase",
+                    "thermostable",
+                    "proof-reading"
+                ]
+            },
+            "syllabus_mapping": {
+                "subject": "Biology",
+                "unit": "Biotechnology",
+                "chapter": "Biotechnology: Principles and Processes",
+                "topic": "PCR Technique"
+            },
+            "source_reference": {
+                "page": 2,
+                "question_location": "Bottom",
+                "source_question_number": "20"
+            },
+            "content_origin": {
+                "question_text": "source",
+                "options": "source",
+                "diagram": null,
+                "answer": "generated",
+                "explanation": "generated",
+                "metadata": "generated"
+            },
+            "quality": {
+                "ocr_confidence": 0.98,
+                "structure_confidence": 1.0,
+                "answer_confidence": 1.0,
+                "needs_manual_review": false
+            },
+            "notes": []
+        }
+    ]
+}
